@@ -1,0 +1,15 @@
+project:
+  type: manuscript
+  output-dir: docs
+
+manuscript:
+  article: index.qmd
+
+format:
+  html:
+    highlight-style: kate
+    notebook-links: false
+  # pdf: default
+
+execute:
+  freeze: true

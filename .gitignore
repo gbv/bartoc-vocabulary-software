@@ -1,0 +1,4 @@
+/.quarto/
+.venv/
+_freeze/
+docs/

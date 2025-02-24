@@ -1,0 +1,24 @@
+[
+  {
+    "name": "Semantic MediaWiki",
+    "url": "https://www.semantic-mediawiki.org/",
+    "platform": "Web",
+    "edit": true,
+    "api": true,
+    "language": "PHP",
+    "license": "GPL",
+    "repository": "https://github.com/SemanticMediaWiki/SemanticMediaWiki/",
+    "update": "2025"
+  },
+  {
+    "name": "Wikibase",
+    "url": "http://wikiba.se/",
+    "platform": "Web",
+    "api": true,
+    "edit": true,
+    "language": "PHP",
+    "license": "GPL",
+    "repository": "https://gerrit.wikimedia.org/g/mediawiki/extensions/Wikibase",
+    "update": "2025"
+  }
+]

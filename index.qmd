@@ -1,0 +1,58 @@
+---
+title: Software for controlled vocabularies
+authors:
+- name: Jakob Voß
+  orcid: 0000-0002-7613-4123
+  affiliations:
+   - name: Verbundzentrale des GBV (VZG)
+bibliography: references.bib
+---
+
+This page is linked from <https://bartoc.gbv.de/software> to collect basic information about software for controlled vocabularies, terminologies and related semantic artifacts, also known as knowledge organization systems.
+
+## Scope
+
+- The software should be primarily for editing, viewing and/or analyzing vocabularies
+- Closed source software is only inclued if it is specific to manage vocabularies
+- Software limited to simple terminologies for translation and glossaries are not included
+
+## Summary
+
+```{python}
+#| label: tbl-software
+#| tbl-cap: Software comparison
+from IPython.display import Markdown
+from tabulate import tabulate
+import pandas as pd
+from urllib.parse import urlparse
+from IPython.display import display, HTML
+import re
+
+def hyperlink(row):
+    if pd.notna(row['url']):
+        return f'<a href="{row["url"]}">{row["name"]}</a>'
+    else:
+        return row['name']    
+
+def cell(value):
+    if isinstance(value, bool):
+        return "✓" if value else "-"
+    elif isinstance(value, str) and re.match(r"^https?://",value):
+        url = urlparse(value)
+        host = url.hostname.split(".")[-2]
+        return f'<a href="{value}">{host}</a>'
+    return value # html.escape(value)
+
+df = pd.read_json('software.json')
+
+df["name"] = df.apply(hyperlink, axis=1)
+df = df.drop(columns=["url"])
+df = df.applymap(cell)
+display(HTML(df.to_html(escape=False,index=False)))
+```
+
+
+- `edit` whether vocabularies can be modified with the software
+- API refers to an external API (web service)
+- Update year has been updated manually in February 2025 by inspecting the commit log and ommitting trivial changes.
+

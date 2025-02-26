@@ -4,6 +4,10 @@ project:
 
 manuscript:
   article: index.qmd
+  code-links:
+   - repo
+
+repo-url: https://github.com/gbv/bartoc-vocabulary-software
 
 format:
   html:

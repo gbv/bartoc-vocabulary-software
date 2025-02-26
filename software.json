@@ -74,7 +74,7 @@
     "language": "JavaScript",
     "license": "MIT",
     "repository": "https://github.com/gbv/cocoda",
-    "update": "2025"
+    "update": "2024"
   },
   {
     "name": "JSKOS Server",
@@ -121,7 +121,7 @@
     "update": "2024"
   },
   {
-    "name": "",
+    "name": "Ontology Look-up Service (OLS)",
     "url": "https://github.com/EBISPOT/ols4",
     "platform": "Web",
     "api": true,
@@ -133,7 +133,6 @@
   },
   {
     "name": "OntoPortal Appliance",
-    "url": "",
     "platform": "Web",
     "api": true,
     "edit": false,
@@ -155,7 +154,6 @@
   },
   {
     "name": "VocExcel",
-    "url": "",
     "platform": "Web",
     "api": false,
     "edit": false,
@@ -232,7 +230,6 @@
   },
   {
     "name": "Django Controlled Vocabularies",
-    "url": "",
     "platform": "Web",
     "api": false,
     "edit": false,
@@ -298,7 +295,6 @@
   },
   {
     "name": "SISSVoc",
-    "url": "",
     "platform": "Web",
     "api": true,
     "edit": false,
@@ -342,7 +338,6 @@
   },
   {
     "name": "SKOSjs",
-    "url": "",
     "platform": "Web",
     "api": false,
     "edit": true,
@@ -386,7 +381,6 @@
   },
   {
     "name": "sheet2rdf",
-    "url": "",
     "platform": "?",
     "api": false,
     "edit": true,

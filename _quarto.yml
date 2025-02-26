@@ -13,6 +13,7 @@ format:
   html:
     highlight-style: kate
     notebook-links: false
+    theme: custom.scss
   # pdf: default
 
 execute:

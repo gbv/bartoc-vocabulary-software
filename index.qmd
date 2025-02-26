@@ -9,7 +9,7 @@ bibliography: references.bib
 date: last-modified
 ---
 
-The terminology registry [BARTOC](https://bartoc.org/) collects information about knowledge organization systems or terminologies of all kinds (controlled vocabularies, classifications, ontologies, semantic artifacts...). This report summarizes information about software for management of these knowledge organization systems.
+The terminology registry **[BARTOC](https://bartoc.org/)** collects information about knowledge organization systems or terminologies of all kinds (controlled vocabularies, classifications, ontologies, semantic artifacts...). This report summarizes information about software for management of these knowledge organization systems.
 
 ## Scope
 

@@ -170,7 +170,6 @@
     "edit": false,
     "language": "Java",
     "license": "Closed Source",
-    "repository": "",
     "update": "2025"
   },
   {
@@ -386,7 +385,6 @@
     "edit": true,
     "language": "Python",
     "license": "Apache",
-    "repository": "",
     "update": "2021"
   }
 ]

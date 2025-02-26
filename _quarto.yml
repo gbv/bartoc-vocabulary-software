@@ -9,12 +9,12 @@ manuscript:
 
 repo-url: https://github.com/gbv/bartoc-vocabulary-software
 
+resources:
+  - software.json
+
 format:
   html:
     highlight-style: kate
     notebook-links: false
     theme: custom.scss
   # pdf: default
-
-execute:
-  freeze: true

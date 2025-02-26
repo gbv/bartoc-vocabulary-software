@@ -5,8 +5,9 @@
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
+    <meta name="dcterms.date" content="2025-02-26">
 
-    <title>Software for controlled vocabularies</title>
+    <title>Software for management of knowledge organization systems</title>
     <style>
       code{white-space: pre-wrap;}
       span.smallcaps{font-variant: small-caps;}
@@ -159,8 +160,12 @@
      <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.6/require.min.js" integrity="sha512-c3Nl8+7g4LMSTdrm621y7kf9v3SDPnhxLNhcjFJbKECVnmZHTdo+IRO05sNLTH/D3vA6u1X32ehoLC7WFVdheg==" crossorigin="anonymous"></script>
 
 <script type="application/javascript">define('jquery', [],function() {return window.jQuery;})</script>  
-      <meta name="citation_title" content="Software for controlled vocabularies">
+      <meta name="citation_title" content="Software for management of knowledge organization systems">
 <meta name="citation_author" content="Jakob Voß">
+<meta name="citation_publication_date" content="2025-02-26">
+<meta name="citation_cover_date" content="2025-02-26">
+<meta name="citation_year" content="2025">
+<meta name="citation_online_date" content="2025-02-26">
 <meta name="citation_language" content="en">
 </head>
 
@@ -176,7 +181,7 @@
      <header id="title-block-header" class="quarto-title-block default toc-left page-columns page-full">
   <div class="quarto-title-banner page-columns page-full">
     <div class="quarto-title column-body">
-      <h1 class="title">Software for controlled vocabularies</h1>
+      <h1 class="title">Software for management of knowledge organization systems</h1>
           </div>
 
     
@@ -199,6 +204,12 @@
         <div class="quarto-title-meta">
 
                       
+                <div>
+            <div class="quarto-title-meta-heading">Published</div>
+            <div class="quarto-title-meta-contents">
+              <p class="date">February 26, 2025</p>
+            </div>
+          </div>
           
                 
               </div>
@@ -226,14 +237,12 @@
 </div>
 <main class="content quarto-banner-title-block" id="quarto-document-content">      
 
-       <p>This page is linked from <a href="https://bartoc.gbv.de/software" class="uri">https://bartoc.gbv.de/software</a> to collect basic information about software for controlled vocabularies, terminologies and related semantic artifacts, also known as knowledge organization systems.</p>
+       <p>The terminology registry <a href="https://bartoc.org/">BARTOC</a> collects information about knowledge organization systems or terminologies of all kinds (controlled vocabularies, classifications, ontologies, semantic artifacts…). This report summarizes information about software for management of these knowledge organization systems.</p>
 <section id="scope" class="level2">
 <h2 class="anchored" data-anchor-id="scope">Scope</h2>
-<ul>
-<li>The software should be primarily for editing, viewing and/or analyzing vocabularies</li>
-<li>Closed source software is only inclued if it is specific to manage vocabularies</li>
-<li>Software limited to simple terminologies for translation and glossaries are not included</li>
-</ul>
+<p>The software should be primarily for editing, viewing and/or analyzing vocabularies. Software is not listed if it only happens to make use of terminologies (for instance OpenRefine) or if it only includes a minor terminology management module (such as most database management systems).</p>
+<p>Closed source software is only included if it is very specific to manage vocabularies</p>
+<p>Software limited to simple terminologies for translation and glossaries are not included. This also excludes the category of software known as “terminology management” to manage a centralized repository of approved terms, definitions, and translations in an organization.</p>
 </section>
 <section id="summary" class="level2">
 <h2 class="anchored" data-anchor-id="summary">Summary</h2>
@@ -267,7 +276,7 @@
 <span id="cb1-27"><a href="#cb1-27" aria-hidden="true" tabindex="-1"></a>df <span class="op">=</span> df.applymap(cell)</span>
 <span id="cb1-28"><a href="#cb1-28" aria-hidden="true" tabindex="-1"></a>display(HTML(df.to_html(escape<span class="op">=</span><span class="va">False</span>,index<span class="op">=</span><span class="va">False</span>)))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stderr">
-<pre><code>/tmp/ipykernel_2145/1890323354.py:27: FutureWarning: DataFrame.applymap has been deprecated. Use DataFrame.map instead.
+<pre><code>/tmp/ipykernel_2043/1890323354.py:27: FutureWarning: DataFrame.applymap has been deprecated. Use DataFrame.map instead.
   df = df.applymap(cell)</code></pre>
 </div>
 <div class="cell-container"><div class="cell-decorator"><pre>In [1]:</pre></div><div id="tbl-software" class="cell quarto-float quarto-figure quarto-figure-center anchored" data-execution_count="1">
@@ -658,12 +667,59 @@ Table&nbsp;1: Software comparison
 </figure>
 </div></div>
 </div></div>
-<div id="2b7c5d90" class="cell markdown">
-<ul>
-<li><code>edit</code> whether vocabularies can be modified with the software</li>
-<li>API refers to an external API (web service)</li>
-<li>Update year has been updated manually in February 2025 by inspecting the commit log and ommitting trivial changes.</li>
-</ul>
+<div id="fa63ebf6" class="cell markdown">
+<p>Each software is described with the following fields:</p>
+<table class="caption-top table table-sm table-striped small">
+<colgroup>
+<col style="width: 42%">
+<col style="width: 57%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Field</th>
+<th>Purpose</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><code>name</code></td>
+<td>Name of the software</td>
+</tr>
+<tr class="even">
+<td><code>url</code></td>
+<td>Homepage</td>
+</tr>
+<tr class="odd">
+<td><code>platform</code></td>
+<td>Operating System or similar dependency (Web application, CLI…)</td>
+</tr>
+<tr class="even">
+<td><code>api</code></td>
+<td>whether a web service or similar API is provided to connect to</td>
+</tr>
+<tr class="odd">
+<td><code>edit</code></td>
+<td>whether vocabularies can be modified with the software</td>
+</tr>
+<tr class="even">
+<td><code>language</code></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td><code>license</code></td>
+<td></td>
+</tr>
+<tr class="even">
+<td><code>repository</code></td>
+<td>Source Code repository</td>
+</tr>
+<tr class="odd">
+<td><code>update</code></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p>Update year has been updated manually in February 2025 by inspecting the commit log and ommitting trivial changes.</p>
 </div>
 </section>
      </main>

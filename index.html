@@ -6,8 +6,9 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
+<meta name="dcterms.date" content="2025-02-26">
 
-<title>Software for controlled vocabularies</title>
+<title>Software for management of knowledge organization systems</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -38,8 +39,12 @@ ul.task-list li input[type="checkbox"] {
 <script type="application/javascript">define('jquery', [],function() {return window.jQuery;})</script>
 
 
-<meta name="citation_title" content="Software for controlled vocabularies">
+<meta name="citation_title" content="Software for management of knowledge organization systems">
 <meta name="citation_author" content="Jakob Voß">
+<meta name="citation_publication_date" content="2025-02-26">
+<meta name="citation_cover_date" content="2025-02-26">
+<meta name="citation_year" content="2025">
+<meta name="citation_online_date" content="2025-02-26">
 <meta name="citation_language" content="en">
 </head>
 
@@ -48,7 +53,7 @@ ul.task-list li input[type="checkbox"] {
 <header id="title-block-header" class="quarto-title-block default toc-left page-columns page-full">
   <div class="quarto-title-banner page-columns page-full">
     <div class="quarto-title column-body">
-      <h1 class="title">Software for controlled vocabularies</h1>
+      <h1 class="title">Software for management of knowledge organization systems</h1>
           </div>
 
     
@@ -71,6 +76,12 @@ ul.task-list li input[type="checkbox"] {
         <div class="quarto-title-meta">
 
                       
+                <div>
+            <div class="quarto-title-meta-heading">Published</div>
+            <div class="quarto-title-meta-contents">
+              <p class="date">February 26, 2025</p>
+            </div>
+          </div>
           
                 
               </div>
@@ -103,14 +114,12 @@ ul.task-list li input[type="checkbox"] {
   
 
 
-<p>This page is linked from <a href="https://bartoc.gbv.de/software" class="uri">https://bartoc.gbv.de/software</a> to collect basic information about software for controlled vocabularies, terminologies and related semantic artifacts, also known as knowledge organization systems.</p>
+<p>The terminology registry <a href="https://bartoc.org/">BARTOC</a> collects information about knowledge organization systems or terminologies of all kinds (controlled vocabularies, classifications, ontologies, semantic artifacts…). This report summarizes information about software for management of these knowledge organization systems.</p>
 <section id="scope" class="level2">
 <h2 class="anchored" data-anchor-id="scope">Scope</h2>
-<ul>
-<li>The software should be primarily for editing, viewing and/or analyzing vocabularies</li>
-<li>Closed source software is only inclued if it is specific to manage vocabularies</li>
-<li>Software limited to simple terminologies for translation and glossaries are not included</li>
-</ul>
+<p>The software should be primarily for editing, viewing and/or analyzing vocabularies. Software is not listed if it only happens to make use of terminologies (for instance OpenRefine) or if it only includes a minor terminology management module (such as most database management systems).</p>
+<p>Closed source software is only included if it is very specific to manage vocabularies</p>
+<p>Software limited to simple terminologies for translation and glossaries are not included. This also excludes the category of software known as “terminology management” to manage a centralized repository of approved terms, definitions, and translations in an organization.</p>
 </section>
 <section id="summary" class="level2">
 <h2 class="anchored" data-anchor-id="summary">Summary</h2>
@@ -503,11 +512,58 @@ Table&nbsp;1: Software comparison
 </figure>
 </div>
 </div>
-<ul>
-<li><code>edit</code> whether vocabularies can be modified with the software</li>
-<li>API refers to an external API (web service)</li>
-<li>Update year has been updated manually in February 2025 by inspecting the commit log and ommitting trivial changes.</li>
-</ul>
+<p>Each software is described with the following fields:</p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 42%">
+<col style="width: 57%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Field</th>
+<th>Purpose</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><code>name</code></td>
+<td>Name of the software</td>
+</tr>
+<tr class="even">
+<td><code>url</code></td>
+<td>Homepage</td>
+</tr>
+<tr class="odd">
+<td><code>platform</code></td>
+<td>Operating System or similar dependency (Web application, CLI…)</td>
+</tr>
+<tr class="even">
+<td><code>api</code></td>
+<td>whether a web service or similar API is provided to connect to</td>
+</tr>
+<tr class="odd">
+<td><code>edit</code></td>
+<td>whether vocabularies can be modified with the software</td>
+</tr>
+<tr class="even">
+<td><code>language</code></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td><code>license</code></td>
+<td></td>
+</tr>
+<tr class="even">
+<td><code>repository</code></td>
+<td>Source Code repository</td>
+</tr>
+<tr class="odd">
+<td><code>update</code></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p>Update year has been updated manually in February 2025 by inspecting the commit log and ommitting trivial changes.</p>
 </section>
 
 </main>

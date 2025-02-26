@@ -1,0 +1,32 @@
+$theme: "red" !default;
+
+$white:    #fff !default;
+$black:    #000 !default;
+$red:      #a22c1a !default; 
+
+$primary:       $red !default;
+$navbar-light-bg: $red !default;
+$navbar-dark-bg: $red !default;
+
+$web-font-path: "https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;0,700;1,400&display=swap" !default;
+@if $web-font-path {
+  @import url($web-font-path);
+}
+
+.navbar {
+  background-color: $red !important;
+}
+
+.bg-primary {
+  background-color: $red !important;
+}
+
+.navbar-light {
+  background-color: $red !important;
+  color: $white !important;
+}
+
+.navbar-dark {
+  background-color: $red !important;
+  color: $white !important;
+}

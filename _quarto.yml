@@ -10,7 +10,7 @@ manuscript:
 repo-url: https://github.com/gbv/bartoc-vocabulary-software
 
 resources:
-  - software.json
+  - kos-software.json
 
 format:
   html:

@@ -5,3 +5,14 @@ $primary: $red !default;
 
 $link-decoration: none;
 $link-hover-decoration: underline;
+
+/*-- scss:rules --*/
+.quarto-title-meta-heading { display: none; }
+.quarto-title.column-body { padding-bottom: 0.75em; }
+
+@media (min-width: 992px) {
+  .quarto-title-banner {
+    padding-top: 1.5em;
+    padding-bottom: 1em;
+  }
+}

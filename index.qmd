@@ -11,6 +11,13 @@ date: last-modified
 
 The terminology registry **[BARTOC](https://bartoc.org/)** collects information about knowledge organization systems or terminologies of all kinds (controlled vocabularies, classifications, ontologies, semantic artifacts...). This report summarizes information about software for management of these knowledge organization systems.
 
+## Existing lists
+
+* [Open Source KOS software](https://coli-conc.gbv.de/publications/tr2.html)
+* [Open Source web applications for Knowledge Organization Systems](https://coli-conc.gbv.de/publications/tr7.html) (2016)
+* [W3C SKOS Implementation Report](https://www.w3.org/2006/07/SWD/SKOS/reference/20090315/implementation.html) (2009) - the first one, now quite outdated but could be useful as reference
+* [http://recremisi.blogspot.de/p/acrolinxterminology-lifecycle.html](http://recremisi.blogspot.de/p/acrolinxterminology-lifecycle.html) and [http://term-portal.de/en/software-en/terminology-management.html](http://term-portal.de/en/software-en/terminology-management.html) for terminology software (excluded here)
+
 ## Scope
 
 The software should be primarily for editing, viewing and/or analyzing vocabularies. Software is not listed if it only happens to make use of terminologies (for instance OpenRefine) or if it only includes a minor terminology management module (such as most database management systems).
@@ -69,4 +76,33 @@ Field | Purpose
 `update` |
 
 Update year has been updated manually in February 2025 by inspecting the commit log and ommitting trivial changes.
+
+
+More to add:
+
+* [xTree](https://xtree-public.digicult-verbund.de/)
+* [DANTE](https://doi.org/10.11588/akmb.2018.1.63475)
+* [OntoBee](https://github.com/OntoZoo/ontobee) (2018)
+* [HIVE Vocabulary Server](https://github.com/MetadataResearchCenter/hive-mrc) (2015)
+* [OntoServer](https://ontoserver.csiro.au/) (Closed source, free in Australia)
+* TermCurator (developed to translate MeSH)
+
+## Related software
+
+The following software products support editing, viewing and/or analyzing controlled vocabularies but not as a core feature. They might be used for controlled vocabularies as well.
+
+| Name & URL | OS | edit | api | language | license | repository | update |
+|--|--|--|--|--|--|--|--|
+| [Aristotle Metadata Registry](http://aristotlemetadata.com/) | Web | yes | yes | Python/Django | Closed Source | [Github](https://github.com/Aristotle-Metadata-Enterprises/) | 2025 
+| [PoolParty Semantic Suite](https://www.poolparty.biz/product-overview) | ? | yes | ? | ? | Closed Source | - | 
+| [Apelon TermManager](https://www.apelon.com/solutions/terminology-tooling/termmanager) | Web | mappings | ? | ? | Closed Source | - | 2021
+| [Protégé](https://protege.stanford.edu/) | Java | yes | ? | Java | BSD | [GitHub](https://github.com/protegeproject/protege) | 2025
+| [excel2rdf](https://github.com/edmondchuc/excel2rdf) | - | yes | no | Python | GPL | [GitHub](https://github.com/edmondchuc/excel2rdf) | 2021
+| [TopBraid Composer](https://www.topquadrant.com/products/topbraid-composer/) | ? | yes | ? | ? | Closed Source | - | 2021
+
+Other generic software also used to manage controlled vocabularies:
+
+* Excel, Google Sheets or other spreadsheet software
+* Drupal
+* [Scripts to analyze concept drift](https://github.com/Multilingual-LGBTQIA-Vocabularies/Examing_LGBTQ_Concepts)
 

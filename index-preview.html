@@ -5,7 +5,7 @@
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-    <meta name="dcterms.date" content="2025-02-26">
+    <meta name="dcterms.date" content="2025-02-27">
 
     <title>Software for management of knowledge organization systems</title>
     <style>
@@ -162,10 +162,10 @@
 <script type="application/javascript">define('jquery', [],function() {return window.jQuery;})</script>  
       <meta name="citation_title" content="Software for management of knowledge organization systems">
 <meta name="citation_author" content="Jakob Voß">
-<meta name="citation_publication_date" content="2025-02-26">
-<meta name="citation_cover_date" content="2025-02-26">
+<meta name="citation_publication_date" content="2025-02-27">
+<meta name="citation_cover_date" content="2025-02-27">
 <meta name="citation_year" content="2025">
-<meta name="citation_online_date" content="2025-02-26">
+<meta name="citation_online_date" content="2025-02-27">
 <meta name="citation_language" content="en">
 </head>
 
@@ -207,7 +207,7 @@
                 <div>
             <div class="quarto-title-meta-heading">Published</div>
             <div class="quarto-title-meta-contents">
-              <p class="date">February 26, 2025</p>
+              <p class="date">February 27, 2025</p>
             </div>
           </div>
           
@@ -228,7 +228,8 @@
     <h2 id="toc-title">Table of contents</h2>
    
   <ul>
-  <li><a href="#scope" id="toc-scope" class="nav-link active" data-scroll-target="#scope">Scope</a></li>
+  <li><a href="#existing-lists" id="toc-existing-lists" class="nav-link active" data-scroll-target="#existing-lists">Existing lists</a></li>
+  <li><a href="#scope" id="toc-scope" class="nav-link" data-scroll-target="#scope">Scope</a></li>
   <li><a href="#summary" id="toc-summary" class="nav-link" data-scroll-target="#summary">Summary</a></li>
   </ul>
 </nav>
@@ -238,6 +239,15 @@
 <main class="content quarto-banner-title-block" id="quarto-document-content">      
 
        <p>The terminology registry <strong><a href="https://bartoc.org/">BARTOC</a></strong> collects information about knowledge organization systems or terminologies of all kinds (controlled vocabularies, classifications, ontologies, semantic artifacts…). This report summarizes information about software for management of these knowledge organization systems.</p>
+<section id="existing-lists" class="level2">
+<h2 class="anchored" data-anchor-id="existing-lists">Existing lists</h2>
+<ul>
+<li><a href="https://coli-conc.gbv.de/publications/tr2.html">Open Source KOS software</a></li>
+<li><a href="https://coli-conc.gbv.de/publications/tr7.html">Open Source web applications for Knowledge Organization Systems</a> (2016)</li>
+<li><a href="https://www.w3.org/2006/07/SWD/SKOS/reference/20090315/implementation.html">W3C SKOS Implementation Report</a> (2009) - the first one, now quite outdated but could be useful as reference</li>
+<li><a href="http://recremisi.blogspot.de/p/acrolinxterminology-lifecycle.html">http://recremisi.blogspot.de/p/acrolinxterminology-lifecycle.html</a> and <a href="http://term-portal.de/en/software-en/terminology-management.html">http://term-portal.de/en/software-en/terminology-management.html</a> for terminology software (excluded here)</li>
+</ul>
+</section>
 <section id="scope" class="level2">
 <h2 class="anchored" data-anchor-id="scope">Scope</h2>
 <p>The software should be primarily for editing, viewing and/or analyzing vocabularies. Software is not listed if it only happens to make use of terminologies (for instance OpenRefine) or if it only includes a minor terminology management module (such as most database management systems).</p>
@@ -276,7 +286,7 @@
 <span id="cb1-27"><a href="#cb1-27" aria-hidden="true" tabindex="-1"></a>df <span class="op">=</span> df.applymap(cell)</span>
 <span id="cb1-28"><a href="#cb1-28" aria-hidden="true" tabindex="-1"></a>display(HTML(df.to_html(escape<span class="op">=</span><span class="va">False</span>,index<span class="op">=</span><span class="va">False</span>)))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stderr">
-<pre><code>/tmp/ipykernel_2119/1890323354.py:27: FutureWarning: DataFrame.applymap has been deprecated. Use DataFrame.map instead.
+<pre><code>/tmp/ipykernel_2088/1890323354.py:27: FutureWarning: DataFrame.applymap has been deprecated. Use DataFrame.map instead.
   df = df.applymap(cell)</code></pre>
 </div>
 <div class="cell-container"><div class="cell-decorator"><pre>In [1]:</pre></div><div id="tbl-software" class="cell quarto-float quarto-figure quarto-figure-center anchored" data-execution_count="1">
@@ -667,7 +677,7 @@ Table&nbsp;1: Software comparison
 </figure>
 </div></div>
 </div></div>
-<div id="d44e701e" class="cell markdown">
+<div id="aa2a4e87" class="cell markdown">
 <p>Each software is described with the following fields:</p>
 <table class="caption-top table table-sm table-striped small">
 <colgroup>
@@ -720,6 +730,101 @@ Table&nbsp;1: Software comparison
 </tbody>
 </table>
 <p>Update year has been updated manually in February 2025 by inspecting the commit log and ommitting trivial changes.</p>
+<p>More to add:</p>
+<ul>
+<li><a href="https://xtree-public.digicult-verbund.de/">xTree</a></li>
+<li><a href="https://doi.org/10.11588/akmb.2018.1.63475">DANTE</a></li>
+<li><a href="https://github.com/OntoZoo/ontobee">OntoBee</a> (2018)</li>
+<li><a href="https://github.com/MetadataResearchCenter/hive-mrc">HIVE Vocabulary Server</a> (2015)</li>
+<li><a href="https://ontoserver.csiro.au/">OntoServer</a> (Closed source, free in Australia)</li>
+<li>TermCurator (developed to translate MeSH)</li>
+</ul>
+<section id="related-software" class="level2">
+<h2 class="anchored" data-anchor-id="related-software">Related software</h2>
+<p>The following software products support editing, viewing and/or analyzing controlled vocabularies but not as a core feature. They might be used for controlled vocabularies as well.</p>
+<table class="caption-top table table-sm table-striped small">
+<thead>
+<tr class="header">
+<th>Name &amp; URL</th>
+<th>OS</th>
+<th>edit</th>
+<th>api</th>
+<th>language</th>
+<th>license</th>
+<th>repository</th>
+<th>update</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><a href="http://aristotlemetadata.com/">Aristotle Metadata Registry</a></td>
+<td>Web</td>
+<td>yes</td>
+<td>yes</td>
+<td>Python/Django</td>
+<td>Closed Source</td>
+<td><a href="https://github.com/Aristotle-Metadata-Enterprises/">Github</a></td>
+<td>2025</td>
+</tr>
+<tr class="even">
+<td><a href="https://www.poolparty.biz/product-overview">PoolParty Semantic Suite</a></td>
+<td>?</td>
+<td>yes</td>
+<td>?</td>
+<td>?</td>
+<td>Closed Source</td>
+<td>-</td>
+<td></td>
+</tr>
+<tr class="odd">
+<td><a href="https://www.apelon.com/solutions/terminology-tooling/termmanager">Apelon TermManager</a></td>
+<td>Web</td>
+<td>mappings</td>
+<td>?</td>
+<td>?</td>
+<td>Closed Source</td>
+<td>-</td>
+<td>2021</td>
+</tr>
+<tr class="even">
+<td><a href="https://protege.stanford.edu/">Protégé</a></td>
+<td>Java</td>
+<td>yes</td>
+<td>?</td>
+<td>Java</td>
+<td>BSD</td>
+<td><a href="https://github.com/protegeproject/protege">GitHub</a></td>
+<td>2025</td>
+</tr>
+<tr class="odd">
+<td><a href="https://github.com/edmondchuc/excel2rdf">excel2rdf</a></td>
+<td>-</td>
+<td>yes</td>
+<td>no</td>
+<td>Python</td>
+<td>GPL</td>
+<td><a href="https://github.com/edmondchuc/excel2rdf">GitHub</a></td>
+<td>2021</td>
+</tr>
+<tr class="even">
+<td><a href="https://www.topquadrant.com/products/topbraid-composer/">TopBraid Composer</a></td>
+<td>?</td>
+<td>yes</td>
+<td>?</td>
+<td>?</td>
+<td>Closed Source</td>
+<td>-</td>
+<td>2021</td>
+</tr>
+</tbody>
+</table>
+<p>Other generic software also used to manage controlled vocabularies:</p>
+<ul>
+<li>Excel, Google Sheets or other spreadsheet software</li>
+<li>Drupal</li>
+<li><a href="https://github.com/Multilingual-LGBTQIA-Vocabularies/Examing_LGBTQ_Concepts">Scripts to analyze concept drift</a></li>
+</ul>
+</section>
 </div>
 </section>
      </main>

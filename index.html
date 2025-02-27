@@ -6,7 +6,7 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="dcterms.date" content="2025-02-26">
+<meta name="dcterms.date" content="2025-02-27">
 
 <title>Software for management of knowledge organization systems</title>
 <style>
@@ -41,10 +41,10 @@ ul.task-list li input[type="checkbox"] {
 
 <meta name="citation_title" content="Software for management of knowledge organization systems">
 <meta name="citation_author" content="Jakob Voß">
-<meta name="citation_publication_date" content="2025-02-26">
-<meta name="citation_cover_date" content="2025-02-26">
+<meta name="citation_publication_date" content="2025-02-27">
+<meta name="citation_cover_date" content="2025-02-27">
 <meta name="citation_year" content="2025">
-<meta name="citation_online_date" content="2025-02-26">
+<meta name="citation_online_date" content="2025-02-27">
 <meta name="citation_language" content="en">
 </head>
 
@@ -79,7 +79,7 @@ ul.task-list li input[type="checkbox"] {
                 <div>
             <div class="quarto-title-meta-heading">Published</div>
             <div class="quarto-title-meta-contents">
-              <p class="date">February 26, 2025</p>
+              <p class="date">February 27, 2025</p>
             </div>
           </div>
           
@@ -100,8 +100,10 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">Table of contents</h2>
    
   <ul>
-  <li><a href="#scope" id="toc-scope" class="nav-link active" data-scroll-target="#scope">Scope</a></li>
+  <li><a href="#existing-lists" id="toc-existing-lists" class="nav-link active" data-scroll-target="#existing-lists">Existing lists</a></li>
+  <li><a href="#scope" id="toc-scope" class="nav-link" data-scroll-target="#scope">Scope</a></li>
   <li><a href="#summary" id="toc-summary" class="nav-link" data-scroll-target="#summary">Summary</a></li>
+  <li><a href="#related-software" id="toc-related-software" class="nav-link" data-scroll-target="#related-software">Related software</a></li>
   </ul>
 </nav>
 </div>
@@ -115,6 +117,15 @@ ul.task-list li input[type="checkbox"] {
 
 
 <p>The terminology registry <strong><a href="https://bartoc.org/">BARTOC</a></strong> collects information about knowledge organization systems or terminologies of all kinds (controlled vocabularies, classifications, ontologies, semantic artifacts…). This report summarizes information about software for management of these knowledge organization systems.</p>
+<section id="existing-lists" class="level2">
+<h2 class="anchored" data-anchor-id="existing-lists">Existing lists</h2>
+<ul>
+<li><a href="https://coli-conc.gbv.de/publications/tr2.html">Open Source KOS software</a></li>
+<li><a href="https://coli-conc.gbv.de/publications/tr7.html">Open Source web applications for Knowledge Organization Systems</a> (2016)</li>
+<li><a href="https://www.w3.org/2006/07/SWD/SKOS/reference/20090315/implementation.html">W3C SKOS Implementation Report</a> (2009) - the first one, now quite outdated but could be useful as reference</li>
+<li><a href="http://recremisi.blogspot.de/p/acrolinxterminology-lifecycle.html">http://recremisi.blogspot.de/p/acrolinxterminology-lifecycle.html</a> and <a href="http://term-portal.de/en/software-en/terminology-management.html">http://term-portal.de/en/software-en/terminology-management.html</a> for terminology software (excluded here)</li>
+</ul>
+</section>
 <section id="scope" class="level2">
 <h2 class="anchored" data-anchor-id="scope">Scope</h2>
 <p>The software should be primarily for editing, viewing and/or analyzing vocabularies. Software is not listed if it only happens to make use of terminologies (for instance OpenRefine) or if it only includes a minor terminology management module (such as most database management systems).</p>
@@ -564,6 +575,101 @@ Table&nbsp;1: Software comparison
 </tbody>
 </table>
 <p>Update year has been updated manually in February 2025 by inspecting the commit log and ommitting trivial changes.</p>
+<p>More to add:</p>
+<ul>
+<li><a href="https://xtree-public.digicult-verbund.de/">xTree</a></li>
+<li><a href="https://doi.org/10.11588/akmb.2018.1.63475">DANTE</a></li>
+<li><a href="https://github.com/OntoZoo/ontobee">OntoBee</a> (2018)</li>
+<li><a href="https://github.com/MetadataResearchCenter/hive-mrc">HIVE Vocabulary Server</a> (2015)</li>
+<li><a href="https://ontoserver.csiro.au/">OntoServer</a> (Closed source, free in Australia)</li>
+<li>TermCurator (developed to translate MeSH)</li>
+</ul>
+</section>
+<section id="related-software" class="level2">
+<h2 class="anchored" data-anchor-id="related-software">Related software</h2>
+<p>The following software products support editing, viewing and/or analyzing controlled vocabularies but not as a core feature. They might be used for controlled vocabularies as well.</p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>Name &amp; URL</th>
+<th>OS</th>
+<th>edit</th>
+<th>api</th>
+<th>language</th>
+<th>license</th>
+<th>repository</th>
+<th>update</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><a href="http://aristotlemetadata.com/">Aristotle Metadata Registry</a></td>
+<td>Web</td>
+<td>yes</td>
+<td>yes</td>
+<td>Python/Django</td>
+<td>Closed Source</td>
+<td><a href="https://github.com/Aristotle-Metadata-Enterprises/">Github</a></td>
+<td>2025</td>
+</tr>
+<tr class="even">
+<td><a href="https://www.poolparty.biz/product-overview">PoolParty Semantic Suite</a></td>
+<td>?</td>
+<td>yes</td>
+<td>?</td>
+<td>?</td>
+<td>Closed Source</td>
+<td>-</td>
+<td></td>
+</tr>
+<tr class="odd">
+<td><a href="https://www.apelon.com/solutions/terminology-tooling/termmanager">Apelon TermManager</a></td>
+<td>Web</td>
+<td>mappings</td>
+<td>?</td>
+<td>?</td>
+<td>Closed Source</td>
+<td>-</td>
+<td>2021</td>
+</tr>
+<tr class="even">
+<td><a href="https://protege.stanford.edu/">Protégé</a></td>
+<td>Java</td>
+<td>yes</td>
+<td>?</td>
+<td>Java</td>
+<td>BSD</td>
+<td><a href="https://github.com/protegeproject/protege">GitHub</a></td>
+<td>2025</td>
+</tr>
+<tr class="odd">
+<td><a href="https://github.com/edmondchuc/excel2rdf">excel2rdf</a></td>
+<td>-</td>
+<td>yes</td>
+<td>no</td>
+<td>Python</td>
+<td>GPL</td>
+<td><a href="https://github.com/edmondchuc/excel2rdf">GitHub</a></td>
+<td>2021</td>
+</tr>
+<tr class="even">
+<td><a href="https://www.topquadrant.com/products/topbraid-composer/">TopBraid Composer</a></td>
+<td>?</td>
+<td>yes</td>
+<td>?</td>
+<td>?</td>
+<td>Closed Source</td>
+<td>-</td>
+<td>2021</td>
+</tr>
+</tbody>
+</table>
+<p>Other generic software also used to manage controlled vocabularies:</p>
+<ul>
+<li>Excel, Google Sheets or other spreadsheet software</li>
+<li>Drupal</li>
+<li><a href="https://github.com/Multilingual-LGBTQIA-Vocabularies/Examing_LGBTQ_Concepts">Scripts to analyze concept drift</a></li>
+</ul>
 </section>
 
 </main>

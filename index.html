@@ -33,7 +33,7 @@ ul.task-list li input[type="checkbox"] {
 <link href="site_libs/quarto-html/quarto-syntax-highlighting-36ccbafc264a5c16b46fd6af2d80096c.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-9282a8eda7f6fc7282bd2bb9198f8d49.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-135f442bf5d1cf8619ae90e18dc6faaf.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.6/require.min.js" integrity="sha512-c3Nl8+7g4LMSTdrm621y7kf9v3SDPnhxLNhcjFJbKECVnmZHTdo+IRO05sNLTH/D3vA6u1X32ehoLC7WFVdheg==" crossorigin="anonymous"></script>
 
 <script type="application/javascript">define('jquery', [],function() {return window.jQuery;})</script>
@@ -100,10 +100,16 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">Table of contents</h2>
    
   <ul>
-  <li><a href="#existing-lists" id="toc-existing-lists" class="nav-link active" data-scroll-target="#existing-lists">Existing lists</a></li>
-  <li><a href="#scope" id="toc-scope" class="nav-link" data-scroll-target="#scope">Scope</a></li>
-  <li><a href="#summary" id="toc-summary" class="nav-link" data-scroll-target="#summary">Summary</a></li>
-  <li><a href="#related-software" id="toc-related-software" class="nav-link" data-scroll-target="#related-software">Related software</a></li>
+  <li><a href="#scope" id="toc-scope" class="nav-link active" data-scroll-target="#scope">Scope</a></li>
+  <li><a href="#specialized-software" id="toc-specialized-software" class="nav-link" data-scroll-target="#specialized-software">Specialized Software</a></li>
+  <li><a href="#related-software" id="toc-related-software" class="nav-link" data-scroll-target="#related-software">Related software</a>
+  <ul class="collapse">
+  <li><a href="#generic-software" id="toc-generic-software" class="nav-link" data-scroll-target="#generic-software">Generic software</a></li>
+  <li><a href="#content-management-systems" id="toc-content-management-systems" class="nav-link" data-scroll-target="#content-management-systems">Content Management Systems</a></li>
+  <li><a href="#hosted-services" id="toc-hosted-services" class="nav-link" data-scroll-target="#hosted-services">Hosted services</a></li>
+  <li><a href="#terminology-management" id="toc-terminology-management" class="nav-link" data-scroll-target="#terminology-management">Terminology management</a></li>
+  </ul></li>
+  <li><a href="#references" id="toc-references" class="nav-link" data-scroll-target="#references">References</a></li>
   </ul>
 </nav>
 </div>
@@ -116,33 +122,74 @@ ul.task-list li input[type="checkbox"] {
   
 
 
-<p>The terminology registry <strong><a href="https://bartoc.org/">BARTOC</a></strong> collects information about knowledge organization systems or terminologies of all kinds (controlled vocabularies, classifications, ontologies, semantic artifacts…). This report summarizes information about software for management of these knowledge organization systems.</p>
-<section id="existing-lists" class="level2">
-<h2 class="anchored" data-anchor-id="existing-lists">Existing lists</h2>
-<ul>
-<li><a href="https://coli-conc.gbv.de/publications/tr2.html">Open Source KOS software</a></li>
-<li><a href="https://coli-conc.gbv.de/publications/tr7.html">Open Source web applications for Knowledge Organization Systems</a> (2016)</li>
-<li><a href="https://www.w3.org/2006/07/SWD/SKOS/reference/20090315/implementation.html">W3C SKOS Implementation Report</a> (2009) - the first one, now quite outdated but could be useful as reference</li>
-<li><a href="http://recremisi.blogspot.de/p/acrolinxterminology-lifecycle.html">http://recremisi.blogspot.de/p/acrolinxterminology-lifecycle.html</a> and <a href="http://term-portal.de/en/software-en/terminology-management.html">http://term-portal.de/en/software-en/terminology-management.html</a> for terminology software (excluded here)</li>
-</ul>
-</section>
+<p>The terminology registry <strong><a href="https://bartoc.org/">BARTOC</a></strong> collects information about all kinds of <strong>knowledge organization systems</strong> (KOS) such as controlled vocabularies, classifications, ontologies, and other semantic artifacts. This report summarizes information about software for KOS management.</p>
 <section id="scope" class="level2">
 <h2 class="anchored" data-anchor-id="scope">Scope</h2>
-<p>The software should be primarily for editing, viewing and/or analyzing vocabularies. Software is not listed if it only happens to make use of terminologies (for instance OpenRefine) or if it only includes a minor terminology management module (such as most database management systems).</p>
-<p>Closed source software is only included if it is very specific to manage vocabularies</p>
-<p>Software limited to simple terminologies for translation and glossaries are not included. This also excludes the category of software known as “terminology management” to manage a centralized repository of approved terms, definitions, and translations in an organization.</p>
+<p>This report is limited to <a href="#specialized-software">software specialized</a> for editing, vizualizing and/or analyzing terminologies.<a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a> Software excluded if:</p>
+<ul>
+<li>it only happens to make use of terminologies (for instance OpenRefine), or</li>
+<li>it only contains a minor terminology management module (for instance <a href="#content-management-systems">content management systems</a>, or</li>
+<li>it can only be used as <a href="#hosted-services">hosted service</a> (for instance DANTE), or</li>
+<li>the type of terminologies managed with the software is limited to glossaries and simple lists of terms.</li>
+</ul>
+<p>This also excludes the established category of software known as “<a href="#terminology-management">terminology management</a>” to manage a centralized repository of approved terms, definitions, and translations in an organization. Related KOS software is partly <a href="#related-software">listed or referenced below</a>.</p>
+<p>The terminology software is listed <a href="kos-software.json">in a JSON file</a> as array of flat records with the following fields:</p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 25%">
+<col style="width: 75%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Field</th>
+<th>Purpose</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><code>name</code></td>
+<td>Name of the software</td>
+</tr>
+<tr class="even">
+<td><code>url</code></td>
+<td>Homepage</td>
+</tr>
+<tr class="odd">
+<td><code>platform</code></td>
+<td>Operating System or similar dependency (Web application, CLI…)</td>
+</tr>
+<tr class="even">
+<td><code>api</code></td>
+<td>whether a web service or similar API is provided to connect to</td>
+</tr>
+<tr class="odd">
+<td><code>edit</code></td>
+<td>whether vocabularies can be modified with the software</td>
+</tr>
+<tr class="even">
+<td><code>language</code></td>
+<td>programming language(s) of the software</td>
+</tr>
+<tr class="odd">
+<td><code>license</code></td>
+<td>license of the software</td>
+</tr>
+<tr class="even">
+<td><code>repository</code></td>
+<td>Source Code repository</td>
+</tr>
+<tr class="odd">
+<td><code>update</code></td>
+<td>year of most recent update of the software</td>
+</tr>
+</tbody>
+</table>
 </section>
-<section id="summary" class="level2">
-<h2 class="anchored" data-anchor-id="summary">Summary</h2>
-<div class="cell" data-execution_count="1">
-<div id="tbl-software" class="cell quarto-float quarto-figure quarto-figure-center anchored" data-execution_count="1">
-<figure class="quarto-float quarto-float-tbl figure">
-<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-software-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Table&nbsp;1: Software comparison
-</figcaption>
-<div aria-describedby="tbl-software-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<section id="specialized-software" class="level2">
+<h2 class="anchored" data-anchor-id="specialized-software">Specialized Software</h2>
+<div id="tbl-software" class="cell anchored" data-execution_count="1">
 <div class="cell-output cell-output-display">
-<table class="dataframe do-not-create-environment cell caption-top table table-sm table-striped small" data-quarto-postprocess="true" data-border="1">
+<table class="dataframe caption-top table table-sm table-striped small" data-quarto-postprocess="true" data-border="1">
 <thead>
 <tr class="header">
 <th data-quarto-table-cell-role="th">name</th>
@@ -313,7 +360,7 @@ Table&nbsp;1: Software comparison
 <td>-</td>
 <td>Java</td>
 <td>Closed Source</td>
-<td>NaN</td>
+<td></td>
 <td>2025</td>
 </tr>
 <tr class="odd">
@@ -506,83 +553,19 @@ Table&nbsp;1: Software comparison
 <td><a href="https://sourceforge.net/projects/thmanager/">sourceforge</a></td>
 <td>2006</td>
 </tr>
-<tr class="even">
-<td>sheet2rdf</td>
-<td>?</td>
-<td>✓</td>
-<td>-</td>
-<td>Python</td>
-<td>Apache</td>
-<td>NaN</td>
-<td>2021</td>
-</tr>
 </tbody>
 </table>
 </div>
 </div>
-</figure>
-</div>
-</div>
-<p>Each software is described with the following fields:</p>
-<table class="caption-top table">
-<colgroup>
-<col style="width: 42%">
-<col style="width: 57%">
-</colgroup>
-<thead>
-<tr class="header">
-<th>Field</th>
-<th>Purpose</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td><code>name</code></td>
-<td>Name of the software</td>
-</tr>
-<tr class="even">
-<td><code>url</code></td>
-<td>Homepage</td>
-</tr>
-<tr class="odd">
-<td><code>platform</code></td>
-<td>Operating System or similar dependency (Web application, CLI…)</td>
-</tr>
-<tr class="even">
-<td><code>api</code></td>
-<td>whether a web service or similar API is provided to connect to</td>
-</tr>
-<tr class="odd">
-<td><code>edit</code></td>
-<td>whether vocabularies can be modified with the software</td>
-</tr>
-<tr class="even">
-<td><code>language</code></td>
-<td></td>
-</tr>
-<tr class="odd">
-<td><code>license</code></td>
-<td></td>
-</tr>
-<tr class="even">
-<td><code>repository</code></td>
-<td>Source Code repository</td>
-</tr>
-<tr class="odd">
-<td><code>update</code></td>
-<td></td>
-</tr>
-</tbody>
-</table>
-<p>Update year has been updated manually in February 2025 by inspecting the commit log and ommitting trivial changes.</p>
-<p>More to add:</p>
+<p>TODO: More to add:</p>
 <ul>
-<li><a href="https://xtree-public.digicult-verbund.de/">xTree</a></li>
-<li><a href="https://doi.org/10.11588/akmb.2018.1.63475">DANTE</a></li>
+<li>sheet2rdf?</li>
+<li><a href="https://github.com/nfdi4cat/voc4cat-tool/">voc4cat</a></li>
 <li><a href="https://github.com/OntoZoo/ontobee">OntoBee</a> (2018)</li>
 <li><a href="https://github.com/MetadataResearchCenter/hive-mrc">HIVE Vocabulary Server</a> (2015)</li>
 <li><a href="https://ontoserver.csiro.au/">OntoServer</a> (Closed source, free in Australia)</li>
 <li>TermCurator (developed to translate MeSH)</li>
+<li><a href="https://github.com/Multilingual-LGBTQIA-Vocabularies/Examing_LGBTQ_Concepts">Scripts to analyze concept drift</a></li>
 </ul>
 </section>
 <section id="related-software" class="level2">
@@ -664,15 +647,45 @@ Table&nbsp;1: Software comparison
 </tr>
 </tbody>
 </table>
-<p>Other generic software also used to manage controlled vocabularies:</p>
+<section id="generic-software" class="level3">
+<h3 class="anchored" data-anchor-id="generic-software">Generic software</h3>
+<p>Simple terminologies can be managed in a spreadsheet (LibreOffice Calc, Excel, Google Sheets…). This software lacks most special functionality for terminology management but the usability and accesibility is very high.</p>
+<p>The same applies to database management systems with some additional features such as unique key constraints but less usability.</p>
+<p>Terminologies can also be managed in files for instance in RDF/Turtle syntax. This only requires a text editor but the risk is high to introduce errors.</p>
+</section>
+<section id="content-management-systems" class="level3">
+<h3 class="anchored" data-anchor-id="content-management-systems">Content Management Systems</h3>
+<p>Several Content Management Systems (CMS) allow to manage a list or hierarchy of topics or other entities for knowledge managements. If these lists can be exported, the CMS can be applied to manage terminologies. An example is Drupal, which was used for the first version of BARTOC terminology registry.</p>
+</section>
+<section id="hosted-services" class="level3">
+<h3 class="anchored" data-anchor-id="hosted-services">Hosted services</h3>
 <ul>
-<li>Excel, Google Sheets or other spreadsheet software</li>
-<li>Drupal</li>
-<li><a href="https://github.com/Multilingual-LGBTQIA-Vocabularies/Examing_LGBTQ_Concepts">Scripts to analyze concept drift</a></li>
+<li><a href="https://doi.org/10.11588/akmb.2018.1.63475">DANTE</a></li>
+<li><a href="https://xtree-public.digicult-verbund.de/">xTree</a></li>
+</ul>
+</section>
+<section id="terminology-management" class="level3">
+<h3 class="anchored" data-anchor-id="terminology-management">Terminology management</h3>
+<p>See <a href="http://recremisi.blogspot.de/p/acrolinxterminology-lifecycle.html">http://recremisi.blogspot.de/p/acrolinxterminology-lifecycle.html</a> and <a href="http://term-portal.de/en/software-en/terminology-management.html">http://term-portal.de/en/software-en/terminology-management.html</a>.</p>
+</section>
+</section>
+<section id="references" class="level2">
+<h2 class="anchored" data-anchor-id="references">References</h2>
+<p>Some outdated lists of terminology software:</p>
+<ul>
+<li><a href="https://coli-conc.gbv.de/publications/tr2.html">Open Source KOS software</a></li>
+<li><a href="https://coli-conc.gbv.de/publications/tr7.html">Open Source web applications for Knowledge Organization Systems</a> (2016)</li>
+<li><a href="https://www.w3.org/2006/07/SWD/SKOS/reference/20090315/implementation.html">W3C SKOS Implementation Report</a> (2009) - the first one, now quite outdated but could be useful as reference</li>
 </ul>
 </section>
 
-</main>
+
+<div id="quarto-appendix" class="default"><section id="footnotes" class="footnotes footnotes-end-of-document" role="doc-endnotes"><h2 class="anchored quarto-appendix-heading">Footnotes</h2>
+
+<ol>
+<li id="fn1"><p>The term “terminology” in this document is used as synonym for all kinds of knowledge organization systems.<a href="#fnref1" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+</ol>
+</section></div></main>
 <!-- /main column -->
 <script id="quarto-html-after-body" type="application/javascript">
 window.document.addEventListener("DOMContentLoaded", function (event) {

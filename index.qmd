@@ -9,28 +9,39 @@ bibliography: references.bib
 date: last-modified
 ---
 
-The terminology registry **[BARTOC](https://bartoc.org/)** collects information about knowledge organization systems or terminologies of all kinds (controlled vocabularies, classifications, ontologies, semantic artifacts...). This report summarizes information about software for management of these knowledge organization systems.
-
-## Existing lists
-
-* [Open Source KOS software](https://coli-conc.gbv.de/publications/tr2.html)
-* [Open Source web applications for Knowledge Organization Systems](https://coli-conc.gbv.de/publications/tr7.html) (2016)
-* [W3C SKOS Implementation Report](https://www.w3.org/2006/07/SWD/SKOS/reference/20090315/implementation.html) (2009) - the first one, now quite outdated but could be useful as reference
-* [http://recremisi.blogspot.de/p/acrolinxterminology-lifecycle.html](http://recremisi.blogspot.de/p/acrolinxterminology-lifecycle.html) and [http://term-portal.de/en/software-en/terminology-management.html](http://term-portal.de/en/software-en/terminology-management.html) for terminology software (excluded here)
+The terminology registry **[BARTOC](https://bartoc.org/)** collects information about all kinds of **knowledge organization systems** (KOS) such as controlled vocabularies, classifications, ontologies, and other semantic artifacts. This report summarizes information about software for KOS management.
 
 ## Scope
 
-The software should be primarily for editing, viewing and/or analyzing vocabularies. Software is not listed if it only happens to make use of terminologies (for instance OpenRefine) or if it only includes a minor terminology management module (such as most database management systems).
+This report is limited to [software specialized](#specialized-software) for editing, vizualizing and/or analyzing terminologies.^[The term "terminology" in this document is used as synonym for all kinds of knowledge organization systems.] Software excluded if:
 
-Closed source software is only included if it is very specific to manage vocabularies
+- it only happens to make use of terminologies (for instance OpenRefine), or
+- it only contains a minor terminology management module (for instance [content management systems], or
+- it can only be used as [hosted service](#hosted-services) (for instance DANTE), or
+- the type of terminologies managed with the software is limited to glossaries and simple lists of terms.
 
-Software limited to simple terminologies for translation and glossaries are not included. This also excludes the category of software known as "terminology management" to manage a centralized repository of approved terms, definitions, and translations in an organization.
+This also excludes the established category of software known as "[terminology management]" to manage a centralized repository of approved terms, definitions, and translations in an organization. Related KOS software is partly [listed or referenced below](#related-software).
 
-## Summary
+The terminology software is listed [in a JSON file](kos-software.json) as array of flat records with the following fields:
+
+Field | Purpose
+------|--------
+`name` | Name of the software
+`url` | Homepage
+`platform` | Operating System or similar dependency (Web application, CLI...) 
+`api` | whether a web service or similar API is provided to connect to
+`edit` | whether vocabularies can be modified with the software
+`language` | programming language(s) of the software
+`license` | license of the software
+`repository` | Source Code repository
+`update` | year of most recent update of the software
+
+: {tbl-colwidths="[25,75]"}
+
+## Specialized Software
 
 ```{python}
 #| label: tbl-software
-#| tbl-cap: Software comparison
 from IPython.display import Markdown
 from tabulate import tabulate
 import pandas as pd
@@ -47,13 +58,15 @@ def hyperlink(row):
 def cell(value):
     if isinstance(value, bool):
         return "✓" if value else "-"
-    elif isinstance(value, str) and re.match(r"^https?://",value):
+    elif type(value) is str and re.match(r"^https?://",value):
         url = urlparse(value)
         host = url.hostname.split(".")[-2]
         return f'<a href="{value}">{host}</a>'
-    return value # html.escape(value)
+    elif pd.notna(value):
+        return value
+    return ""
 
-df = pd.read_json('software.json')
+df = pd.read_json('kos-software.json')
 
 df["name"] = df.apply(hyperlink, axis=1)
 df = df.drop(columns=["url"])
@@ -61,31 +74,15 @@ df = df.applymap(cell)
 display(HTML(df.to_html(escape=False,index=False)))
 ```
 
-Each software is described with the following fields:
+TODO: More to add:
 
-Field | Purpose
-------|--------
-`name` | Name of the software
-`url` | Homepage
-`platform` | Operating System or similar dependency (Web application, CLI...) 
-`api` | whether a web service or similar API is provided to connect to
-`edit` | whether vocabularies can be modified with the software
-`language` |
-`license` |
-`repository` | Source Code repository
-`update` |
-
-Update year has been updated manually in February 2025 by inspecting the commit log and ommitting trivial changes.
-
-
-More to add:
-
-* [xTree](https://xtree-public.digicult-verbund.de/)
-* [DANTE](https://doi.org/10.11588/akmb.2018.1.63475)
-* [OntoBee](https://github.com/OntoZoo/ontobee) (2018)
-* [HIVE Vocabulary Server](https://github.com/MetadataResearchCenter/hive-mrc) (2015)
-* [OntoServer](https://ontoserver.csiro.au/) (Closed source, free in Australia)
-* TermCurator (developed to translate MeSH)
+- sheet2rdf?
+- [voc4cat](https://github.com/nfdi4cat/voc4cat-tool/)
+- [OntoBee](https://github.com/OntoZoo/ontobee) (2018)
+- [HIVE Vocabulary Server](https://github.com/MetadataResearchCenter/hive-mrc) (2015)
+- [OntoServer](https://ontoserver.csiro.au/) (Closed source, free in Australia)
+- TermCurator (developed to translate MeSH)
+- [Scripts to analyze concept drift](https://github.com/Multilingual-LGBTQIA-Vocabularies/Examing_LGBTQ_Concepts)
 
 ## Related software
 
@@ -100,9 +97,32 @@ The following software products support editing, viewing and/or analyzing contro
 | [excel2rdf](https://github.com/edmondchuc/excel2rdf) | - | yes | no | Python | GPL | [GitHub](https://github.com/edmondchuc/excel2rdf) | 2021
 | [TopBraid Composer](https://www.topquadrant.com/products/topbraid-composer/) | ? | yes | ? | ? | Closed Source | - | 2021
 
-Other generic software also used to manage controlled vocabularies:
+### Generic software
 
-* Excel, Google Sheets or other spreadsheet software
-* Drupal
-* [Scripts to analyze concept drift](https://github.com/Multilingual-LGBTQIA-Vocabularies/Examing_LGBTQ_Concepts)
+Simple terminologies can be managed in a spreadsheet (LibreOffice Calc, Excel, Google Sheets...). This software lacks most special functionality for terminology management but the usability and accesibility is very high.
+
+The same applies to database management systems with some additional features such as unique key constraints but less usability.
+
+Terminologies can also be managed in files for instance in RDF/Turtle syntax. This only requires a text editor but the risk is high to introduce errors.
+
+### Content Management Systems
+
+Several Content Management Systems (CMS) allow to manage a list or hierarchy of topics or other entities for knowledge managements. If these lists can be exported, the CMS can be applied to manage terminologies. An example is Drupal, which was used for the first version of BARTOC terminology registry.
+
+### Hosted services
+
+- [DANTE](https://doi.org/10.11588/akmb.2018.1.63475)
+- [xTree](https://xtree-public.digicult-verbund.de/)
+
+### Terminology management
+
+See [http://recremisi.blogspot.de/p/acrolinxterminology-lifecycle.html](http://recremisi.blogspot.de/p/acrolinxterminology-lifecycle.html) and [http://term-portal.de/en/software-en/terminology-management.html](http://term-portal.de/en/software-en/terminology-management.html).
+
+## References
+
+Some outdated lists of terminology software:
+
+- [Open Source KOS software](https://coli-conc.gbv.de/publications/tr2.html)
+- [Open Source web applications for Knowledge Organization Systems](https://coli-conc.gbv.de/publications/tr7.html) (2016)
+- [W3C SKOS Implementation Report](https://www.w3.org/2006/07/SWD/SKOS/reference/20090315/implementation.html) (2009) - the first one, now quite outdated but could be useful as reference
 

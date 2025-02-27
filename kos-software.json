@@ -377,14 +377,5 @@
     "license": "LGPL",
     "repository": "https://sourceforge.net/projects/thmanager/",
     "update": "2006"
-  },
-  {
-    "name": "sheet2rdf",
-    "platform": "?",
-    "api": false,
-    "edit": true,
-    "language": "Python",
-    "license": "Apache",
-    "update": "2021"
   }
 ]

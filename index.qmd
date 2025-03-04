@@ -9,11 +9,11 @@ bibliography: references.bib
 date: last-modified
 ---
 
-The terminology registry **[BARTOC](https://bartoc.org/)** collects information about all kinds of **knowledge organization systems** (KOS) such as controlled vocabularies, classifications, ontologies, and other semantic artifacts. This report summarizes information about software for KOS management.
+The terminology registry **[BARTOC](https://bartoc.org/)** collects information about all kinds of **knowledge organization systems** (KOS) such as controlled vocabularies, classifications, ontologies, and other semantic artifacts. This report summarizes information about [software for KOS management](#specialized-software).
 
 ## Scope
 
-This report is limited to [software specialized](#specialized-software) for editing, vizualizing and/or analyzing terminologies (the term "terminology" in this document is used as synonym for all kinds of KOS). Software is excluded if:
+This report is limited to **[software specialized](#specialized-software) for editing, vizualizing and/or analyzing terminologies.** The term "terminology" in this document is used as synonym for all kinds of KOS. Software is excluded if:
 
 - it only happens to make use of terminologies (for instance OpenRefine), or
 - it is more [generic software] that can be used for terminology management among other use cases (like database mamagement systems), or
@@ -22,23 +22,7 @@ This report is limited to [software specialized](#specialized-software) for edit
 
 This also excludes the established category of software known as "[terminology management]" to manage a centralized repository of approved terms, definitions, and translations in an organization. Related KOS software is partly [listed or referenced below](#other-software).
 
-Deprecated applications are not excluded for historical reference.
-
-The terminology software is listed [in a JSON file](kos-software.json) as array of flat records with the following fields:
-
-Field | Purpose
-------|--------
-`name` | Name of the software
-`url` | Homepage
-`platform` | Operating System or similar dependency (Web application, CLI...) 
-`api` | whether a web service or similar API is provided to connect to
-`edit` | whether vocabularies can be modified with the software
-`language` | programming language(s) of the software
-`license` | license of the software
-`repository` | Source Code repository
-`update` | year of most recent update of the software
-
-: {tbl-colwidths="[25,75]"}
+Deprecated applications are included for historical reference.
 
 ## Specialized Software
 
@@ -85,6 +69,26 @@ The following applications, scripts, and/or libraries may also worth to consider
 - TS4NFDI API Gateway
 - TS4NFDI Widgets
 - [Scripts to analyze concept drift](https://github.com/Multilingual-LGBTQIA-Vocabularies/Examing_LGBTQ_Concepts)
+
+## Data
+
+The terminology software is listed [in a JSON file](kos-software.json) as array of flat records with the following fields:
+
+Field | Purpose
+------|--------
+`name` | Name of the software
+`url` | Homepage
+`platform` | Operating System or similar dependency (Web application, CLI...) 
+`api` | whether a web service or similar API is provided to connect to
+`edit` | whether vocabularies can be modified with the software
+`language` | programming language(s) of the software
+`license` | license of the software
+`repository` | Source Code repository
+`update` | year of most recent update of the software
+`category` | type of software
+
+: {tbl-colwidths="[25,75]"}
+
 
 ## Other software
 

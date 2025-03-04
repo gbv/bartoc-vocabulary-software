@@ -11,10 +11,14 @@ repo-url: https://github.com/gbv/bartoc-vocabulary-software
 
 resources:
   - kos-software.json
+  - bartoc-logo.svg
 
 format:
   html:
     highlight-style: kate
     notebook-links: false
     theme: custom.scss
+    favicon: bartoc-icon.png 
+    template-partials:
+      - toc.html
   # pdf: default

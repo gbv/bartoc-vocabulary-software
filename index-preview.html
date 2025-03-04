@@ -246,15 +246,15 @@
 <p>This report is limited to <strong><a href="#specialized-software">software specialized</a> for editing, vizualizing and/or analyzing terminologies.</strong> The term “terminology” in this document is used as synonym for all kinds of KOS. Software is excluded if:</p>
 <ul>
 <li>it only happens to make use of terminologies (for instance OpenRefine), or</li>
-<li>it is more <a href="#generic-software">generic software</a> that can be used for terminology management among other use cases (like database mamagement systems), or</li>
+<li>it is more <a href="#generic-software">generic software</a> that can be used for terminology management among other use cases (like database management systems), or</li>
 <li>it can only be used as <a href="#hosted-services">hosted service</a> (for instance DANTE), or</li>
-<li>the type of terminologies managed with the software is limited to glossaries and simple lists of terms.</li>
+<li>the type of terminologies managed with the software is limited to simple lists of terms, glossaries or similar.</li>
 </ul>
-<p>This also excludes the established category of software known as “<a href="#terminology-management">terminology management</a>” to manage a centralized repository of approved terms, definitions, and translations in an organization. Related KOS software is partly <a href="#other-software">listed or referenced below</a>.</p>
-<p>Deprecated applications are included for historical reference.</p>
+<p>The latter also excludes the established category of software known as “<a href="#terminology-management">terminology management</a>” to manage a centralized repository of approved terms, definitions, and translations in an organization: such software is partly <a href="#other-software">listed or referenced below</a>.</p>
 </section>
 <section id="specialized-software" class="level2">
 <h2 class="anchored" data-anchor-id="specialized-software">Specialized Software</h2>
+<p>Deprecated applications are included for historical reference.</p>
 <div class="cell-container"><div class="cell-decorator"><pre>In [1]:</pre></div><div id="tbl-software" class="cell anchored" data-execution_count="1">
 <div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> IPython.display <span class="im">import</span> Markdown</span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> tabulate <span class="im">import</span> tabulate</span>
@@ -290,7 +290,7 @@
 <span id="cb1-32"><a href="#cb1-32" aria-hidden="true" tabindex="-1"></a>df <span class="op">=</span> df.applymap(cell)</span>
 <span id="cb1-33"><a href="#cb1-33" aria-hidden="true" tabindex="-1"></a>display(HTML(df.to_html(escape<span class="op">=</span><span class="va">False</span>,index<span class="op">=</span><span class="va">False</span>)))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stderr">
-<pre><code>/tmp/ipykernel_2101/950734490.py:32: FutureWarning: DataFrame.applymap has been deprecated. Use DataFrame.map instead.
+<pre><code>/tmp/ipykernel_2123/950734490.py:32: FutureWarning: DataFrame.applymap has been deprecated. Use DataFrame.map instead.
   df = df.applymap(cell)</code></pre>
 </div>
 <div class="cell-output cell-output-display">
@@ -775,7 +775,7 @@
 </table>
 </div>
 </div></div>
-<div id="171099c6" class="cell markdown">
+<div id="b202666c" class="cell markdown">
 <p>The following applications, scripts, and/or libraries may also worth to consider for KOS management but they have not been evaluated yet enough to be inclued in the list above:</p>
 <ul>
 <li>SSSOM (Python)</li>
@@ -903,14 +903,14 @@
 <section id="generic-software" class="level3">
 <h3 class="anchored" data-anchor-id="generic-software">Generic software</h3>
 <p>Simple terminologies can be managed in a <strong>spreadsheet</strong> (LibreOffice Calc, Excel, Google Sheets…). This software lacks most special functionality for terminology management but the usability and accesibility is very high.</p>
-<p>The same applies to <strong>database management systems</strong> (RDBMS, NoSQL, RDF triple stores, property graph databases…) with some additional features such as unique key constraints but less usability.</p>
-<p>Terminologies can also directly be managed in <strong>files</strong> for instance in RDF/Turtle syntax. This only requires a text editor but the risk is high to introduce errors.</p>
+<p>The same applies to <strong>database management systems</strong> (RDBMS, NoSQL, RDF triple stores, property graph databases…) with some additional features such as unique key constraints but less usability. An edge case might be systems for management of knowledge graphs (such as Semantic MediaWiki and Wikibase, <a href="#software">included above</a>), and for personal knowledge management (such as Obsidian and Notion, not included above).</p>
 <p>Several <strong>Content Management Systems</strong> (CMS) allow to manage a list or hierarchy of topics or other entities for knowledge managements. If these lists can be exported, the CMS can be applied to manage terminologies. An example is Drupal, which was used for the first version of BARTOC terminology registry.</p>
 <!--
 More examples:
 
 - [Sanity Taxonomy Manager](https://www.npmjs.com/package/sanity-plugin-taxonomy-manager) (for Sanity CMS)
 -->
+<p>Terminologies can also directly be managed in <strong>files</strong> for instance in RDF/Turtle syntax. This only requires a text editor but the risk is high to introduce errors.</p>
 </section>
 <section id="hosted-services" class="level3">
 <h3 class="anchored" data-anchor-id="hosted-services">Hosted services</h3>
@@ -928,11 +928,15 @@ More examples:
 </section>
 <section id="references" class="level2">
 <h2 class="anchored" data-anchor-id="references">References</h2>
-<p>Some outdated lists of terminology software:</p>
+<p>This report is based on two reports created in 2016 at VZG:</p>
 <ul>
-<li><a href="https://coli-conc.gbv.de/publications/tr2.html">Open Source KOS software</a></li>
-<li><a href="https://coli-conc.gbv.de/publications/tr7.html">Open Source web applications for Knowledge Organization Systems</a> (2016)</li>
-<li><a href="https://www.w3.org/2006/07/SWD/SKOS/reference/20090315/implementation.html">W3C SKOS Implementation Report</a> (2009) - the first one, now quite outdated but could be useful as reference</li>
+<li><a href="https://coli-conc.gbv.de/publications/tr2.html">coli-conc Technical Report 2</a>: Open Source KOS software <a href="https://doi.org/10.5281/zenodo.48227" class="uri">https://doi.org/10.5281/zenodo.48227</a></li>
+<li><a href="https://coli-conc.gbv.de/publications/tr7.html">coli-conc Technical Report 7</a>: Open Source web applications for Knowledge Organization Systems <a href="https://doi.org/10.5281/zenodo.61262" class="uri">https://doi.org/10.5281/zenodo.61262</a></li>
+</ul>
+<p>Both led to <a href="https://github.com/gbv/bartoc.org/wiki/Software-for-controlled-vocabularies">a wiki page</a> managed between 2020 and 2024. Other lists of software for management of terminologies include:</p>
+<ul>
+<li>the <a href="https://www.w3.org/2006/07/SWD/SKOS/reference/20090315/implementation.html">W3C SKOS Implementation Report</a> from 2009</li>
+<li>…</li>
 </ul>
 </section>
 </div>

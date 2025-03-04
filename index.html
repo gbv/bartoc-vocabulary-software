@@ -6,7 +6,7 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="dcterms.date" content="2025-02-27">
+<meta name="dcterms.date" content="2025-03-04">
 
 <title>Software for management of knowledge organization systems</title>
 <style>
@@ -41,10 +41,10 @@ ul.task-list li input[type="checkbox"] {
 
 <meta name="citation_title" content="Software for management of knowledge organization systems">
 <meta name="citation_author" content="Jakob Voß">
-<meta name="citation_publication_date" content="2025-02-27">
-<meta name="citation_cover_date" content="2025-02-27">
+<meta name="citation_publication_date" content="2025-03-04">
+<meta name="citation_cover_date" content="2025-03-04">
 <meta name="citation_year" content="2025">
-<meta name="citation_online_date" content="2025-02-27">
+<meta name="citation_online_date" content="2025-03-04">
 <meta name="citation_language" content="en">
 </head>
 
@@ -79,7 +79,7 @@ ul.task-list li input[type="checkbox"] {
                 <div>
             <div class="quarto-title-meta-heading">Published</div>
             <div class="quarto-title-meta-contents">
-              <p class="date">February 27, 2025</p>
+              <p class="date">March 4, 2025</p>
             </div>
           </div>
           
@@ -97,15 +97,18 @@ ul.task-list li input[type="checkbox"] {
 </header><div id="quarto-content" class="page-columns page-rows-contents page-layout-article toc-left">
 <div id="quarto-sidebar-toc-left" class="sidebar toc-left">
   <nav id="TOC" role="doc-toc" class="toc-active">
+  <a href="https://bartoc.org/">
+    <img src="bartoc-logo.svg" alt="BARTOC" style="width:100%">
+  </a>
     <h2 id="toc-title">Table of contents</h2>
    
   <ul>
   <li><a href="#scope" id="toc-scope" class="nav-link active" data-scroll-target="#scope">Scope</a></li>
   <li><a href="#specialized-software" id="toc-specialized-software" class="nav-link" data-scroll-target="#specialized-software">Specialized Software</a></li>
-  <li><a href="#related-software" id="toc-related-software" class="nav-link" data-scroll-target="#related-software">Related software</a>
+  <li><a href="#data" id="toc-data" class="nav-link" data-scroll-target="#data">Data</a></li>
+  <li><a href="#other-software" id="toc-other-software" class="nav-link" data-scroll-target="#other-software">Other software</a>
   <ul class="collapse">
   <li><a href="#generic-software" id="toc-generic-software" class="nav-link" data-scroll-target="#generic-software">Generic software</a></li>
-  <li><a href="#content-management-systems" id="toc-content-management-systems" class="nav-link" data-scroll-target="#content-management-systems">Content Management Systems</a></li>
   <li><a href="#hosted-services" id="toc-hosted-services" class="nav-link" data-scroll-target="#hosted-services">Hosted services</a></li>
   <li><a href="#terminology-management" id="toc-terminology-management" class="nav-link" data-scroll-target="#terminology-management">Terminology management</a></li>
   </ul></li>
@@ -122,17 +125,514 @@ ul.task-list li input[type="checkbox"] {
   
 
 
-<p>The terminology registry <strong><a href="https://bartoc.org/">BARTOC</a></strong> collects information about all kinds of <strong>knowledge organization systems</strong> (KOS) such as controlled vocabularies, classifications, ontologies, and other semantic artifacts. This report summarizes information about software for KOS management.</p>
+<p>The terminology registry <strong><a href="https://bartoc.org/">BARTOC</a></strong> collects information about all kinds of <strong>knowledge organization systems</strong> (KOS) such as controlled vocabularies, classifications, ontologies, and other semantic artifacts. This report summarizes information about <a href="#specialized-software">software for KOS management</a>.</p>
 <section id="scope" class="level2">
 <h2 class="anchored" data-anchor-id="scope">Scope</h2>
-<p>This report is limited to <a href="#specialized-software">software specialized</a> for editing, vizualizing and/or analyzing terminologies.<a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a> Software excluded if:</p>
+<p>This report is limited to <strong><a href="#specialized-software">software specialized</a> for editing, vizualizing and/or analyzing terminologies.</strong> The term “terminology” in this document is used as synonym for all kinds of KOS. Software is excluded if:</p>
 <ul>
 <li>it only happens to make use of terminologies (for instance OpenRefine), or</li>
-<li>it only contains a minor terminology management module (for instance <a href="#content-management-systems">content management systems</a>, or</li>
+<li>it is more <a href="#generic-software">generic software</a> that can be used for terminology management among other use cases (like database mamagement systems), or</li>
 <li>it can only be used as <a href="#hosted-services">hosted service</a> (for instance DANTE), or</li>
 <li>the type of terminologies managed with the software is limited to glossaries and simple lists of terms.</li>
 </ul>
-<p>This also excludes the established category of software known as “<a href="#terminology-management">terminology management</a>” to manage a centralized repository of approved terms, definitions, and translations in an organization. Related KOS software is partly <a href="#related-software">listed or referenced below</a>.</p>
+<p>This also excludes the established category of software known as “<a href="#terminology-management">terminology management</a>” to manage a centralized repository of approved terms, definitions, and translations in an organization. Related KOS software is partly <a href="#other-software">listed or referenced below</a>.</p>
+<p>Deprecated applications are included for historical reference.</p>
+</section>
+<section id="specialized-software" class="level2">
+<h2 class="anchored" data-anchor-id="specialized-software">Specialized Software</h2>
+<div id="tbl-software" class="cell anchored" data-execution_count="1">
+<div class="cell-output cell-output-display">
+<table class="dataframe caption-top table table-sm table-striped small" data-quarto-postprocess="true" data-border="1">
+<thead>
+<tr class="header">
+<th data-quarto-table-cell-role="th">name</th>
+<th data-quarto-table-cell-role="th">platform</th>
+<th data-quarto-table-cell-role="th">edit</th>
+<th data-quarto-table-cell-role="th">api</th>
+<th data-quarto-table-cell-role="th">language</th>
+<th data-quarto-table-cell-role="th">license</th>
+<th data-quarto-table-cell-role="th">repository</th>
+<th data-quarto-table-cell-role="th">update</th>
+<th data-quarto-table-cell-role="th">category</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><a href="https://www.semantic-mediawiki.org/">Semantic MediaWiki</a></td>
+<td>Web</td>
+<td>✓</td>
+<td>✓</td>
+<td>PHP</td>
+<td>GPL</td>
+<td><a href="https://github.com/SemanticMediaWiki/SemanticMediaWiki/">github</a></td>
+<td>2025</td>
+<td></td>
+</tr>
+<tr class="even">
+<td><a href="http://wikiba.se/">Wikibase</a></td>
+<td>Web</td>
+<td>✓</td>
+<td>✓</td>
+<td>PHP</td>
+<td>GPL</td>
+<td><a href="https://gerrit.wikimedia.org/g/mediawiki/extensions/Wikibase">wikimedia</a></td>
+<td>2025</td>
+<td></td>
+</tr>
+<tr class="odd">
+<td><a href="https://vocabularyserver.com/web/">TemaTres</a></td>
+<td>Web</td>
+<td>✓</td>
+<td>✓</td>
+<td>PHP</td>
+<td>GPL</td>
+<td><a href="https://github.com/tematres/TemaTres-Vocabulary-Server">github</a></td>
+<td>2025</td>
+<td></td>
+</tr>
+<tr class="even">
+<td><a href="https://iqvoc.net/">iQvoc</a></td>
+<td>Web</td>
+<td>✓</td>
+<td>✓</td>
+<td>Ruby</td>
+<td>Apache</td>
+<td><a href="https://github.com/innoq/iqvoc">github</a></td>
+<td>2025</td>
+<td></td>
+</tr>
+<tr class="odd">
+<td><a href="https://vocbench.uniroma2.it/">VocBench</a></td>
+<td>Web</td>
+<td>✓</td>
+<td>✓</td>
+<td>Java &amp; JavaScript</td>
+<td>BSD</td>
+<td><a href="https://bitbucket.org/art-uniroma2/vocbench3/src/master/">bitbucket</a></td>
+<td>2025</td>
+<td></td>
+</tr>
+<tr class="even">
+<td><a href="https://skosmos.org/">Skosmos</a></td>
+<td>Web</td>
+<td>-</td>
+<td>✓</td>
+<td>PHP</td>
+<td>MIT</td>
+<td><a href="https://github.com/NatLibFi/Skosmos">github</a></td>
+<td>2025</td>
+<td>viewer</td>
+</tr>
+<tr class="odd">
+<td><a href="https://github.com/gbv/jskos-server">JSKOS Server</a></td>
+<td>Web</td>
+<td>✓</td>
+<td>✓</td>
+<td>JavaScript</td>
+<td>MIT</td>
+<td><a href="https://github.com/gbv/jskos-server">github</a></td>
+<td>2025</td>
+<td></td>
+</tr>
+<tr class="even">
+<td><a href="https://github.com/netwerk-digitaal-erfgoed/network-of-terms">Network of Terms</a></td>
+<td>Web</td>
+<td>-</td>
+<td>✓</td>
+<td>Typescript</td>
+<td>EUPL</td>
+<td><a href="https://github.com/netwerk-digitaal-erfgoed/network-of-terms">github</a></td>
+<td>2025</td>
+<td></td>
+</tr>
+<tr class="odd">
+<td><a href="https://github.com/skohub-io/skohub-vocabs">SkoHub Vocabs</a></td>
+<td>Web</td>
+<td>✓</td>
+<td>✓</td>
+<td>JavaScript</td>
+<td>Apache</td>
+<td><a href="https://github.com/skohub-io/skohub-vocabs">github</a></td>
+<td>2025</td>
+<td></td>
+</tr>
+<tr class="even">
+<td><a href="https://opentheso.hypotheses.org/">OpenTheso</a></td>
+<td>Web</td>
+<td>✓</td>
+<td>✓</td>
+<td>Java</td>
+<td>GPL</td>
+<td><a href="https://github.com/miledrousset/Opentheso">github</a></td>
+<td>2025</td>
+<td></td>
+</tr>
+<tr class="odd">
+<td><a href="https://github.com/EBISPOT/ols4">Ontology Look-up Service (OLS)</a></td>
+<td>Web</td>
+<td>-</td>
+<td>✓</td>
+<td>JavaScript &amp; Java</td>
+<td>Apache</td>
+<td><a href="https://github.com/EBISPOT/OLS">github</a></td>
+<td>2025</td>
+<td></td>
+</tr>
+<tr class="even">
+<td><a href="https://showvoc.uniroma2.it/">ShowVoc</a></td>
+<td>Web</td>
+<td>-</td>
+<td>-</td>
+<td>JavaScript</td>
+<td>BSD</td>
+<td><a href="https://bitbucket.org/art-uniroma2/showvoc/src/master/">bitbucket</a></td>
+<td>2025</td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>OntoPortal Appliance</td>
+<td>Web</td>
+<td>-</td>
+<td>✓</td>
+<td>Ruby</td>
+<td>BSD</td>
+<td><a href="https://github.com/ontoportal">github</a></td>
+<td>2025</td>
+<td></td>
+</tr>
+<tr class="even">
+<td>Voc4cat</td>
+<td>CLI</td>
+<td>-</td>
+<td>-</td>
+<td>Python</td>
+<td>BSD-3</td>
+<td><a href="https://github.com/nfdi4cat/voc4cat-tool/">github</a></td>
+<td>2025</td>
+<td></td>
+</tr>
+<tr class="odd">
+<td><a href="https://protege.stanford.edu/">Protégé</a></td>
+<td>JVM</td>
+<td>✓</td>
+<td>-</td>
+<td>Java</td>
+<td>BSD</td>
+<td><a href="https://github.com/protegeproject/protege">github</a></td>
+<td>2025</td>
+<td></td>
+</tr>
+<tr class="even">
+<td><a href="https://coli-conc.gbv.de/cocoda/">Cocoda</a></td>
+<td>Web</td>
+<td>-</td>
+<td>-</td>
+<td>JavaScript</td>
+<td>MIT</td>
+<td><a href="https://github.com/gbv/cocoda">github</a></td>
+<td>2024</td>
+<td>mapping editor</td>
+</tr>
+<tr class="odd">
+<td><a href="https://github.com/AKSW/jekyll-rdf">Jekyll RDF</a></td>
+<td>Web</td>
+<td>-</td>
+<td>✓</td>
+<td>Ruby</td>
+<td>MIT</td>
+<td><a href="https://github.com/AKSW/jekyll-rdf">github</a></td>
+<td>2024</td>
+<td></td>
+</tr>
+<tr class="even">
+<td><a href="https://github.com/IHTSDO/snowstorm">Snowstorm</a></td>
+<td>Web</td>
+<td>-</td>
+<td>✓</td>
+<td>Java</td>
+<td>Apache</td>
+<td><a href="https://github.com/IHTSDO/snowstorm">github</a></td>
+<td>2024</td>
+<td></td>
+</tr>
+<tr class="odd">
+<td><a href="https://atramhasis.readthedocs.io/en/latest/">Atramhasis</a></td>
+<td>Web</td>
+<td>✓</td>
+<td>✓</td>
+<td>Python</td>
+<td>GPL</td>
+<td><a href="https://github.com/OnroerendErfgoed/atramhasis">github</a></td>
+<td>2024</td>
+<td></td>
+</tr>
+<tr class="even">
+<td><a href="https://github.com/RDFLib/VocPrez">VocPrez</a></td>
+<td>Web</td>
+<td>-</td>
+<td>✓</td>
+<td>Python</td>
+<td>GPL</td>
+<td><a href="https://github.com/RDFLib/VocPrez">github</a></td>
+<td>2024</td>
+<td></td>
+</tr>
+<tr class="odd">
+<td><a href="https://github.com/cmader/qSKOS/">qSKOS</a></td>
+<td>CLI</td>
+<td>-</td>
+<td>✓</td>
+<td>Java</td>
+<td>GPL</td>
+<td><a href="https://github.com/cmader/qSKOS/">github</a></td>
+<td>2024</td>
+<td></td>
+</tr>
+<tr class="even">
+<td><a href="https://vocabseditor.acdh.oeaw.ac.at/">Vocabseditor</a></td>
+<td>Web</td>
+<td>✓</td>
+<td>-</td>
+<td>Python</td>
+<td>MIT</td>
+<td><a href="https://github.com/acdh-oeaw/vocabseditor">github</a></td>
+<td>2024</td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>VocExcel</td>
+<td>Web</td>
+<td>-</td>
+<td>-</td>
+<td>Python</td>
+<td>GPL</td>
+<td><a href="https://github.com/RDFLib/VocExcel">github</a></td>
+<td>2023</td>
+<td></td>
+</tr>
+<tr class="even">
+<td><a href="https://protegewiki.stanford.edu/wiki/WebProtege">Web Protégé</a></td>
+<td>Web</td>
+<td>✓</td>
+<td>-</td>
+<td>Java</td>
+<td>BSD</td>
+<td><a href="https://github.com/protegeproject/webprotege">github</a></td>
+<td>2023</td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>Django Controlled Vocabularies</td>
+<td>Web</td>
+<td>-</td>
+<td>-</td>
+<td>Python</td>
+<td>BSD</td>
+<td><a href="https://github.com/unt-libraries/django-controlled-vocabularies">github</a></td>
+<td>2023</td>
+<td></td>
+</tr>
+<tr class="even">
+<td><a href="http://culturecommunication.github.io/ginco/">Ginco</a></td>
+<td>Web</td>
+<td>✓</td>
+<td>✓</td>
+<td>Java</td>
+<td>GPL</td>
+<td><a href="https://github.com/culturecommunication/ginco">github</a></td>
+<td>2022</td>
+<td></td>
+</tr>
+<tr class="odd">
+<td><a href="https://surroundaustralia.github.io/vocpub-profile/profile.html">VocPub Profile</a></td>
+<td>RDF</td>
+<td>-</td>
+<td>-</td>
+<td>SHACL</td>
+<td>CC0</td>
+<td><a href="https://github.com/surroundaustralia/vocpub-profile">github</a></td>
+<td>2022</td>
+<td></td>
+</tr>
+<tr class="even">
+<td>SKOSjs</td>
+<td>Web</td>
+<td>✓</td>
+<td>-</td>
+<td>JavaScript</td>
+<td>Apache</td>
+<td><a href="https://github.com/tkurz/skosjs">github</a></td>
+<td>2022</td>
+<td></td>
+</tr>
+<tr class="odd">
+<td><a href="https://www.vocoreg.com/">VoCol</a></td>
+<td>Web</td>
+<td>✓</td>
+<td>-</td>
+<td>JavaScript</td>
+<td>MIT</td>
+<td><a href="https://github.com/vocol/vocol">github</a></td>
+<td>2021</td>
+<td></td>
+</tr>
+<tr class="even">
+<td><a href="https://skosify.readthedocs.io/en/latest/">Skosify</a></td>
+<td>CLI</td>
+<td>-</td>
+<td>✓</td>
+<td>Python</td>
+<td>MIT</td>
+<td><a href="https://github.com/NatLibFi/Skosify">github</a></td>
+<td>2021</td>
+<td></td>
+</tr>
+<tr class="odd">
+<td><a href="http://openskos.org/">OpenSKOS</a></td>
+<td>Web</td>
+<td>-</td>
+<td>✓</td>
+<td>PHP</td>
+<td>GPL</td>
+<td><a href="https://github.com/OpenSKOS/OpenSKOS">github</a></td>
+<td>2020</td>
+<td></td>
+</tr>
+<tr class="even">
+<td>SISSVoc</td>
+<td>Web</td>
+<td>-</td>
+<td>✓</td>
+<td>XSLT</td>
+<td>Apache</td>
+<td><a href="https://github.com/SISS/sissvoc">github</a></td>
+<td>2019</td>
+<td></td>
+</tr>
+<tr class="odd">
+<td><a href="https://skos-play.sparna.fr/play/about">SKOS Play</a></td>
+<td>Web</td>
+<td>-</td>
+<td>-</td>
+<td>Java</td>
+<td>CC-BY-SA</td>
+<td><a href="https://bitbucket.org/tfrancart/sparna/src/master/">bitbucket</a></td>
+<td>2018</td>
+<td></td>
+</tr>
+<tr class="even">
+<td><a href="https://ontobee.org/">OntoBee</a></td>
+<td>Web</td>
+<td>-</td>
+<td>✓</td>
+<td>PHP &amp; JavaScript</td>
+<td>Apache</td>
+<td><a href="https://github.com/OntoZoo/ontobee">github</a></td>
+<td>2018</td>
+<td></td>
+</tr>
+<tr class="odd">
+<td><a href="http://gbv.github.io/ng-skos/">ng-skos</a></td>
+<td>Web</td>
+<td>-</td>
+<td>-</td>
+<td>JavaScript</td>
+<td></td>
+<td><a href="https://github.com/gbv/ng-skos">github</a></td>
+<td>2016</td>
+<td></td>
+</tr>
+<tr class="even">
+<td><a href="https://jbiomedsem.biomedcentral.com/articles/10.1186/s13326-015-0043-z">SKOS Editor</a></td>
+<td>Web</td>
+<td>✓</td>
+<td>✓</td>
+<td>Java</td>
+<td>LGPL</td>
+<td><a href="https://github.com/Blulab-Utah/SKOSEditor">github</a></td>
+<td>2016</td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>HIVE Vocabulary Server</td>
+<td>Web</td>
+<td>✓</td>
+<td>-</td>
+<td>Java</td>
+<td>BSD</td>
+<td><a href="https://github.com/MetadataResearchCenter/hive-mrc">github</a></td>
+<td>2015</td>
+<td></td>
+</tr>
+<tr class="even">
+<td><a href="http://www.askosi.org/">ASKOSI</a></td>
+<td>Web</td>
+<td>-</td>
+<td>-</td>
+<td>Java</td>
+<td>GPL</td>
+<td><a href="http://www.askosi.org/example/">askosi</a></td>
+<td>2011</td>
+<td></td>
+</tr>
+<tr class="odd">
+<td><a href="https://thmanager.sourceforge.io/">THManager</a></td>
+<td>JVM</td>
+<td>✓</td>
+<td>-</td>
+<td>Java</td>
+<td>LGPL</td>
+<td><a href="https://sourceforge.net/projects/thmanager/">sourceforge</a></td>
+<td>2006</td>
+<td></td>
+</tr>
+<tr class="even">
+<td><a href="https://ontoserver.csiro.au/">OntoServer</a></td>
+<td>Web</td>
+<td>✓</td>
+<td>✓</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td><a href="https://www.apelon.com/solutions/terminology-tooling/termmanager">Apelon TermManager</a></td>
+<td>Web</td>
+<td>✓</td>
+<td>?</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>mapping editor</td>
+</tr>
+<tr class="even">
+<td><a href="https://www.poolparty.biz/poolparty-thesaurus-manager">PoolParty Thesaurus Server</a></td>
+<td>Web</td>
+<td>-</td>
+<td>-</td>
+<td>Java</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<p>The following applications, scripts, and/or libraries may also worth to consider for KOS management but they have not been evaluated yet enough to be inclued in the list above:</p>
+<ul>
+<li>SSSOM (Python)</li>
+<li>TS4NFDI API Gateway</li>
+<li>TS4NFDI Widgets</li>
+<li><a href="https://github.com/Multilingual-LGBTQIA-Vocabularies/Examing_LGBTQ_Concepts">Scripts to analyze concept drift</a></li>
+</ul>
+</section>
+<section id="data" class="level2">
+<h2 class="anchored" data-anchor-id="data">Data</h2>
 <p>The terminology software is listed <a href="kos-software.json">in a JSON file</a> as array of flat records with the following fields:</p>
 <table class="caption-top table">
 <colgroup>
@@ -182,394 +682,15 @@ ul.task-list li input[type="checkbox"] {
 <td><code>update</code></td>
 <td>year of most recent update of the software</td>
 </tr>
+<tr class="even">
+<td><code>category</code></td>
+<td>type of software</td>
+</tr>
 </tbody>
 </table>
 </section>
-<section id="specialized-software" class="level2">
-<h2 class="anchored" data-anchor-id="specialized-software">Specialized Software</h2>
-<div id="tbl-software" class="cell anchored" data-execution_count="1">
-<div class="cell-output cell-output-display">
-<table class="dataframe caption-top table table-sm table-striped small" data-quarto-postprocess="true" data-border="1">
-<thead>
-<tr class="header">
-<th data-quarto-table-cell-role="th">name</th>
-<th data-quarto-table-cell-role="th">platform</th>
-<th data-quarto-table-cell-role="th">edit</th>
-<th data-quarto-table-cell-role="th">api</th>
-<th data-quarto-table-cell-role="th">language</th>
-<th data-quarto-table-cell-role="th">license</th>
-<th data-quarto-table-cell-role="th">repository</th>
-<th data-quarto-table-cell-role="th">update</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td><a href="https://www.semantic-mediawiki.org/">Semantic MediaWiki</a></td>
-<td>Web</td>
-<td>✓</td>
-<td>✓</td>
-<td>PHP</td>
-<td>GPL</td>
-<td><a href="https://github.com/SemanticMediaWiki/SemanticMediaWiki/">github</a></td>
-<td>2025</td>
-</tr>
-<tr class="even">
-<td><a href="http://wikiba.se/">Wikibase</a></td>
-<td>Web</td>
-<td>✓</td>
-<td>✓</td>
-<td>PHP</td>
-<td>GPL</td>
-<td><a href="https://gerrit.wikimedia.org/g/mediawiki/extensions/Wikibase">wikimedia</a></td>
-<td>2025</td>
-</tr>
-<tr class="odd">
-<td><a href="https://vocabularyserver.com/web/">TemaTres</a></td>
-<td>Web</td>
-<td>✓</td>
-<td>✓</td>
-<td>PHP</td>
-<td>GPL</td>
-<td><a href="https://github.com/tematres/TemaTres-Vocabulary-Server">github</a></td>
-<td>2025</td>
-</tr>
-<tr class="even">
-<td><a href="https://iqvoc.net/">iQvoc</a></td>
-<td>Web</td>
-<td>✓</td>
-<td>✓</td>
-<td>Ruby</td>
-<td>Apache</td>
-<td><a href="https://github.com/innoq/iqvoc">github</a></td>
-<td>2025</td>
-</tr>
-<tr class="odd">
-<td><a href="https://vocbench.uniroma2.it/">VocBench</a></td>
-<td>Web</td>
-<td>✓</td>
-<td>✓</td>
-<td>Java &amp; JavaScript</td>
-<td>BSD</td>
-<td><a href="https://bitbucket.org/art-uniroma2/vocbench3/src/master/">bitbucket</a></td>
-<td>2025</td>
-</tr>
-<tr class="even">
-<td><a href="https://skosmos.org/">Skosmos</a></td>
-<td>Web</td>
-<td>-</td>
-<td>✓</td>
-<td>PHP</td>
-<td>MIT</td>
-<td><a href="https://github.com/NatLibFi/Skosmos">github</a></td>
-<td>2025</td>
-</tr>
-<tr class="odd">
-<td><a href="https://coli-conc.gbv.de/cocoda/">Cocoda</a></td>
-<td>Web</td>
-<td>-</td>
-<td>-</td>
-<td>JavaScript</td>
-<td>MIT</td>
-<td><a href="https://github.com/gbv/cocoda">github</a></td>
-<td>2024</td>
-</tr>
-<tr class="even">
-<td><a href="https://github.com/gbv/jskos-server">JSKOS Server</a></td>
-<td>Web</td>
-<td>✓</td>
-<td>✓</td>
-<td>JavaScript</td>
-<td>MIT</td>
-<td><a href="https://github.com/gbv/jskos-server">github</a></td>
-<td>2025</td>
-</tr>
-<tr class="odd">
-<td><a href="https://github.com/skohub-io/skohub-vocabs">SkoHub Vocabs</a></td>
-<td>Web</td>
-<td>✓</td>
-<td>✓</td>
-<td>JavaScript</td>
-<td>Apache</td>
-<td><a href="https://github.com/skohub-io/skohub-vocabs">github</a></td>
-<td>2025</td>
-</tr>
-<tr class="even">
-<td><a href="https://opentheso.hypotheses.org/">OpenTheso</a></td>
-<td>Web</td>
-<td>✓</td>
-<td>✓</td>
-<td>Java</td>
-<td>GPL</td>
-<td><a href="https://github.com/miledrousset/Opentheso">github</a></td>
-<td>2025</td>
-</tr>
-<tr class="odd">
-<td><a href="https://github.com/AKSW/jekyll-rdf">Jekyll RDF</a></td>
-<td>Web</td>
-<td>-</td>
-<td>✓</td>
-<td>Ruby</td>
-<td>MIT</td>
-<td><a href="https://github.com/AKSW/jekyll-rdf">github</a></td>
-<td>2024</td>
-</tr>
-<tr class="even">
-<td><a href="https://github.com/EBISPOT/ols4">Ontology Look-up Service (OLS)</a></td>
-<td>Web</td>
-<td>-</td>
-<td>✓</td>
-<td>JavaScript &amp; Java</td>
-<td>Apache</td>
-<td><a href="https://github.com/EBISPOT/OLS">github</a></td>
-<td>2025</td>
-</tr>
-<tr class="odd">
-<td>OntoPortal Appliance</td>
-<td>Web</td>
-<td>-</td>
-<td>✓</td>
-<td>Ruby</td>
-<td>BSD</td>
-<td><a href="https://github.com/ontoportal">github</a></td>
-<td>2025</td>
-</tr>
-<tr class="even">
-<td><a href="https://showvoc.uniroma2.it/">ShowVoc</a></td>
-<td>Web</td>
-<td>-</td>
-<td>-</td>
-<td>JavaScript</td>
-<td>BSD</td>
-<td><a href="https://bitbucket.org/art-uniroma2/showvoc/src/master/">bitbucket</a></td>
-<td>2025</td>
-</tr>
-<tr class="odd">
-<td>VocExcel</td>
-<td>Web</td>
-<td>-</td>
-<td>-</td>
-<td>Python</td>
-<td>GPL</td>
-<td><a href="https://github.com/RDFLib/VocExcel">github</a></td>
-<td>2023</td>
-</tr>
-<tr class="even">
-<td><a href="https://www.poolparty.biz/poolparty-thesaurus-manager">PoolParty Thesaurus Server</a></td>
-<td>Web</td>
-<td>-</td>
-<td>-</td>
-<td>Java</td>
-<td>Closed Source</td>
-<td></td>
-<td>2025</td>
-</tr>
-<tr class="odd">
-<td><a href="https://atramhasis.readthedocs.io/en/latest/">Atramhasis</a></td>
-<td>Web</td>
-<td>✓</td>
-<td>✓</td>
-<td>Python</td>
-<td>GPL</td>
-<td><a href="https://github.com/OnroerendErfgoed/atramhasis">github</a></td>
-<td>2024</td>
-</tr>
-<tr class="even">
-<td><a href="https://github.com/IHTSDO/snowstorm">Snowstorm</a></td>
-<td>Web</td>
-<td>-</td>
-<td>✓</td>
-<td>Java</td>
-<td>Apache</td>
-<td><a href="https://github.com/IHTSDO/snowstorm">github</a></td>
-<td>2024</td>
-</tr>
-<tr class="odd">
-<td><a href="https://github.com/netwerk-digitaal-erfgoed/network-of-terms">Network of Terms</a></td>
-<td>Web</td>
-<td>-</td>
-<td>✓</td>
-<td>Typescript</td>
-<td>EUPL</td>
-<td><a href="https://github.com/netwerk-digitaal-erfgoed/network-of-terms">github</a></td>
-<td>2025</td>
-</tr>
-<tr class="even">
-<td><a href="https://protegewiki.stanford.edu/wiki/WebProtege">Web Protégé</a></td>
-<td>Web</td>
-<td>✓</td>
-<td>-</td>
-<td>Java</td>
-<td>BSD</td>
-<td><a href="https://github.com/protegeproject/webprotege">github</a></td>
-<td>2023</td>
-</tr>
-<tr class="odd">
-<td><a href="https://www.vocoreg.com/">VoCol</a></td>
-<td>Web</td>
-<td>✓</td>
-<td>-</td>
-<td>JavaScript</td>
-<td>MIT</td>
-<td><a href="https://github.com/vocol/vocol">github</a></td>
-<td>2021</td>
-</tr>
-<tr class="even">
-<td>Django Controlled Vocabularies</td>
-<td>Web</td>
-<td>-</td>
-<td>-</td>
-<td>Python</td>
-<td>BSD</td>
-<td><a href="https://github.com/unt-libraries/django-controlled-vocabularies">github</a></td>
-<td>2023</td>
-</tr>
-<tr class="odd">
-<td><a href="https://vocabseditor.acdh.oeaw.ac.at/">Vocabseditor</a></td>
-<td>Web</td>
-<td>✓</td>
-<td>-</td>
-<td>Python</td>
-<td>MIT</td>
-<td><a href="https://github.com/acdh-oeaw/vocabseditor">github</a></td>
-<td>2024</td>
-</tr>
-<tr class="even">
-<td><a href="https://github.com/RDFLib/VocPrez">VocPrez</a></td>
-<td>Web</td>
-<td>-</td>
-<td>✓</td>
-<td>Python</td>
-<td>GPL</td>
-<td><a href="https://github.com/RDFLib/VocPrez">github</a></td>
-<td>2024</td>
-</tr>
-<tr class="odd">
-<td><a href="https://surroundaustralia.github.io/vocpub-profile/profile.html">VocPub Profile</a></td>
-<td>RDF</td>
-<td>-</td>
-<td>-</td>
-<td>SHACL</td>
-<td>CC0</td>
-<td><a href="https://github.com/surroundaustralia/vocpub-profile">github</a></td>
-<td>2022</td>
-</tr>
-<tr class="even">
-<td><a href="https://skosify.readthedocs.io/en/latest/">Skosify</a></td>
-<td>CLI</td>
-<td>-</td>
-<td>✓</td>
-<td>Python</td>
-<td>MIT</td>
-<td><a href="https://github.com/NatLibFi/Skosify">github</a></td>
-<td>2021</td>
-</tr>
-<tr class="odd">
-<td><a href="http://openskos.org/">OpenSKOS</a></td>
-<td>Web</td>
-<td>-</td>
-<td>✓</td>
-<td>PHP</td>
-<td>GPL</td>
-<td><a href="https://github.com/OpenSKOS/OpenSKOS">github</a></td>
-<td>2020</td>
-</tr>
-<tr class="even">
-<td>SISSVoc</td>
-<td>Web</td>
-<td>-</td>
-<td>✓</td>
-<td>XSLT</td>
-<td>Apache</td>
-<td><a href="https://github.com/SISS/sissvoc">github</a></td>
-<td>2019</td>
-</tr>
-<tr class="odd">
-<td><a href="https://github.com/cmader/qSKOS/">qSKOS</a></td>
-<td>CLI</td>
-<td>-</td>
-<td>✓</td>
-<td>Java</td>
-<td>GPL</td>
-<td><a href="https://github.com/cmader/qSKOS/">github</a></td>
-<td>2024</td>
-</tr>
-<tr class="even">
-<td><a href="https://skos-play.sparna.fr/play/about">SKOS Play</a></td>
-<td>Web</td>
-<td>-</td>
-<td>-</td>
-<td>Java</td>
-<td>CC-BY-SA</td>
-<td><a href="https://bitbucket.org/tfrancart/sparna/src/master/">bitbucket</a></td>
-<td>2018</td>
-</tr>
-<tr class="odd">
-<td><a href="http://culturecommunication.github.io/ginco/">Ginco</a></td>
-<td>Web</td>
-<td>✓</td>
-<td>✓</td>
-<td>Java</td>
-<td>GPL</td>
-<td><a href="https://github.com/culturecommunication/ginco">github</a></td>
-<td>2022</td>
-</tr>
-<tr class="even">
-<td>SKOSjs</td>
-<td>Web</td>
-<td>✓</td>
-<td>-</td>
-<td>JavaScript</td>
-<td>Apache</td>
-<td><a href="https://github.com/tkurz/skosjs">github</a></td>
-<td>2022</td>
-</tr>
-<tr class="odd">
-<td><a href="https://jbiomedsem.biomedcentral.com/articles/10.1186/s13326-015-0043-z">SKOS Editor</a></td>
-<td>Web</td>
-<td>✓</td>
-<td>✓</td>
-<td>Java</td>
-<td>LGPL</td>
-<td><a href="https://github.com/Blulab-Utah/SKOSEditor">github</a></td>
-<td>2016</td>
-</tr>
-<tr class="even">
-<td><a href="http://www.askosi.org/">ASKOSI</a></td>
-<td>Web</td>
-<td>-</td>
-<td>-</td>
-<td>Java</td>
-<td>GPL</td>
-<td><a href="http://www.askosi.org/example/">askosi</a></td>
-<td>2011</td>
-</tr>
-<tr class="odd">
-<td><a href="https://thmanager.sourceforge.io/">THManager</a></td>
-<td>?</td>
-<td>✓</td>
-<td>-</td>
-<td>Java</td>
-<td>LGPL</td>
-<td><a href="https://sourceforge.net/projects/thmanager/">sourceforge</a></td>
-<td>2006</td>
-</tr>
-</tbody>
-</table>
-</div>
-</div>
-<p>TODO: More to add:</p>
-<ul>
-<li>sheet2rdf?</li>
-<li><a href="https://github.com/nfdi4cat/voc4cat-tool/">voc4cat</a></li>
-<li><a href="https://github.com/OntoZoo/ontobee">OntoBee</a> (2018)</li>
-<li><a href="https://github.com/MetadataResearchCenter/hive-mrc">HIVE Vocabulary Server</a> (2015)</li>
-<li><a href="https://ontoserver.csiro.au/">OntoServer</a> (Closed source, free in Australia)</li>
-<li>TermCurator (developed to translate MeSH)</li>
-<li><a href="https://github.com/Multilingual-LGBTQIA-Vocabularies/Examing_LGBTQ_Concepts">Scripts to analyze concept drift</a></li>
-</ul>
-</section>
-<section id="related-software" class="level2">
-<h2 class="anchored" data-anchor-id="related-software">Related software</h2>
+<section id="other-software" class="level2">
+<h2 class="anchored" data-anchor-id="other-software">Other software</h2>
 <p>The following software products support editing, viewing and/or analyzing controlled vocabularies but not as a core feature. They might be used for controlled vocabularies as well.</p>
 <table class="caption-top table">
 <thead>
@@ -606,26 +727,6 @@ ul.task-list li input[type="checkbox"] {
 <td></td>
 </tr>
 <tr class="odd">
-<td><a href="https://www.apelon.com/solutions/terminology-tooling/termmanager">Apelon TermManager</a></td>
-<td>Web</td>
-<td>mappings</td>
-<td>?</td>
-<td>?</td>
-<td>Closed Source</td>
-<td>-</td>
-<td>2021</td>
-</tr>
-<tr class="even">
-<td><a href="https://protege.stanford.edu/">Protégé</a></td>
-<td>Java</td>
-<td>yes</td>
-<td>?</td>
-<td>Java</td>
-<td>BSD</td>
-<td><a href="https://github.com/protegeproject/protege">GitHub</a></td>
-<td>2025</td>
-</tr>
-<tr class="odd">
 <td><a href="https://github.com/edmondchuc/excel2rdf">excel2rdf</a></td>
 <td>-</td>
 <td>yes</td>
@@ -636,32 +737,36 @@ ul.task-list li input[type="checkbox"] {
 <td>2021</td>
 </tr>
 <tr class="even">
-<td><a href="https://www.topquadrant.com/products/topbraid-composer/">TopBraid Composer</a></td>
+<td><a href="https://allegrograph.com/topbraid-composer/">TopBraid Composer</a></td>
 <td>?</td>
 <td>yes</td>
 <td>?</td>
 <td>?</td>
-<td>Closed Source</td>
 <td>-</td>
-<td>2021</td>
+<td>-</td>
+<td></td>
 </tr>
 </tbody>
 </table>
 <section id="generic-software" class="level3">
 <h3 class="anchored" data-anchor-id="generic-software">Generic software</h3>
-<p>Simple terminologies can be managed in a spreadsheet (LibreOffice Calc, Excel, Google Sheets…). This software lacks most special functionality for terminology management but the usability and accesibility is very high.</p>
-<p>The same applies to database management systems with some additional features such as unique key constraints but less usability.</p>
-<p>Terminologies can also be managed in files for instance in RDF/Turtle syntax. This only requires a text editor but the risk is high to introduce errors.</p>
-</section>
-<section id="content-management-systems" class="level3">
-<h3 class="anchored" data-anchor-id="content-management-systems">Content Management Systems</h3>
-<p>Several Content Management Systems (CMS) allow to manage a list or hierarchy of topics or other entities for knowledge managements. If these lists can be exported, the CMS can be applied to manage terminologies. An example is Drupal, which was used for the first version of BARTOC terminology registry.</p>
+<p>Simple terminologies can be managed in a <strong>spreadsheet</strong> (LibreOffice Calc, Excel, Google Sheets…). This software lacks most special functionality for terminology management but the usability and accesibility is very high.</p>
+<p>The same applies to <strong>database management systems</strong> (RDBMS, NoSQL, RDF triple stores, property graph databases…) with some additional features such as unique key constraints but less usability.</p>
+<p>Terminologies can also directly be managed in <strong>files</strong> for instance in RDF/Turtle syntax. This only requires a text editor but the risk is high to introduce errors.</p>
+<p>Several <strong>Content Management Systems</strong> (CMS) allow to manage a list or hierarchy of topics or other entities for knowledge managements. If these lists can be exported, the CMS can be applied to manage terminologies. An example is Drupal, which was used for the first version of BARTOC terminology registry.</p>
+<!--
+More examples:
+
+- [Sanity Taxonomy Manager](https://www.npmjs.com/package/sanity-plugin-taxonomy-manager) (for Sanity CMS)
+-->
 </section>
 <section id="hosted-services" class="level3">
 <h3 class="anchored" data-anchor-id="hosted-services">Hosted services</h3>
+<p>Some organizations host applications for KOS management (the list is likely incomplete):</p>
 <ul>
 <li><a href="https://doi.org/10.11588/akmb.2018.1.63475">DANTE</a></li>
 <li><a href="https://xtree-public.digicult-verbund.de/">xTree</a></li>
+<li>…</li>
 </ul>
 </section>
 <section id="terminology-management" class="level3">
@@ -679,13 +784,7 @@ ul.task-list li input[type="checkbox"] {
 </ul>
 </section>
 
-
-<div id="quarto-appendix" class="default"><section id="footnotes" class="footnotes footnotes-end-of-document" role="doc-endnotes"><h2 class="anchored quarto-appendix-heading">Footnotes</h2>
-
-<ol>
-<li id="fn1"><p>The term “terminology” in this document is used as synonym for all kinds of knowledge organization systems.<a href="#fnref1" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
-</ol>
-</section></div></main>
+</main>
 <!-- /main column -->
 <script id="quarto-html-after-body" type="application/javascript">
 window.document.addEventListener("DOMContentLoaded", function (event) {

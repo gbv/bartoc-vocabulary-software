@@ -5,7 +5,7 @@
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-    <meta name="dcterms.date" content="2025-02-27">
+    <meta name="dcterms.date" content="2025-03-04">
 
     <title>Software for management of knowledge organization systems</title>
     <style>
@@ -162,10 +162,10 @@
 <script type="application/javascript">define('jquery', [],function() {return window.jQuery;})</script>  
       <meta name="citation_title" content="Software for management of knowledge organization systems">
 <meta name="citation_author" content="Jakob Voß">
-<meta name="citation_publication_date" content="2025-02-27">
-<meta name="citation_cover_date" content="2025-02-27">
+<meta name="citation_publication_date" content="2025-03-04">
+<meta name="citation_cover_date" content="2025-03-04">
 <meta name="citation_year" content="2025">
-<meta name="citation_online_date" content="2025-02-27">
+<meta name="citation_online_date" content="2025-03-04">
 <meta name="citation_language" content="en">
 </head>
 
@@ -207,7 +207,7 @@
                 <div>
             <div class="quarto-title-meta-heading">Published</div>
             <div class="quarto-title-meta-contents">
-              <p class="date">February 27, 2025</p>
+              <p class="date">March 4, 2025</p>
             </div>
           </div>
           
@@ -225,6 +225,9 @@
 </header><div id="quarto-content" class="page-columns page-rows-contents page-layout-article toc-left">
 <div id="quarto-sidebar-toc-left" class="sidebar toc-left">
   <nav id="TOC" role="doc-toc" class="toc-active">
+  <a href="https://bartoc.org/">
+    <img src="bartoc-logo.svg" alt="BARTOC" style="width:100%">
+  </a>
     <h2 id="toc-title">Table of contents</h2>
    
   <ul>
@@ -237,19 +240,553 @@
 </div>
 <main class="content quarto-banner-title-block" id="quarto-document-content">      
 
-       <p>The terminology registry <strong><a href="https://bartoc.org/">BARTOC</a></strong> collects information about all kinds of <strong>knowledge organization systems</strong> (KOS) such as controlled vocabularies, classifications, ontologies, and other semantic artifacts. This report summarizes information about software for KOS management.</p>
+       <p>The terminology registry <strong><a href="https://bartoc.org/">BARTOC</a></strong> collects information about all kinds of <strong>knowledge organization systems</strong> (KOS) such as controlled vocabularies, classifications, ontologies, and other semantic artifacts. This report summarizes information about <a href="#specialized-software">software for KOS management</a>.</p>
 <section id="scope" class="level2">
 <h2 class="anchored" data-anchor-id="scope">Scope</h2>
-<p>This report is limited to <a href="#specialized-software">software specialized</a> for editing, vizualizing and/or analyzing terminologies.<a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a> Software excluded if:</p>
+<p>This report is limited to <strong><a href="#specialized-software">software specialized</a> for editing, vizualizing and/or analyzing terminologies.</strong> The term “terminology” in this document is used as synonym for all kinds of KOS. Software is excluded if:</p>
 <ul>
 <li>it only happens to make use of terminologies (for instance OpenRefine), or</li>
-<li>it only contains a minor terminology management module (for instance <a href="#content-management-systems">content management systems</a>, or</li>
+<li>it is more <a href="#generic-software">generic software</a> that can be used for terminology management among other use cases (like database mamagement systems), or</li>
 <li>it can only be used as <a href="#hosted-services">hosted service</a> (for instance DANTE), or</li>
 <li>the type of terminologies managed with the software is limited to glossaries and simple lists of terms.</li>
 </ul>
-<p>This also excludes the established category of software known as “<a href="#terminology-management">terminology management</a>” to manage a centralized repository of approved terms, definitions, and translations in an organization. Related KOS software is partly <a href="#related-software">listed or referenced below</a>.</p>
+<p>This also excludes the established category of software known as “<a href="#terminology-management">terminology management</a>” to manage a centralized repository of approved terms, definitions, and translations in an organization. Related KOS software is partly <a href="#other-software">listed or referenced below</a>.</p>
+<p>Deprecated applications are included for historical reference.</p>
+</section>
+<section id="specialized-software" class="level2">
+<h2 class="anchored" data-anchor-id="specialized-software">Specialized Software</h2>
+<div class="cell-container"><div class="cell-decorator"><pre>In [1]:</pre></div><div id="tbl-software" class="cell anchored" data-execution_count="1">
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> IPython.display <span class="im">import</span> Markdown</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> tabulate <span class="im">import</span> tabulate</span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> pandas <span class="im">as</span> pd</span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> urllib.parse <span class="im">import</span> urlparse</span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> IPython.display <span class="im">import</span> display, HTML</span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> re</span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> hyperlink(row):</span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> pd.notna(row[<span class="st">'url'</span>]):</span>
+<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a>        <span class="cf">return</span> <span class="ss">f'&lt;a href="</span><span class="sc">{</span>row[<span class="st">"url"</span>]<span class="sc">}</span><span class="ss">"&gt;</span><span class="sc">{</span>row[<span class="st">"name"</span>]<span class="sc">}</span><span class="ss">&lt;/a&gt;'</span></span>
+<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a>    <span class="cf">else</span>:</span>
+<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a>        <span class="cf">return</span> row[<span class="st">'name'</span>]    </span>
+<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> cell(value):</span>
+<span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> <span class="bu">isinstance</span>(value, <span class="bu">bool</span>):</span>
+<span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a>        <span class="cf">return</span> <span class="st">"✓"</span> <span class="cf">if</span> value <span class="cf">else</span> <span class="st">"-"</span></span>
+<span id="cb1-17"><a href="#cb1-17" aria-hidden="true" tabindex="-1"></a>    <span class="cf">elif</span> <span class="bu">type</span>(value) <span class="kw">is</span> <span class="bu">str</span> <span class="kw">and</span> re.match(<span class="vs">r"^https?://"</span>,value):</span>
+<span id="cb1-18"><a href="#cb1-18" aria-hidden="true" tabindex="-1"></a>        url <span class="op">=</span> urlparse(value)</span>
+<span id="cb1-19"><a href="#cb1-19" aria-hidden="true" tabindex="-1"></a>        host <span class="op">=</span> url.hostname.split(<span class="st">"."</span>)[<span class="op">-</span><span class="dv">2</span>]</span>
+<span id="cb1-20"><a href="#cb1-20" aria-hidden="true" tabindex="-1"></a>        <span class="cf">return</span> <span class="ss">f'&lt;a href="</span><span class="sc">{</span>value<span class="sc">}</span><span class="ss">"&gt;</span><span class="sc">{</span>host<span class="sc">}</span><span class="ss">&lt;/a&gt;'</span></span>
+<span id="cb1-21"><a href="#cb1-21" aria-hidden="true" tabindex="-1"></a>    <span class="cf">elif</span> <span class="kw">not</span> pd.notna(value):</span>
+<span id="cb1-22"><a href="#cb1-22" aria-hidden="true" tabindex="-1"></a>        <span class="cf">return</span> <span class="st">""</span></span>
+<span id="cb1-23"><a href="#cb1-23" aria-hidden="true" tabindex="-1"></a>    <span class="cf">elif</span> <span class="bu">type</span>(value) <span class="kw">is</span> <span class="bu">float</span>: <span class="co"># pd converts string to float</span></span>
+<span id="cb1-24"><a href="#cb1-24" aria-hidden="true" tabindex="-1"></a>        <span class="cf">return</span> <span class="bu">int</span>(value)</span>
+<span id="cb1-25"><a href="#cb1-25" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> value</span>
+<span id="cb1-26"><a href="#cb1-26" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-27"><a href="#cb1-27" aria-hidden="true" tabindex="-1"></a>df <span class="op">=</span> pd.read_json(<span class="st">'kos-software.json'</span>)</span>
+<span id="cb1-28"><a href="#cb1-28" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-29"><a href="#cb1-29" aria-hidden="true" tabindex="-1"></a>df[<span class="st">"name"</span>] <span class="op">=</span> df.<span class="bu">apply</span>(hyperlink, axis<span class="op">=</span><span class="dv">1</span>)</span>
+<span id="cb1-30"><a href="#cb1-30" aria-hidden="true" tabindex="-1"></a>df <span class="op">=</span> df.sort_values(by<span class="op">=</span>[<span class="st">"update"</span>],ascending<span class="op">=</span><span class="va">False</span>)</span>
+<span id="cb1-31"><a href="#cb1-31" aria-hidden="true" tabindex="-1"></a>df <span class="op">=</span> df.drop(columns<span class="op">=</span>[<span class="st">"url"</span>])</span>
+<span id="cb1-32"><a href="#cb1-32" aria-hidden="true" tabindex="-1"></a>df <span class="op">=</span> df.applymap(cell)</span>
+<span id="cb1-33"><a href="#cb1-33" aria-hidden="true" tabindex="-1"></a>display(HTML(df.to_html(escape<span class="op">=</span><span class="va">False</span>,index<span class="op">=</span><span class="va">False</span>)))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stderr">
+<pre><code>/tmp/ipykernel_2101/950734490.py:32: FutureWarning: DataFrame.applymap has been deprecated. Use DataFrame.map instead.
+  df = df.applymap(cell)</code></pre>
+</div>
+<div class="cell-output cell-output-display">
+<table class="dataframe caption-top table table-sm table-striped small" data-quarto-postprocess="true" data-border="1">
+<thead>
+<tr class="header">
+<th data-quarto-table-cell-role="th">name</th>
+<th data-quarto-table-cell-role="th">platform</th>
+<th data-quarto-table-cell-role="th">edit</th>
+<th data-quarto-table-cell-role="th">api</th>
+<th data-quarto-table-cell-role="th">language</th>
+<th data-quarto-table-cell-role="th">license</th>
+<th data-quarto-table-cell-role="th">repository</th>
+<th data-quarto-table-cell-role="th">update</th>
+<th data-quarto-table-cell-role="th">category</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><a href="https://www.semantic-mediawiki.org/">Semantic MediaWiki</a></td>
+<td>Web</td>
+<td>✓</td>
+<td>✓</td>
+<td>PHP</td>
+<td>GPL</td>
+<td><a href="https://github.com/SemanticMediaWiki/SemanticMediaWiki/">github</a></td>
+<td>2025</td>
+<td></td>
+</tr>
+<tr class="even">
+<td><a href="http://wikiba.se/">Wikibase</a></td>
+<td>Web</td>
+<td>✓</td>
+<td>✓</td>
+<td>PHP</td>
+<td>GPL</td>
+<td><a href="https://gerrit.wikimedia.org/g/mediawiki/extensions/Wikibase">wikimedia</a></td>
+<td>2025</td>
+<td></td>
+</tr>
+<tr class="odd">
+<td><a href="https://vocabularyserver.com/web/">TemaTres</a></td>
+<td>Web</td>
+<td>✓</td>
+<td>✓</td>
+<td>PHP</td>
+<td>GPL</td>
+<td><a href="https://github.com/tematres/TemaTres-Vocabulary-Server">github</a></td>
+<td>2025</td>
+<td></td>
+</tr>
+<tr class="even">
+<td><a href="https://iqvoc.net/">iQvoc</a></td>
+<td>Web</td>
+<td>✓</td>
+<td>✓</td>
+<td>Ruby</td>
+<td>Apache</td>
+<td><a href="https://github.com/innoq/iqvoc">github</a></td>
+<td>2025</td>
+<td></td>
+</tr>
+<tr class="odd">
+<td><a href="https://vocbench.uniroma2.it/">VocBench</a></td>
+<td>Web</td>
+<td>✓</td>
+<td>✓</td>
+<td>Java &amp; JavaScript</td>
+<td>BSD</td>
+<td><a href="https://bitbucket.org/art-uniroma2/vocbench3/src/master/">bitbucket</a></td>
+<td>2025</td>
+<td></td>
+</tr>
+<tr class="even">
+<td><a href="https://skosmos.org/">Skosmos</a></td>
+<td>Web</td>
+<td>-</td>
+<td>✓</td>
+<td>PHP</td>
+<td>MIT</td>
+<td><a href="https://github.com/NatLibFi/Skosmos">github</a></td>
+<td>2025</td>
+<td>viewer</td>
+</tr>
+<tr class="odd">
+<td><a href="https://github.com/gbv/jskos-server">JSKOS Server</a></td>
+<td>Web</td>
+<td>✓</td>
+<td>✓</td>
+<td>JavaScript</td>
+<td>MIT</td>
+<td><a href="https://github.com/gbv/jskos-server">github</a></td>
+<td>2025</td>
+<td></td>
+</tr>
+<tr class="even">
+<td><a href="https://github.com/netwerk-digitaal-erfgoed/network-of-terms">Network of Terms</a></td>
+<td>Web</td>
+<td>-</td>
+<td>✓</td>
+<td>Typescript</td>
+<td>EUPL</td>
+<td><a href="https://github.com/netwerk-digitaal-erfgoed/network-of-terms">github</a></td>
+<td>2025</td>
+<td></td>
+</tr>
+<tr class="odd">
+<td><a href="https://github.com/skohub-io/skohub-vocabs">SkoHub Vocabs</a></td>
+<td>Web</td>
+<td>✓</td>
+<td>✓</td>
+<td>JavaScript</td>
+<td>Apache</td>
+<td><a href="https://github.com/skohub-io/skohub-vocabs">github</a></td>
+<td>2025</td>
+<td></td>
+</tr>
+<tr class="even">
+<td><a href="https://opentheso.hypotheses.org/">OpenTheso</a></td>
+<td>Web</td>
+<td>✓</td>
+<td>✓</td>
+<td>Java</td>
+<td>GPL</td>
+<td><a href="https://github.com/miledrousset/Opentheso">github</a></td>
+<td>2025</td>
+<td></td>
+</tr>
+<tr class="odd">
+<td><a href="https://github.com/EBISPOT/ols4">Ontology Look-up Service (OLS)</a></td>
+<td>Web</td>
+<td>-</td>
+<td>✓</td>
+<td>JavaScript &amp; Java</td>
+<td>Apache</td>
+<td><a href="https://github.com/EBISPOT/OLS">github</a></td>
+<td>2025</td>
+<td></td>
+</tr>
+<tr class="even">
+<td><a href="https://showvoc.uniroma2.it/">ShowVoc</a></td>
+<td>Web</td>
+<td>-</td>
+<td>-</td>
+<td>JavaScript</td>
+<td>BSD</td>
+<td><a href="https://bitbucket.org/art-uniroma2/showvoc/src/master/">bitbucket</a></td>
+<td>2025</td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>OntoPortal Appliance</td>
+<td>Web</td>
+<td>-</td>
+<td>✓</td>
+<td>Ruby</td>
+<td>BSD</td>
+<td><a href="https://github.com/ontoportal">github</a></td>
+<td>2025</td>
+<td></td>
+</tr>
+<tr class="even">
+<td>Voc4cat</td>
+<td>CLI</td>
+<td>-</td>
+<td>-</td>
+<td>Python</td>
+<td>BSD-3</td>
+<td><a href="https://github.com/nfdi4cat/voc4cat-tool/">github</a></td>
+<td>2025</td>
+<td></td>
+</tr>
+<tr class="odd">
+<td><a href="https://protege.stanford.edu/">Protégé</a></td>
+<td>JVM</td>
+<td>✓</td>
+<td>-</td>
+<td>Java</td>
+<td>BSD</td>
+<td><a href="https://github.com/protegeproject/protege">github</a></td>
+<td>2025</td>
+<td></td>
+</tr>
+<tr class="even">
+<td><a href="https://coli-conc.gbv.de/cocoda/">Cocoda</a></td>
+<td>Web</td>
+<td>-</td>
+<td>-</td>
+<td>JavaScript</td>
+<td>MIT</td>
+<td><a href="https://github.com/gbv/cocoda">github</a></td>
+<td>2024</td>
+<td>mapping editor</td>
+</tr>
+<tr class="odd">
+<td><a href="https://github.com/AKSW/jekyll-rdf">Jekyll RDF</a></td>
+<td>Web</td>
+<td>-</td>
+<td>✓</td>
+<td>Ruby</td>
+<td>MIT</td>
+<td><a href="https://github.com/AKSW/jekyll-rdf">github</a></td>
+<td>2024</td>
+<td></td>
+</tr>
+<tr class="even">
+<td><a href="https://github.com/IHTSDO/snowstorm">Snowstorm</a></td>
+<td>Web</td>
+<td>-</td>
+<td>✓</td>
+<td>Java</td>
+<td>Apache</td>
+<td><a href="https://github.com/IHTSDO/snowstorm">github</a></td>
+<td>2024</td>
+<td></td>
+</tr>
+<tr class="odd">
+<td><a href="https://atramhasis.readthedocs.io/en/latest/">Atramhasis</a></td>
+<td>Web</td>
+<td>✓</td>
+<td>✓</td>
+<td>Python</td>
+<td>GPL</td>
+<td><a href="https://github.com/OnroerendErfgoed/atramhasis">github</a></td>
+<td>2024</td>
+<td></td>
+</tr>
+<tr class="even">
+<td><a href="https://github.com/RDFLib/VocPrez">VocPrez</a></td>
+<td>Web</td>
+<td>-</td>
+<td>✓</td>
+<td>Python</td>
+<td>GPL</td>
+<td><a href="https://github.com/RDFLib/VocPrez">github</a></td>
+<td>2024</td>
+<td></td>
+</tr>
+<tr class="odd">
+<td><a href="https://github.com/cmader/qSKOS/">qSKOS</a></td>
+<td>CLI</td>
+<td>-</td>
+<td>✓</td>
+<td>Java</td>
+<td>GPL</td>
+<td><a href="https://github.com/cmader/qSKOS/">github</a></td>
+<td>2024</td>
+<td></td>
+</tr>
+<tr class="even">
+<td><a href="https://vocabseditor.acdh.oeaw.ac.at/">Vocabseditor</a></td>
+<td>Web</td>
+<td>✓</td>
+<td>-</td>
+<td>Python</td>
+<td>MIT</td>
+<td><a href="https://github.com/acdh-oeaw/vocabseditor">github</a></td>
+<td>2024</td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>VocExcel</td>
+<td>Web</td>
+<td>-</td>
+<td>-</td>
+<td>Python</td>
+<td>GPL</td>
+<td><a href="https://github.com/RDFLib/VocExcel">github</a></td>
+<td>2023</td>
+<td></td>
+</tr>
+<tr class="even">
+<td><a href="https://protegewiki.stanford.edu/wiki/WebProtege">Web Protégé</a></td>
+<td>Web</td>
+<td>✓</td>
+<td>-</td>
+<td>Java</td>
+<td>BSD</td>
+<td><a href="https://github.com/protegeproject/webprotege">github</a></td>
+<td>2023</td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>Django Controlled Vocabularies</td>
+<td>Web</td>
+<td>-</td>
+<td>-</td>
+<td>Python</td>
+<td>BSD</td>
+<td><a href="https://github.com/unt-libraries/django-controlled-vocabularies">github</a></td>
+<td>2023</td>
+<td></td>
+</tr>
+<tr class="even">
+<td><a href="http://culturecommunication.github.io/ginco/">Ginco</a></td>
+<td>Web</td>
+<td>✓</td>
+<td>✓</td>
+<td>Java</td>
+<td>GPL</td>
+<td><a href="https://github.com/culturecommunication/ginco">github</a></td>
+<td>2022</td>
+<td></td>
+</tr>
+<tr class="odd">
+<td><a href="https://surroundaustralia.github.io/vocpub-profile/profile.html">VocPub Profile</a></td>
+<td>RDF</td>
+<td>-</td>
+<td>-</td>
+<td>SHACL</td>
+<td>CC0</td>
+<td><a href="https://github.com/surroundaustralia/vocpub-profile">github</a></td>
+<td>2022</td>
+<td></td>
+</tr>
+<tr class="even">
+<td>SKOSjs</td>
+<td>Web</td>
+<td>✓</td>
+<td>-</td>
+<td>JavaScript</td>
+<td>Apache</td>
+<td><a href="https://github.com/tkurz/skosjs">github</a></td>
+<td>2022</td>
+<td></td>
+</tr>
+<tr class="odd">
+<td><a href="https://www.vocoreg.com/">VoCol</a></td>
+<td>Web</td>
+<td>✓</td>
+<td>-</td>
+<td>JavaScript</td>
+<td>MIT</td>
+<td><a href="https://github.com/vocol/vocol">github</a></td>
+<td>2021</td>
+<td></td>
+</tr>
+<tr class="even">
+<td><a href="https://skosify.readthedocs.io/en/latest/">Skosify</a></td>
+<td>CLI</td>
+<td>-</td>
+<td>✓</td>
+<td>Python</td>
+<td>MIT</td>
+<td><a href="https://github.com/NatLibFi/Skosify">github</a></td>
+<td>2021</td>
+<td></td>
+</tr>
+<tr class="odd">
+<td><a href="http://openskos.org/">OpenSKOS</a></td>
+<td>Web</td>
+<td>-</td>
+<td>✓</td>
+<td>PHP</td>
+<td>GPL</td>
+<td><a href="https://github.com/OpenSKOS/OpenSKOS">github</a></td>
+<td>2020</td>
+<td></td>
+</tr>
+<tr class="even">
+<td>SISSVoc</td>
+<td>Web</td>
+<td>-</td>
+<td>✓</td>
+<td>XSLT</td>
+<td>Apache</td>
+<td><a href="https://github.com/SISS/sissvoc">github</a></td>
+<td>2019</td>
+<td></td>
+</tr>
+<tr class="odd">
+<td><a href="https://skos-play.sparna.fr/play/about">SKOS Play</a></td>
+<td>Web</td>
+<td>-</td>
+<td>-</td>
+<td>Java</td>
+<td>CC-BY-SA</td>
+<td><a href="https://bitbucket.org/tfrancart/sparna/src/master/">bitbucket</a></td>
+<td>2018</td>
+<td></td>
+</tr>
+<tr class="even">
+<td><a href="https://ontobee.org/">OntoBee</a></td>
+<td>Web</td>
+<td>-</td>
+<td>✓</td>
+<td>PHP &amp; JavaScript</td>
+<td>Apache</td>
+<td><a href="https://github.com/OntoZoo/ontobee">github</a></td>
+<td>2018</td>
+<td></td>
+</tr>
+<tr class="odd">
+<td><a href="http://gbv.github.io/ng-skos/">ng-skos</a></td>
+<td>Web</td>
+<td>-</td>
+<td>-</td>
+<td>JavaScript</td>
+<td></td>
+<td><a href="https://github.com/gbv/ng-skos">github</a></td>
+<td>2016</td>
+<td></td>
+</tr>
+<tr class="even">
+<td><a href="https://jbiomedsem.biomedcentral.com/articles/10.1186/s13326-015-0043-z">SKOS Editor</a></td>
+<td>Web</td>
+<td>✓</td>
+<td>✓</td>
+<td>Java</td>
+<td>LGPL</td>
+<td><a href="https://github.com/Blulab-Utah/SKOSEditor">github</a></td>
+<td>2016</td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>HIVE Vocabulary Server</td>
+<td>Web</td>
+<td>✓</td>
+<td>-</td>
+<td>Java</td>
+<td>BSD</td>
+<td><a href="https://github.com/MetadataResearchCenter/hive-mrc">github</a></td>
+<td>2015</td>
+<td></td>
+</tr>
+<tr class="even">
+<td><a href="http://www.askosi.org/">ASKOSI</a></td>
+<td>Web</td>
+<td>-</td>
+<td>-</td>
+<td>Java</td>
+<td>GPL</td>
+<td><a href="http://www.askosi.org/example/">askosi</a></td>
+<td>2011</td>
+<td></td>
+</tr>
+<tr class="odd">
+<td><a href="https://thmanager.sourceforge.io/">THManager</a></td>
+<td>JVM</td>
+<td>✓</td>
+<td>-</td>
+<td>Java</td>
+<td>LGPL</td>
+<td><a href="https://sourceforge.net/projects/thmanager/">sourceforge</a></td>
+<td>2006</td>
+<td></td>
+</tr>
+<tr class="even">
+<td><a href="https://ontoserver.csiro.au/">OntoServer</a></td>
+<td>Web</td>
+<td>✓</td>
+<td>✓</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td><a href="https://www.apelon.com/solutions/terminology-tooling/termmanager">Apelon TermManager</a></td>
+<td>Web</td>
+<td>✓</td>
+<td>?</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>mapping editor</td>
+</tr>
+<tr class="even">
+<td><a href="https://www.poolparty.biz/poolparty-thesaurus-manager">PoolParty Thesaurus Server</a></td>
+<td>Web</td>
+<td>-</td>
+<td>-</td>
+<td>Java</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div></div>
+<div id="171099c6" class="cell markdown">
+<p>The following applications, scripts, and/or libraries may also worth to consider for KOS management but they have not been evaluated yet enough to be inclued in the list above:</p>
+<ul>
+<li>SSSOM (Python)</li>
+<li>TS4NFDI API Gateway</li>
+<li>TS4NFDI Widgets</li>
+<li><a href="https://github.com/Multilingual-LGBTQIA-Vocabularies/Examing_LGBTQ_Concepts">Scripts to analyze concept drift</a></li>
+</ul>
+<section id="data" class="level2">
+<h2 class="anchored" data-anchor-id="data">Data</h2>
 <p>The terminology software is listed <a href="kos-software.json">in a JSON file</a> as array of flat records with the following fields:</p>
-<table class="caption-top table">
+<table class="caption-top table table-sm table-striped small">
 <colgroup>
 <col style="width: 25%">
 <col style="width: 75%">
@@ -297,428 +834,15 @@
 <td><code>update</code></td>
 <td>year of most recent update of the software</td>
 </tr>
+<tr class="even">
+<td><code>category</code></td>
+<td>type of software</td>
+</tr>
 </tbody>
 </table>
 </section>
-<section id="specialized-software" class="level2">
-<h2 class="anchored" data-anchor-id="specialized-software">Specialized Software</h2>
-<div class="cell-container"><div class="cell-decorator"><pre>In [1]:</pre></div><div id="tbl-software" class="cell anchored" data-execution_count="1">
-<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> IPython.display <span class="im">import</span> Markdown</span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> tabulate <span class="im">import</span> tabulate</span>
-<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> pandas <span class="im">as</span> pd</span>
-<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> urllib.parse <span class="im">import</span> urlparse</span>
-<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> IPython.display <span class="im">import</span> display, HTML</span>
-<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> re</span>
-<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> hyperlink(row):</span>
-<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> pd.notna(row[<span class="st">'url'</span>]):</span>
-<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a>        <span class="cf">return</span> <span class="ss">f'&lt;a href="</span><span class="sc">{</span>row[<span class="st">"url"</span>]<span class="sc">}</span><span class="ss">"&gt;</span><span class="sc">{</span>row[<span class="st">"name"</span>]<span class="sc">}</span><span class="ss">&lt;/a&gt;'</span></span>
-<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a>    <span class="cf">else</span>:</span>
-<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a>        <span class="cf">return</span> row[<span class="st">'name'</span>]    </span>
-<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> cell(value):</span>
-<span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> <span class="bu">isinstance</span>(value, <span class="bu">bool</span>):</span>
-<span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a>        <span class="cf">return</span> <span class="st">"✓"</span> <span class="cf">if</span> value <span class="cf">else</span> <span class="st">"-"</span></span>
-<span id="cb1-17"><a href="#cb1-17" aria-hidden="true" tabindex="-1"></a>    <span class="cf">elif</span> <span class="bu">type</span>(value) <span class="kw">is</span> <span class="bu">str</span> <span class="kw">and</span> re.match(<span class="vs">r"^https?://"</span>,value):</span>
-<span id="cb1-18"><a href="#cb1-18" aria-hidden="true" tabindex="-1"></a>        url <span class="op">=</span> urlparse(value)</span>
-<span id="cb1-19"><a href="#cb1-19" aria-hidden="true" tabindex="-1"></a>        host <span class="op">=</span> url.hostname.split(<span class="st">"."</span>)[<span class="op">-</span><span class="dv">2</span>]</span>
-<span id="cb1-20"><a href="#cb1-20" aria-hidden="true" tabindex="-1"></a>        <span class="cf">return</span> <span class="ss">f'&lt;a href="</span><span class="sc">{</span>value<span class="sc">}</span><span class="ss">"&gt;</span><span class="sc">{</span>host<span class="sc">}</span><span class="ss">&lt;/a&gt;'</span></span>
-<span id="cb1-21"><a href="#cb1-21" aria-hidden="true" tabindex="-1"></a>    <span class="cf">elif</span> pd.notna(value):</span>
-<span id="cb1-22"><a href="#cb1-22" aria-hidden="true" tabindex="-1"></a>        <span class="cf">return</span> value</span>
-<span id="cb1-23"><a href="#cb1-23" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> <span class="st">""</span></span>
-<span id="cb1-24"><a href="#cb1-24" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-25"><a href="#cb1-25" aria-hidden="true" tabindex="-1"></a>df <span class="op">=</span> pd.read_json(<span class="st">'kos-software.json'</span>)</span>
-<span id="cb1-26"><a href="#cb1-26" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-27"><a href="#cb1-27" aria-hidden="true" tabindex="-1"></a>df[<span class="st">"name"</span>] <span class="op">=</span> df.<span class="bu">apply</span>(hyperlink, axis<span class="op">=</span><span class="dv">1</span>)</span>
-<span id="cb1-28"><a href="#cb1-28" aria-hidden="true" tabindex="-1"></a>df <span class="op">=</span> df.drop(columns<span class="op">=</span>[<span class="st">"url"</span>])</span>
-<span id="cb1-29"><a href="#cb1-29" aria-hidden="true" tabindex="-1"></a>df <span class="op">=</span> df.applymap(cell)</span>
-<span id="cb1-30"><a href="#cb1-30" aria-hidden="true" tabindex="-1"></a>display(HTML(df.to_html(escape<span class="op">=</span><span class="va">False</span>,index<span class="op">=</span><span class="va">False</span>)))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stderr">
-<pre><code>/tmp/ipykernel_2084/3163213030.py:29: FutureWarning: DataFrame.applymap has been deprecated. Use DataFrame.map instead.
-  df = df.applymap(cell)</code></pre>
-</div>
-<div class="cell-output cell-output-display">
-<table class="dataframe caption-top table table-sm table-striped small" data-quarto-postprocess="true" data-border="1">
-<thead>
-<tr class="header">
-<th data-quarto-table-cell-role="th">name</th>
-<th data-quarto-table-cell-role="th">platform</th>
-<th data-quarto-table-cell-role="th">edit</th>
-<th data-quarto-table-cell-role="th">api</th>
-<th data-quarto-table-cell-role="th">language</th>
-<th data-quarto-table-cell-role="th">license</th>
-<th data-quarto-table-cell-role="th">repository</th>
-<th data-quarto-table-cell-role="th">update</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td><a href="https://www.semantic-mediawiki.org/">Semantic MediaWiki</a></td>
-<td>Web</td>
-<td>✓</td>
-<td>✓</td>
-<td>PHP</td>
-<td>GPL</td>
-<td><a href="https://github.com/SemanticMediaWiki/SemanticMediaWiki/">github</a></td>
-<td>2025</td>
-</tr>
-<tr class="even">
-<td><a href="http://wikiba.se/">Wikibase</a></td>
-<td>Web</td>
-<td>✓</td>
-<td>✓</td>
-<td>PHP</td>
-<td>GPL</td>
-<td><a href="https://gerrit.wikimedia.org/g/mediawiki/extensions/Wikibase">wikimedia</a></td>
-<td>2025</td>
-</tr>
-<tr class="odd">
-<td><a href="https://vocabularyserver.com/web/">TemaTres</a></td>
-<td>Web</td>
-<td>✓</td>
-<td>✓</td>
-<td>PHP</td>
-<td>GPL</td>
-<td><a href="https://github.com/tematres/TemaTres-Vocabulary-Server">github</a></td>
-<td>2025</td>
-</tr>
-<tr class="even">
-<td><a href="https://iqvoc.net/">iQvoc</a></td>
-<td>Web</td>
-<td>✓</td>
-<td>✓</td>
-<td>Ruby</td>
-<td>Apache</td>
-<td><a href="https://github.com/innoq/iqvoc">github</a></td>
-<td>2025</td>
-</tr>
-<tr class="odd">
-<td><a href="https://vocbench.uniroma2.it/">VocBench</a></td>
-<td>Web</td>
-<td>✓</td>
-<td>✓</td>
-<td>Java &amp; JavaScript</td>
-<td>BSD</td>
-<td><a href="https://bitbucket.org/art-uniroma2/vocbench3/src/master/">bitbucket</a></td>
-<td>2025</td>
-</tr>
-<tr class="even">
-<td><a href="https://skosmos.org/">Skosmos</a></td>
-<td>Web</td>
-<td>-</td>
-<td>✓</td>
-<td>PHP</td>
-<td>MIT</td>
-<td><a href="https://github.com/NatLibFi/Skosmos">github</a></td>
-<td>2025</td>
-</tr>
-<tr class="odd">
-<td><a href="https://coli-conc.gbv.de/cocoda/">Cocoda</a></td>
-<td>Web</td>
-<td>-</td>
-<td>-</td>
-<td>JavaScript</td>
-<td>MIT</td>
-<td><a href="https://github.com/gbv/cocoda">github</a></td>
-<td>2024</td>
-</tr>
-<tr class="even">
-<td><a href="https://github.com/gbv/jskos-server">JSKOS Server</a></td>
-<td>Web</td>
-<td>✓</td>
-<td>✓</td>
-<td>JavaScript</td>
-<td>MIT</td>
-<td><a href="https://github.com/gbv/jskos-server">github</a></td>
-<td>2025</td>
-</tr>
-<tr class="odd">
-<td><a href="https://github.com/skohub-io/skohub-vocabs">SkoHub Vocabs</a></td>
-<td>Web</td>
-<td>✓</td>
-<td>✓</td>
-<td>JavaScript</td>
-<td>Apache</td>
-<td><a href="https://github.com/skohub-io/skohub-vocabs">github</a></td>
-<td>2025</td>
-</tr>
-<tr class="even">
-<td><a href="https://opentheso.hypotheses.org/">OpenTheso</a></td>
-<td>Web</td>
-<td>✓</td>
-<td>✓</td>
-<td>Java</td>
-<td>GPL</td>
-<td><a href="https://github.com/miledrousset/Opentheso">github</a></td>
-<td>2025</td>
-</tr>
-<tr class="odd">
-<td><a href="https://github.com/AKSW/jekyll-rdf">Jekyll RDF</a></td>
-<td>Web</td>
-<td>-</td>
-<td>✓</td>
-<td>Ruby</td>
-<td>MIT</td>
-<td><a href="https://github.com/AKSW/jekyll-rdf">github</a></td>
-<td>2024</td>
-</tr>
-<tr class="even">
-<td><a href="https://github.com/EBISPOT/ols4">Ontology Look-up Service (OLS)</a></td>
-<td>Web</td>
-<td>-</td>
-<td>✓</td>
-<td>JavaScript &amp; Java</td>
-<td>Apache</td>
-<td><a href="https://github.com/EBISPOT/OLS">github</a></td>
-<td>2025</td>
-</tr>
-<tr class="odd">
-<td>OntoPortal Appliance</td>
-<td>Web</td>
-<td>-</td>
-<td>✓</td>
-<td>Ruby</td>
-<td>BSD</td>
-<td><a href="https://github.com/ontoportal">github</a></td>
-<td>2025</td>
-</tr>
-<tr class="even">
-<td><a href="https://showvoc.uniroma2.it/">ShowVoc</a></td>
-<td>Web</td>
-<td>-</td>
-<td>-</td>
-<td>JavaScript</td>
-<td>BSD</td>
-<td><a href="https://bitbucket.org/art-uniroma2/showvoc/src/master/">bitbucket</a></td>
-<td>2025</td>
-</tr>
-<tr class="odd">
-<td>VocExcel</td>
-<td>Web</td>
-<td>-</td>
-<td>-</td>
-<td>Python</td>
-<td>GPL</td>
-<td><a href="https://github.com/RDFLib/VocExcel">github</a></td>
-<td>2023</td>
-</tr>
-<tr class="even">
-<td><a href="https://www.poolparty.biz/poolparty-thesaurus-manager">PoolParty Thesaurus Server</a></td>
-<td>Web</td>
-<td>-</td>
-<td>-</td>
-<td>Java</td>
-<td>Closed Source</td>
-<td></td>
-<td>2025</td>
-</tr>
-<tr class="odd">
-<td><a href="https://atramhasis.readthedocs.io/en/latest/">Atramhasis</a></td>
-<td>Web</td>
-<td>✓</td>
-<td>✓</td>
-<td>Python</td>
-<td>GPL</td>
-<td><a href="https://github.com/OnroerendErfgoed/atramhasis">github</a></td>
-<td>2024</td>
-</tr>
-<tr class="even">
-<td><a href="https://github.com/IHTSDO/snowstorm">Snowstorm</a></td>
-<td>Web</td>
-<td>-</td>
-<td>✓</td>
-<td>Java</td>
-<td>Apache</td>
-<td><a href="https://github.com/IHTSDO/snowstorm">github</a></td>
-<td>2024</td>
-</tr>
-<tr class="odd">
-<td><a href="https://github.com/netwerk-digitaal-erfgoed/network-of-terms">Network of Terms</a></td>
-<td>Web</td>
-<td>-</td>
-<td>✓</td>
-<td>Typescript</td>
-<td>EUPL</td>
-<td><a href="https://github.com/netwerk-digitaal-erfgoed/network-of-terms">github</a></td>
-<td>2025</td>
-</tr>
-<tr class="even">
-<td><a href="https://protegewiki.stanford.edu/wiki/WebProtege">Web Protégé</a></td>
-<td>Web</td>
-<td>✓</td>
-<td>-</td>
-<td>Java</td>
-<td>BSD</td>
-<td><a href="https://github.com/protegeproject/webprotege">github</a></td>
-<td>2023</td>
-</tr>
-<tr class="odd">
-<td><a href="https://www.vocoreg.com/">VoCol</a></td>
-<td>Web</td>
-<td>✓</td>
-<td>-</td>
-<td>JavaScript</td>
-<td>MIT</td>
-<td><a href="https://github.com/vocol/vocol">github</a></td>
-<td>2021</td>
-</tr>
-<tr class="even">
-<td>Django Controlled Vocabularies</td>
-<td>Web</td>
-<td>-</td>
-<td>-</td>
-<td>Python</td>
-<td>BSD</td>
-<td><a href="https://github.com/unt-libraries/django-controlled-vocabularies">github</a></td>
-<td>2023</td>
-</tr>
-<tr class="odd">
-<td><a href="https://vocabseditor.acdh.oeaw.ac.at/">Vocabseditor</a></td>
-<td>Web</td>
-<td>✓</td>
-<td>-</td>
-<td>Python</td>
-<td>MIT</td>
-<td><a href="https://github.com/acdh-oeaw/vocabseditor">github</a></td>
-<td>2024</td>
-</tr>
-<tr class="even">
-<td><a href="https://github.com/RDFLib/VocPrez">VocPrez</a></td>
-<td>Web</td>
-<td>-</td>
-<td>✓</td>
-<td>Python</td>
-<td>GPL</td>
-<td><a href="https://github.com/RDFLib/VocPrez">github</a></td>
-<td>2024</td>
-</tr>
-<tr class="odd">
-<td><a href="https://surroundaustralia.github.io/vocpub-profile/profile.html">VocPub Profile</a></td>
-<td>RDF</td>
-<td>-</td>
-<td>-</td>
-<td>SHACL</td>
-<td>CC0</td>
-<td><a href="https://github.com/surroundaustralia/vocpub-profile">github</a></td>
-<td>2022</td>
-</tr>
-<tr class="even">
-<td><a href="https://skosify.readthedocs.io/en/latest/">Skosify</a></td>
-<td>CLI</td>
-<td>-</td>
-<td>✓</td>
-<td>Python</td>
-<td>MIT</td>
-<td><a href="https://github.com/NatLibFi/Skosify">github</a></td>
-<td>2021</td>
-</tr>
-<tr class="odd">
-<td><a href="http://openskos.org/">OpenSKOS</a></td>
-<td>Web</td>
-<td>-</td>
-<td>✓</td>
-<td>PHP</td>
-<td>GPL</td>
-<td><a href="https://github.com/OpenSKOS/OpenSKOS">github</a></td>
-<td>2020</td>
-</tr>
-<tr class="even">
-<td>SISSVoc</td>
-<td>Web</td>
-<td>-</td>
-<td>✓</td>
-<td>XSLT</td>
-<td>Apache</td>
-<td><a href="https://github.com/SISS/sissvoc">github</a></td>
-<td>2019</td>
-</tr>
-<tr class="odd">
-<td><a href="https://github.com/cmader/qSKOS/">qSKOS</a></td>
-<td>CLI</td>
-<td>-</td>
-<td>✓</td>
-<td>Java</td>
-<td>GPL</td>
-<td><a href="https://github.com/cmader/qSKOS/">github</a></td>
-<td>2024</td>
-</tr>
-<tr class="even">
-<td><a href="https://skos-play.sparna.fr/play/about">SKOS Play</a></td>
-<td>Web</td>
-<td>-</td>
-<td>-</td>
-<td>Java</td>
-<td>CC-BY-SA</td>
-<td><a href="https://bitbucket.org/tfrancart/sparna/src/master/">bitbucket</a></td>
-<td>2018</td>
-</tr>
-<tr class="odd">
-<td><a href="http://culturecommunication.github.io/ginco/">Ginco</a></td>
-<td>Web</td>
-<td>✓</td>
-<td>✓</td>
-<td>Java</td>
-<td>GPL</td>
-<td><a href="https://github.com/culturecommunication/ginco">github</a></td>
-<td>2022</td>
-</tr>
-<tr class="even">
-<td>SKOSjs</td>
-<td>Web</td>
-<td>✓</td>
-<td>-</td>
-<td>JavaScript</td>
-<td>Apache</td>
-<td><a href="https://github.com/tkurz/skosjs">github</a></td>
-<td>2022</td>
-</tr>
-<tr class="odd">
-<td><a href="https://jbiomedsem.biomedcentral.com/articles/10.1186/s13326-015-0043-z">SKOS Editor</a></td>
-<td>Web</td>
-<td>✓</td>
-<td>✓</td>
-<td>Java</td>
-<td>LGPL</td>
-<td><a href="https://github.com/Blulab-Utah/SKOSEditor">github</a></td>
-<td>2016</td>
-</tr>
-<tr class="even">
-<td><a href="http://www.askosi.org/">ASKOSI</a></td>
-<td>Web</td>
-<td>-</td>
-<td>-</td>
-<td>Java</td>
-<td>GPL</td>
-<td><a href="http://www.askosi.org/example/">askosi</a></td>
-<td>2011</td>
-</tr>
-<tr class="odd">
-<td><a href="https://thmanager.sourceforge.io/">THManager</a></td>
-<td>?</td>
-<td>✓</td>
-<td>-</td>
-<td>Java</td>
-<td>LGPL</td>
-<td><a href="https://sourceforge.net/projects/thmanager/">sourceforge</a></td>
-<td>2006</td>
-</tr>
-</tbody>
-</table>
-</div>
-</div></div>
-<div id="06e88d95" class="cell markdown">
-<p>TODO: More to add:</p>
-<ul>
-<li>sheet2rdf?</li>
-<li><a href="https://github.com/nfdi4cat/voc4cat-tool/">voc4cat</a></li>
-<li><a href="https://github.com/OntoZoo/ontobee">OntoBee</a> (2018)</li>
-<li><a href="https://github.com/MetadataResearchCenter/hive-mrc">HIVE Vocabulary Server</a> (2015)</li>
-<li><a href="https://ontoserver.csiro.au/">OntoServer</a> (Closed source, free in Australia)</li>
-<li>TermCurator (developed to translate MeSH)</li>
-<li><a href="https://github.com/Multilingual-LGBTQIA-Vocabularies/Examing_LGBTQ_Concepts">Scripts to analyze concept drift</a></li>
-</ul>
-<section id="related-software" class="level2">
-<h2 class="anchored" data-anchor-id="related-software">Related software</h2>
+<section id="other-software" class="level2">
+<h2 class="anchored" data-anchor-id="other-software">Other software</h2>
 <p>The following software products support editing, viewing and/or analyzing controlled vocabularies but not as a core feature. They might be used for controlled vocabularies as well.</p>
 <table class="caption-top table table-sm table-striped small">
 <thead>
@@ -755,26 +879,6 @@
 <td></td>
 </tr>
 <tr class="odd">
-<td><a href="https://www.apelon.com/solutions/terminology-tooling/termmanager">Apelon TermManager</a></td>
-<td>Web</td>
-<td>mappings</td>
-<td>?</td>
-<td>?</td>
-<td>Closed Source</td>
-<td>-</td>
-<td>2021</td>
-</tr>
-<tr class="even">
-<td><a href="https://protege.stanford.edu/">Protégé</a></td>
-<td>Java</td>
-<td>yes</td>
-<td>?</td>
-<td>Java</td>
-<td>BSD</td>
-<td><a href="https://github.com/protegeproject/protege">GitHub</a></td>
-<td>2025</td>
-</tr>
-<tr class="odd">
 <td><a href="https://github.com/edmondchuc/excel2rdf">excel2rdf</a></td>
 <td>-</td>
 <td>yes</td>
@@ -785,32 +889,36 @@
 <td>2021</td>
 </tr>
 <tr class="even">
-<td><a href="https://www.topquadrant.com/products/topbraid-composer/">TopBraid Composer</a></td>
+<td><a href="https://allegrograph.com/topbraid-composer/">TopBraid Composer</a></td>
 <td>?</td>
 <td>yes</td>
 <td>?</td>
 <td>?</td>
-<td>Closed Source</td>
 <td>-</td>
-<td>2021</td>
+<td>-</td>
+<td></td>
 </tr>
 </tbody>
 </table>
 <section id="generic-software" class="level3">
 <h3 class="anchored" data-anchor-id="generic-software">Generic software</h3>
-<p>Simple terminologies can be managed in a spreadsheet (LibreOffice Calc, Excel, Google Sheets…). This software lacks most special functionality for terminology management but the usability and accesibility is very high.</p>
-<p>The same applies to database management systems with some additional features such as unique key constraints but less usability.</p>
-<p>Terminologies can also be managed in files for instance in RDF/Turtle syntax. This only requires a text editor but the risk is high to introduce errors.</p>
-</section>
-<section id="content-management-systems" class="level3">
-<h3 class="anchored" data-anchor-id="content-management-systems">Content Management Systems</h3>
-<p>Several Content Management Systems (CMS) allow to manage a list or hierarchy of topics or other entities for knowledge managements. If these lists can be exported, the CMS can be applied to manage terminologies. An example is Drupal, which was used for the first version of BARTOC terminology registry.</p>
+<p>Simple terminologies can be managed in a <strong>spreadsheet</strong> (LibreOffice Calc, Excel, Google Sheets…). This software lacks most special functionality for terminology management but the usability and accesibility is very high.</p>
+<p>The same applies to <strong>database management systems</strong> (RDBMS, NoSQL, RDF triple stores, property graph databases…) with some additional features such as unique key constraints but less usability.</p>
+<p>Terminologies can also directly be managed in <strong>files</strong> for instance in RDF/Turtle syntax. This only requires a text editor but the risk is high to introduce errors.</p>
+<p>Several <strong>Content Management Systems</strong> (CMS) allow to manage a list or hierarchy of topics or other entities for knowledge managements. If these lists can be exported, the CMS can be applied to manage terminologies. An example is Drupal, which was used for the first version of BARTOC terminology registry.</p>
+<!--
+More examples:
+
+- [Sanity Taxonomy Manager](https://www.npmjs.com/package/sanity-plugin-taxonomy-manager) (for Sanity CMS)
+-->
 </section>
 <section id="hosted-services" class="level3">
 <h3 class="anchored" data-anchor-id="hosted-services">Hosted services</h3>
+<p>Some organizations host applications for KOS management (the list is likely incomplete):</p>
 <ul>
 <li><a href="https://doi.org/10.11588/akmb.2018.1.63475">DANTE</a></li>
 <li><a href="https://xtree-public.digicult-verbund.de/">xTree</a></li>
+<li>…</li>
 </ul>
 </section>
 <section id="terminology-management" class="level3">
@@ -828,12 +936,6 @@
 </ul>
 </section>
 </div>
-</section>
-<section id="footnotes" class="footnotes footnotes-end-of-document" role="doc-endnotes">
-<hr>
-<ol>
-<li id="fn1"><p>The term “terminology” in this document is used as synonym for all kinds of knowledge organization systems.<a href="#fnref1" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
-</ol>
 </section>
      </main>
 <!-- /main column -->  <script id="quarto-html-after-body" type="application/javascript">

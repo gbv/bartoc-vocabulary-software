@@ -63,7 +63,8 @@
     "language": "PHP",
     "license": "MIT",
     "repository": "https://github.com/NatLibFi/Skosmos",
-    "update": "2025"
+    "update": "2025",
+    "category": "viewer"
   },
   {
     "name": "Cocoda",
@@ -74,7 +75,8 @@
     "language": "JavaScript",
     "license": "MIT",
     "repository": "https://github.com/gbv/cocoda",
-    "update": "2024"
+    "update": "2024",
+    "category": "mapping editor"
   },
   {
     "name": "JSKOS Server",
@@ -153,6 +155,27 @@
     "update": "2025"
   },
   {
+    "name": "Voc4cat",
+    "platform": "CLI",
+    "api": false,
+    "edit": false,
+    "language": "Python",
+    "license": "BSD-3",
+    "repository": "https://github.com/nfdi4cat/voc4cat-tool/",
+    "update": "2025"
+  },
+  {
+    "name": "Protégé",
+    "platform": "JVM",
+    "url": "https://protege.stanford.edu/",
+    "api": false,
+    "edit": true,
+    "language": "Java",
+    "license": "BSD",
+    "repository": "https://github.com/protegeproject/protege",
+    "update": "2025"
+  },
+  {
     "name": "VocExcel",
     "platform": "Web",
     "api": false,
@@ -161,16 +184,6 @@
     "license": "GPL",
     "repository": "https://github.com/RDFLib/VocExcel",
     "update": "2023"
-  },
-  {
-    "name": "PoolParty Thesaurus Server",
-    "url": "https://www.poolparty.biz/poolparty-thesaurus-manager",
-    "platform": "Web",
-    "api": false,
-    "edit": false,
-    "language": "Java",
-    "license": "Closed Source",
-    "update": "2025"
   },
   {
     "name": "Atramhasis",
@@ -260,6 +273,17 @@
     "update": "2024"
   },
   {
+    "name": "qSKOS",
+    "url": "https://github.com/cmader/qSKOS/",
+    "platform": "CLI",
+    "api": true,
+    "edit": false,
+    "language": "Java",
+    "license": "GPL",
+    "repository": "https://github.com/cmader/qSKOS/",
+    "update": "2024"
+  },
+  {
     "name": "VocPub Profile",
     "url": "https://surroundaustralia.github.io/vocpub-profile/profile.html",
     "platform": "RDF",
@@ -268,6 +292,27 @@
     "language": "SHACL",
     "license": "CC0",
     "repository": "https://github.com/surroundaustralia/vocpub-profile",
+    "update": "2022"
+  },
+  {
+    "name": "Ginco",
+    "url": "http://culturecommunication.github.io/ginco/",
+    "platform": "Web",
+    "api": true,
+    "edit": true,
+    "language": "Java",
+    "license": "GPL",
+    "repository": "https://github.com/culturecommunication/ginco",
+    "update": "2022"
+  },
+  {
+    "name": "SKOSjs",
+    "platform": "Web",
+    "api": false,
+    "edit": true,
+    "language": "JavaScript",
+    "license": "Apache",
+    "repository": "https://github.com/tkurz/skosjs",
     "update": "2022"
   },
   {
@@ -303,17 +348,6 @@
     "update": "2019"
   },
   {
-    "name": "qSKOS",
-    "url": "https://github.com/cmader/qSKOS/",
-    "platform": "CLI",
-    "api": true,
-    "edit": false,
-    "language": "Java",
-    "license": "GPL",
-    "repository": "https://github.com/cmader/qSKOS/",
-    "update": "2024"
-  },
-  {
     "name": "SKOS Play",
     "url": "https://skos-play.sparna.fr/play/about",
     "platform": "Web",
@@ -325,25 +359,25 @@
     "update": "2018"
   },
   {
-    "name": "Ginco",
-    "url": "http://culturecommunication.github.io/ginco/",
+    "name": "OntoBee",
+    "url": "https://ontobee.org/",
     "platform": "Web",
     "api": true,
-    "edit": true,
-    "language": "Java",
-    "license": "GPL",
-    "repository": "https://github.com/culturecommunication/ginco",
-    "update": "2022"
+    "edit": false,
+    "language": "PHP & JavaScript",
+    "license": "Apache",
+    "repository": "https://github.com/OntoZoo/ontobee",
+    "update": "2018"
   },
   {
-    "name": "SKOSjs",
+    "name": "ng-skos",
+    "url": "http://gbv.github.io/ng-skos/",
     "platform": "Web",
     "api": false,
-    "edit": true,
+    "edit": false,
     "language": "JavaScript",
-    "license": "Apache",
-    "repository": "https://github.com/tkurz/skosjs",
-    "update": "2022"
+    "repository": "https://github.com/gbv/ng-skos",
+    "update": "2016"
   },
   {
     "name": "SKOS Editor",
@@ -355,6 +389,31 @@
     "license": "LGPL",
     "repository": "https://github.com/Blulab-Utah/SKOSEditor",
     "update": "2016"
+  },
+  {
+    "name": "HIVE Vocabulary Server",
+    "platform": "Web",
+    "edit": true,
+    "api": false,
+    "language": "Java",
+    "license": "BSD",
+    "repository": "https://github.com/MetadataResearchCenter/hive-mrc",
+    "update": "2015"
+  },
+  {
+    "name": "OntoServer",
+    "url": "https://ontoserver.csiro.au/",
+    "platform": "Web",
+    "edit": true,
+    "api": true
+  },
+  {
+    "name": "Apelon TermManager",
+    "url": "https://www.apelon.com/solutions/terminology-tooling/termmanager",
+    "platform": "Web",
+    "edit": true,
+    "api": "?",
+    "category": "mapping editor"
   },
   {
     "name": "ASKOSI",
@@ -370,12 +429,20 @@
   {
     "name": "THManager",
     "url": "https://thmanager.sourceforge.io/",
-    "platform": "?",
+    "platform": "JVM",
     "api": false,
     "edit": true,
     "language": "Java",
     "license": "LGPL",
     "repository": "https://sourceforge.net/projects/thmanager/",
     "update": "2006"
+  },
+  {
+    "name": "PoolParty Thesaurus Server",
+    "url": "https://www.poolparty.biz/poolparty-thesaurus-manager",
+    "platform": "Web",
+    "api": false,
+    "edit": false,
+    "language": "Java"
   }
 ]

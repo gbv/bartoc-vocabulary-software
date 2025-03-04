@@ -13,14 +13,16 @@ The terminology registry **[BARTOC](https://bartoc.org/)** collects information 
 
 ## Scope
 
-This report is limited to [software specialized](#specialized-software) for editing, vizualizing and/or analyzing terminologies.^[The term "terminology" in this document is used as synonym for all kinds of knowledge organization systems.] Software excluded if:
+This report is limited to [software specialized](#specialized-software) for editing, vizualizing and/or analyzing terminologies (the term "terminology" in this document is used as synonym for all kinds of KOS). Software is excluded if:
 
 - it only happens to make use of terminologies (for instance OpenRefine), or
-- it only contains a minor terminology management module (for instance [content management systems], or
+- it is more [generic software] that can be used for terminology management among other use cases (like database mamagement systems), or
 - it can only be used as [hosted service](#hosted-services) (for instance DANTE), or
 - the type of terminologies managed with the software is limited to glossaries and simple lists of terms.
 
-This also excludes the established category of software known as "[terminology management]" to manage a centralized repository of approved terms, definitions, and translations in an organization. Related KOS software is partly [listed or referenced below](#related-software).
+This also excludes the established category of software known as "[terminology management]" to manage a centralized repository of approved terms, definitions, and translations in an organization. Related KOS software is partly [listed or referenced below](#other-software).
+
+Deprecated applications are not excluded for historical reference.
 
 The terminology software is listed [in a JSON file](kos-software.json) as array of flat records with the following fields:
 
@@ -62,29 +64,29 @@ def cell(value):
         url = urlparse(value)
         host = url.hostname.split(".")[-2]
         return f'<a href="{value}">{host}</a>'
-    elif pd.notna(value):
-        return value
-    return ""
+    elif not pd.notna(value):
+        return ""
+    elif type(value) is float: # pd converts string to float
+        return int(value)
+    return value
 
 df = pd.read_json('kos-software.json')
 
 df["name"] = df.apply(hyperlink, axis=1)
+df = df.sort_values(by=["update"],ascending=False)
 df = df.drop(columns=["url"])
 df = df.applymap(cell)
 display(HTML(df.to_html(escape=False,index=False)))
 ```
 
-TODO: More to add:
+The following applications, scripts, and/or libraries may also worth to consider for KOS management but they have not been evaluated yet enough to be inclued in the list above:
 
-- sheet2rdf?
-- [voc4cat](https://github.com/nfdi4cat/voc4cat-tool/)
-- [OntoBee](https://github.com/OntoZoo/ontobee) (2018)
-- [HIVE Vocabulary Server](https://github.com/MetadataResearchCenter/hive-mrc) (2015)
-- [OntoServer](https://ontoserver.csiro.au/) (Closed source, free in Australia)
-- TermCurator (developed to translate MeSH)
+- SSSOM (Python)
+- TS4NFDI API Gateway
+- TS4NFDI Widgets
 - [Scripts to analyze concept drift](https://github.com/Multilingual-LGBTQIA-Vocabularies/Examing_LGBTQ_Concepts)
 
-## Related software
+## Other software
 
 The following software products support editing, viewing and/or analyzing controlled vocabularies but not as a core feature. They might be used for controlled vocabularies as well.
 
@@ -92,27 +94,32 @@ The following software products support editing, viewing and/or analyzing contro
 |--|--|--|--|--|--|--|--|
 | [Aristotle Metadata Registry](http://aristotlemetadata.com/) | Web | yes | yes | Python/Django | Closed Source | [Github](https://github.com/Aristotle-Metadata-Enterprises/) | 2025 
 | [PoolParty Semantic Suite](https://www.poolparty.biz/product-overview) | ? | yes | ? | ? | Closed Source | - | 
-| [Apelon TermManager](https://www.apelon.com/solutions/terminology-tooling/termmanager) | Web | mappings | ? | ? | Closed Source | - | 2021
-| [Protégé](https://protege.stanford.edu/) | Java | yes | ? | Java | BSD | [GitHub](https://github.com/protegeproject/protege) | 2025
 | [excel2rdf](https://github.com/edmondchuc/excel2rdf) | - | yes | no | Python | GPL | [GitHub](https://github.com/edmondchuc/excel2rdf) | 2021
-| [TopBraid Composer](https://www.topquadrant.com/products/topbraid-composer/) | ? | yes | ? | ? | Closed Source | - | 2021
+| [TopBraid Composer](https://allegrograph.com/topbraid-composer/) | ? | yes | ? | ? | - | - | 
 
 ### Generic software
 
-Simple terminologies can be managed in a spreadsheet (LibreOffice Calc, Excel, Google Sheets...). This software lacks most special functionality for terminology management but the usability and accesibility is very high.
+Simple terminologies can be managed in a **spreadsheet** (LibreOffice Calc, Excel, Google Sheets...). This software lacks most special functionality for terminology management but the usability and accesibility is very high.
 
-The same applies to database management systems with some additional features such as unique key constraints but less usability.
+The same applies to **database management systems** (RDBMS, NoSQL, RDF triple stores, property graph databases...) with some additional features such as unique key constraints but less usability.
 
-Terminologies can also be managed in files for instance in RDF/Turtle syntax. This only requires a text editor but the risk is high to introduce errors.
+Terminologies can also directly be managed in **files** for instance in RDF/Turtle syntax. This only requires a text editor but the risk is high to introduce errors.
 
-### Content Management Systems
+Several **Content Management Systems** (CMS) allow to manage a list or hierarchy of topics or other entities for knowledge managements. If these lists can be exported, the CMS can be applied to manage terminologies. An example is Drupal, which was used for the first version of BARTOC terminology registry.
 
-Several Content Management Systems (CMS) allow to manage a list or hierarchy of topics or other entities for knowledge managements. If these lists can be exported, the CMS can be applied to manage terminologies. An example is Drupal, which was used for the first version of BARTOC terminology registry.
+<!--
+More examples:
+
+- [Sanity Taxonomy Manager](https://www.npmjs.com/package/sanity-plugin-taxonomy-manager) (for Sanity CMS)
+-->
 
 ### Hosted services
 
+Some organizations host applications for KOS management (the list is likely incomplete):
+
 - [DANTE](https://doi.org/10.11588/akmb.2018.1.63475)
 - [xTree](https://xtree-public.digicult-verbund.de/)
+- ...
 
 ### Terminology management
 

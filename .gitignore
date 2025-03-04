@@ -2,3 +2,6 @@
 .venv/
 _freeze/
 docs/
+*.ipynb
+index-preview.html
+site_libs/

@@ -445,5 +445,15 @@
     "api": false,
     "edit": false,
     "language": "Java"
+  },
+  {
+    "name": "TerminoloGit",
+    "platform": "?",
+    "api": false,
+    "edit": true,
+    "language": "Python",
+    "license": "GPL",
+    "repository": "https://gitlab.com/elga-gmbh/termgit",
+    "update": "2025"
   }
 ]

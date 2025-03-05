@@ -123,7 +123,7 @@
     "update": "2024"
   },
   {
-    "name": "Ontology Look-up Service (OLS)",
+    "name": "Ontology Lookup Service (OLS)",
     "url": "https://github.com/EBISPOT/ols4",
     "platform": "Web",
     "api": true,
@@ -134,7 +134,8 @@
     "update": "2025"
   },
   {
-    "name": "OntoPortal Appliance",
+    "name": "OntoPortal Alliance",
+    "url": "https://ontoportal.org/",
     "platform": "Web",
     "api": true,
     "edit": false,

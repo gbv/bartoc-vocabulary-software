@@ -129,6 +129,18 @@ Some organizations host applications for KOS management (the list is likely inco
 
 See [http://recremisi.blogspot.de/p/acrolinxterminology-lifecycle.html](http://recremisi.blogspot.de/p/acrolinxterminology-lifecycle.html) and [http://term-portal.de/en/software-en/terminology-management.html](http://term-portal.de/en/software-en/terminology-management.html).
 
+## Acknowledgements
+
+Contributions to this report or to its precedessors have been provided by 
+Adrian Pohl,
+Antoine Isaac,
+Eugene Morozov,
+Koen Van Daele,
+Matthias Löbe
+Roman Baum,
+Susanne Arndt,
+and possibly others.
+
 ## References
 
 This report is based on two reports created in 2016 at VZG:

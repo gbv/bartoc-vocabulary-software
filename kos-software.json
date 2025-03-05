@@ -135,6 +135,7 @@
   },
   {
     "name": "OntoPortal Alliance",
+    "url": "https://ontoportal.org/",
     "platform": "Web",
     "api": true,
     "edit": false,

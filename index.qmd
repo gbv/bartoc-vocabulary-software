@@ -103,7 +103,7 @@ The following software products support editing, viewing and/or analyzing contro
 
 ### Generic software
 
-Simple terminologies can be managed in a **spreadsheet** (LibreOffice Calc, Excel, Google Sheets...). This software lacks most special functionality for terminology management but the usability and accessibility is very high. Some tools in the list below enhance standard spreadsheets with terminology management functionalities (e.g. vocexcel, voc4cat-tool).
+Simple terminologies can be managed in a **spreadsheet** (LibreOffice Calc, Excel, Google Sheets...). This software lacks most special functionality for terminology management but the usability and accessibility is very high. Some tools in the list above (VocExcel, voc4cat-tool) enhance standard spreadsheets with terminology management functionalities.
 
 The same applies to **database management systems** (RDBMS, NoSQL, RDF triple stores, property graph databases...) with some additional features such as unique key constraints but less usability. An edge case might be systems for management of knowledge graphs (such as Semantic MediaWiki and Wikibase, [included above](#software)), and for personal knowledge management (such as Obsidian and Notion, not included above).
 

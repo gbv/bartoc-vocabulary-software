@@ -179,13 +179,14 @@
   },
   {
     "name": "VocExcel",
-    "platform": "Web",
+    "platform": "Excel, CLI",
     "api": false,
     "edit": false,
     "language": "Python",
     "license": "BSD-3",
     "repository": "https://github.com/Kurrawong/VocExcel",
-    "update": "2025"
+    "update": "2025",
+    "category": "converter"
   },
   {
     "name": "Atramhasis",

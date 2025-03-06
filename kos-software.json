@@ -156,10 +156,11 @@
     "update": "2025"
   },
   {
-    "name": "Voc4cat",
+    "name": "voc4cat-tool",
+    "url": "https://github.com/nfdi4cat/voc4cat-tool/",
     "platform": "CLI",
     "api": false,
-    "edit": false,
+    "edit": true,
     "language": "Python",
     "license": "BSD-3",
     "repository": "https://github.com/nfdi4cat/voc4cat-tool/",
@@ -182,9 +183,9 @@
     "api": false,
     "edit": false,
     "language": "Python",
-    "license": "GPL",
-    "repository": "https://github.com/RDFLib/VocExcel",
-    "update": "2023"
+    "license": "BSD-3",
+    "repository": "https://github.com/Kurrawong/VocExcel",
+    "update": "2025"
   },
   {
     "name": "Atramhasis",

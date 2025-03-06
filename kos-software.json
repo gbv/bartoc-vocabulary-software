@@ -292,9 +292,9 @@
     "api": false,
     "edit": false,
     "language": "SHACL",
-    "license": "CC0",
-    "repository": "https://github.com/surroundaustralia/vocpub-profile",
-    "update": "2022"
+    "license": "CC-BY-4.0",
+    "repository": "https://github.com/AGLDWG/vocpub-profile/",
+    "update": "2024"
   },
   {
     "name": "Ginco",

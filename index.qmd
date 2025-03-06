@@ -63,7 +63,7 @@ df = df.applymap(cell)
 display(HTML(df.to_html(escape=False,index=False)))
 ```
 
-The following applications, scripts, and/or libraries may also worth to consider for KOS management but they have not been evaluated yet enough to be inclued in the list above:
+The following applications, scripts, and/or libraries may also worth to consider for KOS management but they have not been evaluated yet enough to be included in the list above:
 
 - SSSOM (Python)
 - TS4NFDI API Gateway
@@ -103,7 +103,7 @@ The following software products support editing, viewing and/or analyzing contro
 
 ### Generic software
 
-Simple terminologies can be managed in a **spreadsheet** (LibreOffice Calc, Excel, Google Sheets...). This software lacks most special functionality for terminology management but the usability and accesibility is very high.
+Simple terminologies can be managed in a **spreadsheet** (LibreOffice Calc, Excel, Google Sheets...). This software lacks most special functionality for terminology management but the usability and accessibility is very high. Some tools in the list below enhance standard spreadsheets with terminology management functionalities (e.g. vocexcel, voc4cat-tool).
 
 The same applies to **database management systems** (RDBMS, NoSQL, RDF triple stores, property graph databases...) with some additional features such as unique key constraints but less usability. An edge case might be systems for management of knowledge graphs (such as Semantic MediaWiki and Wikibase, [included above](#software)), and for personal knowledge management (such as Obsidian and Notion, not included above).
 
@@ -131,9 +131,10 @@ See [http://recremisi.blogspot.de/p/acrolinxterminology-lifecycle.html](http://r
 
 ## Acknowledgements
 
-Contributions to this report or to its precedessors have been provided by 
+Contributions to this report or to its predecessors have been provided by 
 Adrian Pohl,
 Antoine Isaac,
+David Linke,
 Eugene Morozov,
 Koen Van Daele,
 Matthias Löbe

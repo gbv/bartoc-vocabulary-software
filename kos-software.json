@@ -87,7 +87,8 @@
     "language": "JavaScript",
     "license": "MIT",
     "repository": "https://github.com/gbv/jskos-server",
-    "update": "2025"
+    "update": "2025",
+    "category": "database"
   },
   {
     "name": "SkoHub Vocabs",
@@ -98,7 +99,8 @@
     "language": "JavaScript",
     "license": "Apache",
     "repository": "https://github.com/skohub-io/skohub-vocabs",
-    "update": "2025"
+    "update": "2025",
+    "category": "viewer"
   },
   {
     "name": "OpenTheso",
@@ -153,18 +155,20 @@
     "language": "JavaScript",
     "license": "BSD",
     "repository": "https://bitbucket.org/art-uniroma2/showvoc/src/master/",
-    "update": "2025"
+    "update": "2025",
+    "category": "viewer"
   },
   {
     "name": "voc4cat-tool",
     "url": "https://github.com/nfdi4cat/voc4cat-tool/",
     "platform": "CLI, GitHub",
     "api": false,
-    "edit": true,
+    "edit": false,
     "language": "Python",
     "license": "BSD-3",
     "repository": "https://github.com/nfdi4cat/voc4cat-tool/",
-    "update": "2025"
+    "update": "2025",
+    "category": "converter"
   },
   {
     "name": "Protégé",
@@ -175,17 +179,41 @@
     "language": "Java",
     "license": "BSD",
     "repository": "https://github.com/protegeproject/protege",
-    "update": "2025"
+    "update": "2025",
+    "category": "editor"
   },
   {
     "name": "VocExcel",
-    "platform": "Web",
+    "platform": "Excel, CLI",
     "api": false,
     "edit": false,
     "language": "Python",
     "license": "BSD-3",
     "repository": "https://github.com/Kurrawong/VocExcel",
-    "update": "2025"
+    "update": "2025",
+    "category": "converter"
+  },
+  {
+    "name": "jskos-cli",
+    "platform": "CLI",
+    "api": false,
+    "edit": false,
+    "language": "JavaScript",
+    "license": "MIT",
+    "repository": "https://github.com/gbv/jskos-cli/",
+    "update": "2025",
+    "category": "converter & validator"
+  },
+  {
+    "name": "jskos-proxy",
+    "platform": "Web",
+    "api": true,
+    "edit": false,
+    "language": "JavaScript",
+    "license": "MIT",
+    "repository": "https://github.com/gbv/jskos-proxy/",
+    "update": "2025",
+    "category": "viewer & proxy"
   },
   {
     "name": "Atramhasis",
@@ -218,7 +246,8 @@
     "language": "Typescript",
     "license": "EUPL",
     "repository": "https://github.com/netwerk-digitaal-erfgoed/network-of-terms",
-    "update": "2025"
+    "update": "2025",
+    "category": "proxy"
   },
   {
     "name": "Web Protégé",
@@ -229,7 +258,8 @@
     "language": "Java",
     "license": "BSD",
     "repository": "https://github.com/protegeproject/webprotege",
-    "update": "2023"
+    "update": "2023",
+    "category": "editor"
   },
   {
     "name": "VoCol",

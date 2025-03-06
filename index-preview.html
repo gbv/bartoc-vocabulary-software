@@ -290,7 +290,7 @@
 <span id="cb1-32"><a href="#cb1-32" aria-hidden="true" tabindex="-1"></a>df <span class="op">=</span> df.applymap(cell)</span>
 <span id="cb1-33"><a href="#cb1-33" aria-hidden="true" tabindex="-1"></a>display(HTML(df.to_html(escape<span class="op">=</span><span class="va">False</span>,index<span class="op">=</span><span class="va">False</span>)))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stderr">
-<pre><code>/tmp/ipykernel_2076/950734490.py:32: FutureWarning: DataFrame.applymap has been deprecated. Use DataFrame.map instead.
+<pre><code>/tmp/ipykernel_2089/950734490.py:32: FutureWarning: DataFrame.applymap has been deprecated. Use DataFrame.map instead.
   df = df.applymap(cell)</code></pre>
 </div>
 <div class="cell-output cell-output-display">
@@ -384,7 +384,7 @@
 <td>MIT</td>
 <td><a href="https://github.com/gbv/jskos-server">github</a></td>
 <td>2025</td>
-<td></td>
+<td>database</td>
 </tr>
 <tr class="even">
 <td><a href="https://github.com/skohub-io/skohub-vocabs">SkoHub Vocabs</a></td>
@@ -394,6 +394,28 @@
 <td>JavaScript</td>
 <td>Apache</td>
 <td><a href="https://github.com/skohub-io/skohub-vocabs">github</a></td>
+<td>2025</td>
+<td>viewer</td>
+</tr>
+<tr class="odd">
+<td><a href="https://opentheso.hypotheses.org/">OpenTheso</a></td>
+<td>Web</td>
+<td>✓</td>
+<td>✓</td>
+<td>Java</td>
+<td>GPL</td>
+<td><a href="https://github.com/miledrousset/Opentheso">github</a></td>
+<td>2025</td>
+<td></td>
+</tr>
+<tr class="even">
+<td><a href="https://github.com/EBISPOT/ols4">Ontology Lookup Service (OLS)</a></td>
+<td>Web</td>
+<td>-</td>
+<td>✓</td>
+<td>JavaScript &amp; Java</td>
+<td>Apache</td>
+<td><a href="https://github.com/EBISPOT/OLS">github</a></td>
 <td>2025</td>
 <td></td>
 </tr>
@@ -406,29 +428,7 @@
 <td>EUPL</td>
 <td><a href="https://github.com/netwerk-digitaal-erfgoed/network-of-terms">github</a></td>
 <td>2025</td>
-<td></td>
-</tr>
-<tr class="even">
-<td><a href="https://opentheso.hypotheses.org/">OpenTheso</a></td>
-<td>Web</td>
-<td>✓</td>
-<td>✓</td>
-<td>Java</td>
-<td>GPL</td>
-<td><a href="https://github.com/miledrousset/Opentheso">github</a></td>
-<td>2025</td>
-<td></td>
-</tr>
-<tr class="odd">
-<td><a href="https://github.com/EBISPOT/ols4">Ontology Lookup Service (OLS)</a></td>
-<td>Web</td>
-<td>-</td>
-<td>✓</td>
-<td>JavaScript &amp; Java</td>
-<td>Apache</td>
-<td><a href="https://github.com/EBISPOT/OLS">github</a></td>
-<td>2025</td>
-<td></td>
+<td>proxy</td>
 </tr>
 <tr class="even">
 <td><a href="https://ontoportal.org/">OntoPortal Alliance</a></td>
@@ -442,17 +442,6 @@
 <td></td>
 </tr>
 <tr class="odd">
-<td><a href="https://github.com/nfdi4cat/voc4cat-tool/">voc4cat-tool</a></td>
-<td>CLI, GitHub</td>
-<td>✓</td>
-<td>-</td>
-<td>Python</td>
-<td>BSD-3</td>
-<td><a href="https://github.com/nfdi4cat/voc4cat-tool/">github</a></td>
-<td>2025</td>
-<td></td>
-</tr>
-<tr class="even">
 <td><a href="https://showvoc.uniroma2.it/">ShowVoc</a></td>
 <td>Web</td>
 <td>-</td>
@@ -461,9 +450,31 @@
 <td>BSD</td>
 <td><a href="https://bitbucket.org/art-uniroma2/showvoc/src/master/">bitbucket</a></td>
 <td>2025</td>
-<td></td>
+<td>viewer</td>
+</tr>
+<tr class="even">
+<td><a href="https://github.com/nfdi4cat/voc4cat-tool/">voc4cat-tool</a></td>
+<td>CLI, GitHub</td>
+<td>-</td>
+<td>-</td>
+<td>Python</td>
+<td>BSD-3</td>
+<td><a href="https://github.com/nfdi4cat/voc4cat-tool/">github</a></td>
+<td>2025</td>
+<td>converter</td>
 </tr>
 <tr class="odd">
+<td>VocExcel</td>
+<td>Excel, CLI</td>
+<td>-</td>
+<td>-</td>
+<td>Python</td>
+<td>BSD-3</td>
+<td><a href="https://github.com/Kurrawong/VocExcel">github</a></td>
+<td>2025</td>
+<td>converter</td>
+</tr>
+<tr class="even">
 <td><a href="https://protege.stanford.edu/">Protégé</a></td>
 <td>JVM</td>
 <td>✓</td>
@@ -472,18 +483,29 @@
 <td>BSD</td>
 <td><a href="https://github.com/protegeproject/protege">github</a></td>
 <td>2025</td>
-<td></td>
+<td>editor</td>
+</tr>
+<tr class="odd">
+<td>jskos-cli</td>
+<td>CLI</td>
+<td>-</td>
+<td>-</td>
+<td>JavaScript</td>
+<td>MIT</td>
+<td><a href="https://github.com/gbv/jskos-cli/">github</a></td>
+<td>2025</td>
+<td>converter &amp; validator</td>
 </tr>
 <tr class="even">
-<td>VocExcel</td>
+<td>jskos-proxy</td>
 <td>Web</td>
 <td>-</td>
-<td>-</td>
-<td>Python</td>
-<td>BSD-3</td>
-<td><a href="https://github.com/Kurrawong/VocExcel">github</a></td>
+<td>✓</td>
+<td>JavaScript</td>
+<td>MIT</td>
+<td><a href="https://github.com/gbv/jskos-proxy/">github</a></td>
 <td>2025</td>
-<td></td>
+<td>viewer &amp; proxy</td>
 </tr>
 <tr class="odd">
 <td>TerminoloGit</td>
@@ -593,7 +615,7 @@
 <td>BSD</td>
 <td><a href="https://github.com/protegeproject/webprotege">github</a></td>
 <td>2023</td>
-<td></td>
+<td>editor</td>
 </tr>
 <tr class="odd">
 <td>Django Controlled Vocabularies</td>
@@ -786,7 +808,7 @@
 </table>
 </div>
 </div></div>
-<div id="e86379c3" class="cell markdown">
+<div id="f18a30a6" class="cell markdown">
 <p>The following applications, scripts, and/or libraries may also worth to consider for KOS management but they have not been evaluated yet enough to be included in the list above:</p>
 <ul>
 <li>SSSOM (Python)</li>
@@ -913,7 +935,7 @@
 </table>
 <section id="generic-software" class="level3">
 <h3 class="anchored" data-anchor-id="generic-software">Generic software</h3>
-<p>Simple terminologies can be managed in a <strong>spreadsheet</strong> (LibreOffice Calc, Excel, Google Sheets…). This software lacks most special functionality for terminology management but the usability and accessibility is very high. Some tools in the list below enhance standard spreadsheets with terminology management functionalities (e.g.&nbsp;vocexcel, voc4cat-tool).</p>
+<p>Simple terminologies can be managed in a <strong>spreadsheet</strong> (LibreOffice Calc, Excel, Google Sheets…). This software lacks most special functionality for terminology management but the usability and accessibility is very high. Some tools in the list above (VocExcel, voc4cat-tool) enhance standard spreadsheets with terminology management functionalities.</p>
 <p>The same applies to <strong>database management systems</strong> (RDBMS, NoSQL, RDF triple stores, property graph databases…) with some additional features such as unique key constraints but less usability. An edge case might be systems for management of knowledge graphs (such as Semantic MediaWiki and Wikibase, <a href="#software">included above</a>), and for personal knowledge management (such as Obsidian and Notion, not included above).</p>
 <p>Several <strong>Content Management Systems</strong> (CMS) allow to manage a list or hierarchy of topics or other entities for knowledge managements. If these lists can be exported, the CMS can be applied to manage terminologies. An example is Drupal, which was used for the first version of BARTOC terminology registry.</p>
 <!--

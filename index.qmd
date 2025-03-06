@@ -13,7 +13,7 @@ The terminology registry **[BARTOC](https://bartoc.org/)** collects information 
 
 ## Scope
 
-This report is limited to **[software specialized](#specialized-software) for editing, vizualizing and/or analyzing terminologies.** The term "terminology" in this document is used as synonym for all kinds of KOS. Software is excluded if:
+This report is limited to **[specialized KOS software](#kos-software) for editing, vizualizing and/or analyzing terminologies.** The term "terminology" in this document is used as synonym for all kinds of KOS. Software is excluded if:
 
 - it only happens to make use of terminologies (for instance OpenRefine), or
 - it is more [generic software] that can be used for terminology management among other use cases (like database management systems), or
@@ -22,7 +22,7 @@ This report is limited to **[software specialized](#specialized-software) for ed
 
 The latter also excludes the established category of software known as "[terminology management]" to manage a centralized repository of approved terms, definitions, and translations in an organization: such software is partly [listed or referenced below](#other-software).
 
-## Specialized Software
+## KOS Software
 
 Deprecated applications are included for historical reference.
 
@@ -105,7 +105,7 @@ The following software products support editing, viewing and/or analyzing contro
 
 Simple terminologies can be managed in a **spreadsheet** (LibreOffice Calc, Excel, Google Sheets...). This software lacks most special functionality for terminology management but the usability and accessibility is very high. Some tools in the list above (VocExcel, voc4cat-tool) enhance standard spreadsheets with terminology management functionalities.
 
-The same applies to **database management systems** (RDBMS, NoSQL, RDF triple stores, property graph databases...) with some additional features such as unique key constraints but less usability. An edge case might be systems for management of knowledge graphs (such as Semantic MediaWiki and Wikibase, [included above](#software)), and for personal knowledge management (such as Obsidian and Notion, not included above).
+The same applies to **database management systems** (RDBMS, NoSQL, RDF triple stores, property graph databases...) with some additional features such as unique key constraints but less usability. An edge case might be systems for management of knowledge graphs (such as Semantic MediaWiki and Wikibase, [included above](#kos-software)), and for personal knowledge management (such as Obsidian and Notion, not included).
 
 Several **Content Management Systems** (CMS) allow to manage a list or hierarchy of topics or other entities for knowledge managements. If these lists can be exported, the CMS can be applied to manage terminologies. An example is Drupal, which was used for the first version of BARTOC terminology registry.
 

@@ -189,6 +189,16 @@
     "category": "converter"
   },
   {
+    "name": "jskos-cli",
+    "platform": "CLI",
+    "api": false,
+    "edit": false,
+    "language": "JavaScript",
+    "license": "MIT",
+    "repository": "https://github.com/gbv/jskos-cli/",
+    "category": "converter & validator"
+  },
+  {
     "name": "Atramhasis",
     "url": "https://atramhasis.readthedocs.io/en/latest/",
     "platform": "Web",

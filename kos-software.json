@@ -205,6 +205,30 @@
     "category": "converter & validator"
   },
   {
+    "name": "sssom-py",
+    "platform": "CLI",
+    "url": "https://mapping-commons.github.io/sssom-py",
+    "api": false,
+    "edit": false,
+    "language": "Python",
+    "license": "MIT",
+    "update": "2025",
+    "repository": "https://github.com/mapping-commons/sssom-py",
+    "category": "mapping converter"
+  },
+  {
+    "name": "sssom-java",
+    "url": "https://incenp.org/dvlpt/sssom-java/",
+    "platform": "CLI",
+    "api": false,
+    "edit": false,
+    "language": "Java",
+    "license": "GPL",
+    "update": "2025",
+    "repository": "https://github.com/gouttegd/sssom-java",
+    "category": "mapping converter"
+  },
+  {
     "name": "jskos-proxy",
     "platform": "Web",
     "api": true,

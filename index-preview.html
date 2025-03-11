@@ -5,7 +5,7 @@
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-    <meta name="dcterms.date" content="2025-03-07">
+    <meta name="dcterms.date" content="2025-03-11">
 
     <title>Software for management of knowledge organization systems</title>
     <style>
@@ -159,13 +159,14 @@
 <link href="site_libs/bootstrap/bootstrap-135f442bf5d1cf8619ae90e18dc6faaf.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
      <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.6/require.min.js" integrity="sha512-c3Nl8+7g4LMSTdrm621y7kf9v3SDPnhxLNhcjFJbKECVnmZHTdo+IRO05sNLTH/D3vA6u1X32ehoLC7WFVdheg==" crossorigin="anonymous"></script>
 
-<script type="application/javascript">define('jquery', [],function() {return window.jQuery;})</script>  
+<script type="application/javascript">define('jquery', [],function() {return window.jQuery;})</script>  <link rel="canonical" href="https://bartoc.org/software">
+<link rel="shortcut icon" href="bartoc-icon.png" type="image/png">  
       <meta name="citation_title" content="Software for management of knowledge organization systems">
 <meta name="citation_author" content="Jakob Voß">
-<meta name="citation_publication_date" content="2025-03-07">
-<meta name="citation_cover_date" content="2025-03-07">
+<meta name="citation_publication_date" content="2025-03-11">
+<meta name="citation_cover_date" content="2025-03-11">
 <meta name="citation_year" content="2025">
-<meta name="citation_online_date" content="2025-03-07">
+<meta name="citation_online_date" content="2025-03-11">
 <meta name="citation_language" content="en">
 </head>
 
@@ -207,7 +208,7 @@
                 <div>
             <div class="quarto-title-meta-heading">Published</div>
             <div class="quarto-title-meta-contents">
-              <p class="date">March 7, 2025</p>
+              <p class="date">March 11, 2025</p>
             </div>
           </div>
           
@@ -245,16 +246,14 @@
 <h2 class="anchored" data-anchor-id="scope">Scope</h2>
 <p>This report is limited to <strong><a href="#kos-software">specialized KOS software</a> for editing, vizualizing and/or analyzing terminologies.</strong> The term “terminology” in this document is used as synonym for all kinds of KOS. Software is excluded if:</p>
 <ul>
-<li>it only happens to make use of terminologies (for instance OpenRefine), or</li>
+<li>it only happens to make use of terminologies (for instance <a href="https://openrefine.org/">OpenRefine</a>), or</li>
 <li>it is more <a href="#generic-software">generic software</a> that can be used for terminology management among other use cases (like database management systems), or</li>
-<li>it can only be used as <a href="#hosted-services">hosted service</a> (for instance DANTE), or</li>
-<li>the type of terminologies managed with the software is limited to simple lists of terms, glossaries or similar.</li>
+<li>it can only be used as <a href="#hosted-services">hosted service</a>, or</li>
+<li>the type of terminologies managed with the software is limited to simple lists of terms, glossaries or similar. This also excludes so called <a href="#terminology-management">terminology management</a> software to manage a centralized repository of approved terms, definitions, and translations in an organization.</li>
 </ul>
-<p>The latter also excludes the established category of software known as “<a href="#terminology-management">terminology management</a>” to manage a centralized repository of approved terms, definitions, and translations in an organization: such software is partly <a href="#other-software">listed or referenced below</a>.</p>
 </section>
 <section id="kos-software" class="level2">
 <h2 class="anchored" data-anchor-id="kos-software">KOS Software</h2>
-<p>Deprecated applications are included for historical reference.</p>
 <div class="cell-container"><div class="cell-decorator"><pre>In [1]:</pre></div><div id="tbl-software" class="cell anchored" data-execution_count="1">
 <div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> IPython.display <span class="im">import</span> Markdown</span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> tabulate <span class="im">import</span> tabulate</span>
@@ -290,7 +289,7 @@
 <span id="cb1-32"><a href="#cb1-32" aria-hidden="true" tabindex="-1"></a>df <span class="op">=</span> df.applymap(cell)</span>
 <span id="cb1-33"><a href="#cb1-33" aria-hidden="true" tabindex="-1"></a>display(HTML(df.to_html(escape<span class="op">=</span><span class="va">False</span>,index<span class="op">=</span><span class="va">False</span>)))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stderr">
-<pre><code>/tmp/ipykernel_2100/950734490.py:32: FutureWarning: DataFrame.applymap has been deprecated. Use DataFrame.map instead.
+<pre><code>/tmp/ipykernel_2097/950734490.py:32: FutureWarning: DataFrame.applymap has been deprecated. Use DataFrame.map instead.
   df = df.applymap(cell)</code></pre>
 </div>
 <div class="cell-output cell-output-display">
@@ -571,7 +570,7 @@
 <td>GPL</td>
 <td><a href="https://github.com/OnroerendErfgoed/atramhasis">github</a></td>
 <td>2024</td>
-<td></td>
+<td>editor</td>
 </tr>
 <tr class="odd">
 <td><a href="https://vocabseditor.acdh.oeaw.ac.at/">Vocabseditor</a></td>
@@ -604,7 +603,7 @@
 <td>GPL</td>
 <td><a href="https://github.com/RDFLib/VocPrez">github</a></td>
 <td>2024</td>
-<td></td>
+<td>viewer</td>
 </tr>
 <tr class="even">
 <td><a href="https://github.com/IHTSDO/snowstorm">Snowstorm</a></td>
@@ -615,7 +614,7 @@
 <td>Apache</td>
 <td><a href="https://github.com/IHTSDO/snowstorm">github</a></td>
 <td>2024</td>
-<td></td>
+<td>?</td>
 </tr>
 <tr class="odd">
 <td><a href="https://github.com/cmader/qSKOS/">qSKOS</a></td>
@@ -659,7 +658,7 @@
 <td>Apache</td>
 <td><a href="https://github.com/tkurz/skosjs">github</a></td>
 <td>2022</td>
-<td></td>
+<td>editor</td>
 </tr>
 <tr class="odd">
 <td><a href="http://culturecommunication.github.io/ginco/">Ginco</a></td>
@@ -670,7 +669,7 @@
 <td>GPL</td>
 <td><a href="https://github.com/culturecommunication/ginco">github</a></td>
 <td>2022</td>
-<td></td>
+<td>editor</td>
 </tr>
 <tr class="even">
 <td><a href="https://www.vocoreg.com/">VoCol</a></td>
@@ -692,7 +691,7 @@
 <td>MIT</td>
 <td><a href="https://github.com/NatLibFi/Skosify">github</a></td>
 <td>2021</td>
-<td></td>
+<td>converter &amp; validator</td>
 </tr>
 <tr class="even">
 <td><a href="http://openskos.org/">OpenSKOS</a></td>
@@ -820,7 +819,18 @@
 <td>Web</td>
 <td>-</td>
 <td>-</td>
-<td>Java</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td><a href="https://www.topquadrant.com/topbraid-edg/">TopBraid EDG</a></td>
+<td>?</td>
+<td>✓</td>
+<td>-</td>
+<td></td>
 <td></td>
 <td></td>
 <td></td>
@@ -830,7 +840,8 @@
 </table>
 </div>
 </div></div>
-<div id="97dce9f6" class="cell markdown">
+<div id="53358ac5" class="cell markdown">
+<p>Applications without license or repository are close source. Deprecated applications are included for historical reference.</p>
 <p>The following applications, scripts, and/or libraries may also worth to consider for KOS management but they have not been evaluated yet enough to be included in the list above:</p>
 <ul>
 <li>SSSOM (Python)</li>
@@ -923,49 +934,15 @@
 <td><a href="https://github.com/Aristotle-Metadata-Enterprises/">Github</a></td>
 <td>2025</td>
 </tr>
-<tr class="even">
-<td><a href="https://www.poolparty.biz/product-overview">PoolParty Semantic Suite</a></td>
-<td>?</td>
-<td>yes</td>
-<td>?</td>
-<td>?</td>
-<td>Closed Source</td>
-<td>-</td>
-<td></td>
-</tr>
-<tr class="odd">
-<td><a href="https://github.com/edmondchuc/excel2rdf">excel2rdf</a></td>
-<td>-</td>
-<td>yes</td>
-<td>no</td>
-<td>Python</td>
-<td>GPL</td>
-<td><a href="https://github.com/edmondchuc/excel2rdf">GitHub</a></td>
-<td>2021</td>
-</tr>
-<tr class="even">
-<td><a href="https://allegrograph.com/topbraid-composer/">TopBraid Composer</a></td>
-<td>?</td>
-<td>yes</td>
-<td>?</td>
-<td>?</td>
-<td>-</td>
-<td>-</td>
-<td></td>
-</tr>
 </tbody>
 </table>
 <section id="generic-software" class="level3">
 <h3 class="anchored" data-anchor-id="generic-software">Generic software</h3>
 <p>Simple terminologies can be managed in a <strong>spreadsheet</strong> (LibreOffice Calc, Excel, Google Sheets…). This software lacks most special functionality for terminology management but the usability and accessibility is very high. Some tools in the list above (VocExcel, voc4cat-tool) enhance standard spreadsheets with terminology management functionalities.</p>
-<p>The same applies to <strong>database management systems</strong> (RDBMS, NoSQL, RDF triple stores, property graph databases…) with some additional features such as unique key constraints but less usability. An edge case might be systems for management of knowledge graphs (such as Semantic MediaWiki and Wikibase, <a href="#kos-software">included above</a>), and for personal knowledge management (such as Obsidian and Notion, not included).</p>
-<p>Several <strong>Content Management Systems</strong> (CMS) allow to manage a list or hierarchy of topics or other entities for knowledge managements. If these lists can be exported, the CMS can be applied to manage terminologies. An example is Drupal, which was used for the first version of BARTOC terminology registry.</p>
-<!--
-More examples:
-
-- [Sanity Taxonomy Manager](https://www.npmjs.com/package/sanity-plugin-taxonomy-manager) (for Sanity CMS)
--->
-<p>Terminologies can also directly be managed in <strong>files</strong> for instance in RDF/Turtle syntax. This only requires a text editor but the risk is high to introduce errors.</p>
+<p>The same applies to <strong>database management systems</strong> (RDBMS, NoSQL, RDF triple stores, property graph databases…) with some additional features such as unique key constraints but less usability. An edge case might be systems for management of knowledge graphs (such as Semantic MediaWiki and Wikibase, included above.</p>
+<p>Tools for personal <strong>knowledge management</strong> (such as <a href="https://obsidian.md/">Obsidian</a> and <a href="https://www.notion.com/">Notion</a>) help to structure ideas and concepts. Similar tools exist for enterprises to support data integration, knowledge management and/or business intelligence of an organization (for instance <a href="https://www.poolparty.biz/product-overview">PoolParty Semantic Suite</a>).</p>
+<p>Several <strong>Content Management Systems</strong> (CMS) allow to manage a list or hierarchy of topics or other entities for knowledge managements. If these lists can be exported, the CMS can be applied to manage terminologies. An example is <a href="https://www.drupal.org/">Drupal</a>, which was used for the first version of BARTOC terminology registry.</p>
+<p>Terminologies can also directly be managed in <strong>files</strong> for instance in RDF/Turtle syntax. This only requires a text editor but the risk is high to introduce errors. A version control system such as git can be used on top to track changes.</p>
 </section>
 <section id="hosted-services" class="level3">
 <h3 class="anchored" data-anchor-id="hosted-services">Hosted services</h3>

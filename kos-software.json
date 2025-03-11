@@ -257,7 +257,8 @@
     "language": "Python",
     "license": "GPL",
     "repository": "https://github.com/OnroerendErfgoed/atramhasis",
-    "update": "2024"
+    "update": "2024",
+    "category": "editor"
   },
   {
     "name": "Snowstorm",
@@ -268,7 +269,8 @@
     "language": "Java",
     "license": "Apache",
     "repository": "https://github.com/IHTSDO/snowstorm",
-    "update": "2024"
+    "update": "2024",
+    "category": "?"
   },
   {
     "name": "Network of Terms",
@@ -336,7 +338,8 @@
     "language": "Python",
     "license": "GPL",
     "repository": "https://github.com/RDFLib/VocPrez",
-    "update": "2024"
+    "update": "2024",
+    "category": "viewer"
   },
   {
     "name": "qSKOS",
@@ -371,7 +374,8 @@
     "language": "Java",
     "license": "GPL",
     "repository": "https://github.com/culturecommunication/ginco",
-    "update": "2022"
+    "update": "2022",
+    "category": "editor"
   },
   {
     "name": "SKOSjs",
@@ -381,7 +385,8 @@
     "language": "JavaScript",
     "license": "Apache",
     "repository": "https://github.com/tkurz/skosjs",
-    "update": "2022"
+    "update": "2022",
+    "category": "editor"
   },
   {
     "name": "Skosify",
@@ -392,7 +397,8 @@
     "language": "Python",
     "license": "MIT",
     "repository": "https://github.com/NatLibFi/Skosify",
-    "update": "2021"
+    "update": "2021",
+    "category": "converter & validator"
   },
   {
     "name": "OpenSKOS",
@@ -510,8 +516,14 @@
     "url": "https://www.poolparty.biz/poolparty-thesaurus-manager",
     "platform": "Web",
     "api": false,
-    "edit": false,
-    "language": "Java"
+    "edit": false
+  },
+  {
+    "name": "TopBraid EDG",
+    "url": "https://www.topquadrant.com/topbraid-edg/",
+    "api": false,
+    "edit": true,
+    "platform": "?"
   },
   {
     "name": "TerminoloGit",

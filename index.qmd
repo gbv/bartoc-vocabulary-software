@@ -15,16 +15,12 @@ The terminology registry **[BARTOC](https://bartoc.org/)** collects information 
 
 This report is limited to **[specialized KOS software](#kos-software) for editing, vizualizing and/or analyzing terminologies.** The term "terminology" in this document is used as synonym for all kinds of KOS. Software is excluded if:
 
-- it only happens to make use of terminologies (for instance OpenRefine), or
+- it only happens to make use of terminologies (for instance [OpenRefine]), or
 - it is more [generic software] that can be used for terminology management among other use cases (like database management systems), or
-- it can only be used as [hosted service](#hosted-services) (for instance DANTE), or
-- the type of terminologies managed with the software is limited to simple lists of terms, glossaries or similar.
-
-The latter also excludes the established category of software known as "[terminology management]" to manage a centralized repository of approved terms, definitions, and translations in an organization: such software is partly [listed or referenced below](#other-software).
+- it can only be used as [hosted service](#hosted-services), or
+- the type of terminologies managed with the software is limited to simple lists of terms, glossaries or similar. This also excludes so called [terminology management] software to manage a centralized repository of approved terms, definitions, and translations in an organization.
 
 ## KOS Software
-
-Deprecated applications are included for historical reference.
 
 ```{python}
 #| label: tbl-software
@@ -63,6 +59,8 @@ df = df.applymap(cell)
 display(HTML(df.to_html(escape=False,index=False)))
 ```
 
+Applications without license or repository are close source. Deprecated applications are included for historical reference.
+
 The following applications, scripts, and/or libraries may also worth to consider for KOS management but they have not been evaluated yet enough to be included in the list above:
 
 - SSSOM (Python)
@@ -97,25 +95,20 @@ The following software products support editing, viewing and/or analyzing contro
 | Name & URL | OS | edit | api | language | license | repository | update |
 |--|--|--|--|--|--|--|--|
 | [Aristotle Metadata Registry](http://aristotlemetadata.com/) | Web | yes | yes | Python/Django | Closed Source | [Github](https://github.com/Aristotle-Metadata-Enterprises/) | 2025 
-| [PoolParty Semantic Suite](https://www.poolparty.biz/product-overview) | ? | yes | ? | ? | Closed Source | - | 
-| [excel2rdf](https://github.com/edmondchuc/excel2rdf) | - | yes | no | Python | GPL | [GitHub](https://github.com/edmondchuc/excel2rdf) | 2021
-| [TopBraid Composer](https://allegrograph.com/topbraid-composer/) | ? | yes | ? | ? | - | - | 
+
+[PoolParty Semantic Suite]: https://www.poolparty.biz/product-overview
 
 ### Generic software
 
 Simple terminologies can be managed in a **spreadsheet** (LibreOffice Calc, Excel, Google Sheets...). This software lacks most special functionality for terminology management but the usability and accessibility is very high. Some tools in the list above (VocExcel, voc4cat-tool) enhance standard spreadsheets with terminology management functionalities.
 
-The same applies to **database management systems** (RDBMS, NoSQL, RDF triple stores, property graph databases...) with some additional features such as unique key constraints but less usability. An edge case might be systems for management of knowledge graphs (such as Semantic MediaWiki and Wikibase, [included above](#kos-software)), and for personal knowledge management (such as Obsidian and Notion, not included).
+The same applies to **database management systems** (RDBMS, NoSQL, RDF triple stores, property graph databases...) with some additional features such as unique key constraints but less usability. An edge case might be systems for management of knowledge graphs (such as Semantic MediaWiki and Wikibase, included above.
 
-Several **Content Management Systems** (CMS) allow to manage a list or hierarchy of topics or other entities for knowledge managements. If these lists can be exported, the CMS can be applied to manage terminologies. An example is Drupal, which was used for the first version of BARTOC terminology registry.
+Tools for personal **knowledge management** (such as [Obsidian] and [Notion]) help to structure ideas and concepts. Similar tools exist for enterprises to support data integration, knowledge management and/or business intelligence of an organization (for instance [PoolParty Semantic Suite]).
 
-<!--
-More examples:
+Several **Content Management Systems** (CMS) allow to manage a list or hierarchy of topics or other entities for knowledge managements. If these lists can be exported, the CMS can be applied to manage terminologies. An example is [Drupal], which was used for the first version of BARTOC terminology registry.
 
-- [Sanity Taxonomy Manager](https://www.npmjs.com/package/sanity-plugin-taxonomy-manager) (for Sanity CMS)
--->
-
-Terminologies can also directly be managed in **files** for instance in RDF/Turtle syntax. This only requires a text editor but the risk is high to introduce errors.
+Terminologies can also directly be managed in **files** for instance in RDF/Turtle syntax. This only requires a text editor but the risk is high to introduce errors. A version control system such as git can be used on top to track changes.
 
 ### Hosted services
 
@@ -154,3 +147,8 @@ Both led to [a wiki page](https://github.com/gbv/bartoc.org/wiki/Software-for-co
 - the [W3C SKOS Implementation Report](https://www.w3.org/2006/07/SWD/SKOS/reference/20090315/implementation.html) from 2009
 - ...
 
+
+[Drupal]: https://www.drupal.org/
+[OpenRefine]: https://openrefine.org/
+[Obsidian]: https://obsidian.md/
+[Notion]: https://www.notion.com/

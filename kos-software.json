@@ -21,7 +21,7 @@
     "license": "GPL",
     "repository": "https://gerrit.wikimedia.org/g/mediawiki/extensions/Wikibase",
     "update": "2025",
-    "category": "editor"
+    "category": "database & editor"
   },
   {
     "name": "TemaTres",
@@ -170,7 +170,7 @@
   {
     "name": "voc4cat-tool",
     "url": "https://github.com/nfdi4cat/voc4cat-tool/",
-    "platform": "CLI, GitHub",
+    "platform": "CLI, GitHub, Excel",
     "api": false,
     "edit": false,
     "language": "Python",
@@ -212,6 +212,18 @@
     "repository": "https://github.com/gbv/jskos-cli/",
     "update": "2025",
     "category": "converter & validator"
+  },
+  {
+    "name": "TS4NFDI API Gateway",
+    "url": "https://ts4nfdi.github.io/api-gateway/",
+    "platform": "Web",
+    "api": true,
+    "edit": false,
+    "license": "?",
+    "language": "Java & JavaScript",
+    "update": "2025",
+    "category": "viewer & converter",
+    "repository": "https://github.com/ts4nfdi/api-gateway"
   },
   {
     "name": "sssom-py",

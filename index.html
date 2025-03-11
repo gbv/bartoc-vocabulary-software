@@ -107,13 +107,14 @@ ul.task-list li input[type="checkbox"] {
   <ul>
   <li><a href="#scope" id="toc-scope" class="nav-link active" data-scroll-target="#scope">Scope</a></li>
   <li><a href="#kos-software" id="toc-kos-software" class="nav-link" data-scroll-target="#kos-software">KOS Software</a></li>
-  <li><a href="#data" id="toc-data" class="nav-link" data-scroll-target="#data">Data</a></li>
+  <li><a href="#metadata" id="toc-metadata" class="nav-link" data-scroll-target="#metadata">Metadata</a></li>
   <li><a href="#other-software" id="toc-other-software" class="nav-link" data-scroll-target="#other-software">Other software</a>
   <ul class="collapse">
   <li><a href="#generic-software" id="toc-generic-software" class="nav-link" data-scroll-target="#generic-software">Generic software</a></li>
   <li><a href="#hosted-services" id="toc-hosted-services" class="nav-link" data-scroll-target="#hosted-services">Hosted services</a></li>
   <li><a href="#terminology-management" id="toc-terminology-management" class="nav-link" data-scroll-target="#terminology-management">Terminology management</a></li>
   </ul></li>
+  <li><a href="#other" id="toc-other" class="nav-link" data-scroll-target="#other">Other</a></li>
   <li><a href="#acknowledgements" id="toc-acknowledgements" class="nav-link" data-scroll-target="#acknowledgements">Acknowledgements</a></li>
   <li><a href="#references" id="toc-references" class="nav-link" data-scroll-target="#references">References</a></li>
   </ul>
@@ -128,7 +129,7 @@ ul.task-list li input[type="checkbox"] {
   
 
 
-<p>The terminology registry <strong><a href="https://bartoc.org/">BARTOC</a></strong> collects information about all kinds of <strong>knowledge organization systems</strong> (KOS) such as controlled vocabularies, classifications, ontologies, and other semantic artifacts. This report summarizes information about <a href="#specialized-software">software for KOS management</a>.</p>
+<p>The terminology registry <strong><a href="https://bartoc.org/">BARTOC</a></strong> collects information about all kinds of <strong>knowledge organization systems</strong> (KOS) such as controlled vocabularies, classifications, ontologies, and other semantic artifacts. This report summarizes information about <a href="#kos-software">software for KOS management</a>.</p>
 <section id="scope" class="level2">
 <h2 class="anchored" data-anchor-id="scope">Scope</h2>
 <p>This report is limited to <strong><a href="#kos-software">specialized KOS software</a> for editing, vizualizing and/or analyzing terminologies.</strong> The term “terminology” in this document is used as synonym for all kinds of KOS. Software is excluded if:</p>
@@ -136,7 +137,9 @@ ul.task-list li input[type="checkbox"] {
 <li>it only happens to make use of terminologies (for instance <a href="https://openrefine.org/">OpenRefine</a>), or</li>
 <li>it is more <a href="#generic-software">generic software</a> that can be used for terminology management among other use cases (like database management systems), or</li>
 <li>it can only be used as <a href="#hosted-services">hosted service</a>, or</li>
-<li>the type of terminologies managed with the software is limited to simple lists of terms, glossaries or similar. This also excludes so called <a href="#terminology-management">terminology management</a> software to manage a centralized repository of approved terms, definitions, and translations in an organization.</li>
+<li>it is a programming library (<a href="https://github.com/gbv/jskos-vue/">jskos-vue</a>, <a href="https://github.com/gbv/cocoda-sdk/">cocoda-sdk</a>, <a href="https://github.com/ts4nfdi/terminology-service-suite">TSS Widgets</a>…), or</li>
+<li>it is limited to simple lists of terms, glossaries and similar, or</li>
+<li>it is so called <a href="#terminology-management">terminology management</a> software for a a centralized repository of approved terms, definitions, and translations in an organization.</li>
 </ul>
 </section>
 <section id="kos-software" class="level2">
@@ -178,7 +181,7 @@ ul.task-list li input[type="checkbox"] {
 <td>GPL</td>
 <td><a href="https://gerrit.wikimedia.org/g/mediawiki/extensions/Wikibase">wikimedia</a></td>
 <td>2025</td>
-<td>editor</td>
+<td>database &amp; editor</td>
 </tr>
 <tr class="odd">
 <td><a href="https://vocabularyserver.com/web/">TemaTres</a></td>
@@ -247,17 +250,6 @@ ul.task-list li input[type="checkbox"] {
 <td>viewer</td>
 </tr>
 <tr class="odd">
-<td><a href="https://github.com/EBISPOT/ols4">Ontology Lookup Service (OLS)</a></td>
-<td>Web</td>
-<td>-</td>
-<td>✓</td>
-<td>JavaScript &amp; Java</td>
-<td>Apache</td>
-<td><a href="https://github.com/EBISPOT/OLS">github</a></td>
-<td>2025</td>
-<td>viewer</td>
-</tr>
-<tr class="even">
 <td><a href="https://opentheso.hypotheses.org/">OpenTheso</a></td>
 <td>Web</td>
 <td>✓</td>
@@ -267,17 +259,6 @@ ul.task-list li input[type="checkbox"] {
 <td><a href="https://github.com/miledrousset/Opentheso">github</a></td>
 <td>2025</td>
 <td>editor</td>
-</tr>
-<tr class="odd">
-<td><a href="https://showvoc.uniroma2.it/">ShowVoc</a></td>
-<td>Web</td>
-<td>-</td>
-<td>-</td>
-<td>JavaScript</td>
-<td>BSD</td>
-<td><a href="https://bitbucket.org/art-uniroma2/showvoc/src/master/">bitbucket</a></td>
-<td>2025</td>
-<td>viewer</td>
 </tr>
 <tr class="even">
 <td><a href="https://ontoportal.org/">OntoPortal Alliance</a></td>
@@ -291,6 +272,39 @@ ul.task-list li input[type="checkbox"] {
 <td>viewer</td>
 </tr>
 <tr class="odd">
+<td><a href="https://github.com/EBISPOT/ols4">Ontology Lookup Service (OLS)</a></td>
+<td>Web</td>
+<td>-</td>
+<td>✓</td>
+<td>JavaScript &amp; Java</td>
+<td>Apache</td>
+<td><a href="https://github.com/EBISPOT/OLS">github</a></td>
+<td>2025</td>
+<td>viewer</td>
+</tr>
+<tr class="even">
+<td><a href="https://github.com/nfdi4cat/voc4cat-tool/">voc4cat-tool</a></td>
+<td>CLI, GitHub, Excel</td>
+<td>-</td>
+<td>-</td>
+<td>Python</td>
+<td>BSD-3</td>
+<td><a href="https://github.com/nfdi4cat/voc4cat-tool/">github</a></td>
+<td>2025</td>
+<td>converter</td>
+</tr>
+<tr class="odd">
+<td><a href="https://showvoc.uniroma2.it/">ShowVoc</a></td>
+<td>Web</td>
+<td>-</td>
+<td>-</td>
+<td>JavaScript</td>
+<td>BSD</td>
+<td><a href="https://bitbucket.org/art-uniroma2/showvoc/src/master/">bitbucket</a></td>
+<td>2025</td>
+<td>viewer</td>
+</tr>
+<tr class="even">
 <td>jskos-proxy</td>
 <td>Web</td>
 <td>-</td>
@@ -301,7 +315,7 @@ ul.task-list li input[type="checkbox"] {
 <td>2025</td>
 <td>viewer &amp; converter</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td><a href="https://github.com/netwerk-digitaal-erfgoed/network-of-terms">Network of Terms</a></td>
 <td>Web</td>
 <td>-</td>
@@ -309,17 +323,6 @@ ul.task-list li input[type="checkbox"] {
 <td>Typescript</td>
 <td>EUPL</td>
 <td><a href="https://github.com/netwerk-digitaal-erfgoed/network-of-terms">github</a></td>
-<td>2025</td>
-<td>converter</td>
-</tr>
-<tr class="odd">
-<td><a href="https://github.com/nfdi4cat/voc4cat-tool/">voc4cat-tool</a></td>
-<td>CLI, GitHub</td>
-<td>-</td>
-<td>-</td>
-<td>Python</td>
-<td>BSD-3</td>
-<td><a href="https://github.com/nfdi4cat/voc4cat-tool/">github</a></td>
 <td>2025</td>
 <td>converter</td>
 </tr>
@@ -357,6 +360,17 @@ ul.task-list li input[type="checkbox"] {
 <td>converter &amp; validator</td>
 </tr>
 <tr class="odd">
+<td><a href="https://ts4nfdi.github.io/api-gateway/">TS4NFDI API Gateway</a></td>
+<td>Web</td>
+<td>-</td>
+<td>✓</td>
+<td>Java &amp; JavaScript</td>
+<td>?</td>
+<td><a href="https://github.com/ts4nfdi/api-gateway">github</a></td>
+<td>2025</td>
+<td>viewer &amp; converter</td>
+</tr>
+<tr class="even">
 <td><a href="https://mapping-commons.github.io/sssom-py">sssom-py</a></td>
 <td>CLI</td>
 <td>-</td>
@@ -367,7 +381,7 @@ ul.task-list li input[type="checkbox"] {
 <td>2025</td>
 <td>mapping converter</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td><a href="https://incenp.org/dvlpt/sssom-java/">sssom-java</a></td>
 <td>CLI</td>
 <td>-</td>
@@ -378,7 +392,7 @@ ul.task-list li input[type="checkbox"] {
 <td>2025</td>
 <td>mapping converter</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td>TerminoloGit</td>
 <td>?</td>
 <td>✓</td>
@@ -389,7 +403,7 @@ ul.task-list li input[type="checkbox"] {
 <td>2025</td>
 <td></td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td><a href="https://coli-conc.gbv.de/cocoda/">Cocoda</a></td>
 <td>Web</td>
 <td>-</td>
@@ -400,7 +414,7 @@ ul.task-list li input[type="checkbox"] {
 <td>2024</td>
 <td>mapping editor</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td><a href="https://github.com/AKSW/jekyll-rdf">Jekyll RDF</a></td>
 <td>Web</td>
 <td>-</td>
@@ -411,7 +425,7 @@ ul.task-list li input[type="checkbox"] {
 <td>2024</td>
 <td>viewer</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td><a href="https://atramhasis.readthedocs.io/en/latest/">Atramhasis</a></td>
 <td>Web</td>
 <td>✓</td>
@@ -422,7 +436,7 @@ ul.task-list li input[type="checkbox"] {
 <td>2024</td>
 <td>editor</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td><a href="https://vocabseditor.acdh.oeaw.ac.at/">Vocabseditor</a></td>
 <td>Web</td>
 <td>✓</td>
@@ -433,7 +447,7 @@ ul.task-list li input[type="checkbox"] {
 <td>2024</td>
 <td>editor</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td><a href="https://surroundaustralia.github.io/vocpub-profile/profile.html">VocPub Profile</a></td>
 <td>RDF</td>
 <td>-</td>
@@ -444,7 +458,7 @@ ul.task-list li input[type="checkbox"] {
 <td>2024</td>
 <td>validator</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td><a href="https://github.com/RDFLib/VocPrez">VocPrez</a></td>
 <td>Web</td>
 <td>-</td>
@@ -455,7 +469,7 @@ ul.task-list li input[type="checkbox"] {
 <td>2024</td>
 <td>viewer</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td><a href="https://github.com/IHTSDO/snowstorm">Snowstorm</a></td>
 <td>Web</td>
 <td>-</td>
@@ -466,7 +480,7 @@ ul.task-list li input[type="checkbox"] {
 <td>2024</td>
 <td>?</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td><a href="https://github.com/cmader/qSKOS/">qSKOS</a></td>
 <td>CLI</td>
 <td>-</td>
@@ -477,7 +491,7 @@ ul.task-list li input[type="checkbox"] {
 <td>2024</td>
 <td>validator</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td><a href="https://protegewiki.stanford.edu/wiki/WebProtege">Web Protégé</a></td>
 <td>Web</td>
 <td>✓</td>
@@ -488,7 +502,7 @@ ul.task-list li input[type="checkbox"] {
 <td>2023</td>
 <td>editor</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td>Django Controlled Vocabularies</td>
 <td>Web</td>
 <td>-</td>
@@ -499,7 +513,7 @@ ul.task-list li input[type="checkbox"] {
 <td>2023</td>
 <td></td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td>SKOSjs</td>
 <td>Web</td>
 <td>✓</td>
@@ -510,7 +524,7 @@ ul.task-list li input[type="checkbox"] {
 <td>2022</td>
 <td>editor</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td><a href="http://culturecommunication.github.io/ginco/">Ginco</a></td>
 <td>Web</td>
 <td>✓</td>
@@ -521,7 +535,7 @@ ul.task-list li input[type="checkbox"] {
 <td>2022</td>
 <td>editor</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td><a href="https://www.vocoreg.com/">VoCol</a></td>
 <td>Web</td>
 <td>✓</td>
@@ -532,7 +546,7 @@ ul.task-list li input[type="checkbox"] {
 <td>2021</td>
 <td></td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td><a href="https://skosify.readthedocs.io/en/latest/">Skosify</a></td>
 <td>CLI</td>
 <td>-</td>
@@ -543,7 +557,7 @@ ul.task-list li input[type="checkbox"] {
 <td>2021</td>
 <td>converter &amp; validator</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td><a href="http://openskos.org/">OpenSKOS</a></td>
 <td>Web</td>
 <td>-</td>
@@ -554,7 +568,7 @@ ul.task-list li input[type="checkbox"] {
 <td>2020</td>
 <td></td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td>SISSVoc</td>
 <td>Web</td>
 <td>-</td>
@@ -565,7 +579,7 @@ ul.task-list li input[type="checkbox"] {
 <td>2019</td>
 <td></td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td><a href="https://skos-play.sparna.fr/play/about">SKOS Play</a></td>
 <td>Web</td>
 <td>-</td>
@@ -576,7 +590,7 @@ ul.task-list li input[type="checkbox"] {
 <td>2018</td>
 <td></td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td><a href="https://ontobee.org/">OntoBee</a></td>
 <td>Web</td>
 <td>-</td>
@@ -587,7 +601,7 @@ ul.task-list li input[type="checkbox"] {
 <td>2018</td>
 <td></td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td><a href="http://gbv.github.io/ng-skos/">ng-skos</a></td>
 <td>Web</td>
 <td>-</td>
@@ -598,7 +612,7 @@ ul.task-list li input[type="checkbox"] {
 <td>2016</td>
 <td></td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td><a href="https://jbiomedsem.biomedcentral.com/articles/10.1186/s13326-015-0043-z">SKOS Editor</a></td>
 <td>Web</td>
 <td>✓</td>
@@ -609,7 +623,7 @@ ul.task-list li input[type="checkbox"] {
 <td>2016</td>
 <td></td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td>HIVE Vocabulary Server</td>
 <td>Web</td>
 <td>✓</td>
@@ -620,7 +634,7 @@ ul.task-list li input[type="checkbox"] {
 <td>2015</td>
 <td></td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td><a href="http://www.askosi.org/">ASKOSI</a></td>
 <td>Web</td>
 <td>-</td>
@@ -631,7 +645,7 @@ ul.task-list li input[type="checkbox"] {
 <td>2011</td>
 <td></td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td><a href="https://thmanager.sourceforge.io/">THManager</a></td>
 <td>JVM</td>
 <td>✓</td>
@@ -642,7 +656,7 @@ ul.task-list li input[type="checkbox"] {
 <td>2006</td>
 <td></td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td><a href="https://ontoserver.csiro.au/">OntoServer</a></td>
 <td>Web</td>
 <td>✓</td>
@@ -653,7 +667,7 @@ ul.task-list li input[type="checkbox"] {
 <td></td>
 <td></td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td><a href="https://www.apelon.com/solutions/terminology-tooling/termmanager">Apelon TermManager</a></td>
 <td>Web</td>
 <td>✓</td>
@@ -664,7 +678,7 @@ ul.task-list li input[type="checkbox"] {
 <td></td>
 <td>mapping editor</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td><a href="https://www.poolparty.biz/poolparty-thesaurus-manager">PoolParty Thesaurus Server</a></td>
 <td>Web</td>
 <td>-</td>
@@ -675,7 +689,7 @@ ul.task-list li input[type="checkbox"] {
 <td></td>
 <td></td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td><a href="https://www.topquadrant.com/topbraid-edg/">TopBraid EDG</a></td>
 <td>?</td>
 <td>✓</td>
@@ -690,18 +704,10 @@ ul.task-list li input[type="checkbox"] {
 </table>
 </div>
 </div>
-<p>Applications without license or repository are close source. Deprecated applications are included for historical reference.</p>
-<p>The following applications, scripts, and/or libraries may also worth to consider for KOS management but they have not been evaluated yet enough to be included in the list above:</p>
-<ul>
-<li>SSSOM (Python)</li>
-<li>TS4NFDI API Gateway</li>
-<li>TS4NFDI Widgets</li>
-<li><a href="https://github.com/Multilingual-LGBTQIA-Vocabularies/Examing_LGBTQ_Concepts">Scripts to analyze concept drift</a></li>
-</ul>
+<p>The list of software is managed <a href="kos-software.json">in a JSON file</a> as array of records with flat fields as <a href="#metadata">described below</a>. Applications without license or repository are close source. Deprecated applications are included for historical reference.</p>
 </section>
-<section id="data" class="level2">
-<h2 class="anchored" data-anchor-id="data">Data</h2>
-<p>The terminology software is listed <a href="kos-software.json">in a JSON file</a> as array of flat records with the following fields:</p>
+<section id="metadata" class="level2">
+<h2 class="anchored" data-anchor-id="metadata">Metadata</h2>
 <table class="caption-top table">
 <colgroup>
 <col style="width: 25%">
@@ -716,15 +722,15 @@ ul.task-list li input[type="checkbox"] {
 <tbody>
 <tr class="odd">
 <td><code>name</code></td>
-<td>Name of the software</td>
+<td>name</td>
 </tr>
 <tr class="even">
 <td><code>url</code></td>
-<td>Homepage</td>
+<td>homepage</td>
 </tr>
 <tr class="odd">
 <td><code>platform</code></td>
-<td>Operating System or similar dependency (Web application, CLI…)</td>
+<td>operating system or similar dependency (Web, CLI…)</td>
 </tr>
 <tr class="even">
 <td><code>api</code></td>
@@ -736,19 +742,19 @@ ul.task-list li input[type="checkbox"] {
 </tr>
 <tr class="even">
 <td><code>language</code></td>
-<td>programming language(s) of the software</td>
+<td>programming language(s)</td>
 </tr>
 <tr class="odd">
 <td><code>license</code></td>
-<td>license of the software</td>
+<td>license of the software (if free software)</td>
 </tr>
 <tr class="even">
 <td><code>repository</code></td>
-<td>Source Code repository</td>
+<td>source Code repository (if open source)</td>
 </tr>
 <tr class="odd">
 <td><code>update</code></td>
-<td>year of most recent update of the software</td>
+<td>year of most recent update</td>
 </tr>
 <tr class="even">
 <td><code>category</code></td>
@@ -756,40 +762,22 @@ ul.task-list li input[type="checkbox"] {
 </tr>
 </tbody>
 </table>
+<p>The KOS software categories are preliminary:</p>
+<ul>
+<li>viewer</li>
+<li>editor</li>
+<li>mapping editor</li>
+<li>converter</li>
+<li>validator</li>
+<li>database</li>
+</ul>
 </section>
 <section id="other-software" class="level2">
 <h2 class="anchored" data-anchor-id="other-software">Other software</h2>
-<p>The following software products support editing, viewing and/or analyzing controlled vocabularies but not as a core feature. They might be used for controlled vocabularies as well.</p>
-<table class="caption-top table">
-<thead>
-<tr class="header">
-<th>Name &amp; URL</th>
-<th>OS</th>
-<th>edit</th>
-<th>api</th>
-<th>language</th>
-<th>license</th>
-<th>repository</th>
-<th>update</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td><a href="http://aristotlemetadata.com/">Aristotle Metadata Registry</a></td>
-<td>Web</td>
-<td>yes</td>
-<td>yes</td>
-<td>Python/Django</td>
-<td>Closed Source</td>
-<td><a href="https://github.com/Aristotle-Metadata-Enterprises/">Github</a></td>
-<td>2025</td>
-</tr>
-</tbody>
-</table>
 <section id="generic-software" class="level3">
 <h3 class="anchored" data-anchor-id="generic-software">Generic software</h3>
 <p>Simple terminologies can be managed in a <strong>spreadsheet</strong> (LibreOffice Calc, Excel, Google Sheets…). This software lacks most special functionality for terminology management but the usability and accessibility is very high. Some tools in the list above (VocExcel, voc4cat-tool) enhance standard spreadsheets with terminology management functionalities.</p>
-<p>The same applies to <strong>database management systems</strong> (RDBMS, NoSQL, RDF triple stores, property graph databases…) with some additional features such as unique key constraints but less usability. An edge case might be systems for management of knowledge graphs (such as Semantic MediaWiki and Wikibase, included above.</p>
+<p>The same applies to <strong>database management systems</strong> (RDBMS, NoSQL, RDF triple stores, property graph databases…) with some additional features such as unique key constraints but less usability. An edge case might be systems for management of knowledge graphs (such as Wikibase), included above.</p>
 <p>Tools for personal <strong>knowledge management</strong> (such as <a href="https://obsidian.md/">Obsidian</a> and <a href="https://www.notion.com/">Notion</a>) help to structure ideas and concepts. Similar tools exist for enterprises to support data integration, knowledge management and/or business intelligence of an organization (for instance <a href="https://www.poolparty.biz/product-overview">PoolParty Semantic Suite</a>).</p>
 <p>Several <strong>Content Management Systems</strong> (CMS) allow to manage a list or hierarchy of topics or other entities for knowledge managements. If these lists can be exported, the CMS can be applied to manage terminologies. An example is <a href="https://www.drupal.org/">Drupal</a>, which was used for the first version of BARTOC terminology registry.</p>
 <p>Terminologies can also directly be managed in <strong>files</strong> for instance in RDF/Turtle syntax. This only requires a text editor but the risk is high to introduce errors. A version control system such as git can be used on top to track changes.</p>
@@ -807,6 +795,12 @@ ul.task-list li input[type="checkbox"] {
 <h3 class="anchored" data-anchor-id="terminology-management">Terminology management</h3>
 <p>See <a href="http://recremisi.blogspot.de/p/acrolinxterminology-lifecycle.html">http://recremisi.blogspot.de/p/acrolinxterminology-lifecycle.html</a> and <a href="http://term-portal.de/en/software-en/terminology-management.html">http://term-portal.de/en/software-en/terminology-management.html</a>.</p>
 </section>
+</section>
+<section id="other" class="level2">
+<h2 class="anchored" data-anchor-id="other">Other</h2>
+<ul>
+<li><a href="https://github.com/Multilingual-LGBTQIA-Vocabularies/Examing_LGBTQ_Concepts">Scripts to analyze concept drift</a></li>
+</ul>
 </section>
 <section id="acknowledgements" class="level2">
 <h2 class="anchored" data-anchor-id="acknowledgements">Acknowledgements</h2>

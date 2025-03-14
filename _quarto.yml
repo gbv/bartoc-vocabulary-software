@@ -24,4 +24,4 @@ format:
     header-includes: |
       <link rel="canonical" href="https://bartoc.org/software"/>
       <link rel="shortcut icon" href="bartoc-icon.png" type="image/png" />
-  # pdf: default
+  pdf: default

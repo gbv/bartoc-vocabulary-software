@@ -1,5 +1,5 @@
 preview:
-	QUARTO_PYTHON=.venv/bin/python quarto preview
+	QUARTO_PYTHON=.venv/bin/python quarto preview --to html
 
 render:
 	QUARTO_PYTHON=.venv/bin/python quarto render

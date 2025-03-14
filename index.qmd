@@ -22,7 +22,7 @@ This report is limited to **[specialized KOS software](#kos-software) for editin
 - it is limited to simple lists of terms, glossaries and similar, or
 - it is so called [terminology management] software for a a centralized repository of approved terms, definitions, and translations in an organization.
 
-## KOS Software
+## KOS software
 
 ```{python}
 #| label: tbl-software
@@ -63,6 +63,8 @@ display(HTML(df.to_html(escape=False,index=False)))
 
 The list of software is managed [in a JSON file](kos-software.json) as array of records with flat fields as [described below](#metadata). Applications without license or repository are close source. Deprecated applications are included for historical reference.
 
+Please [open an issue](https://github.com/gbv/bartoc-vocabulary-software/issues) if some relevant software is missing!
+
 ## Metadata
 
 Field | Purpose
@@ -76,20 +78,22 @@ Field | Purpose
 `license` | license of the software (if free software)
 `repository` | source Code repository (if open source)
 `update` | year of most recent update
-`category` | type of software
+`category` | type of KOS software
 
 : {tbl-colwidths="[25,75]"}
 
-The KOS software categories are preliminary:
+## KOS software categories
 
-- viewer
-- editor
-- mapping editor
-- converter
-- validator
-- database
+- **viewer**: to display terminologies
+- **editor**: to create and modify terminologies
+- **mapping editor**: to create and modify mappings
+- **converter**: to convert from one format into another
+- **validator**: to check terminologies
+- **database**: to store terminologies
 
 ## Other software
+
+Knowledge organization systems are also managed by other types software [excluded from this report](#scope).
 
 ### Generic software
 
@@ -105,19 +109,16 @@ Terminologies can also directly be managed in **files** for instance in RDF/Turt
 
 ### Hosted services
 
-Some organizations host applications for KOS management (the list is likely incomplete):
-
-- [DANTE](https://doi.org/10.11588/akmb.2018.1.63475)
-- [xTree](https://xtree-public.digicult-verbund.de/)
-- ...
+Some organizations host their own applications for KOS management. Examples from cultural heritage domain in Germany are [DANTE](https://doi.org/10.11588/akmb.2018.1.63475) and [xTree](https://xtree-public.digicult-verbund.de/). The BARTOC [list of terminology registries](https://bartoc.org/registries) includes some more terminology services that may also include management functionalities.
 
 ### Terminology management
 
-See [http://recremisi.blogspot.de/p/acrolinxterminology-lifecycle.html](http://recremisi.blogspot.de/p/acrolinxterminology-lifecycle.html) and [http://term-portal.de/en/software-en/terminology-management.html](http://term-portal.de/en/software-en/terminology-management.html).
+The term "terminology management" is also used for systems to organize the terms, definitions, and translations used in an organization. See @Montoro2018 for a list of terminology management systems. The focus of these systems is more on translation but there is some overlap with KOS management.
 
-## Other
+## Related works
 
-- [Scripts to analyze concept drift](https://github.com/Multilingual-LGBTQIA-Vocabularies/Examing_LGBTQ_Concepts)
+This report is based on two reports [@Voss2016a;@Voss2016b] from the beginning of [project coli-conc](https://coli-conc.gbv.de/) that led to a [a wiki page](https://github.com/gbv/bartoc.org/wiki/Software-for-controlled-vocabularies) managed between 2020 and 2024. 
+Other lists of software for management of terminologies include: See @Miles2009 for a report created during the specification of SKOS W3C Recommendation.
 
 ## Acknowledgements
 
@@ -135,15 +136,8 @@ and possibly others.
 
 ## References
 
-This report is based on two reports created in 2016 at VZG:
-
-- @Voss2016a
-- @Voss2016b  
-Both led to [a wiki page](https://github.com/gbv/bartoc.org/wiki/Software-for-controlled-vocabularies) managed between 2020 and 2024. Other lists of software for management of terminologies include:
-
-- @Miles2009
-- ...
-
+:::{#refs}
+:::
 
 [Drupal]: https://www.drupal.org/
 [OpenRefine]: https://openrefine.org/

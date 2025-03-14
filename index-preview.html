@@ -180,8 +180,8 @@
      <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.6/require.min.js" integrity="sha512-c3Nl8+7g4LMSTdrm621y7kf9v3SDPnhxLNhcjFJbKECVnmZHTdo+IRO05sNLTH/D3vA6u1X32ehoLC7WFVdheg==" crossorigin="anonymous"></script>
 
 <script type="application/javascript">define('jquery', [],function() {return window.jQuery;})</script>  <link rel="canonical" href="https://bartoc.org/software">
-<link rel="shortcut icon" href="bartoc-icon.png" type="image/png">  
-      <meta name="citation_title" content="Software for management of knowledge organization systems">
+<link rel="shortcut icon" href="bartoc-icon.png" type="image/png">
+<meta name="citation_title" content="Software for management of knowledge organization systems">
 <meta name="citation_author" content="Jakob Voß">
 <meta name="citation_publication_date" content="2025-03-14">
 <meta name="citation_cover_date" content="2025-03-14">
@@ -192,9 +192,10 @@
 <meta name="citation_reference" content="citation_title=Open Source web applications for Knowledge Organization Systems;,citation_abstract=This report gives an overview about Open Source web applications to create, manage, and publish Knowledge Organization Systems (KOS).;,citation_author=Jakob Voß;,citation_publication_date=2016-08;,citation_cover_date=2016-08;,citation_year=2016;,citation_fulltext_html_url=https://zenodo.org/records/61262;,citation_doi=10.5281/zenodo.61262;">
 <meta name="citation_reference" content="citation_title=W3C SKOS implementation report;,citation_abstract=This document summarises implementation experience reported to the Semantic Web Deployment Working Group relating to SKOS.;,citation_author=Alistair Miles;,citation_author=Sean Bechhofer;,citation_publication_date=2009-05;,citation_cover_date=2009-05;,citation_year=2009;,citation_fulltext_html_url=https://www.w3.org/2006/07/SWD/SKOS/reference/20090315/implementation.html;">
 <meta name="citation_reference" content="citation_title=Terminology management systems;,citation_author=Maria Pia Montoro;,citation_publication_date=2018;,citation_cover_date=2018;,citation_year=2018;,citation_fulltext_html_url=https://recremisi.blogspot.com/p/acrolinxterminology-lifecycle.html;">
-</head>
+</head><body class="quarto-notebook">#  pdf: default  
+      
 
-  <body class="quarto-notebook">
+  
     <div id="quarto-embed-header" class="headroom fixed-top bg-primary">
       
       <a onclick="window.quartoBackToArticle(); return false;" class="btn btn-primary quarto-back-link" href=""><i class="bi bi-caret-left"></i> Back to Article</a>
@@ -315,7 +316,7 @@
 <span id="cb1-32"><a href="#cb1-32" aria-hidden="true" tabindex="-1"></a>df <span class="op">=</span> df.applymap(cell)</span>
 <span id="cb1-33"><a href="#cb1-33" aria-hidden="true" tabindex="-1"></a>display(HTML(df.to_html(escape<span class="op">=</span><span class="va">False</span>,index<span class="op">=</span><span class="va">False</span>)))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stderr">
-<pre><code>/tmp/ipykernel_2112/950734490.py:32: FutureWarning: DataFrame.applymap has been deprecated. Use DataFrame.map instead.
+<pre><code>/tmp/ipykernel_2074/950734490.py:32: FutureWarning: DataFrame.applymap has been deprecated. Use DataFrame.map instead.
   df = df.applymap(cell)</code></pre>
 </div>
 <div class="cell-output cell-output-display">
@@ -877,7 +878,7 @@
 </table>
 </div>
 </div></div>
-<div id="b07dc0af" class="cell markdown">
+<div id="79d7b2ea" class="cell markdown">
 <p>The list of software is managed <a href="kos-software.json">in a JSON file</a> as array of records with flat fields as <a href="#metadata">described below</a>. Applications without license or repository are close source. Deprecated applications are included for historical reference.</p>
 <p>Please <a href="https://github.com/gbv/bartoc-vocabulary-software/issues">open an issue</a> if some relevant software is missing!</p>
 <section id="metadata" class="level2">
@@ -942,7 +943,7 @@
 <ul>
 <li><strong>viewer</strong>: to display terminologies</li>
 <li><strong>editor</strong>: to create and modify terminologies</li>
-<li><strong>mapping editor</strong>: to create and modify mappings</li>
+<li><strong>mapping editor</strong>: to create and modify mappings/alignments</li>
 <li><strong>converter</strong>: to convert from one format into another</li>
 <li><strong>validator</strong>: to check terminologies</li>
 <li><strong>database</strong>: to store terminologies</li>

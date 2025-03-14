@@ -86,7 +86,7 @@ Field | Purpose
 
 - **viewer**: to display terminologies
 - **editor**: to create and modify terminologies
-- **mapping editor**: to create and modify mappings
+- **mapping editor**: to create and modify mappings/alignments
 - **converter**: to convert from one format into another
 - **validator**: to check terminologies
 - **database**: to store terminologies

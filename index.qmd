@@ -127,7 +127,8 @@ Antoine Isaac,
 David Linke,
 Eugene Morozov,
 Koen Van Daele,
-Matthias Löbe
+Matthias Löbe,
+Monty Bitto,
 Roman Baum,
 Susanne Arndt,
 and possibly others.

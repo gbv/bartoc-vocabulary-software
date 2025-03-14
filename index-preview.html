@@ -191,6 +191,7 @@
 <meta name="citation_reference" content="citation_title=Coli-conc Technical Report 2: Open Source KOS software;,citation_abstract=This report gives an overview about Open Source software for Knowledge Organization Systems (KOS).;,citation_author=Jakob Voß;,citation_publication_date=2016-03;,citation_cover_date=2016-03;,citation_year=2016;,citation_fulltext_html_url=https://zenodo.org/records/48227;,citation_doi=10.5281/zenodo.48227;">
 <meta name="citation_reference" content="citation_title=Open Source web applications for Knowledge Organization Systems;,citation_abstract=This report gives an overview about Open Source web applications to create, manage, and publish Knowledge Organization Systems (KOS).;,citation_author=Jakob Voß;,citation_publication_date=2016-08;,citation_cover_date=2016-08;,citation_year=2016;,citation_fulltext_html_url=https://zenodo.org/records/61262;,citation_doi=10.5281/zenodo.61262;">
 <meta name="citation_reference" content="citation_title=W3C SKOS implementation report;,citation_abstract=This document summarises implementation experience reported to the Semantic Web Deployment Working Group relating to SKOS.;,citation_author=Alistair Miles;,citation_author=Sean Bechhofer;,citation_publication_date=2009-05;,citation_cover_date=2009-05;,citation_year=2009;,citation_fulltext_html_url=https://www.w3.org/2006/07/SWD/SKOS/reference/20090315/implementation.html;">
+<meta name="citation_reference" content="citation_title=Terminology management systems;,citation_author=Maria Pia Montoro;,citation_publication_date=2018;,citation_cover_date=2018;,citation_year=2018;,citation_fulltext_html_url=https://recremisi.blogspot.com/p/acrolinxterminology-lifecycle.html;">
 </head>
 
   <body class="quarto-notebook">
@@ -256,7 +257,7 @@
    
   <ul>
   <li><a href="#scope" id="toc-scope" class="nav-link active" data-scroll-target="#scope">Scope</a></li>
-  <li><a href="#kos-software" id="toc-kos-software" class="nav-link" data-scroll-target="#kos-software">KOS Software</a></li>
+  <li><a href="#kos-software" id="toc-kos-software" class="nav-link" data-scroll-target="#kos-software">KOS software</a></li>
   </ul>
 </nav>
 </div>
@@ -278,7 +279,7 @@
 </ul>
 </section>
 <section id="kos-software" class="level2">
-<h2 class="anchored" data-anchor-id="kos-software">KOS Software</h2>
+<h2 class="anchored" data-anchor-id="kos-software">KOS software</h2>
 <div class="cell-container"><div class="cell-decorator"><pre>In [1]:</pre></div><div id="tbl-software" class="cell anchored" data-execution_count="1">
 <div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> IPython.display <span class="im">import</span> Markdown</span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> tabulate <span class="im">import</span> tabulate</span>
@@ -314,7 +315,7 @@
 <span id="cb1-32"><a href="#cb1-32" aria-hidden="true" tabindex="-1"></a>df <span class="op">=</span> df.applymap(cell)</span>
 <span id="cb1-33"><a href="#cb1-33" aria-hidden="true" tabindex="-1"></a>display(HTML(df.to_html(escape<span class="op">=</span><span class="va">False</span>,index<span class="op">=</span><span class="va">False</span>)))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stderr">
-<pre><code>/tmp/ipykernel_2146/950734490.py:32: FutureWarning: DataFrame.applymap has been deprecated. Use DataFrame.map instead.
+<pre><code>/tmp/ipykernel_2112/950734490.py:32: FutureWarning: DataFrame.applymap has been deprecated. Use DataFrame.map instead.
   df = df.applymap(cell)</code></pre>
 </div>
 <div class="cell-output cell-output-display">
@@ -876,8 +877,9 @@
 </table>
 </div>
 </div></div>
-<div id="089ea98d" class="cell markdown">
+<div id="b07dc0af" class="cell markdown">
 <p>The list of software is managed <a href="kos-software.json">in a JSON file</a> as array of records with flat fields as <a href="#metadata">described below</a>. Applications without license or repository are close source. Deprecated applications are included for historical reference.</p>
+<p>Please <a href="https://github.com/gbv/bartoc-vocabulary-software/issues">open an issue</a> if some relevant software is missing!</p>
 <section id="metadata" class="level2">
 <h2 class="anchored" data-anchor-id="metadata">Metadata</h2>
 <table class="caption-top table table-sm table-striped small">
@@ -930,22 +932,25 @@
 </tr>
 <tr class="even">
 <td><code>category</code></td>
-<td>type of software</td>
+<td>type of KOS software</td>
 </tr>
 </tbody>
 </table>
-<p>The KOS software categories are preliminary:</p>
+</section>
+<section id="kos-software-categories" class="level2">
+<h2 class="anchored" data-anchor-id="kos-software-categories">KOS software categories</h2>
 <ul>
-<li>viewer</li>
-<li>editor</li>
-<li>mapping editor</li>
-<li>converter</li>
-<li>validator</li>
-<li>database</li>
+<li><strong>viewer</strong>: to display terminologies</li>
+<li><strong>editor</strong>: to create and modify terminologies</li>
+<li><strong>mapping editor</strong>: to create and modify mappings</li>
+<li><strong>converter</strong>: to convert from one format into another</li>
+<li><strong>validator</strong>: to check terminologies</li>
+<li><strong>database</strong>: to store terminologies</li>
 </ul>
 </section>
 <section id="other-software" class="level2">
 <h2 class="anchored" data-anchor-id="other-software">Other software</h2>
+<p>Knowledge organization systems are also managed by other types software <a href="#scope">excluded from this report</a>.</p>
 <section id="generic-software" class="level3">
 <h3 class="anchored" data-anchor-id="generic-software">Generic software</h3>
 <p>Simple terminologies can be managed in a <strong>spreadsheet</strong> (LibreOffice Calc, Excel, Google Sheets…). This software lacks most special functionality for terminology management but the usability and accessibility is very high. Some tools in the list above (VocExcel, voc4cat-tool) enhance standard spreadsheets with terminology management functionalities.</p>
@@ -956,23 +961,16 @@
 </section>
 <section id="hosted-services" class="level3">
 <h3 class="anchored" data-anchor-id="hosted-services">Hosted services</h3>
-<p>Some organizations host applications for KOS management (the list is likely incomplete):</p>
-<ul>
-<li><a href="https://doi.org/10.11588/akmb.2018.1.63475">DANTE</a></li>
-<li><a href="https://xtree-public.digicult-verbund.de/">xTree</a></li>
-<li>…</li>
-</ul>
+<p>Some organizations host their own applications for KOS management. Examples from cultural heritage domain in Germany are <a href="https://doi.org/10.11588/akmb.2018.1.63475">DANTE</a> and <a href="https://xtree-public.digicult-verbund.de/">xTree</a>. The BARTOC <a href="https://bartoc.org/registries">list of terminology registries</a> includes some more terminology services that may also include management functionalities.</p>
 </section>
 <section id="terminology-management" class="level3">
 <h3 class="anchored" data-anchor-id="terminology-management">Terminology management</h3>
-<p>See <a href="http://recremisi.blogspot.de/p/acrolinxterminology-lifecycle.html">http://recremisi.blogspot.de/p/acrolinxterminology-lifecycle.html</a> and <a href="http://term-portal.de/en/software-en/terminology-management.html">http://term-portal.de/en/software-en/terminology-management.html</a>.</p>
+<p>The term “terminology management” is also used for systems to organize the terms, definitions, and translations used in an organization. See <span class="citation" data-cites="Montoro2018">Montoro (<a href="#ref-Montoro2018" role="doc-biblioref">2018</a>)</span> for a list of terminology management systems. The focus of these systems is more on translation but there is some overlap with KOS management.</p>
 </section>
 </section>
-<section id="other" class="level2">
-<h2 class="anchored" data-anchor-id="other">Other</h2>
-<ul>
-<li><a href="https://github.com/Multilingual-LGBTQIA-Vocabularies/Examing_LGBTQ_Concepts">Scripts to analyze concept drift</a></li>
-</ul>
+<section id="related-works" class="level2">
+<h2 class="anchored" data-anchor-id="related-works">Related works</h2>
+<p>This report is based on two reports <span class="citation" data-cites="Voss2016a Voss2016b">(<a href="#ref-Voss2016a" role="doc-biblioref">Voß 2016a</a>, <a href="#ref-Voss2016b" role="doc-biblioref">2016b</a>)</span> from the beginning of <a href="https://coli-conc.gbv.de/">project coli-conc</a> that led to a <a href="https://github.com/gbv/bartoc.org/wiki/Software-for-controlled-vocabularies">a wiki page</a> managed between 2020 and 2024. Other lists of software for management of terminologies include: See <span class="citation" data-cites="Miles2009">Miles and Bechhofer (<a href="#ref-Miles2009" role="doc-biblioref">2009</a>)</span> for a report created during the specification of SKOS W3C Recommendation.</p>
 </section>
 <section id="acknowledgements" class="level2">
 <h2 class="anchored" data-anchor-id="acknowledgements">Acknowledgements</h2>
@@ -980,19 +978,12 @@
 </section>
 <section id="references" class="level2">
 <h2 class="anchored" data-anchor-id="references">References</h2>
-<p>This report is based on two reports created in 2016 at VZG:</p>
-<ul>
-<li><p><span class="citation" data-cites="Voss2016a">Voß (<a href="#ref-Voss2016a" role="doc-biblioref">2016a</a>)</span></p></li>
-<li><p><span class="citation" data-cites="Voss2016b">Voß (<a href="#ref-Voss2016b" role="doc-biblioref">2016b</a>)</span><br>
-Both led to <a href="https://github.com/gbv/bartoc.org/wiki/Software-for-controlled-vocabularies">a wiki page</a> managed between 2020 and 2024. Other lists of software for management of terminologies include:</p></li>
-<li><p><span class="citation" data-cites="Miles2009">Miles and Bechhofer (<a href="#ref-Miles2009" role="doc-biblioref">2009</a>)</span></p></li>
-<li><p>…</p></li>
-</ul>
-</section>
-</div>
 <div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" role="list">
 <div id="ref-Miles2009" class="csl-entry" role="listitem">
 Miles, Alistair, and Sean Bechhofer. 2009. <span>“W3C SKOS Implementation Report,”</span> May. <a href="https://www.w3.org/2006/07/SWD/SKOS/reference/20090315/implementation.html">https://www.w3.org/2006/07/SWD/SKOS/reference/20090315/implementation.html</a>.
+</div>
+<div id="ref-Montoro2018" class="csl-entry" role="listitem">
+Montoro, Maria Pia. 2018. <span>“Terminology Management Systems.”</span> <a href="https://recremisi.blogspot.com/p/acrolinxterminology-lifecycle.html">https://recremisi.blogspot.com/p/acrolinxterminology-lifecycle.html</a>.
 </div>
 <div id="ref-Voss2016a" class="csl-entry" role="listitem">
 Voß, Jakob. 2016a. <span>“Coli-Conc <span>Technical</span> <span>Report</span> 2: <span>Open</span> <span>Source</span> <span>KOS</span> Software,”</span> March. <a href="https://doi.org/10.5281/zenodo.48227">https://doi.org/10.5281/zenodo.48227</a>.
@@ -1000,6 +991,8 @@ Voß, Jakob. 2016a. <span>“Coli-Conc <span>Technical</span> <span>Report</span
 <div id="ref-Voss2016b" class="csl-entry" role="listitem">
 ———. 2016b. <span>“Open <span>Source</span> Web Applications for <span>Knowledge</span> <span>Organization</span> <span>Systems</span>,”</span> August. <a href="https://doi.org/10.5281/zenodo.61262">https://doi.org/10.5281/zenodo.61262</a>.
 </div>
+</div>
+</section>
 </div>
 </section>
      </main>

@@ -317,7 +317,8 @@
     "language": "JavaScript",
     "license": "MIT",
     "repository": "https://github.com/vocol/vocol",
-    "update": "2021"
+    "update": "2021",
+    "category": "editor"
   },
   {
     "name": "Django Controlled Vocabularies",
@@ -421,7 +422,8 @@
     "language": "PHP",
     "license": "GPL",
     "repository": "https://github.com/OpenSKOS/OpenSKOS",
-    "update": "2020"
+    "update": "2020",
+    "category": "viewer & editor"
   },
   {
     "name": "SISSVoc",
@@ -546,5 +548,93 @@
     "license": "GPL",
     "repository": "https://gitlab.com/elga-gmbh/termgit",
     "update": "2025"
+  },
+  {
+    "name": "mc2skos",
+    "url": "https://github.com/scriptotek/mc2skos",
+    "platform": "CLI",
+    "edit": true,
+    "api": false,
+    "language": "Python",
+    "license": "The Unlicense",
+    "repository": "https://github.com/scriptotek/mc2skos",
+    "update": "2021",
+    "category": "converter"
+  },
+  {
+    "name": "Examining LGBTQ+-related Concepts in the Semantic Web",
+    "url": "https://zenodo.org/records/12684870",
+    "platform": "RDF",
+    "edit": false,
+    "api": true,
+    "language": "Python",
+    "license": "CC-BY 4.0",
+    "repository": "https://github.com/Multilingual-LGBTQIA-Vocabularies/Examing_LGBTQ_Concepts",
+    "update": "2025"
+  },
+  {
+    "name": "Apelon DTS",
+    "url": "http://www.apelondts.org/",
+    "language": "Java",
+    "update": "2024",
+    "edit": "?",
+    "api": "?"
+
+  },
+  {
+    "name": "Lexasaurus",
+    "url": "http://www.k-int.com/products/lexaurus/",
+    "edit": true,
+    "api": false
+  },
+  {
+    "name": "mix'n'match",
+    "url": "https://mix-n-match.toolforge.org/#/",
+    "platform": "Web",
+    "repository": "https://bitbucket.org/magnusmanske/mixnmatch/src/master/",
+    "update": "2024",
+    "edit": "?",
+    "api": "?"
+  },
+  {
+    "name": "Mondeca",
+    "url": "https://mondeca.com/",
+    "edit": "?",
+    "api": "?"
+  },
+  {
+    "name": "Wandora",
+    "url": "http://wandora.org/www/",
+    "edit": true,
+    "api": false,
+    "language": "Java",
+    "license": "GPL",
+    "repository": "https://github.com/wandora-team/wandora",
+    "update": "2023"
+  },
+  {
+    "name": "OxO",
+    "url": "https://www.ebi.ac.uk/spot/oxo/",
+    "platform": "Web",
+    "edit": "?",
+    "api": "?"
+  },
+  {
+    "name": "Amalgame",
+    "url": "https://semanticweb.cs.vu.nl/amalgame/",
+    "update": "2011",
+    "edit": "?",
+    "api": "?"
+  },
+  {
+    "name": "Alignment API and Alignment Server",
+    "url": "https://moex.gitlabpages.inria.fr/alignapi/",
+    "platform": "CLI",
+    "edit": false,
+    "api": true,
+    "language": "Java",
+    "license": "GPL",
+    "repository": "https://gitlab.inria.fr/moex/alignapi/",
+    "update": "2023"
   }
 ]

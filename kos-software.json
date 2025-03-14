@@ -576,7 +576,10 @@
     "name": "Apelon DTS",
     "url": "http://www.apelondts.org/",
     "language": "Java",
-    "update": "2024"
+    "update": "2024",
+    "edit": "?",
+    "api": "?"
+
   },
   {
     "name": "Lexasaurus",
@@ -589,11 +592,15 @@
     "url": "https://mix-n-match.toolforge.org/#/",
     "platform": "Web",
     "repository": "https://bitbucket.org/magnusmanske/mixnmatch/src/master/",
-    "update": "2024"
+    "update": "2024",
+    "edit": "?",
+    "api": "?"
   },
   {
     "name": "Mondeca",
-    "url": "https://mondeca.com/"
+    "url": "https://mondeca.com/",
+    "edit": "?",
+    "api": "?"
   },
   {
     "name": "Wandora",
@@ -608,12 +615,16 @@
   {
     "name": "OxO",
     "url": "https://www.ebi.ac.uk/spot/oxo/",
-    "platform": "Web"
+    "platform": "Web",
+    "edit": "?",
+    "api": "?"
   },
   {
     "name": "Amalgame",
     "url": "https://semanticweb.cs.vu.nl/amalgame/",
-    "update": "2011"
+    "update": "2011",
+    "edit": "?",
+    "api": "?"
   },
   {
     "name": "Alignment API and Alignment Server",

@@ -127,7 +127,8 @@ Antoine Isaac,
 David Linke,
 Eugene Morozov,
 Koen Van Daele,
-Matthias Löbe
+Matthias Löbe,
+Monty Bitto,
 Roman Baum,
 Susanne Arndt,
 and possibly others.
@@ -136,12 +137,11 @@ and possibly others.
 
 This report is based on two reports created in 2016 at VZG:
 
-- [coli-conc Technical Report 2](https://coli-conc.gbv.de/publications/tr2.html): Open Source KOS software <https://doi.org/10.5281/zenodo.48227>
-- [coli-conc Technical Report 7](https://coli-conc.gbv.de/publications/tr7.html): Open Source web applications for Knowledge Organization Systems <https://doi.org/10.5281/zenodo.61262>
-
+- @Voss2016a
+- @Voss2016b  
 Both led to [a wiki page](https://github.com/gbv/bartoc.org/wiki/Software-for-controlled-vocabularies) managed between 2020 and 2024. Other lists of software for management of terminologies include:
 
-- the [W3C SKOS Implementation Report](https://www.w3.org/2006/07/SWD/SKOS/reference/20090315/implementation.html) from 2009
+- @Miles2009
 - ...
 
 

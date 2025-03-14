@@ -6,7 +6,7 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="dcterms.date" content="2025-03-11">
+<meta name="dcterms.date" content="2025-03-14">
 
 <title>Software for management of knowledge organization systems</title>
 <style>
@@ -21,7 +21,27 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
-</style>
+/* CSS for citations */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+  margin-bottom: 0em;
+}
+.hanging-indent div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}</style>
 
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js" integrity="sha512-bLT0Qm9VnAYZDflyKcBaQ2gg0hSYNQrJ8RilYldYQ1FxQYoCLtUjuuRuZo+fjqhx/qtq/1itJ0C2ejDxltZVFg==" crossorigin="anonymous"></script><script src="site_libs/clipboard/clipboard.min.js"></script>
@@ -43,11 +63,14 @@ ul.task-list li input[type="checkbox"] {
 
 <meta name="citation_title" content="Software for management of knowledge organization systems">
 <meta name="citation_author" content="Jakob Voß">
-<meta name="citation_publication_date" content="2025-03-11">
-<meta name="citation_cover_date" content="2025-03-11">
+<meta name="citation_publication_date" content="2025-03-14">
+<meta name="citation_cover_date" content="2025-03-14">
 <meta name="citation_year" content="2025">
-<meta name="citation_online_date" content="2025-03-11">
+<meta name="citation_online_date" content="2025-03-14">
 <meta name="citation_language" content="en">
+<meta name="citation_reference" content="citation_title=Coli-conc Technical Report 2: Open Source KOS software;,citation_abstract=This report gives an overview about Open Source software for Knowledge Organization Systems (KOS).;,citation_author=Jakob Voß;,citation_publication_date=2016-03;,citation_cover_date=2016-03;,citation_year=2016;,citation_fulltext_html_url=https://zenodo.org/records/48227;,citation_doi=10.5281/zenodo.48227;">
+<meta name="citation_reference" content="citation_title=Open Source web applications for Knowledge Organization Systems;,citation_abstract=This report gives an overview about Open Source web applications to create, manage, and publish Knowledge Organization Systems (KOS).;,citation_author=Jakob Voß;,citation_publication_date=2016-08;,citation_cover_date=2016-08;,citation_year=2016;,citation_fulltext_html_url=https://zenodo.org/records/61262;,citation_doi=10.5281/zenodo.61262;">
+<meta name="citation_reference" content="citation_title=W3C SKOS implementation report;,citation_abstract=This document summarises implementation experience reported to the Semantic Web Deployment Working Group relating to SKOS.;,citation_author=Alistair Miles;,citation_author=Sean Bechhofer;,citation_publication_date=2009-05;,citation_cover_date=2009-05;,citation_year=2009;,citation_fulltext_html_url=https://www.w3.org/2006/07/SWD/SKOS/reference/20090315/implementation.html;">
 </head>
 
 <body>
@@ -81,7 +104,7 @@ ul.task-list li input[type="checkbox"] {
                 <div>
             <div class="quarto-title-meta-heading">Published</div>
             <div class="quarto-title-meta-contents">
-              <p class="date">March 11, 2025</p>
+              <p class="date">March 14, 2025</p>
             </div>
           </div>
           
@@ -804,23 +827,32 @@ ul.task-list li input[type="checkbox"] {
 </section>
 <section id="acknowledgements" class="level2">
 <h2 class="anchored" data-anchor-id="acknowledgements">Acknowledgements</h2>
-<p>Contributions to this report or to its predecessors have been provided by Adrian Pohl, Antoine Isaac, David Linke, Eugene Morozov, Koen Van Daele, Matthias Löbe Roman Baum, Susanne Arndt, and possibly others.</p>
+<p>Contributions to this report or to its predecessors have been provided by Adrian Pohl, Antoine Isaac, David Linke, Eugene Morozov, Koen Van Daele, Matthias Löbe, Monty Bitto, Roman Baum, Susanne Arndt, and possibly others.</p>
 </section>
 <section id="references" class="level2">
 <h2 class="anchored" data-anchor-id="references">References</h2>
 <p>This report is based on two reports created in 2016 at VZG:</p>
 <ul>
-<li><a href="https://coli-conc.gbv.de/publications/tr2.html">coli-conc Technical Report 2</a>: Open Source KOS software <a href="https://doi.org/10.5281/zenodo.48227" class="uri">https://doi.org/10.5281/zenodo.48227</a></li>
-<li><a href="https://coli-conc.gbv.de/publications/tr7.html">coli-conc Technical Report 7</a>: Open Source web applications for Knowledge Organization Systems <a href="https://doi.org/10.5281/zenodo.61262" class="uri">https://doi.org/10.5281/zenodo.61262</a></li>
+<li><p><span class="citation" data-cites="Voss2016a">Voß (<a href="#ref-Voss2016a" role="doc-biblioref">2016a</a>)</span></p></li>
+<li><p><span class="citation" data-cites="Voss2016b">Voß (<a href="#ref-Voss2016b" role="doc-biblioref">2016b</a>)</span><br>
+Both led to <a href="https://github.com/gbv/bartoc.org/wiki/Software-for-controlled-vocabularies">a wiki page</a> managed between 2020 and 2024. Other lists of software for management of terminologies include:</p></li>
+<li><p><span class="citation" data-cites="Miles2009">Miles and Bechhofer (<a href="#ref-Miles2009" role="doc-biblioref">2009</a>)</span></p></li>
+<li><p>…</p></li>
 </ul>
-<p>Both led to <a href="https://github.com/gbv/bartoc.org/wiki/Software-for-controlled-vocabularies">a wiki page</a> managed between 2020 and 2024. Other lists of software for management of terminologies include:</p>
-<ul>
-<li>the <a href="https://www.w3.org/2006/07/SWD/SKOS/reference/20090315/implementation.html">W3C SKOS Implementation Report</a> from 2009</li>
-<li>…</li>
-</ul>
+
 </section>
 
-</main>
+<div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" role="doc-bibliography" id="quarto-bibliography"><h2 class="anchored quarto-appendix-heading">References</h2><div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" role="list">
+<div id="ref-Miles2009" class="csl-entry" role="listitem">
+Miles, Alistair, and Sean Bechhofer. 2009. <span>“W3C SKOS Implementation Report,”</span> May. <a href="https://www.w3.org/2006/07/SWD/SKOS/reference/20090315/implementation.html">https://www.w3.org/2006/07/SWD/SKOS/reference/20090315/implementation.html</a>.
+</div>
+<div id="ref-Voss2016a" class="csl-entry" role="listitem">
+Voß, Jakob. 2016a. <span>“Coli-Conc <span>Technical</span> <span>Report</span> 2: <span>Open</span> <span>Source</span> <span>KOS</span> Software,”</span> March. <a href="https://doi.org/10.5281/zenodo.48227">https://doi.org/10.5281/zenodo.48227</a>.
+</div>
+<div id="ref-Voss2016b" class="csl-entry" role="listitem">
+———. 2016b. <span>“Open <span>Source</span> Web Applications for <span>Knowledge</span> <span>Organization</span> <span>Systems</span>,”</span> August. <a href="https://doi.org/10.5281/zenodo.61262">https://doi.org/10.5281/zenodo.61262</a>.
+</div>
+</div></section></div></main>
 <!-- /main column -->
 <script id="quarto-html-after-body" type="application/javascript">
 window.document.addEventListener("DOMContentLoaded", function (event) {

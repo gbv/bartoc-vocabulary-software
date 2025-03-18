@@ -235,7 +235,7 @@
     "license": "MIT",
     "update": "2025",
     "repository": "https://github.com/mapping-commons/sssom-py",
-    "category": "mapping converter"
+    "category": "converter"
   },
   {
     "name": "sssom-java",
@@ -541,13 +541,15 @@
   },
   {
     "name": "TerminoloGit",
-    "platform": "?",
+    "url": "https://termgit.elga.gv.at/",
+    "platform": "Web, git",
     "api": false,
-    "edit": true,
+    "edit": false,
     "language": "Python",
     "license": "GPL",
     "repository": "https://gitlab.com/elga-gmbh/termgit",
-    "update": "2025"
+    "update": "2025",
+    "category": "converter"
   },
   {
     "name": "mc2skos",
@@ -562,39 +564,19 @@
     "category": "converter"
   },
   {
-    "name": "Examining LGBTQ+-related Concepts in the Semantic Web",
-    "url": "https://zenodo.org/records/12684870",
-    "platform": "RDF",
-    "edit": false,
-    "api": true,
-    "language": "Python",
-    "license": "CC-BY 4.0",
-    "repository": "https://github.com/Multilingual-LGBTQIA-Vocabularies/Examing_LGBTQ_Concepts",
-    "update": "2025"
-  },
-  {
     "name": "Apelon DTS",
     "url": "http://www.apelondts.org/",
     "language": "Java",
     "update": "2024",
-    "edit": "?",
-    "api": "?"
-
+    "edit": true,
+    "api": "?"    
   },
   {
     "name": "Lexasaurus",
     "url": "http://www.k-int.com/products/lexaurus/",
     "edit": true,
-    "api": false
-  },
-  {
-    "name": "mix'n'match",
-    "url": "https://mix-n-match.toolforge.org/#/",
-    "platform": "Web",
-    "repository": "https://bitbucket.org/magnusmanske/mixnmatch/src/master/",
-    "update": "2024",
-    "edit": "?",
-    "api": "?"
+    "api": false,
+    "category": "editor"
   },
   {
     "name": "Mondeca",
@@ -604,13 +586,15 @@
   },
   {
     "name": "Wandora",
+    "platform": "JVM",
     "url": "http://wandora.org/www/",
     "edit": true,
     "api": false,
     "language": "Java",
     "license": "GPL",
     "repository": "https://github.com/wandora-team/wandora",
-    "update": "2023"
+    "update": "2023",
+    "category": "editor"
   },
   {
     "name": "OxO",
@@ -622,9 +606,12 @@
   {
     "name": "Amalgame",
     "url": "https://semanticweb.cs.vu.nl/amalgame/",
-    "update": "2011",
-    "edit": "?",
-    "api": "?"
+    "language": "prolog",
+    "update": "2023",
+    "edit": true,
+    "api": false,
+    "repository": "https://github.com/jrvosse/amalgame",
+    "category": "mapping editor"
   },
   {
     "name": "Alignment API and Alignment Server",
@@ -635,6 +622,7 @@
     "language": "Java",
     "license": "GPL",
     "repository": "https://gitlab.inria.fr/moex/alignapi/",
-    "update": "2023"
+    "update": "2023",
+    "category": "database"
   }
 ]

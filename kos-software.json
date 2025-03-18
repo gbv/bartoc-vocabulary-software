@@ -606,11 +606,13 @@
   {
     "name": "Amalgame",
     "url": "https://semanticweb.cs.vu.nl/amalgame/",
+    "platform": "Web",
     "language": "prolog",
     "update": "2023",
     "edit": true,
     "api": false,
     "repository": "https://github.com/jrvosse/amalgame",
+    "license": "BSD",
     "category": "mapping editor"
   },
   {

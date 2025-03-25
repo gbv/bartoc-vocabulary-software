@@ -80,7 +80,7 @@
     "language": "JavaScript",
     "license": "MIT",
     "repository": "https://github.com/gbv/cocoda",
-    "update": "2024",
+    "update": "2025",
     "category": "mapping editor"
   },
   {
@@ -500,7 +500,10 @@
     "url": "https://ontoserver.csiro.au/",
     "platform": "Web",
     "edit": true,
-    "api": true
+    "api": true,
+    "license": "?",
+    "repository": "-",
+    "category": "viewer"
   },
   {
     "name": "ASKOSI",
@@ -529,8 +532,11 @@
     "name": "PoolParty Thesaurus Server",
     "url": "https://www.poolparty.biz/poolparty-thesaurus-manager",
     "platform": "Web",
-    "api": false,
-    "edit": false
+    "api": "?",
+    "edit": true,
+    "license": "-",
+    "repository": "-",
+    "category": "editor" 
   },
   {
     "name": "TopBraid EDG",
@@ -565,21 +571,13 @@
     "category": "converter"
   },
   {
-    "name": "Apelon DTS",
-    "url": "http://www.apelondts.org/",
-    "language": "Java",
-    "update": "2024",
-    "edit": true,
-    "api": "?", 
-    "license": "-"
-  },
-  {
     "name": "Lexasaurus",
     "url": "http://www.k-int.com/products/lexaurus/",
     "platform": "Web",
     "edit": true,
     "api": true,
     "license": "-",
+    "repository": "-",
     "category": "editor"
   },
   {

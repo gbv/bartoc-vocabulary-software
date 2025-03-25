@@ -323,12 +323,13 @@
   {
     "name": "Django Controlled Vocabularies",
     "platform": "Web",
-    "api": false,
-    "edit": false,
+    "api": true,
+    "edit": true,
     "language": "Python",
     "license": "BSD",
     "repository": "https://github.com/unt-libraries/django-controlled-vocabularies",
-    "update": "2023"
+    "update": "2023",
+    "category": "editor"
   },
   {
     "name": "Vocabseditor",
@@ -502,14 +503,6 @@
     "api": true
   },
   {
-    "name": "Apelon TermManager",
-    "url": "https://www.apelon.com/solutions/terminology-tooling/termmanager",
-    "platform": "Web",
-    "edit": true,
-    "api": "?",
-    "category": "mapping editor"
-  },
-  {
     "name": "ASKOSI",
     "url": "http://www.askosi.org/",
     "platform": "Web",
@@ -588,12 +581,6 @@
     "api": true,
     "license": "-",
     "category": "editor"
-  },
-  {
-    "name": "Mondeca",
-    "url": "https://mondeca.com/",
-    "edit": "?",
-    "api": "?"
   },
   {
     "name": "Wandora",

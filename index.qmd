@@ -124,7 +124,7 @@ The term "terminology management" is also used for systems to organize the terms
 ## Related works
 
 This report is based on two reports [@Voss2016a;@Voss2016b] from the beginning of [project coli-conc](https://coli-conc.gbv.de/) that led to a [a wiki page](https://github.com/gbv/bartoc.org/wiki/Software-for-controlled-vocabularies) managed between 2020 and 2024. 
-Other lists of software for management of terminologies include: See @Miles2009 for a report created during the specification of SKOS W3C Recommendation.
+Other lists of software for management of terminologies include: See @Miles2009 for a report created during the specification of SKOS W3C Recommendation and the corresponding wiki pages at <https://www.w3.org/2001/sw/wiki/Category:Editor>.
 
 ## Acknowledgements
 

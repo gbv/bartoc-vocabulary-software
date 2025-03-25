@@ -80,7 +80,7 @@
     "language": "JavaScript",
     "license": "MIT",
     "repository": "https://github.com/gbv/cocoda",
-    "update": "2024",
+    "update": "2025",
     "category": "mapping editor"
   },
   {
@@ -323,12 +323,13 @@
   {
     "name": "Django Controlled Vocabularies",
     "platform": "Web",
-    "api": false,
-    "edit": false,
+    "api": true,
+    "edit": true,
     "language": "Python",
     "license": "BSD",
     "repository": "https://github.com/unt-libraries/django-controlled-vocabularies",
-    "update": "2023"
+    "update": "2023",
+    "category": "editor"
   },
   {
     "name": "Vocabseditor",
@@ -433,7 +434,8 @@
     "language": "XSLT",
     "license": "Apache",
     "repository": "https://github.com/SISS/sissvoc",
-    "update": "2019"
+    "update": "2019",
+    "category": "viewer"
   },
   {
     "name": "SKOS Play",
@@ -444,7 +446,8 @@
     "language": "Java",
     "license": "CC-BY-SA",
     "repository": "https://bitbucket.org/tfrancart/sparna/src/master/",
-    "update": "2018"
+    "update": "2018",
+    "category": "viewer & converter"
   },
   {
     "name": "OntoBee",
@@ -455,7 +458,8 @@
     "language": "PHP & JavaScript",
     "license": "Apache",
     "repository": "https://github.com/OntoZoo/ontobee",
-    "update": "2018"
+    "update": "2018",
+    "category": "viewer"
   },
   {
     "name": "ng-skos",
@@ -465,7 +469,9 @@
     "edit": false,
     "language": "JavaScript",
     "repository": "https://github.com/gbv/ng-skos",
-    "update": "2016"
+    "license": "AGPL",
+    "update": "2016",
+    "category": "viewer"
   },
   {
     "name": "SKOS Editor",
@@ -476,7 +482,8 @@
     "language": "Java",
     "license": "LGPL",
     "repository": "https://github.com/Blulab-Utah/SKOSEditor",
-    "update": "2016"
+    "update": "2016",
+    "category": "editor"
   },
   {
     "name": "HIVE Vocabulary Server",
@@ -493,15 +500,10 @@
     "url": "https://ontoserver.csiro.au/",
     "platform": "Web",
     "edit": true,
-    "api": true
-  },
-  {
-    "name": "Apelon TermManager",
-    "url": "https://www.apelon.com/solutions/terminology-tooling/termmanager",
-    "platform": "Web",
-    "edit": true,
-    "api": "?",
-    "category": "mapping editor"
+    "api": true,
+    "license": "?",
+    "repository": "-",
+    "category": "viewer"
   },
   {
     "name": "ASKOSI",
@@ -523,21 +525,26 @@
     "language": "Java",
     "license": "LGPL",
     "repository": "https://sourceforge.net/projects/thmanager/",
-    "update": "2006"
+    "update": "2006",
+    "category": "editor"
   },
   {
     "name": "PoolParty Thesaurus Server",
     "url": "https://www.poolparty.biz/poolparty-thesaurus-manager",
     "platform": "Web",
-    "api": false,
-    "edit": false
+    "api": "?",
+    "edit": true,
+    "license": "-",
+    "repository": "-",
+    "category": "editor" 
   },
   {
     "name": "TopBraid EDG",
     "url": "https://www.topquadrant.com/topbraid-edg/",
     "api": false,
     "edit": true,
-    "platform": "?"
+    "platform": "?",
+    "category": "editor"
   },
   {
     "name": "TerminoloGit",
@@ -564,25 +571,14 @@
     "category": "converter"
   },
   {
-    "name": "Apelon DTS",
-    "url": "http://www.apelondts.org/",
-    "language": "Java",
-    "update": "2024",
-    "edit": true,
-    "api": "?"    
-  },
-  {
     "name": "Lexasaurus",
     "url": "http://www.k-int.com/products/lexaurus/",
+    "platform": "Web",
     "edit": true,
-    "api": false,
+    "api": true,
+    "license": "-",
+    "repository": "-",
     "category": "editor"
-  },
-  {
-    "name": "Mondeca",
-    "url": "https://mondeca.com/",
-    "edit": "?",
-    "api": "?"
   },
   {
     "name": "Wandora",

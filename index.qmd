@@ -63,7 +63,7 @@ display(HTML(df.to_html(escape=False,index=False)))
 
 The list of software is managed [in a JSON file](kos-software.json) as array of records with flat fields as [described below](#metadata). Applications without license or repository are close source. Deprecated applications are included for historical reference.
 
-Please [open an issue](https://github.com/gbv/bartoc-vocabulary-software/issues) if some relevant software is missing!
+*Please [open an issue](https://github.com/gbv/bartoc-vocabulary-software/issues) if some relevant software is missing!*
 
 ## Metadata
 
@@ -91,7 +91,7 @@ Field | Purpose
 - **validator**: to check terminologies
 - **database**: to store terminologies
 
-## Other software
+## Related software
 
 Knowledge organization systems are also managed by other types software [excluded from this report](#scope).
 
@@ -115,11 +115,14 @@ Some organizations host their own applications for KOS management. Examples from
 
 The term "terminology management" is also used for systems to organize the terms, definitions, and translations used in an organization. See @Montoro2018 for a list of terminology management systems. The focus of these systems is more on translation but there is some overlap with KOS management.
 
-<!--
 ### Other software
 
-[OpenRefine] and [mix'n'match]
--->
+The following do not fit into of of the software categories above or there was not enough information:
+
+- [Scripts to analyze concept drift](https://github.com/Multilingual-LGBTQIA-Vocabularies/Examing_LGBTQ_Concepts) as part of a research project (Open Source)
+- [TopBraid EDG](https://www.topquadrant.com/topbraid-edg/) is a commercial knowledge graph editor
+- [Apelon DTS](https://www.apelondts.org/) (Distributed Terminology System) and Apelon TermManager are commercial terminology editors. An earlier [version from 2013](https://apelon-dts.sourceforge.net/) is available as Open Source.
+- [Grafo](https://gra.fo/) is a collaborative knowledge graph editor, available as commercial web application
 
 ## Related works
 

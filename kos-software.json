@@ -219,7 +219,7 @@
     "platform": "Web",
     "api": true,
     "edit": false,
-    "license": "?",
+    "license": "MIT",
     "language": "Java & JavaScript",
     "update": "2025",
     "category": "viewer & converter",
@@ -282,7 +282,7 @@
     "license": "Apache",
     "repository": "https://github.com/IHTSDO/snowstorm",
     "update": "2024",
-    "category": "?"
+    "category": "viewer"
   },
   {
     "name": "Network of Terms",
@@ -493,7 +493,8 @@
     "language": "Java",
     "license": "BSD",
     "repository": "https://github.com/MetadataResearchCenter/hive-mrc",
-    "update": "2015"
+    "update": "2015",
+    "category": "viewer"
   },
   {
     "name": "OntoServer",
@@ -501,7 +502,7 @@
     "platform": "Web",
     "edit": true,
     "api": true,
-    "license": "?",
+    "license": "-",
     "repository": "-",
     "category": "viewer"
   },
@@ -514,7 +515,8 @@
     "language": "Java",
     "license": "GPL",
     "repository": "http://www.askosi.org/example/",
-    "update": "2011"
+    "update": "2011",
+    "category": "viewer"
   },
   {
     "name": "THManager",
@@ -532,19 +534,11 @@
     "name": "PoolParty Thesaurus Server",
     "url": "https://www.poolparty.biz/poolparty-thesaurus-manager",
     "platform": "Web",
-    "api": "?",
+    "api": true,
     "edit": true,
     "license": "-",
     "repository": "-",
     "category": "editor" 
-  },
-  {
-    "name": "TopBraid EDG",
-    "url": "https://www.topquadrant.com/topbraid-edg/",
-    "api": false,
-    "edit": true,
-    "platform": "?",
-    "category": "editor"
   },
   {
     "name": "TerminoloGit",
@@ -581,6 +575,63 @@
     "category": "editor"
   },
   {
+    "name": "Ontology Development Kit",
+    "url": "http://incatools.github.io/ontology-development-kit/",
+    "platform": "CLI",
+    "edit": false,
+    "api": false,
+    "language": "Python",
+    "repository": "https://github.com/INCATools/ontology-development-kit",
+    "update": "2025",
+    "license": "BSD",
+    "category": "converter & validator"
+  },
+  {
+    "name": "Onto4ALL Editor",
+    "url": "https://onto4all.com/",
+    "platform": "Web",
+    "edit": true,
+    "api": false,
+    "language": "JavaScript & PHP",
+    "license": "Apache",
+    "update": "2024",
+    "repository": "https://github.com/NCOR-BR/onto4all",
+    "category": "editor"
+  },
+  {
+    "name": "Neologism",
+    "platform": "Web",
+    "edit": true,
+    "api": true,
+    "language": "JavaScript",
+    "license": "MIT",
+    "update": "2023",
+    "repository": "https://github.com/Semantic-Society/Neologism",
+    "category": "editor"
+  },
+  {
+    "name": "Chowlk",
+    "url": "https://chowlk.linkeddata.es/",
+    "platform": "Web",
+    "edit": false,
+    "api": false,
+    "language": "Python",
+    "license": "Apache",
+    "update": "2025",
+    "repository": "https://github.com/oeg-upm/Chowlk",
+    "category": "converter"
+  },
+  {
+    "name": "Fiblio",
+    "url": "https://www.fiblio.de/",
+    "platform": "Web",
+    "edit": true,
+    "api": false,
+    "license": "-",
+    "repository": "-",
+    "category": "editor"
+  },
+  {
     "name": "Wandora",
     "platform": "JVM",
     "url": "http://wandora.org/www/",
@@ -596,8 +647,13 @@
     "name": "OxO",
     "url": "https://www.ebi.ac.uk/spot/oxo/",
     "platform": "Web",
-    "edit": "?",
-    "api": "?"
+    "language": "JavaScript",
+    "edit": false,
+    "api": true,
+    "update": "2024",
+    "license": "Apache",
+    "repository": "https://github.com/EBISPOT/OXO",
+    "category": "viewer"
   },
   {
     "name": "Amalgame",
@@ -622,5 +678,5 @@
     "repository": "https://gitlab.inria.fr/moex/alignapi/",
     "update": "2023",
     "category": "database"
-  }
+  } 
 ]

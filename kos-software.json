@@ -87,7 +87,7 @@
     "name": "MSCR",
     "url": "https://cscfi.github.io/mscr-docs/",
     "platform": "Web",
-    "api": false,
+    "api": true,
     "edit": true,
     "language": "Java",
     "license": "MIT",

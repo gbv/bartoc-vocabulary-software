@@ -76,7 +76,7 @@
     "url": "https://coli-conc.gbv.de/cocoda/",
     "platform": "Web",
     "api": false,
-    "edit": false,
+    "edit": true,
     "language": "JavaScript",
     "license": "MIT",
     "repository": "https://github.com/gbv/cocoda",

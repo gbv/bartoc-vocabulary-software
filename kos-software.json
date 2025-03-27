@@ -84,6 +84,18 @@
     "category": "mapping editor"
   },
   {
+    "name": "MSCR",
+    "url": "https://cscfi.github.io/mscr-docs/",
+    "platform": "Web",
+    "api": false,
+    "edit": true,
+    "language": "Java",
+    "license": "MIT",
+    "repository": "https://github.com/CSCfi/mscr-compose",
+    "update": "2025",
+    "category": "mapping editor"
+  },
+  {
     "name": "JSKOS Server",
     "url": "https://github.com/gbv/jskos-server",
     "platform": "Web",

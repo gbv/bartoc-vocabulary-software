@@ -690,5 +690,16 @@
     "repository": "https://gitlab.inria.fr/moex/alignapi/",
     "update": "2023",
     "category": "database"
-  } 
+  }, 
+  {
+    "name": "SkoHub Shapes",
+    "edit": false,
+    "api": false,
+    "repository": "https://github.com/skohub-io/skohub-shapes",
+    "license": "?",
+    "platform": "RDF",
+    "language": "SHACL",
+    "update": "2024",
+    "category": "validator"
+  }
 ]

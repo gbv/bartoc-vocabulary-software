@@ -20,7 +20,8 @@ This report is limited to **[specialized KOS software](#kos-software) for editin
 - it can only be used as [hosted service](#hosted-services), or
 - it is a programming library ([jskos-vue], [cocoda-sdk], [TSS Widgets]...), or
 - it is limited to simple lists of terms, glossaries and similar, or
-- it is so called [terminology management] software for a a centralized repository of approved terms, definitions, and translations in an organization.
+- it is so called [terminology management] software for a a centralized repository of approved terms, definitions, and translations in an organization, or
+- it is only meant [to manage identifiers](#identifier-systems).
 
 ## KOS software
 
@@ -114,6 +115,10 @@ Some organizations host their own applications for KOS management. Examples from
 ### Terminology management
 
 The term "terminology management" is also used for systems to organize the terms, definitions, and translations used in an organization. See @Montoro2018 for a list of terminology management systems. The focus of these systems is more on translation but there is some overlap with KOS management.
+
+### Identifier systems
+
+Several systems and applications exist to manage identifiers (Domain Name System, [w3id](https://w3id.org/)...). These systems are relevant to manage KOS but they are rarely enough for KOS management alone. See <https://bioregistry.io/registry/> for a registry of identifier systems used with KOS.
 
 ### Other software
 

@@ -701,5 +701,16 @@
     "language": "SHACL",
     "update": "2024",
     "category": "validator"
+  },
+  {
+    "name": "OnToology",
+    "edit": false,
+    "api": false,
+    "repository": "https://github.com/OnToology/OnToology",
+    "license": "Apache",
+    "platform": "Web, git",
+    "language": "Python",
+    "update": "2024",
+    "category": "viewer & validator"
   }
 ]

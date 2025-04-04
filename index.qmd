@@ -136,6 +136,7 @@ The following do not fit into of of the software categories above or there was n
 - [TopBraid EDG](https://www.topquadrant.com/topbraid-edg/) is a commercial knowledge graph editor
 - [Apelon DTS](https://www.apelondts.org/) (Distributed Terminology System) and Apelon TermManager are commercial terminology editors. An earlier [version from 2013](https://apelon-dts.sourceforge.net/) is available as Open Source.
 - [Grafo](https://gra.fo/) is a collaborative knowledge graph editor, available as commercial web application
+- [Vitro](https://github.com/vivo-project/Vitro) is a framework for semantic web applications, used in [VIVO](https://vivoweb.org/)
 
 ## Related works
 

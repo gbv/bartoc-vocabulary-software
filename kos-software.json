@@ -712,5 +712,77 @@
     "language": "Python",
     "update": "2024",
     "category": "viewer & validator"
+  },
+  {
+    "name": "O'FAIRe",
+    "url": "https://foops.linkeddata.es/FAIR_validator.html",
+    "platform": "Web",
+    "api": true,
+    "edit": false,
+    "language": "Java",
+    "license": "MIT",
+    "repository": "https://github.com/agroportal/fairness",
+    "update": "2025",
+    "category": "validator"
+  },
+  {
+    "name": "webvowl",
+    "url": "https://service.tib.eu/webvowl/",
+    "platform": "Web",
+    "api": false,
+    "edit": false,
+    "language": "JavaScript",
+    "license": "MIT",
+    "repository": "https://github.com/VisualDataWeb/WebVOWL",
+    "update": "2022",
+    "category": "viewer"
+  },
+  {
+    "name": "Widoco",
+    "url": "https://github.com/dgarijo/Widoco",
+    "platform": "JVM",
+    "api": false,
+    "edit": false,
+    "language": "JavaScript & Java",
+    "license": "Apache",
+    "repository": "https://github.com/dgarijo/Widoco",
+    "update": "2025",
+    "category": "viewer"
+  },
+  {
+    "name": "OntOlogy Pitfall Scanner!",
+    "url": "https://oops.linkeddata.es/",
+    "platform": "WEB",
+    "api": false,
+    "edit": false,
+    "language": "Java",
+    "license": "?",
+    "repository": "https://github.com/oeg-upm/OOPS",
+    "update": "2025",
+    "category": "viewer"
+  },
+  {
+    "name": "LODE",
+    "url": "https://essepuntato.it/lode/",
+    "platform": "WEB",
+    "api": true,
+    "edit": false,
+    "language": "Java",
+    "license": "ISC",
+    "repository": "https://github.com/essepuntato/LODE",
+    "update": "2020",
+    "category": "viewer"
+  },
+  {
+    "name": "ODM2 Controlled Vocabularies",
+    "url": "http://vocabulary.odm2.org/",
+    "platform": "WEB",
+    "api": true,
+    "edit": true,
+    "language": "Python",
+    "license": "BSD-3",
+    "repository": "https://github.com/ODM2/ODM2ControlledVocabularies",
+    "update": "2024",
+    "category": "editor"
   }
 ]

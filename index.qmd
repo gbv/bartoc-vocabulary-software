@@ -26,10 +26,16 @@ This report is limited to **[specialized KOS software](#kos-software) for editin
 ## KOS software
 
 ```{python}
+import pandas as pd
+kos = pd.read_json('kos-software.json')
+```
+
+This report includes **`{python} len(kos.index)`** instances of KOS software so far. The list is managed [in a JSON file](kos-software.json) as array of records with flat fields as [described below](#metadata). Applications without license or repository are close source. Deprecated applications are included for historical reference.
+
+```{python}
 #| label: tbl-software
 from IPython.display import Markdown
 from tabulate import tabulate
-import pandas as pd
 from urllib.parse import urlparse
 from IPython.display import display, HTML
 import re
@@ -53,18 +59,14 @@ def cell(value):
         return int(value)
     return value
 
-df = pd.read_json('kos-software.json')
-
-df["name"] = df.apply(hyperlink, axis=1)
-df = df.sort_values(by=["update"],ascending=False)
-df = df.drop(columns=["url"])
-df = df.applymap(cell)
-display(HTML(df.to_html(escape=False,index=False)))
+kos["name"] = kos.apply(hyperlink, axis=1)
+kos = kos.sort_values(by=["update"],ascending=False)
+kos = kos.drop(columns=["url"])
+kos = kos.applymap(cell)
+display(HTML(kos.to_html(escape=False,index=False)))
 ```
 
-The list of software is managed [in a JSON file](kos-software.json) as array of records with flat fields as [described below](#metadata). Applications without license or repository are close source. Deprecated applications are included for historical reference.
-
-*Please [open an issue](https://github.com/gbv/bartoc-vocabulary-software/issues) if some relevant software is missing!*
+Please [open an issue](https://github.com/gbv/bartoc-vocabulary-software/issues) if some relevant software is missing or data seems invalid!
 
 ## Metadata
 

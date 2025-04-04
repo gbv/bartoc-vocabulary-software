@@ -87,12 +87,23 @@ Field | Purpose
 
 ## KOS software categories
 
-- **viewer**: to display terminologies
-- **editor**: to create and modify terminologies
-- **mapping editor**: to create and modify mappings/alignments
-- **converter**: to convert from one format into another
-- **validator**: to check terminologies
-- **database**: to store terminologies
+```{python}
+df = pd.read_json('kos-software.json')
+categories = {}
+for item in df["category"]:
+    for category in item.split(' & '):
+        if category in categories:
+            categories[category] += 1
+        else:
+            categories[category] = 1
+```
+
+- **viewer**: to display terminologies (`{python} categories['viewer']`)
+- **editor**: to create and modify terminologies (`{python} categories['editor']`)
+- **mapping editor**: to create and modify mappings/alignments (`{python} categories['mapping editor']`)
+- **converter**: to convert from one format into another (`{python} categories['converter']`)
+- **validator**: to check terminologies (`{python} categories['validator']`)
+- **database**: to store terminologies (`{python} categories['database']`)
 
 ## Related software
 

@@ -7,9 +7,17 @@ authors:
    - name: Verbundzentrale des GBV (VZG)
 bibliography: references.bib
 date: last-modified
+url: "https://bartoc.org/software"
 ---
 
+::: {.content-visible when-format="pdf"}
+\large
+*This report is much more usable in HTML at <https://bartoc.org/software>!*
+\vspace*{20mm}
+:::
+
 The terminology registry **[BARTOC](https://bartoc.org/)** collects information about all kinds of **knowledge organization systems** (KOS) such as controlled vocabularies, classifications, ontologies, and other semantic artifacts. This report summarizes information about [software for KOS management](#kos-software).
+
 
 ## Scope
 
@@ -22,6 +30,11 @@ This report is limited to **[specialized KOS software](#kos-software) for editin
 - it is limited to simple lists of terms, glossaries and similar, or
 - it is so called [terminology management] software for a a centralized repository of approved terms, definitions, and translations in an organization, or
 - it is only meant [to manage identifiers](#identifier-systems).
+
+<!-- start landscape mode in PDF -->
+\newpage
+\KOMAoptions{paper=landscape,pagesize,DIV=20}
+\recalctypearea
 
 ## KOS software
 
@@ -67,6 +80,11 @@ display(HTML(kos.to_html(escape=False,index=False)))
 ```
 
 Please [open an issue](https://github.com/gbv/bartoc-vocabulary-software/issues) if some relevant software is missing or data seems invalid!
+
+<!-- end landscape mode in PDF -->
+\newpage
+\KOMAoptions{paper=portrait,pagesize,DIV=10}
+\recalctypearea
 
 ## Metadata
 

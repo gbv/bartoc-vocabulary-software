@@ -24,4 +24,17 @@ format:
     header-includes: |
       <link rel="canonical" href="https://bartoc.org/software"/>
       <link rel="shortcut icon" href="bartoc-icon.png" type="image/png" />
-#  pdf: default
+  pdf:
+    notebook-links: false
+    keep-tex: true
+    classoption: DIV=10
+    template-partials:
+      - title.tex
+    include-in-header: 
+      text: |
+        \usepackage[noblocks]{authblk}
+        \renewcommand\Affilfont{\small}
+        \usepackage{typearea}    
+        \usepackage{floatrow}        
+        \DeclareFloatFont{small}{\small}
+        \floatsetup[table]{font=small}

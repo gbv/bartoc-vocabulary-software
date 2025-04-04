@@ -752,7 +752,7 @@
   {
     "name": "OntOlogy Pitfall Scanner!",
     "url": "https://oops.linkeddata.es/",
-    "platform": "WEB",
+    "platform": "Web",
     "api": false,
     "edit": false,
     "language": "Java",
@@ -764,7 +764,7 @@
   {
     "name": "LODE",
     "url": "https://essepuntato.it/lode/",
-    "platform": "WEB",
+    "platform": "Web",
     "api": true,
     "edit": false,
     "language": "Java",
@@ -776,7 +776,7 @@
   {
     "name": "ODM2 Controlled Vocabularies",
     "url": "http://vocabulary.odm2.org/",
-    "platform": "WEB",
+    "platform": "Web",
     "api": true,
     "edit": true,
     "language": "Python",

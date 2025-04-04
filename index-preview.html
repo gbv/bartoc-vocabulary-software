@@ -281,12 +281,12 @@
 </section>
 <section id="kos-software" class="level2">
 <h2 class="anchored" data-anchor-id="kos-software">KOS software</h2>
-<div class="cell-container"><div class="cell-decorator"><pre>In [1]:</pre></div><div id="2ce68cc1" class="cell" data-execution_count="1">
+<div class="cell-container"><div class="cell-decorator"><pre>In [1]:</pre></div><div id="e020e8cd" class="cell" data-execution_count="1">
 <div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> pandas <span class="im">as</span> pd</span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>kos <span class="op">=</span> pd.read_json(<span class="st">'kos-software.json'</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div></div>
-<div id="b0de60e8" class="cell markdown">
-<p>This report includes <strong>67</strong> instances of KOS software so far. The list is managed <a href="kos-software.json">in a JSON file</a> as array of records with flat fields as <a href="#metadata">described below</a>. Applications without license or repository are close source. Deprecated applications are included for historical reference.</p>
+<div id="43257832" class="cell markdown">
+<p>This report includes <strong>69</strong> instances of KOS software so far. The list is managed <a href="kos-software.json">in a JSON file</a> as array of records with flat fields as <a href="#metadata">described below</a>. Applications without license or repository are close source. Deprecated applications are included for historical reference.</p>
 </div>
 <div class="cell-container"><div class="cell-decorator"><pre>In [2]:</pre></div><div id="tbl-software" class="cell anchored" data-execution_count="2">
 <div class="sourceCode cell-code" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> IPython.display <span class="im">import</span> Markdown</span>
@@ -320,7 +320,7 @@
 <span id="cb2-29"><a href="#cb2-29" aria-hidden="true" tabindex="-1"></a>kos <span class="op">=</span> kos.applymap(cell)</span>
 <span id="cb2-30"><a href="#cb2-30" aria-hidden="true" tabindex="-1"></a>display(HTML(kos.to_html(escape<span class="op">=</span><span class="va">False</span>,index<span class="op">=</span><span class="va">False</span>)))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stderr">
-<pre><code>/tmp/ipykernel_2150/2186700073.py:29: FutureWarning: DataFrame.applymap has been deprecated. Use DataFrame.map instead.
+<pre><code>/tmp/ipykernel_2167/2186700073.py:29: FutureWarning: DataFrame.applymap has been deprecated. Use DataFrame.map instead.
   kos = kos.applymap(cell)</code></pre>
 </div>
 <div class="cell-output cell-output-display">
@@ -483,17 +483,6 @@
 <td>viewer</td>
 </tr>
 <tr class="even">
-<td><a href="https://showvoc.uniroma2.it/">ShowVoc</a></td>
-<td>Web</td>
-<td>-</td>
-<td>-</td>
-<td>JavaScript</td>
-<td>BSD</td>
-<td><a href="https://bitbucket.org/art-uniroma2/showvoc/src/master/">bitbucket</a></td>
-<td>2025</td>
-<td>viewer</td>
-</tr>
-<tr class="odd">
 <td><a href="https://github.com/nfdi4cat/voc4cat-tool/">voc4cat-tool</a></td>
 <td>CLI, GitHub, Excel</td>
 <td>-</td>
@@ -504,18 +493,18 @@
 <td>2025</td>
 <td>converter</td>
 </tr>
-<tr class="even">
-<td><a href="https://github.com/netwerk-digitaal-erfgoed/network-of-terms">Network of Terms</a></td>
+<tr class="odd">
+<td><a href="https://showvoc.uniroma2.it/">ShowVoc</a></td>
 <td>Web</td>
 <td>-</td>
-<td>✓</td>
-<td>Typescript</td>
-<td>EUPL</td>
-<td><a href="https://github.com/netwerk-digitaal-erfgoed/network-of-terms">github</a></td>
+<td>-</td>
+<td>JavaScript</td>
+<td>BSD</td>
+<td><a href="https://bitbucket.org/art-uniroma2/showvoc/src/master/">bitbucket</a></td>
 <td>2025</td>
-<td>converter</td>
+<td>viewer</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td><a href="https://protege.stanford.edu/">Protégé</a></td>
 <td>JVM</td>
 <td>✓</td>
@@ -526,7 +515,7 @@
 <td>2025</td>
 <td>editor</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td>VocExcel</td>
 <td>Excel, CLI</td>
 <td>-</td>
@@ -536,6 +525,17 @@
 <td><a href="https://github.com/Kurrawong/VocExcel">github</a></td>
 <td>2025</td>
 <td>converter</td>
+</tr>
+<tr class="even">
+<td><a href="https://incenp.org/dvlpt/sssom-java/">sssom-java</a></td>
+<td>CLI</td>
+<td>-</td>
+<td>-</td>
+<td>Java</td>
+<td>GPL</td>
+<td><a href="https://github.com/gouttegd/sssom-java">github</a></td>
+<td>2025</td>
+<td>mapping converter</td>
 </tr>
 <tr class="odd">
 <td>jskos-cli</td>
@@ -571,15 +571,15 @@
 <td>converter</td>
 </tr>
 <tr class="even">
-<td><a href="https://incenp.org/dvlpt/sssom-java/">sssom-java</a></td>
-<td>CLI</td>
+<td><a href="https://github.com/netwerk-digitaal-erfgoed/network-of-terms">Network of Terms</a></td>
+<td>Web</td>
 <td>-</td>
-<td>-</td>
-<td>Java</td>
-<td>GPL</td>
-<td><a href="https://github.com/gouttegd/sssom-java">github</a></td>
+<td>✓</td>
+<td>Typescript</td>
+<td>EUPL</td>
+<td><a href="https://github.com/netwerk-digitaal-erfgoed/network-of-terms">github</a></td>
 <td>2025</td>
-<td>mapping converter</td>
+<td>converter</td>
 </tr>
 <tr class="odd">
 <td>jskos-proxy</td>
@@ -593,15 +593,37 @@
 <td>viewer &amp; converter</td>
 </tr>
 <tr class="even">
-<td><a href="https://oops.linkeddata.es/">OOPS!</a></td>
+<td><a href="http://incatools.github.io/ontology-development-kit/">Ontology Development Kit</a></td>
+<td>CLI</td>
+<td>-</td>
+<td>-</td>
+<td>Python</td>
+<td>BSD</td>
+<td><a href="https://github.com/INCATools/ontology-development-kit">github</a></td>
+<td>2025</td>
+<td>converter &amp; validator</td>
+</tr>
+<tr class="odd">
+<td><a href="https://termgit.elga.gv.at/">TerminoloGit</a></td>
+<td>Web, git</td>
+<td>-</td>
+<td>-</td>
+<td>Python</td>
+<td>GPL</td>
+<td><a href="https://gitlab.com/elga-gmbh/termgit">gitlab</a></td>
+<td>2025</td>
+<td>converter</td>
+</tr>
+<tr class="even">
+<td><a href="https://foops.linkeddata.es/FAIR_validator.html">FOOPS!</a></td>
 <td>Web</td>
 <td>-</td>
 <td>-</td>
-<td>Java</td>
-<td>?</td>
-<td><a href="https://github.com/oeg-upm/OOPS">github</a></td>
+<td>Java &amp; JavaScript</td>
+<td>Apache</td>
+<td><a href="https://github.com/oeg-upm/fair_ontologies">github</a></td>
 <td>2025</td>
-<td>viewer</td>
+<td>validator</td>
 </tr>
 <tr class="odd">
 <td><a href="https://chowlk.linkeddata.es/">Chowlk</a></td>
@@ -615,15 +637,15 @@
 <td>converter</td>
 </tr>
 <tr class="even">
-<td><a href="http://incatools.github.io/ontology-development-kit/">Ontology Development Kit</a></td>
-<td>CLI</td>
+<td><a href="https://github.com/dgarijo/Widoco">WIDOCO</a></td>
+<td>JVM</td>
 <td>-</td>
 <td>-</td>
-<td>Python</td>
-<td>BSD</td>
-<td><a href="https://github.com/INCATools/ontology-development-kit">github</a></td>
+<td>JavaScript &amp; Java</td>
+<td>Apache</td>
+<td><a href="https://github.com/dgarijo/Widoco">github</a></td>
 <td>2025</td>
-<td>converter &amp; validator</td>
+<td>viewer</td>
 </tr>
 <tr class="odd">
 <td><a href="https://foops.linkeddata.es/FAIR_validator.html">O'FAIRe</a></td>
@@ -637,26 +659,26 @@
 <td>validator</td>
 </tr>
 <tr class="even">
-<td><a href="https://github.com/dgarijo/Widoco">WIDOCO</a></td>
-<td>JVM</td>
+<td><a href="https://oops.linkeddata.es/">OOPS!</a></td>
+<td>Web</td>
 <td>-</td>
 <td>-</td>
-<td>JavaScript &amp; Java</td>
-<td>Apache</td>
-<td><a href="https://github.com/dgarijo/Widoco">github</a></td>
+<td>Java</td>
+<td>?</td>
+<td><a href="https://github.com/oeg-upm/OOPS">github</a></td>
 <td>2025</td>
 <td>viewer</td>
 </tr>
 <tr class="odd">
-<td><a href="https://termgit.elga.gv.at/">TerminoloGit</a></td>
-<td>Web, git</td>
+<td><a href="https://github.com/IHTSDO/snowstorm">Snowstorm</a></td>
+<td>Web</td>
 <td>-</td>
-<td>-</td>
-<td>Python</td>
-<td>GPL</td>
-<td><a href="https://gitlab.com/elga-gmbh/termgit">gitlab</a></td>
-<td>2025</td>
-<td>converter</td>
+<td>✓</td>
+<td>Java</td>
+<td>Apache</td>
+<td><a href="https://github.com/IHTSDO/snowstorm">github</a></td>
+<td>2024</td>
+<td>viewer</td>
 </tr>
 <tr class="even">
 <td><a href="https://github.com/AKSW/jekyll-rdf">Jekyll RDF</a></td>
@@ -681,6 +703,28 @@
 <td>editor</td>
 </tr>
 <tr class="even">
+<td>OnToology</td>
+<td>Web, git</td>
+<td>-</td>
+<td>-</td>
+<td>Python</td>
+<td>Apache</td>
+<td><a href="https://github.com/OnToology/OnToology">github</a></td>
+<td>2024</td>
+<td>viewer &amp; validator</td>
+</tr>
+<tr class="odd">
+<td>SkoHub Shapes</td>
+<td>RDF</td>
+<td>-</td>
+<td>-</td>
+<td>SHACL</td>
+<td>?</td>
+<td><a href="https://github.com/skohub-io/skohub-shapes">github</a></td>
+<td>2024</td>
+<td>validator</td>
+</tr>
+<tr class="even">
 <td><a href="https://www.ebi.ac.uk/spot/oxo/">OxO</a></td>
 <td>Web</td>
 <td>-</td>
@@ -690,6 +734,50 @@
 <td><a href="https://github.com/EBISPOT/OXO">github</a></td>
 <td>2024</td>
 <td>viewer</td>
+</tr>
+<tr class="odd">
+<td><a href="https://surroundaustralia.github.io/vocpub-profile/profile.html">VocPub Profile</a></td>
+<td>RDF</td>
+<td>-</td>
+<td>-</td>
+<td>SHACL</td>
+<td>CC-BY-4.0</td>
+<td><a href="https://github.com/AGLDWG/vocpub-profile/">github</a></td>
+<td>2024</td>
+<td>validator</td>
+</tr>
+<tr class="even">
+<td><a href="https://vocabseditor.acdh.oeaw.ac.at/">Vocabseditor</a></td>
+<td>Web</td>
+<td>✓</td>
+<td>-</td>
+<td>Python</td>
+<td>MIT</td>
+<td><a href="https://github.com/acdh-oeaw/vocabseditor">github</a></td>
+<td>2024</td>
+<td>editor</td>
+</tr>
+<tr class="odd">
+<td><a href="https://github.com/RDFLib/VocPrez">VocPrez</a></td>
+<td>Web</td>
+<td>-</td>
+<td>✓</td>
+<td>Python</td>
+<td>GPL</td>
+<td><a href="https://github.com/RDFLib/VocPrez">github</a></td>
+<td>2024</td>
+<td>viewer</td>
+</tr>
+<tr class="even">
+<td><a href="https://github.com/cmader/qSKOS/">qSKOS</a></td>
+<td>CLI</td>
+<td>-</td>
+<td>✓</td>
+<td>Java</td>
+<td>GPL</td>
+<td><a href="https://github.com/cmader/qSKOS/">github</a></td>
+<td>2024</td>
+<td>validator</td>
 </tr>
 <tr class="odd">
 <td><a href="https://onto4all.com/">Onto4ALL Editor</a></td>
@@ -703,83 +791,6 @@
 <td>editor</td>
 </tr>
 <tr class="even">
-<td>SkoHub Shapes</td>
-<td>RDF</td>
-<td>-</td>
-<td>-</td>
-<td>SHACL</td>
-<td>?</td>
-<td><a href="https://github.com/skohub-io/skohub-shapes">github</a></td>
-<td>2024</td>
-<td>validator</td>
-</tr>
-<tr class="odd">
-<td><a href="https://vocabseditor.acdh.oeaw.ac.at/">Vocabseditor</a></td>
-<td>Web</td>
-<td>✓</td>
-<td>-</td>
-<td>Python</td>
-<td>MIT</td>
-<td><a href="https://github.com/acdh-oeaw/vocabseditor">github</a></td>
-<td>2024</td>
-<td>editor</td>
-</tr>
-<tr class="even">
-<td><a href="https://github.com/RDFLib/VocPrez">VocPrez</a></td>
-<td>Web</td>
-<td>-</td>
-<td>✓</td>
-<td>Python</td>
-<td>GPL</td>
-<td><a href="https://github.com/RDFLib/VocPrez">github</a></td>
-<td>2024</td>
-<td>viewer</td>
-</tr>
-<tr class="odd">
-<td><a href="https://github.com/IHTSDO/snowstorm">Snowstorm</a></td>
-<td>Web</td>
-<td>-</td>
-<td>✓</td>
-<td>Java</td>
-<td>Apache</td>
-<td><a href="https://github.com/IHTSDO/snowstorm">github</a></td>
-<td>2024</td>
-<td>viewer</td>
-</tr>
-<tr class="even">
-<td><a href="https://surroundaustralia.github.io/vocpub-profile/profile.html">VocPub Profile</a></td>
-<td>RDF</td>
-<td>-</td>
-<td>-</td>
-<td>SHACL</td>
-<td>CC-BY-4.0</td>
-<td><a href="https://github.com/AGLDWG/vocpub-profile/">github</a></td>
-<td>2024</td>
-<td>validator</td>
-</tr>
-<tr class="odd">
-<td><a href="https://github.com/cmader/qSKOS/">qSKOS</a></td>
-<td>CLI</td>
-<td>-</td>
-<td>✓</td>
-<td>Java</td>
-<td>GPL</td>
-<td><a href="https://github.com/cmader/qSKOS/">github</a></td>
-<td>2024</td>
-<td>validator</td>
-</tr>
-<tr class="even">
-<td>OnToology</td>
-<td>Web, git</td>
-<td>-</td>
-<td>-</td>
-<td>Python</td>
-<td>Apache</td>
-<td><a href="https://github.com/OnToology/OnToology">github</a></td>
-<td>2024</td>
-<td>viewer &amp; validator</td>
-</tr>
-<tr class="odd">
 <td><a href="http://vocabulary.odm2.org/">ODM2 Controlled Vocabularies</a></td>
 <td>Web</td>
 <td>✓</td>
@@ -788,6 +799,17 @@
 <td>BSD-3</td>
 <td><a href="https://github.com/ODM2/ODM2ControlledVocabularies">github</a></td>
 <td>2024</td>
+<td>editor</td>
+</tr>
+<tr class="odd">
+<td><a href="http://wandora.org/www/">Wandora</a></td>
+<td>JVM</td>
+<td>✓</td>
+<td>-</td>
+<td>Java</td>
+<td>GPL</td>
+<td><a href="https://github.com/wandora-team/wandora">github</a></td>
+<td>2023</td>
 <td>editor</td>
 </tr>
 <tr class="even">
@@ -813,39 +835,6 @@
 <td>editor</td>
 </tr>
 <tr class="even">
-<td><a href="https://semanticweb.cs.vu.nl/amalgame/">Amalgame</a></td>
-<td>Web</td>
-<td>✓</td>
-<td>-</td>
-<td>prolog</td>
-<td>BSD</td>
-<td><a href="https://github.com/jrvosse/amalgame">github</a></td>
-<td>2023</td>
-<td>mapping editor</td>
-</tr>
-<tr class="odd">
-<td><a href="http://wandora.org/www/">Wandora</a></td>
-<td>JVM</td>
-<td>✓</td>
-<td>-</td>
-<td>Java</td>
-<td>GPL</td>
-<td><a href="https://github.com/wandora-team/wandora">github</a></td>
-<td>2023</td>
-<td>editor</td>
-</tr>
-<tr class="even">
-<td>Neologism</td>
-<td>Web</td>
-<td>✓</td>
-<td>✓</td>
-<td>JavaScript</td>
-<td>MIT</td>
-<td><a href="https://github.com/Semantic-Society/Neologism">github</a></td>
-<td>2023</td>
-<td>editor</td>
-</tr>
-<tr class="odd">
 <td><a href="https://moex.gitlabpages.inria.fr/alignapi/">Alignment API and Alignment Server</a></td>
 <td>CLI</td>
 <td>-</td>
@@ -856,16 +845,27 @@
 <td>2023</td>
 <td>database</td>
 </tr>
-<tr class="even">
-<td><a href="https://service.tib.eu/webvowl/">WebVOWL</a></td>
+<tr class="odd">
+<td>Neologism</td>
 <td>Web</td>
-<td>-</td>
-<td>-</td>
+<td>✓</td>
+<td>✓</td>
 <td>JavaScript</td>
 <td>MIT</td>
-<td><a href="https://github.com/VisualDataWeb/WebVOWL">github</a></td>
-<td>2022</td>
-<td>viewer</td>
+<td><a href="https://github.com/Semantic-Society/Neologism">github</a></td>
+<td>2023</td>
+<td>editor</td>
+</tr>
+<tr class="even">
+<td><a href="https://semanticweb.cs.vu.nl/amalgame/">Amalgame</a></td>
+<td>Web</td>
+<td>✓</td>
+<td>-</td>
+<td>prolog</td>
+<td>BSD</td>
+<td><a href="https://github.com/jrvosse/amalgame">github</a></td>
+<td>2023</td>
+<td>mapping editor</td>
 </tr>
 <tr class="odd">
 <td><a href="http://culturecommunication.github.io/ginco/">Ginco</a></td>
@@ -890,6 +890,17 @@
 <td>editor</td>
 </tr>
 <tr class="odd">
+<td><a href="https://service.tib.eu/webvowl/">WebVOWL</a></td>
+<td>Web</td>
+<td>-</td>
+<td>-</td>
+<td>JavaScript</td>
+<td>MIT</td>
+<td><a href="https://github.com/VisualDataWeb/WebVOWL">github</a></td>
+<td>2022</td>
+<td>viewer</td>
+</tr>
+<tr class="even">
 <td><a href="https://www.vocoreg.com/">VoCol</a></td>
 <td>Web</td>
 <td>✓</td>
@@ -899,17 +910,6 @@
 <td><a href="https://github.com/vocol/vocol">github</a></td>
 <td>2021</td>
 <td>editor</td>
-</tr>
-<tr class="even">
-<td><a href="https://skosify.readthedocs.io/en/latest/">Skosify</a></td>
-<td>CLI</td>
-<td>-</td>
-<td>✓</td>
-<td>Python</td>
-<td>MIT</td>
-<td><a href="https://github.com/NatLibFi/Skosify">github</a></td>
-<td>2021</td>
-<td>converter &amp; validator</td>
 </tr>
 <tr class="odd">
 <td><a href="https://github.com/scriptotek/mc2skos">mc2skos</a></td>
@@ -921,6 +921,28 @@
 <td><a href="https://github.com/scriptotek/mc2skos">github</a></td>
 <td>2021</td>
 <td>converter</td>
+</tr>
+<tr class="even">
+<td><a href="http://themis.linkeddata.es/">Themis</a></td>
+<td>Web</td>
+<td>-</td>
+<td>✓</td>
+<td>Java</td>
+<td>Apache</td>
+<td><a href="https://github.com/oeg-upm/Themis">github</a></td>
+<td>2021</td>
+<td>validator</td>
+</tr>
+<tr class="odd">
+<td><a href="https://skosify.readthedocs.io/en/latest/">Skosify</a></td>
+<td>CLI</td>
+<td>-</td>
+<td>✓</td>
+<td>Python</td>
+<td>MIT</td>
+<td><a href="https://github.com/NatLibFi/Skosify">github</a></td>
+<td>2021</td>
+<td>converter &amp; validator</td>
 </tr>
 <tr class="even">
 <td><a href="http://openskos.org/">OpenSKOS</a></td>
@@ -1080,7 +1102,7 @@
 </table>
 </div>
 </div></div>
-<div id="73d0aa4e" class="cell markdown">
+<div id="bc2ad296" class="cell markdown">
 <p>Please <a href="https://github.com/gbv/bartoc-vocabulary-software/issues">open an issue</a> if some relevant software is missing or data seems invalid!</p>
 <section id="metadata" class="level2">
 <h2 class="anchored" data-anchor-id="metadata">Metadata</h2>
@@ -1141,15 +1163,27 @@
 </section>
 <section id="kos-software-categories" class="level2">
 <h2 class="anchored" data-anchor-id="kos-software-categories">KOS software categories</h2>
-<ul>
-<li><strong>viewer</strong>: to display terminologies</li>
-<li><strong>editor</strong>: to create and modify terminologies</li>
-<li><strong>mapping editor</strong>: to create and modify mappings/alignments</li>
-<li><strong>converter</strong>: to convert from one format into another</li>
-<li><strong>validator</strong>: to check terminologies</li>
-<li><strong>database</strong>: to store terminologies</li>
-</ul>
 </section>
+</div>
+<div class="cell-container"><div class="cell-decorator"><pre>In [3]:</pre></div><div id="17328136" class="cell" data-execution_count="3">
+<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>df <span class="op">=</span> pd.read_json(<span class="st">'kos-software.json'</span>)</span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>categories <span class="op">=</span> {}</span>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> item <span class="kw">in</span> df[<span class="st">"category"</span>]:</span>
+<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a>    <span class="cf">for</span> category <span class="kw">in</span> item.split(<span class="st">' &amp; '</span>):</span>
+<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a>        <span class="cf">if</span> category <span class="kw">in</span> categories:</span>
+<span id="cb4-6"><a href="#cb4-6" aria-hidden="true" tabindex="-1"></a>            categories[category] <span class="op">+=</span> <span class="dv">1</span></span>
+<span id="cb4-7"><a href="#cb4-7" aria-hidden="true" tabindex="-1"></a>        <span class="cf">else</span>:</span>
+<span id="cb4-8"><a href="#cb4-8" aria-hidden="true" tabindex="-1"></a>            categories[category] <span class="op">=</span> <span class="dv">1</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div></div>
+<div id="0999268b" class="cell markdown">
+<ul>
+<li><strong>viewer</strong>: to display terminologies (24)</li>
+<li><strong>editor</strong>: to create and modify terminologies (24)</li>
+<li><strong>mapping editor</strong>: to create and modify mappings/alignments (3)</li>
+<li><strong>converter</strong>: to convert from one format into another (13)</li>
+<li><strong>validator</strong>: to check terminologies (10)</li>
+<li><strong>database</strong>: to store terminologies (3)</li>
+</ul>
 <section id="related-software" class="level2">
 <h2 class="anchored" data-anchor-id="related-software">Related software</h2>
 <p>Knowledge organization systems are also managed by other types software <a href="#scope">excluded from this report</a>.</p>

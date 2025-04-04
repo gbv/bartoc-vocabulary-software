@@ -784,5 +784,29 @@
     "repository": "https://github.com/ODM2/ODM2ControlledVocabularies",
     "update": "2024",
     "category": "editor"
+  },
+  {
+    "name": "FOOPS!",
+    "url": "https://foops.linkeddata.es/FAIR_validator.html",
+    "platform": "Web",
+    "api": false,
+    "edit": false,
+    "language": "Java & JavaScript",
+    "license": "Apache",
+    "repository": "https://github.com/oeg-upm/fair_ontologies",
+    "update": "2025",
+    "category": "validator"
+  },
+  {
+    "name": "Themis",
+    "url": "http://themis.linkeddata.es/",
+    "platform": "Web",
+    "api": true,
+    "edit": false,
+    "language": "Java",
+    "license": "Apache",
+    "repository": "https://github.com/oeg-upm/Themis",
+    "update": "2021",
+    "category": "validator"
   }
 ]

@@ -281,43 +281,47 @@
 </section>
 <section id="kos-software" class="level2">
 <h2 class="anchored" data-anchor-id="kos-software">KOS software</h2>
-<div class="cell-container"><div class="cell-decorator"><pre>In [1]:</pre></div><div id="tbl-software" class="cell anchored" data-execution_count="1">
-<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> IPython.display <span class="im">import</span> Markdown</span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> tabulate <span class="im">import</span> tabulate</span>
-<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> pandas <span class="im">as</span> pd</span>
-<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> urllib.parse <span class="im">import</span> urlparse</span>
-<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> IPython.display <span class="im">import</span> display, HTML</span>
-<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> re</span>
-<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> hyperlink(row):</span>
-<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> pd.notna(row[<span class="st">'url'</span>]):</span>
-<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a>        <span class="cf">return</span> <span class="ss">f'&lt;a href="</span><span class="sc">{</span>row[<span class="st">"url"</span>]<span class="sc">}</span><span class="ss">"&gt;</span><span class="sc">{</span>row[<span class="st">"name"</span>]<span class="sc">}</span><span class="ss">&lt;/a&gt;'</span></span>
-<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a>    <span class="cf">else</span>:</span>
-<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a>        <span class="cf">return</span> row[<span class="st">'name'</span>]    </span>
-<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> cell(value):</span>
-<span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> <span class="bu">isinstance</span>(value, <span class="bu">bool</span>):</span>
-<span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a>        <span class="cf">return</span> <span class="st">"✓"</span> <span class="cf">if</span> value <span class="cf">else</span> <span class="st">"-"</span></span>
-<span id="cb1-17"><a href="#cb1-17" aria-hidden="true" tabindex="-1"></a>    <span class="cf">elif</span> <span class="bu">type</span>(value) <span class="kw">is</span> <span class="bu">str</span> <span class="kw">and</span> re.match(<span class="vs">r"^https?://"</span>,value):</span>
-<span id="cb1-18"><a href="#cb1-18" aria-hidden="true" tabindex="-1"></a>        url <span class="op">=</span> urlparse(value)</span>
-<span id="cb1-19"><a href="#cb1-19" aria-hidden="true" tabindex="-1"></a>        host <span class="op">=</span> url.hostname.split(<span class="st">"."</span>)[<span class="op">-</span><span class="dv">2</span>]</span>
-<span id="cb1-20"><a href="#cb1-20" aria-hidden="true" tabindex="-1"></a>        <span class="cf">return</span> <span class="ss">f'&lt;a href="</span><span class="sc">{</span>value<span class="sc">}</span><span class="ss">"&gt;</span><span class="sc">{</span>host<span class="sc">}</span><span class="ss">&lt;/a&gt;'</span></span>
-<span id="cb1-21"><a href="#cb1-21" aria-hidden="true" tabindex="-1"></a>    <span class="cf">elif</span> <span class="kw">not</span> pd.notna(value):</span>
-<span id="cb1-22"><a href="#cb1-22" aria-hidden="true" tabindex="-1"></a>        <span class="cf">return</span> <span class="st">""</span></span>
-<span id="cb1-23"><a href="#cb1-23" aria-hidden="true" tabindex="-1"></a>    <span class="cf">elif</span> <span class="bu">type</span>(value) <span class="kw">is</span> <span class="bu">float</span>: <span class="co"># pd converts string to float</span></span>
-<span id="cb1-24"><a href="#cb1-24" aria-hidden="true" tabindex="-1"></a>        <span class="cf">return</span> <span class="bu">int</span>(value)</span>
-<span id="cb1-25"><a href="#cb1-25" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> value</span>
-<span id="cb1-26"><a href="#cb1-26" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-27"><a href="#cb1-27" aria-hidden="true" tabindex="-1"></a>df <span class="op">=</span> pd.read_json(<span class="st">'kos-software.json'</span>)</span>
-<span id="cb1-28"><a href="#cb1-28" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-29"><a href="#cb1-29" aria-hidden="true" tabindex="-1"></a>df[<span class="st">"name"</span>] <span class="op">=</span> df.<span class="bu">apply</span>(hyperlink, axis<span class="op">=</span><span class="dv">1</span>)</span>
-<span id="cb1-30"><a href="#cb1-30" aria-hidden="true" tabindex="-1"></a>df <span class="op">=</span> df.sort_values(by<span class="op">=</span>[<span class="st">"update"</span>],ascending<span class="op">=</span><span class="va">False</span>)</span>
-<span id="cb1-31"><a href="#cb1-31" aria-hidden="true" tabindex="-1"></a>df <span class="op">=</span> df.drop(columns<span class="op">=</span>[<span class="st">"url"</span>])</span>
-<span id="cb1-32"><a href="#cb1-32" aria-hidden="true" tabindex="-1"></a>df <span class="op">=</span> df.applymap(cell)</span>
-<span id="cb1-33"><a href="#cb1-33" aria-hidden="true" tabindex="-1"></a>display(HTML(df.to_html(escape<span class="op">=</span><span class="va">False</span>,index<span class="op">=</span><span class="va">False</span>)))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-container"><div class="cell-decorator"><pre>In [1]:</pre></div><div id="1409277f" class="cell" data-execution_count="1">
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> pandas <span class="im">as</span> pd</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>kos <span class="op">=</span> pd.read_json(<span class="st">'kos-software.json'</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div></div>
+<div id="294ec4e0" class="cell markdown">
+<p>This report includes <strong>67</strong> instances of KOS software so far. The list is managed <a href="kos-software.json">in a JSON file</a> as array of records with flat fields as <a href="#metadata">described below</a>. Applications without license or repository are close source. Deprecated applications are included for historical reference.</p>
+</div>
+<div class="cell-container"><div class="cell-decorator"><pre>In [2]:</pre></div><div id="tbl-software" class="cell anchored" data-execution_count="2">
+<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> IPython.display <span class="im">import</span> Markdown</span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> tabulate <span class="im">import</span> tabulate</span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> urllib.parse <span class="im">import</span> urlparse</span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> IPython.display <span class="im">import</span> display, HTML</span>
+<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> re</span>
+<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> hyperlink(row):</span>
+<span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> pd.notna(row[<span class="st">'url'</span>]):</span>
+<span id="cb2-9"><a href="#cb2-9" aria-hidden="true" tabindex="-1"></a>        <span class="cf">return</span> <span class="ss">f'&lt;a href="</span><span class="sc">{</span>row[<span class="st">"url"</span>]<span class="sc">}</span><span class="ss">"&gt;</span><span class="sc">{</span>row[<span class="st">"name"</span>]<span class="sc">}</span><span class="ss">&lt;/a&gt;'</span></span>
+<span id="cb2-10"><a href="#cb2-10" aria-hidden="true" tabindex="-1"></a>    <span class="cf">else</span>:</span>
+<span id="cb2-11"><a href="#cb2-11" aria-hidden="true" tabindex="-1"></a>        <span class="cf">return</span> row[<span class="st">'name'</span>]    </span>
+<span id="cb2-12"><a href="#cb2-12" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-13"><a href="#cb2-13" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> cell(value):</span>
+<span id="cb2-14"><a href="#cb2-14" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> <span class="bu">isinstance</span>(value, <span class="bu">bool</span>):</span>
+<span id="cb2-15"><a href="#cb2-15" aria-hidden="true" tabindex="-1"></a>        <span class="cf">return</span> <span class="st">"✓"</span> <span class="cf">if</span> value <span class="cf">else</span> <span class="st">"-"</span></span>
+<span id="cb2-16"><a href="#cb2-16" aria-hidden="true" tabindex="-1"></a>    <span class="cf">elif</span> <span class="bu">type</span>(value) <span class="kw">is</span> <span class="bu">str</span> <span class="kw">and</span> re.match(<span class="vs">r"^https?://"</span>,value):</span>
+<span id="cb2-17"><a href="#cb2-17" aria-hidden="true" tabindex="-1"></a>        url <span class="op">=</span> urlparse(value)</span>
+<span id="cb2-18"><a href="#cb2-18" aria-hidden="true" tabindex="-1"></a>        host <span class="op">=</span> url.hostname.split(<span class="st">"."</span>)[<span class="op">-</span><span class="dv">2</span>]</span>
+<span id="cb2-19"><a href="#cb2-19" aria-hidden="true" tabindex="-1"></a>        <span class="cf">return</span> <span class="ss">f'&lt;a href="</span><span class="sc">{</span>value<span class="sc">}</span><span class="ss">"&gt;</span><span class="sc">{</span>host<span class="sc">}</span><span class="ss">&lt;/a&gt;'</span></span>
+<span id="cb2-20"><a href="#cb2-20" aria-hidden="true" tabindex="-1"></a>    <span class="cf">elif</span> <span class="kw">not</span> pd.notna(value):</span>
+<span id="cb2-21"><a href="#cb2-21" aria-hidden="true" tabindex="-1"></a>        <span class="cf">return</span> <span class="st">""</span></span>
+<span id="cb2-22"><a href="#cb2-22" aria-hidden="true" tabindex="-1"></a>    <span class="cf">elif</span> <span class="bu">type</span>(value) <span class="kw">is</span> <span class="bu">float</span>: <span class="co"># pd converts string to float</span></span>
+<span id="cb2-23"><a href="#cb2-23" aria-hidden="true" tabindex="-1"></a>        <span class="cf">return</span> <span class="bu">int</span>(value)</span>
+<span id="cb2-24"><a href="#cb2-24" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> value</span>
+<span id="cb2-25"><a href="#cb2-25" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-26"><a href="#cb2-26" aria-hidden="true" tabindex="-1"></a>kos[<span class="st">"name"</span>] <span class="op">=</span> kos.<span class="bu">apply</span>(hyperlink, axis<span class="op">=</span><span class="dv">1</span>)</span>
+<span id="cb2-27"><a href="#cb2-27" aria-hidden="true" tabindex="-1"></a>kos <span class="op">=</span> kos.sort_values(by<span class="op">=</span>[<span class="st">"update"</span>],ascending<span class="op">=</span><span class="va">False</span>)</span>
+<span id="cb2-28"><a href="#cb2-28" aria-hidden="true" tabindex="-1"></a>kos <span class="op">=</span> kos.drop(columns<span class="op">=</span>[<span class="st">"url"</span>])</span>
+<span id="cb2-29"><a href="#cb2-29" aria-hidden="true" tabindex="-1"></a>kos <span class="op">=</span> kos.applymap(cell)</span>
+<span id="cb2-30"><a href="#cb2-30" aria-hidden="true" tabindex="-1"></a>display(HTML(kos.to_html(escape<span class="op">=</span><span class="va">False</span>,index<span class="op">=</span><span class="va">False</span>)))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stderr">
-<pre><code>/tmp/ipykernel_2137/950734490.py:32: FutureWarning: DataFrame.applymap has been deprecated. Use DataFrame.map instead.
-  df = df.applymap(cell)</code></pre>
+<pre><code>/tmp/ipykernel_2125/2186700073.py:29: FutureWarning: DataFrame.applymap has been deprecated. Use DataFrame.map instead.
+  kos = kos.applymap(cell)</code></pre>
 </div>
 <div class="cell-output cell-output-display">
 <table class="dataframe caption-top table table-sm table-striped small" data-quarto-postprocess="true" data-border="1">
@@ -1076,9 +1080,8 @@
 </table>
 </div>
 </div></div>
-<div id="cf06f94d" class="cell markdown">
-<p>The list of software is managed <a href="kos-software.json">in a JSON file</a> as array of records with flat fields as <a href="#metadata">described below</a>. Applications without license or repository are close source. Deprecated applications are included for historical reference.</p>
-<p><em>Please <a href="https://github.com/gbv/bartoc-vocabulary-software/issues">open an issue</a> if some relevant software is missing!</em></p>
+<div id="68bf8993" class="cell markdown">
+<p>Please <a href="https://github.com/gbv/bartoc-vocabulary-software/issues">open an issue</a> if some relevant software is missing or data seems invalid!</p>
 <section id="metadata" class="level2">
 <h2 class="anchored" data-anchor-id="metadata">Metadata</h2>
 <table class="caption-top table table-sm table-striped small">

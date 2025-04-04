@@ -259,7 +259,19 @@
     "license": "GPL",
     "update": "2025",
     "repository": "https://github.com/gouttegd/sssom-java",
-    "category": "mapping converter"
+    "category": "converter"
+  },
+  {
+    "name": "sssom-js",
+    "url": "https://www.npmjs.org/package/sssom",
+    "platform": "CLI",
+    "api": false,
+    "edit": false,
+    "language": "JavaScript",
+    "license": "MIT",
+    "update": "2025",
+    "repository": "https://github.com/gbv/sssom-js",
+    "category": "converter"
   },
   {
     "name": "jskos-proxy",

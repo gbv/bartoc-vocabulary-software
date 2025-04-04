@@ -726,7 +726,7 @@
     "category": "validator"
   },
   {
-    "name": "webvowl",
+    "name": "WebVOWL",
     "url": "https://service.tib.eu/webvowl/",
     "platform": "Web",
     "api": false,
@@ -738,7 +738,7 @@
     "category": "viewer"
   },
   {
-    "name": "Widoco",
+    "name": "WIDOCO",
     "url": "https://github.com/dgarijo/Widoco",
     "platform": "JVM",
     "api": false,
@@ -750,7 +750,7 @@
     "category": "viewer"
   },
   {
-    "name": "OntOlogy Pitfall Scanner!",
+    "name": "OOPS!",
     "url": "https://oops.linkeddata.es/",
     "platform": "Web",
     "api": false,

@@ -272,7 +272,7 @@
 <ul>
 <li>it only happens to make use of terminologies (for instance <a href="https://openrefine.org/">OpenRefine</a> and <a href="https://mix-n-match.toolforge.org/">mix’n’match</a>), or</li>
 <li>it is more <a href="#generic-software">generic software</a> that can be used for terminology management among other use cases (like database management systems), or</li>
-<li>it can only be used as <a href="#hosted-services">hosted service</a>, or</li>
+<li>it is only used as <a href="#hosted-services">hosted service</a>, or</li>
 <li>it is a programming library (<a href="https://github.com/gbv/jskos-vue/">jskos-vue</a>, <a href="https://github.com/gbv/cocoda-sdk/">cocoda-sdk</a>, <a href="https://github.com/ts4nfdi/terminology-service-suite">TSS Widgets</a>…), or</li>
 <li>it is limited to simple lists of terms, glossaries and similar, or</li>
 <li>it is so called <a href="#terminology-management">terminology management</a> software for a a centralized repository of approved terms, definitions, and translations in an organization, or</li>
@@ -281,11 +281,11 @@
 </section>
 <section id="kos-software" class="level2">
 <h2 class="anchored" data-anchor-id="kos-software">KOS software</h2>
-<div class="cell-container"><div class="cell-decorator"><pre>In [1]:</pre></div><div id="1409277f" class="cell" data-execution_count="1">
+<div class="cell-container"><div class="cell-decorator"><pre>In [1]:</pre></div><div id="2ce68cc1" class="cell" data-execution_count="1">
 <div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> pandas <span class="im">as</span> pd</span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>kos <span class="op">=</span> pd.read_json(<span class="st">'kos-software.json'</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div></div>
-<div id="294ec4e0" class="cell markdown">
+<div id="b0de60e8" class="cell markdown">
 <p>This report includes <strong>67</strong> instances of KOS software so far. The list is managed <a href="kos-software.json">in a JSON file</a> as array of records with flat fields as <a href="#metadata">described below</a>. Applications without license or repository are close source. Deprecated applications are included for historical reference.</p>
 </div>
 <div class="cell-container"><div class="cell-decorator"><pre>In [2]:</pre></div><div id="tbl-software" class="cell anchored" data-execution_count="2">
@@ -320,7 +320,7 @@
 <span id="cb2-29"><a href="#cb2-29" aria-hidden="true" tabindex="-1"></a>kos <span class="op">=</span> kos.applymap(cell)</span>
 <span id="cb2-30"><a href="#cb2-30" aria-hidden="true" tabindex="-1"></a>display(HTML(kos.to_html(escape<span class="op">=</span><span class="va">False</span>,index<span class="op">=</span><span class="va">False</span>)))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stderr">
-<pre><code>/tmp/ipykernel_2125/2186700073.py:29: FutureWarning: DataFrame.applymap has been deprecated. Use DataFrame.map instead.
+<pre><code>/tmp/ipykernel_2150/2186700073.py:29: FutureWarning: DataFrame.applymap has been deprecated. Use DataFrame.map instead.
   kos = kos.applymap(cell)</code></pre>
 </div>
 <div class="cell-output cell-output-display">
@@ -1080,7 +1080,7 @@
 </table>
 </div>
 </div></div>
-<div id="68bf8993" class="cell markdown">
+<div id="73d0aa4e" class="cell markdown">
 <p>Please <a href="https://github.com/gbv/bartoc-vocabulary-software/issues">open an issue</a> if some relevant software is missing or data seems invalid!</p>
 <section id="metadata" class="level2">
 <h2 class="anchored" data-anchor-id="metadata">Metadata</h2>
@@ -1163,7 +1163,13 @@
 </section>
 <section id="hosted-services" class="level3">
 <h3 class="anchored" data-anchor-id="hosted-services">Hosted services</h3>
-<p>Some organizations host their own applications for KOS management. Examples from cultural heritage domain in Germany are <a href="https://doi.org/10.11588/akmb.2018.1.63475">DANTE</a> and <a href="https://xtree-public.digicult-verbund.de/">xTree</a>. The BARTOC <a href="https://bartoc.org/registries">list of terminology registries</a> includes some more terminology services that may also include management functionalities.</p>
+<p>Some organizations host their own applications for KOS management or related services. Examples include:</p>
+<ul>
+<li><a href="https://doi.org/10.11588/akmb.2018.1.63475">DANTE</a></li>
+<li><a href="https://xtree-public.digicult-verbund.de/">xTree</a></li>
+<li><a href="http://lov.okfn.org/dataset/lov/">Linked Open Vocabularies (LOV)</a></li>
+</ul>
+<p>More examples may be found in the BARTOC <a href="https://bartoc.org/registries">list of terminology registries</a>.</p>
 </section>
 <section id="terminology-management" class="level3">
 <h3 class="anchored" data-anchor-id="terminology-management">Terminology management</h3>
@@ -1181,6 +1187,7 @@
 <li><a href="https://www.topquadrant.com/topbraid-edg/">TopBraid EDG</a> is a commercial knowledge graph editor</li>
 <li><a href="https://www.apelondts.org/">Apelon DTS</a> (Distributed Terminology System) and Apelon TermManager are commercial terminology editors. An earlier <a href="https://apelon-dts.sourceforge.net/">version from 2013</a> is available as Open Source.</li>
 <li><a href="https://gra.fo/">Grafo</a> is a collaborative knowledge graph editor, available as commercial web application</li>
+<li><a href="https://github.com/vivo-project/Vitro">Vitro</a> is a framework for semantic web applications, used in <a href="https://vivoweb.org/">VIVO</a></li>
 </ul>
 </section>
 </section>

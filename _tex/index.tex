@@ -1,25 +1,27 @@
 % Options for packages loaded elsewhere
+% Options for packages loaded elsewhere
 \PassOptionsToPackage{unicode}{hyperref}
 \PassOptionsToPackage{hyphens}{url}
 \PassOptionsToPackage{dvipsnames,svgnames,x11names}{xcolor}
 %
 \documentclass[
   DIV=10]{article}
-
+\usepackage{xcolor}
 \usepackage{amsmath,amssymb}
+\setcounter{secnumdepth}{-\maxdimen} % remove section numbering
 \usepackage{iftex}
 \ifPDFTeX
   \usepackage[T1]{fontenc}
   \usepackage[utf8]{inputenc}
   \usepackage{textcomp} % provide euro and other symbols
 \else % if luatex or xetex
-  \usepackage{unicode-math}
+  \usepackage{unicode-math} % this also loads fontspec
   \defaultfontfeatures{Scale=MatchLowercase}
   \defaultfontfeatures[\rmfamily]{Ligatures=TeX,Scale=1}
 \fi
 \usepackage{lmodern}
-\ifPDFTeX\else  
-    % xetex/luatex font selection
+\ifPDFTeX\else
+  % xetex/luatex font selection
 \fi
 % Use upquote if available, for straight quotes in verbatim environments
 \IfFileExists{upquote.sty}{\usepackage{upquote}}{}
@@ -37,9 +39,6 @@
 }{% if KOMA class
   \KOMAoptions{parskip=half}}
 \makeatother
-\usepackage{xcolor}
-\setlength{\emergencystretch}{3em} % prevent overfull lines
-\setcounter{secnumdepth}{-\maxdimen} % remove section numbering
 % Make \paragraph and \subparagraph free-standing
 \makeatletter
 \ifx\paragraph\undefined\else
@@ -65,8 +64,7 @@
 \makeatother
 
 
-\providecommand{\tightlist}{%
-  \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}\usepackage{longtable,booktabs,array}
+\usepackage{longtable,booktabs,array}
 \usepackage{calc} % for calculating minipage widths
 % Correct order of tables after \paragraph or \subparagraph
 \usepackage{etoolbox}
@@ -91,6 +89,8 @@
 % Set default figure placement to htbp
 \def\fps@figure{htbp}
 \makeatother
+
+
 % definitions for citeproc citations
 \NewDocumentCommand\citeproctext{}{}
 \NewDocumentCommand\citeproc{mm}{%
@@ -124,6 +124,18 @@
 \newcommand{\CSLLeftMargin}[1]{\parbox[t]{\csllabelwidth}{\strut#1\strut}}
 \newcommand{\CSLRightInline}[1]{\parbox[t]{\linewidth - \csllabelwidth}{\strut#1\strut}}
 \newcommand{\CSLIndent}[1]{\hspace{\cslhangindent}#1}
+
+
+
+\setlength{\emergencystretch}{3em} % prevent overfull lines
+
+\providecommand{\tightlist}{%
+  \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+
+
+
+ 
+
 
 \usepackage[noblocks]{authblk}
 \renewcommand\Affilfont{\small}
@@ -172,11 +184,9 @@
 \@ifpackageloaded{caption}{}{\usepackage{caption}}
 \@ifpackageloaded{subcaption}{}{\usepackage{subcaption}}
 \makeatother
-
 \usepackage{bookmark}
-
 \IfFileExists{xurl.sty}{\usepackage{xurl}}{} % add URL line breaks if available
-\urlstyle{same} % disable monospaced font for URLs
+\urlstyle{same}
 \hypersetup{
   pdftitle={Software for management of knowledge organization systems},
   colorlinks=true,
@@ -195,7 +205,7 @@
                   Verbundzentrale des GBV (VZG)
               }
       
-\date{2025-04-04}
+\date{2025-05-04}
 \begin{document}
 \maketitle
 
@@ -235,7 +245,7 @@ kinds of KOS. Software is excluded if:
   (\href{https://github.com/gbv/jskos-vue/}{jskos-vue},
   \href{https://github.com/gbv/cocoda-sdk/}{cocoda-sdk},
   \href{https://github.com/ts4nfdi/terminology-service-suite}{TSS
-  Widgets}\ldots), or
+  Widgets}, \href{http://gbv.github.io/ng-skos/}{ng-skos}\ldots), or
 \item
   it is limited to simple lists of terms, glossaries and similar, or
 \item
@@ -252,14 +262,18 @@ kinds of KOS. Software is excluded if:
 
 \subsection{KOS software}\label{kos-software}
 
-This report includes \textbf{70} instances of KOS software so far. The
+This report includes \textbf{69} instances of KOS software so far. The
 list is managed \href{kos-software.json}{in a JSON file} as array of
 records with flat fields as \hyperref[metadata]{described below}.
-Applications without license or repository are close source. Deprecated
+Applications without license or repository are closed source. Deprecated
 applications are included for historical reference.
 
-\phantomsection\label{tbl-software}
 \begin{longtable}[]{@{}lllllllll@{}}
+
+\caption{\label{tbl-software}}
+
+\tabularnewline
+
 \toprule\noalign{}
 name & platform & edit & api & language & license & repository & update
 & category \\
@@ -307,6 +321,10 @@ Web & - & ✓ & JavaScript \& Java & Apache &
 \href{https://github.com/EBISPOT/OLS}{github} & 2025 & viewer \\
 \href{https://ontoportal.org/}{OntoPortal Alliance} & Web & - & ✓ & Ruby
 & BSD & \href{https://github.com/ontoportal}{github} & 2025 & viewer \\
+\href{https://github.com/nfdi4cat/voc4cat-tool/}{voc4cat-tool} & CLI,
+GitHub, Excel & - & - & Python & BSD-3 &
+\href{https://github.com/nfdi4cat/voc4cat-tool/}{github} & 2025 &
+converter \\
 \href{https://showvoc.uniroma2.it/}{ShowVoc} & Web & - & - & JavaScript
 & BSD &
 \href{https://bitbucket.org/art-uniroma2/showvoc/src/master/}{bitbucket}
@@ -314,19 +332,15 @@ Web & - & ✓ & JavaScript \& Java & Apache &
 \href{https://protege.stanford.edu/}{Protégé} & JVM & ✓ & - & Java & BSD
 & \href{https://github.com/protegeproject/protege}{github} & 2025 &
 editor \\
-\href{https://github.com/nfdi4cat/voc4cat-tool/}{voc4cat-tool} & CLI,
-GitHub, Excel & - & - & Python & BSD-3 &
-\href{https://github.com/nfdi4cat/voc4cat-tool/}{github} & 2025 &
-converter \\
 VocExcel & Excel, CLI & - & - & Python & BSD-3 &
 \href{https://github.com/Kurrawong/VocExcel}{github} & 2025 &
 converter \\
+\href{https://incenp.org/dvlpt/sssom-java/}{sssom-java} & CLI & - & - &
+Java & GPL & \href{https://github.com/gouttegd/sssom-java}{github} &
+2025 & converter \\
 jskos-cli & CLI & - & - & JavaScript & MIT &
 \href{https://github.com/gbv/jskos-cli/}{github} & 2025 & converter \&
 validator \\
-\href{https://www.npmjs.org/package/sssom}{sssom-js} & CLI & - & - &
-JavaScript & MIT & \href{https://github.com/gbv/sssom-js}{github} & 2025
-& converter \\
 \href{https://ts4nfdi.github.io/api-gateway/}{TS4NFDI API Gateway} & Web
 & - & ✓ & Java \& JavaScript & MIT &
 \href{https://github.com/ts4nfdi/api-gateway}{github} & 2025 & viewer \&
@@ -335,20 +349,16 @@ converter \\
 - & Python & MIT &
 \href{https://github.com/mapping-commons/sssom-py}{github} & 2025 &
 converter \\
-\href{https://incenp.org/dvlpt/sssom-java/}{sssom-java} & CLI & - & - &
-Java & GPL & \href{https://github.com/gouttegd/sssom-java}{github} &
-2025 & converter \\
+jskos-proxy & Web & - & ✓ & JavaScript & MIT &
+\href{https://github.com/gbv/jskos-proxy/}{github} & 2025 & viewer \&
+converter \\
+\href{https://www.npmjs.org/package/sssom}{sssom-js} & CLI & - & - &
+JavaScript & MIT & \href{https://github.com/gbv/sssom-js}{github} & 2025
+& converter \\
 \href{https://github.com/netwerk-digitaal-erfgoed/network-of-terms}{Network
 of Terms} & Web & - & ✓ & Typescript & EUPL &
 \href{https://github.com/netwerk-digitaal-erfgoed/network-of-terms}{github}
 & 2025 & converter \\
-jskos-proxy & Web & - & ✓ & JavaScript & MIT &
-\href{https://github.com/gbv/jskos-proxy/}{github} & 2025 & viewer \&
-converter \\
-\href{http://incatools.github.io/ontology-development-kit/}{Ontology
-Development Kit} & CLI & - & - & Python & BSD &
-\href{https://github.com/INCATools/ontology-development-kit}{github} &
-2025 & converter \& validator \\
 \href{https://termgit.elga.gv.at/}{TerminoloGit} & Web, git & - & - &
 Python & GPL & \href{https://gitlab.com/elga-gmbh/termgit}{gitlab} &
 2025 & converter \\
@@ -366,18 +376,19 @@ JavaScript \& Java & Apache &
 & Web & - & ✓ & Java & MIT &
 \href{https://github.com/agroportal/fairness}{github} & 2025 &
 validator \\
+\href{http://incatools.github.io/ontology-development-kit/}{Ontology
+Development Kit} & CLI & - & - & Python & BSD &
+\href{https://github.com/INCATools/ontology-development-kit}{github} &
+2025 & converter \& validator \\
 \href{https://oops.linkeddata.es/}{OOPS!} & Web & - & - & Java & ? &
 \href{https://github.com/oeg-upm/OOPS}{github} & 2025 & viewer \\
-\href{https://github.com/IHTSDO/snowstorm}{Snowstorm} & Web & - & ✓ &
-Java & Apache & \href{https://github.com/IHTSDO/snowstorm}{github} &
-2024 & viewer \\
-\href{https://github.com/AKSW/jekyll-rdf}{Jekyll RDF} & Web & - & ✓ &
-Ruby & MIT & \href{https://github.com/AKSW/jekyll-rdf}{github} & 2024 &
-viewer \\
 \href{https://atramhasis.readthedocs.io/en/latest/}{Atramhasis} & Web &
 ✓ & ✓ & Python & GPL &
 \href{https://github.com/OnroerendErfgoed/atramhasis}{github} & 2024 &
 editor \\
+\href{https://github.com/AKSW/jekyll-rdf}{Jekyll RDF} & Web & - & ✓ &
+Ruby & MIT & \href{https://github.com/AKSW/jekyll-rdf}{github} & 2024 &
+viewer \\
 OnToology & Web, git & - & - & Python & Apache &
 \href{https://github.com/OnToology/OnToology}{github} & 2024 & viewer \&
 validator \\
@@ -387,9 +398,8 @@ validator \\
 \href{https://www.ebi.ac.uk/spot/oxo/}{OxO} & Web & - & ✓ & JavaScript &
 Apache & \href{https://github.com/EBISPOT/OXO}{github} & 2024 &
 viewer \\
-\href{https://surroundaustralia.github.io/vocpub-profile/profile.html}{VocPub
-Profile} & RDF & - & - & SHACL & CC-BY-4.0 &
-\href{https://github.com/AGLDWG/vocpub-profile/}{github} & 2024 &
+\href{https://github.com/cmader/qSKOS/}{qSKOS} & CLI & - & ✓ & Java &
+GPL & \href{https://github.com/cmader/qSKOS/}{github} & 2024 &
 validator \\
 \href{https://vocabseditor.acdh.oeaw.ac.at/}{Vocabseditor} & Web & ✓ & -
 & Python & MIT &
@@ -398,19 +408,20 @@ editor \\
 \href{https://github.com/RDFLib/VocPrez}{VocPrez} & Web & - & ✓ & Python
 & GPL & \href{https://github.com/RDFLib/VocPrez}{github} & 2024 &
 viewer \\
-\href{https://github.com/cmader/qSKOS/}{qSKOS} & CLI & - & ✓ & Java &
-GPL & \href{https://github.com/cmader/qSKOS/}{github} & 2024 &
+\href{https://github.com/IHTSDO/snowstorm}{Snowstorm} & Web & - & ✓ &
+Java & Apache & \href{https://github.com/IHTSDO/snowstorm}{github} &
+2024 & viewer \\
+\href{https://surroundaustralia.github.io/vocpub-profile/profile.html}{VocPub
+Profile} & RDF & - & - & SHACL & CC-BY-4.0 &
+\href{https://github.com/AGLDWG/vocpub-profile/}{github} & 2024 &
 validator \\
-\href{https://onto4all.com/}{Onto4ALL Editor} & Web & ✓ & - & JavaScript
-\& PHP & Apache & \href{https://github.com/NCOR-BR/onto4all}{github} &
-2024 & editor \\
 \href{http://vocabulary.odm2.org/}{ODM2 Controlled Vocabularies} & Web &
 ✓ & ✓ & Python & BSD-3 &
 \href{https://github.com/ODM2/ODM2ControlledVocabularies}{github} & 2024
 & editor \\
-\href{http://wandora.org/www/}{Wandora} & JVM & ✓ & - & Java & GPL &
-\href{https://github.com/wandora-team/wandora}{github} & 2023 &
-editor \\
+\href{https://onto4all.com/}{Onto4ALL Editor} & Web & ✓ & - & JavaScript
+\& PHP & Apache & \href{https://github.com/NCOR-BR/onto4all}{github} &
+2024 & editor \\
 \href{https://protegewiki.stanford.edu/wiki/WebProtege}{Web Protégé} &
 Web & ✓ & - & Java & BSD &
 \href{https://github.com/protegeproject/webprotege}{github} & 2023 &
@@ -418,6 +429,12 @@ editor \\
 Django Controlled Vocabularies & Web & ✓ & ✓ & Python & BSD &
 \href{https://github.com/unt-libraries/django-controlled-vocabularies}{github}
 & 2023 & editor \\
+\href{https://semanticweb.cs.vu.nl/amalgame/}{Amalgame} & Web & ✓ & - &
+prolog & BSD & \href{https://github.com/jrvosse/amalgame}{github} & 2023
+& mapping editor \\
+\href{http://wandora.org/www/}{Wandora} & JVM & ✓ & - & Java & GPL &
+\href{https://github.com/wandora-team/wandora}{github} & 2023 &
+editor \\
 \href{https://moex.gitlabpages.inria.fr/alignapi/}{Alignment API and
 Alignment Server} & CLI & - & ✓ & Java & GPL &
 \href{https://gitlab.inria.fr/moex/alignapi/}{inria} & 2023 &
@@ -425,21 +442,21 @@ database \\
 Neologism & Web & ✓ & ✓ & JavaScript & MIT &
 \href{https://github.com/Semantic-Society/Neologism}{github} & 2023 &
 editor \\
-\href{https://semanticweb.cs.vu.nl/amalgame/}{Amalgame} & Web & ✓ & - &
-prolog & BSD & \href{https://github.com/jrvosse/amalgame}{github} & 2023
-& mapping editor \\
 \href{http://culturecommunication.github.io/ginco/}{Ginco} & Web & ✓ & ✓
 & Java & GPL &
 \href{https://github.com/culturecommunication/ginco}{github} & 2022 &
 editor \\
-SKOSjs & Web & ✓ & - & JavaScript & Apache &
-\href{https://github.com/tkurz/skosjs}{github} & 2022 & editor \\
 \href{https://service.tib.eu/webvowl/}{WebVOWL} & Web & - & - &
 JavaScript & MIT &
 \href{https://github.com/VisualDataWeb/WebVOWL}{github} & 2022 &
 viewer \\
+SKOSjs & Web & ✓ & - & JavaScript & Apache &
+\href{https://github.com/tkurz/skosjs}{github} & 2022 & editor \\
 \href{https://www.vocoreg.com/}{VoCol} & Web & ✓ & - & JavaScript & MIT
 & \href{https://github.com/vocol/vocol}{github} & 2021 & editor \\
+\href{https://skosify.readthedocs.io/en/latest/}{Skosify} & CLI & - & ✓
+& Python & MIT & \href{https://github.com/NatLibFi/Skosify}{github} &
+2021 & converter \& validator \\
 \href{https://github.com/scriptotek/mc2skos}{mc2skos} & CLI & ✓ & - &
 Python & The Unlicense &
 \href{https://github.com/scriptotek/mc2skos}{github} & 2021 &
@@ -447,9 +464,6 @@ converter \\
 \href{http://themis.linkeddata.es/}{Themis} & Web & - & ✓ & Java &
 Apache & \href{https://github.com/oeg-upm/Themis}{github} & 2021 &
 validator \\
-\href{https://skosify.readthedocs.io/en/latest/}{Skosify} & CLI & - & ✓
-& Python & MIT & \href{https://github.com/NatLibFi/Skosify}{github} &
-2021 & converter \& validator \\
 \href{http://openskos.org/}{OpenSKOS} & Web & - & ✓ & PHP & GPL &
 \href{https://github.com/OpenSKOS/OpenSKOS}{github} & 2020 & viewer \&
 editor \\
@@ -463,9 +477,6 @@ Java & CC-BY-SA &
 2018 & viewer \& converter \\
 \href{https://ontobee.org/}{OntoBee} & Web & - & ✓ & PHP \& JavaScript &
 Apache & \href{https://github.com/OntoZoo/ontobee}{github} & 2018 &
-viewer \\
-\href{http://gbv.github.io/ng-skos/}{ng-skos} & Web & - & - & JavaScript
-& AGPL & \href{https://github.com/gbv/ng-skos}{github} & 2016 &
 viewer \\
 \href{https://jbiomedsem.biomedcentral.com/articles/10.1186/s13326-015-0043-z}{SKOS
 Editor} & Web & ✓ & ✓ & Java & LGPL &
@@ -487,6 +498,7 @@ Thesaurus Server} & Web & ✓ & ✓ & & - & - & & editor \\
 & & - & - & & editor \\
 \href{https://www.fiblio.de/}{Fiblio} & Web & ✓ & - & & - & - & &
 editor \\
+
 \end{longtable}
 
 Please
@@ -532,7 +544,7 @@ software \\
 \begin{itemize}
 \tightlist
 \item
-  \textbf{viewer}: to display terminologies (24)
+  \textbf{viewer}: to display terminologies (23)
 \item
   \textbf{editor}: to create and modify terminologies (24)
 \item

@@ -486,18 +486,6 @@
     "category": "viewer"
   },
   {
-    "name": "ng-skos",
-    "url": "http://gbv.github.io/ng-skos/",
-    "platform": "Web",
-    "api": false,
-    "edit": false,
-    "language": "JavaScript",
-    "repository": "https://github.com/gbv/ng-skos",
-    "license": "AGPL",
-    "update": "2016",
-    "category": "viewer"
-  },
-  {
     "name": "SKOS Editor",
     "url": "https://jbiomedsem.biomedcentral.com/articles/10.1186/s13326-015-0043-z",
     "platform": "Web",

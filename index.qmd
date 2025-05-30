@@ -18,7 +18,6 @@ url: "https://bartoc.org/software"
 
 The terminology registry **[BARTOC](https://bartoc.org/)** collects information about all kinds of **knowledge organization systems** (KOS) such as controlled vocabularies, classifications, ontologies, and other semantic artifacts. This report summarizes information about [software for KOS management](#kos-software).
 
-
 ## Scope
 
 This report is limited to **[specialized KOS software](#kos-software) for editing, vizualizing and/or analyzing terminologies.** The term "terminology" in this document is used as synonym for all kinds of KOS. Software is excluded if:
@@ -62,10 +61,15 @@ def hyperlink(row):
 def cell(value):
     if isinstance(value, bool):
         return "✓" if value else "-"
+    if isinstance(value, str) and value.startswith("https://spdx.org/licenses/"):
+        license_name = value.replace("https://spdx.org/licenses/", "")
+        return f'<a href="{value}">{license_name}</a>'
     elif type(value) is str and re.match(r"^https?://",value):
         url = urlparse(value)
         host = url.hostname.split(".")[-2]
         return f'<a href="{value}">{host}</a>'
+    elif isinstance(value, list):
+        return ", ".join(str(item) for item in value)
     elif not pd.notna(value):
         return ""
     elif type(value) is float: # pd converts string to float
@@ -73,7 +77,7 @@ def cell(value):
     return value
 
 kos["name"] = kos.apply(hyperlink, axis=1)
-kos = kos.sort_values(by=["update"],ascending=False)
+kos = kos.sort_values(by=["dateModified"],ascending=False)
 kos = kos.drop(columns=["url"])
 kos = kos.applymap(cell)
 display(HTML(kos.to_html(escape=False,index=False)))
@@ -90,16 +94,15 @@ Please [open an issue](https://github.com/gbv/bartoc-vocabulary-software/issues)
 
 Field | Purpose
 ------|--------
-`name` | name
-`url` | homepage
-`platform` | operating system or similar dependency (Web, CLI...) 
+`name` | name with link to homepage
+`operatingSystem` | operating system or similar dependency (Web, CLI...) 
 `api` | whether a web service or similar API is provided to connect to
 `edit` | whether vocabularies can be modified with the software
-`language` | programming language(s)
+`programmingLanguage` | programming language(s)
 `license` | license of the software (if free software)
-`repository` | source Code repository (if open source)
-`update` | year of most recent update
-`category` | type of KOS software
+`codeRepository` | source Code repository (if open source)
+`dateModified` | year of most recent update
+`applicationSubCategory` | type of KOS software
 
 : {tbl-colwidths="[25,75]"}
 
@@ -108,8 +111,8 @@ Field | Purpose
 ```{python}
 df = pd.read_json('kos-software.json')
 categories = {}
-for item in df["category"]:
-    for category in item.split(' & '):
+for item in df["applicationSubCategory"]:
+    for category in item:
         if category in categories:
             categories[category] += 1
         else:

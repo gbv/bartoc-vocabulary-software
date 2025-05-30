@@ -1,11 +1,11 @@
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
     <meta charset="utf-8">
-    <meta name="generator" content="quarto-1.7.29">
+    <meta name="generator" content="quarto-1.7.31">
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-    <meta name="dcterms.date" content="2025-05-04">
+    <meta name="dcterms.date" content="2025-05-30">
 
     <title>Software for management of knowledge organization systems</title>
     <style>
@@ -175,20 +175,20 @@
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="site_libs/quarto-html/anchor.min.js"></script>
 <link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-115b1bb45a9be5781102bc3ea7a0894c.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-f1f3b3fd89b16212fde59a2af78f1759.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-cda4a1a797ffcd4c4f67ef076c0e2348.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-43be24d0267f1a34371c5a418ff15faf.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
      <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.6/require.min.js" integrity="sha512-c3Nl8+7g4LMSTdrm621y7kf9v3SDPnhxLNhcjFJbKECVnmZHTdo+IRO05sNLTH/D3vA6u1X32ehoLC7WFVdheg==" crossorigin="anonymous"></script>
 
 <script type="application/javascript">define('jquery', [],function() {return window.jQuery;})</script>  <link rel="canonical" href="https://bartoc.org/software">
 <link rel="shortcut icon" href="bartoc-icon.png" type="image/png">  
       <meta name="citation_title" content="Software for management of knowledge organization systems">
 <meta name="citation_author" content="Jakob Voß">
-<meta name="citation_publication_date" content="2025-05-04">
-<meta name="citation_cover_date" content="2025-05-04">
+<meta name="citation_publication_date" content="2025-05-30">
+<meta name="citation_cover_date" content="2025-05-30">
 <meta name="citation_year" content="2025">
-<meta name="citation_online_date" content="2025-05-04">
+<meta name="citation_online_date" content="2025-05-30">
 <meta name="citation_language" content="en">
 <meta name="citation_reference" content="citation_title=Coli-conc Technical Report 2: Open Source KOS software;,citation_abstract=This report gives an overview about Open Source software for Knowledge Organization Systems (KOS).;,citation_author=Jakob Voß;,citation_publication_date=2016-03;,citation_cover_date=2016-03;,citation_year=2016;,citation_fulltext_html_url=https://zenodo.org/records/48227;,citation_doi=10.5281/zenodo.48227;">
 <meta name="citation_reference" content="citation_title=Open Source web applications for Knowledge Organization Systems;,citation_abstract=This report gives an overview about Open Source web applications to create, manage, and publish Knowledge Organization Systems (KOS).;,citation_author=Jakob Voß;,citation_publication_date=2016-08;,citation_cover_date=2016-08;,citation_year=2016;,citation_fulltext_html_url=https://zenodo.org/records/61262;,citation_doi=10.5281/zenodo.61262;">
@@ -234,7 +234,7 @@
                 <div>
             <div class="quarto-title-meta-heading">Published</div>
             <div class="quarto-title-meta-contents">
-              <p class="date">May 4, 2025</p>
+              <p class="date">May 30, 2025</p>
             </div>
           </div>
           
@@ -284,11 +284,11 @@
 </section>
 <section id="kos-software" class="level2">
 <h2 class="anchored" data-anchor-id="kos-software">KOS software</h2>
-<div class="cell-container"><div class="cell-decorator"><pre>In [1]:</pre></div><div id="88d97025" class="cell" data-execution_count="1">
+<div class="cell-container"><div class="cell-decorator"><pre>In [1]:</pre></div><div id="9db18549" class="cell" data-execution_count="1">
 <div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> pandas <span class="im">as</span> pd</span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>kos <span class="op">=</span> pd.read_json(<span class="st">'kos-software.json'</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div></div>
-<div id="5713165c" class="cell markdown">
+<div id="3dfb184f" class="cell markdown">
 <p>This report includes <strong>69</strong> instances of KOS software so far. The list is managed <a href="kos-software.json">in a JSON file</a> as array of records with flat fields as <a href="#metadata">described below</a>. Applications without license or repository are closed source. Deprecated applications are included for historical reference.</p>
 </div>
 <div class="cell-container"><div class="cell-decorator"><pre>In [2]:</pre></div><div class="cell" data-execution_count="2">
@@ -307,23 +307,28 @@
 <span id="cb2-13"><a href="#cb2-13" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> cell(value):</span>
 <span id="cb2-14"><a href="#cb2-14" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> <span class="bu">isinstance</span>(value, <span class="bu">bool</span>):</span>
 <span id="cb2-15"><a href="#cb2-15" aria-hidden="true" tabindex="-1"></a>        <span class="cf">return</span> <span class="st">"✓"</span> <span class="cf">if</span> value <span class="cf">else</span> <span class="st">"-"</span></span>
-<span id="cb2-16"><a href="#cb2-16" aria-hidden="true" tabindex="-1"></a>    <span class="cf">elif</span> <span class="bu">type</span>(value) <span class="kw">is</span> <span class="bu">str</span> <span class="kw">and</span> re.match(<span class="vs">r"</span><span class="dv">^</span><span class="vs">https</span><span class="op">?</span><span class="vs">://"</span>,value):</span>
-<span id="cb2-17"><a href="#cb2-17" aria-hidden="true" tabindex="-1"></a>        url <span class="op">=</span> urlparse(value)</span>
-<span id="cb2-18"><a href="#cb2-18" aria-hidden="true" tabindex="-1"></a>        host <span class="op">=</span> url.hostname.split(<span class="st">"."</span>)[<span class="op">-</span><span class="dv">2</span>]</span>
-<span id="cb2-19"><a href="#cb2-19" aria-hidden="true" tabindex="-1"></a>        <span class="cf">return</span> <span class="ss">f'&lt;a href="</span><span class="sc">{</span>value<span class="sc">}</span><span class="ss">"&gt;</span><span class="sc">{</span>host<span class="sc">}</span><span class="ss">&lt;/a&gt;'</span></span>
-<span id="cb2-20"><a href="#cb2-20" aria-hidden="true" tabindex="-1"></a>    <span class="cf">elif</span> <span class="kw">not</span> pd.notna(value):</span>
-<span id="cb2-21"><a href="#cb2-21" aria-hidden="true" tabindex="-1"></a>        <span class="cf">return</span> <span class="st">""</span></span>
-<span id="cb2-22"><a href="#cb2-22" aria-hidden="true" tabindex="-1"></a>    <span class="cf">elif</span> <span class="bu">type</span>(value) <span class="kw">is</span> <span class="bu">float</span>: <span class="co"># pd converts string to float</span></span>
-<span id="cb2-23"><a href="#cb2-23" aria-hidden="true" tabindex="-1"></a>        <span class="cf">return</span> <span class="bu">int</span>(value)</span>
-<span id="cb2-24"><a href="#cb2-24" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> value</span>
-<span id="cb2-25"><a href="#cb2-25" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-26"><a href="#cb2-26" aria-hidden="true" tabindex="-1"></a>kos[<span class="st">"name"</span>] <span class="op">=</span> kos.<span class="bu">apply</span>(hyperlink, axis<span class="op">=</span><span class="dv">1</span>)</span>
-<span id="cb2-27"><a href="#cb2-27" aria-hidden="true" tabindex="-1"></a>kos <span class="op">=</span> kos.sort_values(by<span class="op">=</span>[<span class="st">"update"</span>],ascending<span class="op">=</span><span class="va">False</span>)</span>
-<span id="cb2-28"><a href="#cb2-28" aria-hidden="true" tabindex="-1"></a>kos <span class="op">=</span> kos.drop(columns<span class="op">=</span>[<span class="st">"url"</span>])</span>
-<span id="cb2-29"><a href="#cb2-29" aria-hidden="true" tabindex="-1"></a>kos <span class="op">=</span> kos.applymap(cell)</span>
-<span id="cb2-30"><a href="#cb2-30" aria-hidden="true" tabindex="-1"></a>display(HTML(kos.to_html(escape<span class="op">=</span><span class="va">False</span>,index<span class="op">=</span><span class="va">False</span>)))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb2-16"><a href="#cb2-16" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> <span class="bu">isinstance</span>(value, <span class="bu">str</span>) <span class="kw">and</span> value.startswith(<span class="st">"https://spdx.org/licenses/"</span>):</span>
+<span id="cb2-17"><a href="#cb2-17" aria-hidden="true" tabindex="-1"></a>        license_name <span class="op">=</span> value.replace(<span class="st">"https://spdx.org/licenses/"</span>, <span class="st">""</span>)</span>
+<span id="cb2-18"><a href="#cb2-18" aria-hidden="true" tabindex="-1"></a>        <span class="cf">return</span> <span class="ss">f'&lt;a href="</span><span class="sc">{</span>value<span class="sc">}</span><span class="ss">"&gt;</span><span class="sc">{</span>license_name<span class="sc">}</span><span class="ss">&lt;/a&gt;'</span></span>
+<span id="cb2-19"><a href="#cb2-19" aria-hidden="true" tabindex="-1"></a>    <span class="cf">elif</span> <span class="bu">type</span>(value) <span class="kw">is</span> <span class="bu">str</span> <span class="kw">and</span> re.match(<span class="vs">r"</span><span class="dv">^</span><span class="vs">https</span><span class="op">?</span><span class="vs">://"</span>,value):</span>
+<span id="cb2-20"><a href="#cb2-20" aria-hidden="true" tabindex="-1"></a>        url <span class="op">=</span> urlparse(value)</span>
+<span id="cb2-21"><a href="#cb2-21" aria-hidden="true" tabindex="-1"></a>        host <span class="op">=</span> url.hostname.split(<span class="st">"."</span>)[<span class="op">-</span><span class="dv">2</span>]</span>
+<span id="cb2-22"><a href="#cb2-22" aria-hidden="true" tabindex="-1"></a>        <span class="cf">return</span> <span class="ss">f'&lt;a href="</span><span class="sc">{</span>value<span class="sc">}</span><span class="ss">"&gt;</span><span class="sc">{</span>host<span class="sc">}</span><span class="ss">&lt;/a&gt;'</span></span>
+<span id="cb2-23"><a href="#cb2-23" aria-hidden="true" tabindex="-1"></a>    <span class="cf">elif</span> <span class="bu">isinstance</span>(value, <span class="bu">list</span>):</span>
+<span id="cb2-24"><a href="#cb2-24" aria-hidden="true" tabindex="-1"></a>        <span class="cf">return</span> <span class="st">", "</span>.join(<span class="bu">str</span>(item) <span class="cf">for</span> item <span class="kw">in</span> value)</span>
+<span id="cb2-25"><a href="#cb2-25" aria-hidden="true" tabindex="-1"></a>    <span class="cf">elif</span> <span class="kw">not</span> pd.notna(value):</span>
+<span id="cb2-26"><a href="#cb2-26" aria-hidden="true" tabindex="-1"></a>        <span class="cf">return</span> <span class="st">""</span></span>
+<span id="cb2-27"><a href="#cb2-27" aria-hidden="true" tabindex="-1"></a>    <span class="cf">elif</span> <span class="bu">type</span>(value) <span class="kw">is</span> <span class="bu">float</span>: <span class="co"># pd converts string to float</span></span>
+<span id="cb2-28"><a href="#cb2-28" aria-hidden="true" tabindex="-1"></a>        <span class="cf">return</span> <span class="bu">int</span>(value)</span>
+<span id="cb2-29"><a href="#cb2-29" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> value</span>
+<span id="cb2-30"><a href="#cb2-30" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-31"><a href="#cb2-31" aria-hidden="true" tabindex="-1"></a>kos[<span class="st">"name"</span>] <span class="op">=</span> kos.<span class="bu">apply</span>(hyperlink, axis<span class="op">=</span><span class="dv">1</span>)</span>
+<span id="cb2-32"><a href="#cb2-32" aria-hidden="true" tabindex="-1"></a>kos <span class="op">=</span> kos.sort_values(by<span class="op">=</span>[<span class="st">"dateModified"</span>],ascending<span class="op">=</span><span class="va">False</span>)</span>
+<span id="cb2-33"><a href="#cb2-33" aria-hidden="true" tabindex="-1"></a>kos <span class="op">=</span> kos.drop(columns<span class="op">=</span>[<span class="st">"url"</span>])</span>
+<span id="cb2-34"><a href="#cb2-34" aria-hidden="true" tabindex="-1"></a>kos <span class="op">=</span> kos.applymap(cell)</span>
+<span id="cb2-35"><a href="#cb2-35" aria-hidden="true" tabindex="-1"></a>display(HTML(kos.to_html(escape<span class="op">=</span><span class="va">False</span>,index<span class="op">=</span><span class="va">False</span>)))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stderr">
-<pre><code>/tmp/ipykernel_2343/2186700073.py:29: FutureWarning: DataFrame.applymap has been deprecated. Use DataFrame.map instead.
+<pre><code>/tmp/ipykernel_2447/1302829116.py:34: FutureWarning: DataFrame.applymap has been deprecated. Use DataFrame.map instead.
   kos = kos.applymap(cell)</code></pre>
 </div>
 <div class="cell-container"><div class="cell-decorator"><pre>In [2]:</pre></div><div id="tbl-software" class="cell quarto-float quarto-figure quarto-figure-center anchored" data-execution_count="2">
@@ -337,14 +342,14 @@ Table&nbsp;1
 <thead>
 <tr class="header">
 <th data-quarto-table-cell-role="th">name</th>
-<th data-quarto-table-cell-role="th">platform</th>
+<th data-quarto-table-cell-role="th">operatingSystem</th>
 <th data-quarto-table-cell-role="th">edit</th>
 <th data-quarto-table-cell-role="th">api</th>
-<th data-quarto-table-cell-role="th">language</th>
+<th data-quarto-table-cell-role="th">programmingLanguage</th>
 <th data-quarto-table-cell-role="th">license</th>
-<th data-quarto-table-cell-role="th">repository</th>
-<th data-quarto-table-cell-role="th">update</th>
-<th data-quarto-table-cell-role="th">category</th>
+<th data-quarto-table-cell-role="th">codeRepository</th>
+<th data-quarto-table-cell-role="th">dateModified</th>
+<th data-quarto-table-cell-role="th">applicationSubCategory</th>
 </tr>
 </thead>
 <tbody>
@@ -354,7 +359,7 @@ Table&nbsp;1
 <td>✓</td>
 <td>✓</td>
 <td>PHP</td>
-<td>GPL</td>
+<td><a href="https://spdx.org/licenses/GPL-3.0-or-later">GPL-3.0-or-later</a></td>
 <td><a href="https://github.com/SemanticMediaWiki/SemanticMediaWiki/">github</a></td>
 <td>2025</td>
 <td>editor</td>
@@ -365,10 +370,10 @@ Table&nbsp;1
 <td>✓</td>
 <td>✓</td>
 <td>PHP</td>
-<td>GPL</td>
+<td><a href="https://spdx.org/licenses/GPL-3.0-or-later">GPL-3.0-or-later</a></td>
 <td><a href="https://gerrit.wikimedia.org/g/mediawiki/extensions/Wikibase">wikimedia</a></td>
 <td>2025</td>
-<td>database &amp; editor</td>
+<td>database, editor</td>
 </tr>
 <tr class="odd">
 <td><a href="https://vocabularyserver.com/web/">TemaTres</a></td>
@@ -376,7 +381,7 @@ Table&nbsp;1
 <td>✓</td>
 <td>✓</td>
 <td>PHP</td>
-<td>GPL</td>
+<td><a href="https://spdx.org/licenses/GPL-3.0-or-later">GPL-3.0-or-later</a></td>
 <td><a href="https://github.com/tematres/TemaTres-Vocabulary-Server">github</a></td>
 <td>2025</td>
 <td>editor</td>
@@ -387,7 +392,7 @@ Table&nbsp;1
 <td>✓</td>
 <td>✓</td>
 <td>Ruby</td>
-<td>Apache</td>
+<td><a href="https://spdx.org/licenses/Apache-2.0">Apache-2.0</a></td>
 <td><a href="https://github.com/innoq/iqvoc">github</a></td>
 <td>2025</td>
 <td>editor</td>
@@ -397,8 +402,8 @@ Table&nbsp;1
 <td>Web</td>
 <td>✓</td>
 <td>✓</td>
-<td>Java &amp; JavaScript</td>
-<td>BSD</td>
+<td>Java, JavaScript</td>
+<td><a href="https://spdx.org/licenses/BSD-3-Clause">BSD-3-Clause</a></td>
 <td><a href="https://bitbucket.org/art-uniroma2/vocbench3/src/master/">bitbucket</a></td>
 <td>2025</td>
 <td>editor</td>
@@ -409,7 +414,7 @@ Table&nbsp;1
 <td>-</td>
 <td>✓</td>
 <td>PHP</td>
-<td>MIT</td>
+<td><a href="https://spdx.org/licenses/MIT">MIT</a></td>
 <td><a href="https://github.com/NatLibFi/Skosmos">github</a></td>
 <td>2025</td>
 <td>viewer</td>
@@ -420,7 +425,7 @@ Table&nbsp;1
 <td>✓</td>
 <td>-</td>
 <td>JavaScript</td>
-<td>MIT</td>
+<td><a href="https://spdx.org/licenses/MIT">MIT</a></td>
 <td><a href="https://github.com/gbv/cocoda">github</a></td>
 <td>2025</td>
 <td>mapping editor</td>
@@ -431,7 +436,7 @@ Table&nbsp;1
 <td>✓</td>
 <td>✓</td>
 <td>Java</td>
-<td>MIT</td>
+<td><a href="https://spdx.org/licenses/MIT">MIT</a></td>
 <td><a href="https://github.com/CSCfi/mscr-compose">github</a></td>
 <td>2025</td>
 <td>mapping editor</td>
@@ -442,7 +447,7 @@ Table&nbsp;1
 <td>✓</td>
 <td>✓</td>
 <td>JavaScript</td>
-<td>MIT</td>
+<td><a href="https://spdx.org/licenses/MIT">MIT</a></td>
 <td><a href="https://github.com/gbv/jskos-server">github</a></td>
 <td>2025</td>
 <td>database</td>
@@ -453,7 +458,7 @@ Table&nbsp;1
 <td>✓</td>
 <td>✓</td>
 <td>JavaScript</td>
-<td>Apache</td>
+<td><a href="https://spdx.org/licenses/Apache-2.0">Apache-2.0</a></td>
 <td><a href="https://github.com/skohub-io/skohub-vocabs">github</a></td>
 <td>2025</td>
 <td>viewer</td>
@@ -464,7 +469,7 @@ Table&nbsp;1
 <td>✓</td>
 <td>✓</td>
 <td>Java</td>
-<td>GPL</td>
+<td><a href="https://spdx.org/licenses/GPL-3.0-or-later">GPL-3.0-or-later</a></td>
 <td><a href="https://github.com/miledrousset/Opentheso">github</a></td>
 <td>2025</td>
 <td>editor</td>
@@ -474,8 +479,8 @@ Table&nbsp;1
 <td>Web</td>
 <td>-</td>
 <td>✓</td>
-<td>JavaScript &amp; Java</td>
-<td>Apache</td>
+<td>JavaScript, Java</td>
+<td><a href="https://spdx.org/licenses/Apache-2.0">Apache-2.0</a></td>
 <td><a href="https://github.com/EBISPOT/OLS">github</a></td>
 <td>2025</td>
 <td>viewer</td>
@@ -486,7 +491,7 @@ Table&nbsp;1
 <td>-</td>
 <td>✓</td>
 <td>Ruby</td>
-<td>BSD</td>
+<td><a href="https://spdx.org/licenses/BSD-3-Clause">BSD-3-Clause</a></td>
 <td><a href="https://github.com/ontoportal">github</a></td>
 <td>2025</td>
 <td>viewer</td>
@@ -497,7 +502,7 @@ Table&nbsp;1
 <td>-</td>
 <td>-</td>
 <td>Python</td>
-<td>BSD-3</td>
+<td><a href="https://spdx.org/licenses/BSD-3-Clause">BSD-3-Clause</a></td>
 <td><a href="https://github.com/nfdi4cat/voc4cat-tool/">github</a></td>
 <td>2025</td>
 <td>converter</td>
@@ -508,7 +513,7 @@ Table&nbsp;1
 <td>-</td>
 <td>-</td>
 <td>JavaScript</td>
-<td>BSD</td>
+<td><a href="https://spdx.org/licenses/BSD-3-Clause">BSD-3-Clause</a></td>
 <td><a href="https://bitbucket.org/art-uniroma2/showvoc/src/master/">bitbucket</a></td>
 <td>2025</td>
 <td>viewer</td>
@@ -519,7 +524,7 @@ Table&nbsp;1
 <td>✓</td>
 <td>-</td>
 <td>Java</td>
-<td>BSD</td>
+<td><a href="https://spdx.org/licenses/BSD-3-Clause">BSD-3-Clause</a></td>
 <td><a href="https://github.com/protegeproject/protege">github</a></td>
 <td>2025</td>
 <td>editor</td>
@@ -530,7 +535,7 @@ Table&nbsp;1
 <td>-</td>
 <td>-</td>
 <td>Python</td>
-<td>BSD-3</td>
+<td><a href="https://spdx.org/licenses/BSD-3-Clause">BSD-3-Clause</a></td>
 <td><a href="https://github.com/Kurrawong/VocExcel">github</a></td>
 <td>2025</td>
 <td>converter</td>
@@ -541,7 +546,7 @@ Table&nbsp;1
 <td>-</td>
 <td>-</td>
 <td>Java</td>
-<td>GPL</td>
+<td><a href="https://spdx.org/licenses/GPL-3.0-or-later">GPL-3.0-or-later</a></td>
 <td><a href="https://github.com/gouttegd/sssom-java">github</a></td>
 <td>2025</td>
 <td>converter</td>
@@ -552,21 +557,21 @@ Table&nbsp;1
 <td>-</td>
 <td>-</td>
 <td>JavaScript</td>
-<td>MIT</td>
+<td><a href="https://spdx.org/licenses/MIT">MIT</a></td>
 <td><a href="https://github.com/gbv/jskos-cli/">github</a></td>
 <td>2025</td>
-<td>converter &amp; validator</td>
+<td>converter, validator</td>
 </tr>
 <tr class="even">
 <td><a href="https://ts4nfdi.github.io/api-gateway/">TS4NFDI API Gateway</a></td>
 <td>Web</td>
 <td>-</td>
 <td>✓</td>
-<td>Java &amp; JavaScript</td>
-<td>MIT</td>
+<td>Java, JavaScript</td>
+<td><a href="https://spdx.org/licenses/MIT">MIT</a></td>
 <td><a href="https://github.com/ts4nfdi/api-gateway">github</a></td>
 <td>2025</td>
-<td>viewer &amp; converter</td>
+<td>viewer, converter</td>
 </tr>
 <tr class="odd">
 <td><a href="https://mapping-commons.github.io/sssom-py">sssom-py</a></td>
@@ -574,7 +579,7 @@ Table&nbsp;1
 <td>-</td>
 <td>-</td>
 <td>Python</td>
-<td>MIT</td>
+<td><a href="https://spdx.org/licenses/MIT">MIT</a></td>
 <td><a href="https://github.com/mapping-commons/sssom-py">github</a></td>
 <td>2025</td>
 <td>converter</td>
@@ -585,10 +590,10 @@ Table&nbsp;1
 <td>-</td>
 <td>✓</td>
 <td>JavaScript</td>
-<td>MIT</td>
+<td><a href="https://spdx.org/licenses/MIT">MIT</a></td>
 <td><a href="https://github.com/gbv/jskos-proxy/">github</a></td>
 <td>2025</td>
-<td>viewer &amp; converter</td>
+<td>viewer, converter</td>
 </tr>
 <tr class="odd">
 <td><a href="https://www.npmjs.org/package/sssom">sssom-js</a></td>
@@ -596,7 +601,7 @@ Table&nbsp;1
 <td>-</td>
 <td>-</td>
 <td>JavaScript</td>
-<td>MIT</td>
+<td><a href="https://spdx.org/licenses/MIT">MIT</a></td>
 <td><a href="https://github.com/gbv/sssom-js">github</a></td>
 <td>2025</td>
 <td>converter</td>
@@ -607,7 +612,7 @@ Table&nbsp;1
 <td>-</td>
 <td>✓</td>
 <td>Typescript</td>
-<td>EUPL</td>
+<td><a href="https://spdx.org/licenses/EUPL-1.2">EUPL-1.2</a></td>
 <td><a href="https://github.com/netwerk-digitaal-erfgoed/network-of-terms">github</a></td>
 <td>2025</td>
 <td>converter</td>
@@ -618,7 +623,7 @@ Table&nbsp;1
 <td>-</td>
 <td>-</td>
 <td>Python</td>
-<td>GPL</td>
+<td><a href="https://spdx.org/licenses/GPL-3.0-or-later">GPL-3.0-or-later</a></td>
 <td><a href="https://gitlab.com/elga-gmbh/termgit">gitlab</a></td>
 <td>2025</td>
 <td>converter</td>
@@ -628,8 +633,8 @@ Table&nbsp;1
 <td>Web</td>
 <td>-</td>
 <td>-</td>
-<td>Java &amp; JavaScript</td>
-<td>Apache</td>
+<td>Java, JavaScript</td>
+<td><a href="https://spdx.org/licenses/Apache-2.0">Apache-2.0</a></td>
 <td><a href="https://github.com/oeg-upm/fair_ontologies">github</a></td>
 <td>2025</td>
 <td>validator</td>
@@ -640,7 +645,7 @@ Table&nbsp;1
 <td>-</td>
 <td>-</td>
 <td>Python</td>
-<td>Apache</td>
+<td><a href="https://spdx.org/licenses/Apache-2.0">Apache-2.0</a></td>
 <td><a href="https://github.com/oeg-upm/Chowlk">github</a></td>
 <td>2025</td>
 <td>converter</td>
@@ -650,8 +655,8 @@ Table&nbsp;1
 <td>JVM</td>
 <td>-</td>
 <td>-</td>
-<td>JavaScript &amp; Java</td>
-<td>Apache</td>
+<td>JavaScript, Java</td>
+<td><a href="https://spdx.org/licenses/Apache-2.0">Apache-2.0</a></td>
 <td><a href="https://github.com/dgarijo/Widoco">github</a></td>
 <td>2025</td>
 <td>viewer</td>
@@ -662,7 +667,7 @@ Table&nbsp;1
 <td>-</td>
 <td>✓</td>
 <td>Java</td>
-<td>MIT</td>
+<td><a href="https://spdx.org/licenses/MIT">MIT</a></td>
 <td><a href="https://github.com/agroportal/fairness">github</a></td>
 <td>2025</td>
 <td>validator</td>
@@ -673,10 +678,10 @@ Table&nbsp;1
 <td>-</td>
 <td>-</td>
 <td>Python</td>
-<td>BSD</td>
+<td><a href="https://spdx.org/licenses/BSD-3-Clause">BSD-3-Clause</a></td>
 <td><a href="https://github.com/INCATools/ontology-development-kit">github</a></td>
 <td>2025</td>
-<td>converter &amp; validator</td>
+<td>converter, validator</td>
 </tr>
 <tr class="odd">
 <td><a href="https://oops.linkeddata.es/">OOPS!</a></td>
@@ -695,7 +700,7 @@ Table&nbsp;1
 <td>✓</td>
 <td>✓</td>
 <td>Python</td>
-<td>GPL</td>
+<td><a href="https://spdx.org/licenses/GPL-3.0-or-later">GPL-3.0-or-later</a></td>
 <td><a href="https://github.com/OnroerendErfgoed/atramhasis">github</a></td>
 <td>2024</td>
 <td>editor</td>
@@ -706,7 +711,7 @@ Table&nbsp;1
 <td>-</td>
 <td>✓</td>
 <td>Ruby</td>
-<td>MIT</td>
+<td><a href="https://spdx.org/licenses/MIT">MIT</a></td>
 <td><a href="https://github.com/AKSW/jekyll-rdf">github</a></td>
 <td>2024</td>
 <td>viewer</td>
@@ -717,10 +722,10 @@ Table&nbsp;1
 <td>-</td>
 <td>-</td>
 <td>Python</td>
-<td>Apache</td>
+<td><a href="https://spdx.org/licenses/Apache-2.0">Apache-2.0</a></td>
 <td><a href="https://github.com/OnToology/OnToology">github</a></td>
 <td>2024</td>
-<td>viewer &amp; validator</td>
+<td>viewer, validator</td>
 </tr>
 <tr class="odd">
 <td>SkoHub Shapes</td>
@@ -739,7 +744,7 @@ Table&nbsp;1
 <td>-</td>
 <td>✓</td>
 <td>JavaScript</td>
-<td>Apache</td>
+<td><a href="https://spdx.org/licenses/Apache-2.0">Apache-2.0</a></td>
 <td><a href="https://github.com/EBISPOT/OXO">github</a></td>
 <td>2024</td>
 <td>viewer</td>
@@ -750,7 +755,7 @@ Table&nbsp;1
 <td>-</td>
 <td>✓</td>
 <td>Java</td>
-<td>GPL</td>
+<td><a href="https://spdx.org/licenses/GPL-3.0-or-later">GPL-3.0-or-later</a></td>
 <td><a href="https://github.com/cmader/qSKOS/">github</a></td>
 <td>2024</td>
 <td>validator</td>
@@ -761,7 +766,7 @@ Table&nbsp;1
 <td>✓</td>
 <td>-</td>
 <td>Python</td>
-<td>MIT</td>
+<td><a href="https://spdx.org/licenses/MIT">MIT</a></td>
 <td><a href="https://github.com/acdh-oeaw/vocabseditor">github</a></td>
 <td>2024</td>
 <td>editor</td>
@@ -772,7 +777,7 @@ Table&nbsp;1
 <td>-</td>
 <td>✓</td>
 <td>Python</td>
-<td>GPL</td>
+<td><a href="https://spdx.org/licenses/GPL-3.0-or-later">GPL-3.0-or-later</a></td>
 <td><a href="https://github.com/RDFLib/VocPrez">github</a></td>
 <td>2024</td>
 <td>viewer</td>
@@ -783,7 +788,7 @@ Table&nbsp;1
 <td>-</td>
 <td>✓</td>
 <td>Java</td>
-<td>Apache</td>
+<td><a href="https://spdx.org/licenses/Apache-2.0">Apache-2.0</a></td>
 <td><a href="https://github.com/IHTSDO/snowstorm">github</a></td>
 <td>2024</td>
 <td>viewer</td>
@@ -794,7 +799,7 @@ Table&nbsp;1
 <td>-</td>
 <td>-</td>
 <td>SHACL</td>
-<td>CC-BY-4.0</td>
+<td><a href="https://spdx.org/licenses/CC-BY-4.0">CC-BY-4.0</a></td>
 <td><a href="https://github.com/AGLDWG/vocpub-profile/">github</a></td>
 <td>2024</td>
 <td>validator</td>
@@ -805,7 +810,7 @@ Table&nbsp;1
 <td>✓</td>
 <td>✓</td>
 <td>Python</td>
-<td>BSD-3</td>
+<td><a href="https://spdx.org/licenses/BSD-3-Clause">BSD-3-Clause</a></td>
 <td><a href="https://github.com/ODM2/ODM2ControlledVocabularies">github</a></td>
 <td>2024</td>
 <td>editor</td>
@@ -815,8 +820,8 @@ Table&nbsp;1
 <td>Web</td>
 <td>✓</td>
 <td>-</td>
-<td>JavaScript &amp; PHP</td>
-<td>Apache</td>
+<td>JavaScript, PHP</td>
+<td><a href="https://spdx.org/licenses/Apache-2.0">Apache-2.0</a></td>
 <td><a href="https://github.com/NCOR-BR/onto4all">github</a></td>
 <td>2024</td>
 <td>editor</td>
@@ -827,7 +832,7 @@ Table&nbsp;1
 <td>✓</td>
 <td>-</td>
 <td>Java</td>
-<td>BSD</td>
+<td><a href="https://spdx.org/licenses/BSD-3-Clause">BSD-3-Clause</a></td>
 <td><a href="https://github.com/protegeproject/webprotege">github</a></td>
 <td>2023</td>
 <td>editor</td>
@@ -838,7 +843,7 @@ Table&nbsp;1
 <td>✓</td>
 <td>✓</td>
 <td>Python</td>
-<td>BSD</td>
+<td><a href="https://spdx.org/licenses/BSD-3-Clause">BSD-3-Clause</a></td>
 <td><a href="https://github.com/unt-libraries/django-controlled-vocabularies">github</a></td>
 <td>2023</td>
 <td>editor</td>
@@ -849,7 +854,7 @@ Table&nbsp;1
 <td>✓</td>
 <td>-</td>
 <td>prolog</td>
-<td>BSD</td>
+<td><a href="https://spdx.org/licenses/BSD-3-Clause">BSD-3-Clause</a></td>
 <td><a href="https://github.com/jrvosse/amalgame">github</a></td>
 <td>2023</td>
 <td>mapping editor</td>
@@ -860,7 +865,7 @@ Table&nbsp;1
 <td>✓</td>
 <td>-</td>
 <td>Java</td>
-<td>GPL</td>
+<td><a href="https://spdx.org/licenses/GPL-3.0-or-later">GPL-3.0-or-later</a></td>
 <td><a href="https://github.com/wandora-team/wandora">github</a></td>
 <td>2023</td>
 <td>editor</td>
@@ -871,7 +876,7 @@ Table&nbsp;1
 <td>-</td>
 <td>✓</td>
 <td>Java</td>
-<td>GPL</td>
+<td><a href="https://spdx.org/licenses/GPL-3.0-or-later">GPL-3.0-or-later</a></td>
 <td><a href="https://gitlab.inria.fr/moex/alignapi/">inria</a></td>
 <td>2023</td>
 <td>database</td>
@@ -882,7 +887,7 @@ Table&nbsp;1
 <td>✓</td>
 <td>✓</td>
 <td>JavaScript</td>
-<td>MIT</td>
+<td><a href="https://spdx.org/licenses/MIT">MIT</a></td>
 <td><a href="https://github.com/Semantic-Society/Neologism">github</a></td>
 <td>2023</td>
 <td>editor</td>
@@ -893,7 +898,7 @@ Table&nbsp;1
 <td>✓</td>
 <td>✓</td>
 <td>Java</td>
-<td>GPL</td>
+<td><a href="https://spdx.org/licenses/GPL-3.0-or-later">GPL-3.0-or-later</a></td>
 <td><a href="https://github.com/culturecommunication/ginco">github</a></td>
 <td>2022</td>
 <td>editor</td>
@@ -904,7 +909,7 @@ Table&nbsp;1
 <td>-</td>
 <td>-</td>
 <td>JavaScript</td>
-<td>MIT</td>
+<td><a href="https://spdx.org/licenses/MIT">MIT</a></td>
 <td><a href="https://github.com/VisualDataWeb/WebVOWL">github</a></td>
 <td>2022</td>
 <td>viewer</td>
@@ -915,7 +920,7 @@ Table&nbsp;1
 <td>✓</td>
 <td>-</td>
 <td>JavaScript</td>
-<td>Apache</td>
+<td><a href="https://spdx.org/licenses/Apache-2.0">Apache-2.0</a></td>
 <td><a href="https://github.com/tkurz/skosjs">github</a></td>
 <td>2022</td>
 <td>editor</td>
@@ -926,7 +931,7 @@ Table&nbsp;1
 <td>✓</td>
 <td>-</td>
 <td>JavaScript</td>
-<td>MIT</td>
+<td><a href="https://spdx.org/licenses/MIT">MIT</a></td>
 <td><a href="https://github.com/vocol/vocol">github</a></td>
 <td>2021</td>
 <td>editor</td>
@@ -937,10 +942,10 @@ Table&nbsp;1
 <td>-</td>
 <td>✓</td>
 <td>Python</td>
-<td>MIT</td>
+<td><a href="https://spdx.org/licenses/MIT">MIT</a></td>
 <td><a href="https://github.com/NatLibFi/Skosify">github</a></td>
 <td>2021</td>
-<td>converter &amp; validator</td>
+<td>converter, validator</td>
 </tr>
 <tr class="odd">
 <td><a href="https://github.com/scriptotek/mc2skos">mc2skos</a></td>
@@ -948,7 +953,7 @@ Table&nbsp;1
 <td>✓</td>
 <td>-</td>
 <td>Python</td>
-<td>The Unlicense</td>
+<td><a href="https://spdx.org/licenses/Unlicense">Unlicense</a></td>
 <td><a href="https://github.com/scriptotek/mc2skos">github</a></td>
 <td>2021</td>
 <td>converter</td>
@@ -959,7 +964,7 @@ Table&nbsp;1
 <td>-</td>
 <td>✓</td>
 <td>Java</td>
-<td>Apache</td>
+<td><a href="https://spdx.org/licenses/Apache-2.0">Apache-2.0</a></td>
 <td><a href="https://github.com/oeg-upm/Themis">github</a></td>
 <td>2021</td>
 <td>validator</td>
@@ -970,10 +975,10 @@ Table&nbsp;1
 <td>-</td>
 <td>✓</td>
 <td>PHP</td>
-<td>GPL</td>
+<td><a href="https://spdx.org/licenses/GPL-3.0-or-later">GPL-3.0-or-later</a></td>
 <td><a href="https://github.com/OpenSKOS/OpenSKOS">github</a></td>
 <td>2020</td>
-<td>viewer &amp; editor</td>
+<td>viewer, editor</td>
 </tr>
 <tr class="even">
 <td><a href="https://essepuntato.it/lode/">LODE</a></td>
@@ -981,7 +986,7 @@ Table&nbsp;1
 <td>-</td>
 <td>✓</td>
 <td>Java</td>
-<td>ISC</td>
+<td><a href="https://spdx.org/licenses/ISC">ISC</a></td>
 <td><a href="https://github.com/essepuntato/LODE">github</a></td>
 <td>2020</td>
 <td>viewer</td>
@@ -992,7 +997,7 @@ Table&nbsp;1
 <td>-</td>
 <td>✓</td>
 <td>XSLT</td>
-<td>Apache</td>
+<td><a href="https://spdx.org/licenses/Apache-2.0">Apache-2.0</a></td>
 <td><a href="https://github.com/SISS/sissvoc">github</a></td>
 <td>2019</td>
 <td>viewer</td>
@@ -1003,18 +1008,18 @@ Table&nbsp;1
 <td>-</td>
 <td>-</td>
 <td>Java</td>
-<td>CC-BY-SA</td>
+<td><a href="https://spdx.org/licenses/CC-BY-SA-4.0">CC-BY-SA-4.0</a></td>
 <td><a href="https://bitbucket.org/tfrancart/sparna/src/master/">bitbucket</a></td>
 <td>2018</td>
-<td>viewer &amp; converter</td>
+<td>viewer, converter</td>
 </tr>
 <tr class="odd">
 <td><a href="https://ontobee.org/">OntoBee</a></td>
 <td>Web</td>
 <td>-</td>
 <td>✓</td>
-<td>PHP &amp; JavaScript</td>
-<td>Apache</td>
+<td>PHP, JavaScript</td>
+<td><a href="https://spdx.org/licenses/Apache-2.0">Apache-2.0</a></td>
 <td><a href="https://github.com/OntoZoo/ontobee">github</a></td>
 <td>2018</td>
 <td>viewer</td>
@@ -1025,7 +1030,7 @@ Table&nbsp;1
 <td>✓</td>
 <td>✓</td>
 <td>Java</td>
-<td>LGPL</td>
+<td><a href="https://spdx.org/licenses/LGPL-3.0-or-later">LGPL-3.0-or-later</a></td>
 <td><a href="https://github.com/Blulab-Utah/SKOSEditor">github</a></td>
 <td>2016</td>
 <td>editor</td>
@@ -1036,7 +1041,7 @@ Table&nbsp;1
 <td>✓</td>
 <td>-</td>
 <td>Java</td>
-<td>BSD</td>
+<td><a href="https://spdx.org/licenses/BSD-3-Clause">BSD-3-Clause</a></td>
 <td><a href="https://github.com/MetadataResearchCenter/hive-mrc">github</a></td>
 <td>2015</td>
 <td>viewer</td>
@@ -1047,7 +1052,7 @@ Table&nbsp;1
 <td>-</td>
 <td>-</td>
 <td>Java</td>
-<td>GPL</td>
+<td><a href="https://spdx.org/licenses/GPL-3.0-or-later">GPL-3.0-or-later</a></td>
 <td><a href="http://www.askosi.org/example/">askosi</a></td>
 <td>2011</td>
 <td>viewer</td>
@@ -1058,7 +1063,7 @@ Table&nbsp;1
 <td>✓</td>
 <td>-</td>
 <td>Java</td>
-<td>LGPL</td>
+<td><a href="https://spdx.org/licenses/LGPL-3.0-or-later">LGPL-3.0-or-later</a></td>
 <td><a href="https://sourceforge.net/projects/thmanager/">sourceforge</a></td>
 <td>2006</td>
 <td>editor</td>
@@ -1114,7 +1119,7 @@ Table&nbsp;1
 </figure>
 </div></div>
 </div></div>
-<div id="748242b4" class="cell markdown">
+<div id="2e605e41" class="cell markdown">
 <p>Please <a href="https://github.com/gbv/bartoc-vocabulary-software/issues">open an issue</a> if some relevant software is missing or data seems invalid!</p>
 <!-- end landscape mode in PDF -->
 <section id="metadata" class="level2">
@@ -1133,42 +1138,38 @@ Table&nbsp;1
 <tbody>
 <tr class="odd">
 <td><code>name</code></td>
-<td>name</td>
+<td>name with link to homepage</td>
 </tr>
 <tr class="even">
-<td><code>url</code></td>
-<td>homepage</td>
-</tr>
-<tr class="odd">
-<td><code>platform</code></td>
+<td><code>operatingSystem</code></td>
 <td>operating system or similar dependency (Web, CLI…)</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td><code>api</code></td>
 <td>whether a web service or similar API is provided to connect to</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td><code>edit</code></td>
 <td>whether vocabularies can be modified with the software</td>
 </tr>
-<tr class="even">
-<td><code>language</code></td>
+<tr class="odd">
+<td><code>programmingLanguage</code></td>
 <td>programming language(s)</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td><code>license</code></td>
 <td>license of the software (if free software)</td>
 </tr>
-<tr class="even">
-<td><code>repository</code></td>
+<tr class="odd">
+<td><code>codeRepository</code></td>
 <td>source Code repository (if open source)</td>
 </tr>
-<tr class="odd">
-<td><code>update</code></td>
+<tr class="even">
+<td><code>dateModified</code></td>
 <td>year of most recent update</td>
 </tr>
-<tr class="even">
-<td><code>category</code></td>
+<tr class="odd">
+<td><code>applicationSubCategory</code></td>
 <td>type of KOS software</td>
 </tr>
 </tbody>
@@ -1178,17 +1179,17 @@ Table&nbsp;1
 <h2 class="anchored" data-anchor-id="kos-software-categories">KOS software categories</h2>
 </section>
 </div>
-<div class="cell-container"><div class="cell-decorator"><pre>In [3]:</pre></div><div id="3ed3c830" class="cell" data-execution_count="3">
+<div class="cell-container"><div class="cell-decorator"><pre>In [3]:</pre></div><div id="5922ec4b" class="cell" data-execution_count="3">
 <div class="sourceCode cell-code" id="cb4"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>df <span class="op">=</span> pd.read_json(<span class="st">'kos-software.json'</span>)</span>
 <span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>categories <span class="op">=</span> {}</span>
-<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> item <span class="kw">in</span> df[<span class="st">"category"</span>]:</span>
-<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a>    <span class="cf">for</span> category <span class="kw">in</span> item.split(<span class="st">' &amp; '</span>):</span>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> item <span class="kw">in</span> df[<span class="st">"applicationSubCategory"</span>]:</span>
+<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a>    <span class="cf">for</span> category <span class="kw">in</span> item:</span>
 <span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a>        <span class="cf">if</span> category <span class="kw">in</span> categories:</span>
 <span id="cb4-6"><a href="#cb4-6" aria-hidden="true" tabindex="-1"></a>            categories[category] <span class="op">+=</span> <span class="dv">1</span></span>
 <span id="cb4-7"><a href="#cb4-7" aria-hidden="true" tabindex="-1"></a>        <span class="cf">else</span>:</span>
 <span id="cb4-8"><a href="#cb4-8" aria-hidden="true" tabindex="-1"></a>            categories[category] <span class="op">=</span> <span class="dv">1</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div></div>
-<div id="bff8ef79" class="cell markdown">
+<div id="67eaafd2" class="cell markdown">
 <ul>
 <li><strong>viewer</strong>: to display terminologies (23)</li>
 <li><strong>editor</strong>: to create and modify terminologies (24)</li>

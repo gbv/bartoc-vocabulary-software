@@ -25,7 +25,7 @@ This report is limited to **[specialized KOS software](#kos-software) for editin
 - it only happens to make use of terminologies (for instance [OpenRefine] and [mix'n'match]), or
 - it is more [generic software] that can be used for terminology management among other use cases (like database management systems), or
 - it is only used as [hosted service](#hosted-services), or
-- it is a programming library ([jskos-vue], [cocoda-sdk], [TSS Widgets]...), or
+- it is a programming library ([jskos-vue], [cocoda-sdk], [TSS Widgets], [ng-skos]...), or
 - it is limited to simple lists of terms, glossaries and similar, or
 - it is so called [terminology management] software for a a centralized repository of approved terms, definitions, and translations in an organization, or
 - it is only meant [to manage identifiers](#identifier-systems).
@@ -42,7 +42,7 @@ import pandas as pd
 kos = pd.read_json('kos-software.json')
 ```
 
-This report includes **`{python} len(kos.index)`** instances of KOS software so far. The list is managed [in a JSON file](kos-software.json) as array of records with flat fields as [described below](#metadata). Applications without license or repository are close source. Deprecated applications are included for historical reference.
+This report includes **`{python} len(kos.index)`** instances of KOS software so far. The list is managed [in a JSON file](kos-software.json) as array of records with flat fields as [described below](#metadata). Applications without license or repository are closed source. Deprecated applications are included for historical reference.
 
 ```{python}
 #| label: tbl-software
@@ -201,6 +201,7 @@ and possibly others.
 [Notion]: https://www.notion.com/
 [TSS Widgets]: https://github.com/ts4nfdi/terminology-service-suite
 [jskos-vue]: https://github.com/gbv/jskos-vue/
+[ng-skos]: http://gbv.github.io/ng-skos/
 [cocoda-sdk]: https://github.com/gbv/cocoda-sdk/
 [PoolParty Semantic Suite]: https://www.poolparty.biz/product-overview
 

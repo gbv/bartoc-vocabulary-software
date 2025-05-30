@@ -42,7 +42,7 @@ import pandas as pd
 kos = pd.read_json('kos-software.json')
 ```
 
-This report includes **`{python} len(kos.index)`** instances of KOS software so far. The list is managed [in a JSON file](kos-software.json) as array of records with flat fields as [described below](#metadata). Applications without license or repository are closed source. Deprecated applications are included for historical reference.
+This report includes **`{python} len(kos.index)`** instances of KOS software so far. The list is managed [in a JSON file](kos-software.json) as array of [CodeMeta](https://codemeta.github.io/) records with fields as [described below](#metadata). Applications without license or repository are closed source. Deprecated applications are included for historical reference.
 
 ```{python}
 #| label: tbl-software
@@ -62,7 +62,7 @@ def cell(value):
     if isinstance(value, bool):
         return "✓" if value else "-"
     if isinstance(value, str) and value.startswith("https://spdx.org/licenses/"):
-        license_name = value.replace("https://spdx.org/licenses/", "")
+        license_name = value.replace("https://spdx.org/licenses/", "").split("-")[0]
         return f'<a href="{value}">{license_name}</a>'
     elif type(value) is str and re.match(r"^https?://",value):
         url = urlparse(value)
@@ -80,6 +80,7 @@ kos["name"] = kos.apply(hyperlink, axis=1)
 kos = kos.sort_values(by=["dateModified"],ascending=False)
 kos = kos.drop(columns=["url"])
 kos = kos.applymap(cell)
+kos = kos.rename(columns={"operatingSystem":"system","programmingLanguage":"languages","codeRepository":"repository","dateModified":"update","applicationSubCategory":"category"})
 display(HTML(kos.to_html(escape=False,index=False)))
 ```
 
@@ -92,10 +93,12 @@ Please [open an issue](https://github.com/gbv/bartoc-vocabulary-software/issues)
 
 ## Metadata
 
-Field | Purpose
+Machine-readable description of the software is based on [CodeMeta](https://codemeta.github.io/) plus custom fields `api` and `edit`.
+
+Field | Purpose 
 ------|--------
 `name` | name with link to homepage
-`operatingSystem` | operating system or similar dependency (Web, CLI...) 
+`operatingSystem` | operating system or similar dependency (Web, CLI...)
 `api` | whether a web service or similar API is provided to connect to
 `edit` | whether vocabularies can be modified with the software
 `programmingLanguage` | programming language(s)

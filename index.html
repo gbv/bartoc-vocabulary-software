@@ -174,7 +174,7 @@ div.csl-indent {
 </section>
 <section id="kos-software" class="level2">
 <h2 class="anchored" data-anchor-id="kos-software">KOS software</h2>
-<p>This report includes <strong>69</strong> instances of KOS software so far. The list is managed <a href="kos-software.json">in a JSON file</a> as array of records with flat fields as <a href="#metadata">described below</a>. Applications without license or repository are closed source. Deprecated applications are included for historical reference.</p>
+<p>This report includes <strong>69</strong> instances of KOS software so far. The list is managed <a href="kos-software.json">in a JSON file</a> as array of <a href="https://codemeta.github.io/">CodeMeta</a> records with fields as <a href="#metadata">described below</a>. Applications without license or repository are closed source. Deprecated applications are included for historical reference.</p>
 <div class="cell" data-execution_count="2">
 <div id="tbl-software" class="cell quarto-float quarto-figure quarto-figure-center anchored" data-execution_count="2">
 <figure class="quarto-float quarto-float-tbl figure">
@@ -187,14 +187,14 @@ Table&nbsp;1
 <thead>
 <tr class="header">
 <th data-quarto-table-cell-role="th">name</th>
-<th data-quarto-table-cell-role="th">operatingSystem</th>
+<th data-quarto-table-cell-role="th">system</th>
 <th data-quarto-table-cell-role="th">edit</th>
 <th data-quarto-table-cell-role="th">api</th>
-<th data-quarto-table-cell-role="th">programmingLanguage</th>
+<th data-quarto-table-cell-role="th">languages</th>
 <th data-quarto-table-cell-role="th">license</th>
-<th data-quarto-table-cell-role="th">codeRepository</th>
-<th data-quarto-table-cell-role="th">dateModified</th>
-<th data-quarto-table-cell-role="th">applicationSubCategory</th>
+<th data-quarto-table-cell-role="th">repository</th>
+<th data-quarto-table-cell-role="th">update</th>
+<th data-quarto-table-cell-role="th">category</th>
 </tr>
 </thead>
 <tbody>
@@ -204,7 +204,7 @@ Table&nbsp;1
 <td>✓</td>
 <td>✓</td>
 <td>PHP</td>
-<td><a href="https://spdx.org/licenses/GPL-3.0-or-later">GPL-3.0-or-later</a></td>
+<td><a href="https://spdx.org/licenses/GPL-3.0-or-later">GPL</a></td>
 <td><a href="https://github.com/SemanticMediaWiki/SemanticMediaWiki/">github</a></td>
 <td>2025</td>
 <td>editor</td>
@@ -215,7 +215,7 @@ Table&nbsp;1
 <td>✓</td>
 <td>✓</td>
 <td>PHP</td>
-<td><a href="https://spdx.org/licenses/GPL-3.0-or-later">GPL-3.0-or-later</a></td>
+<td><a href="https://spdx.org/licenses/GPL-3.0-or-later">GPL</a></td>
 <td><a href="https://gerrit.wikimedia.org/g/mediawiki/extensions/Wikibase">wikimedia</a></td>
 <td>2025</td>
 <td>database, editor</td>
@@ -226,7 +226,7 @@ Table&nbsp;1
 <td>✓</td>
 <td>✓</td>
 <td>PHP</td>
-<td><a href="https://spdx.org/licenses/GPL-3.0-or-later">GPL-3.0-or-later</a></td>
+<td><a href="https://spdx.org/licenses/GPL-3.0-or-later">GPL</a></td>
 <td><a href="https://github.com/tematres/TemaTres-Vocabulary-Server">github</a></td>
 <td>2025</td>
 <td>editor</td>
@@ -237,7 +237,7 @@ Table&nbsp;1
 <td>✓</td>
 <td>✓</td>
 <td>Ruby</td>
-<td><a href="https://spdx.org/licenses/Apache-2.0">Apache-2.0</a></td>
+<td><a href="https://spdx.org/licenses/Apache-2.0">Apache</a></td>
 <td><a href="https://github.com/innoq/iqvoc">github</a></td>
 <td>2025</td>
 <td>editor</td>
@@ -248,7 +248,7 @@ Table&nbsp;1
 <td>✓</td>
 <td>✓</td>
 <td>Java, JavaScript</td>
-<td><a href="https://spdx.org/licenses/BSD-3-Clause">BSD-3-Clause</a></td>
+<td><a href="https://spdx.org/licenses/BSD-3-Clause">BSD</a></td>
 <td><a href="https://bitbucket.org/art-uniroma2/vocbench3/src/master/">bitbucket</a></td>
 <td>2025</td>
 <td>editor</td>
@@ -303,7 +303,7 @@ Table&nbsp;1
 <td>✓</td>
 <td>✓</td>
 <td>JavaScript</td>
-<td><a href="https://spdx.org/licenses/Apache-2.0">Apache-2.0</a></td>
+<td><a href="https://spdx.org/licenses/Apache-2.0">Apache</a></td>
 <td><a href="https://github.com/skohub-io/skohub-vocabs">github</a></td>
 <td>2025</td>
 <td>viewer</td>
@@ -314,7 +314,7 @@ Table&nbsp;1
 <td>✓</td>
 <td>✓</td>
 <td>Java</td>
-<td><a href="https://spdx.org/licenses/GPL-3.0-or-later">GPL-3.0-or-later</a></td>
+<td><a href="https://spdx.org/licenses/GPL-3.0-or-later">GPL</a></td>
 <td><a href="https://github.com/miledrousset/Opentheso">github</a></td>
 <td>2025</td>
 <td>editor</td>
@@ -325,7 +325,7 @@ Table&nbsp;1
 <td>-</td>
 <td>✓</td>
 <td>JavaScript, Java</td>
-<td><a href="https://spdx.org/licenses/Apache-2.0">Apache-2.0</a></td>
+<td><a href="https://spdx.org/licenses/Apache-2.0">Apache</a></td>
 <td><a href="https://github.com/EBISPOT/OLS">github</a></td>
 <td>2025</td>
 <td>viewer</td>
@@ -336,7 +336,7 @@ Table&nbsp;1
 <td>-</td>
 <td>✓</td>
 <td>Ruby</td>
-<td><a href="https://spdx.org/licenses/BSD-3-Clause">BSD-3-Clause</a></td>
+<td><a href="https://spdx.org/licenses/BSD-3-Clause">BSD</a></td>
 <td><a href="https://github.com/ontoportal">github</a></td>
 <td>2025</td>
 <td>viewer</td>
@@ -347,7 +347,7 @@ Table&nbsp;1
 <td>-</td>
 <td>-</td>
 <td>Python</td>
-<td><a href="https://spdx.org/licenses/BSD-3-Clause">BSD-3-Clause</a></td>
+<td><a href="https://spdx.org/licenses/BSD-3-Clause">BSD</a></td>
 <td><a href="https://github.com/nfdi4cat/voc4cat-tool/">github</a></td>
 <td>2025</td>
 <td>converter</td>
@@ -358,7 +358,7 @@ Table&nbsp;1
 <td>-</td>
 <td>-</td>
 <td>JavaScript</td>
-<td><a href="https://spdx.org/licenses/BSD-3-Clause">BSD-3-Clause</a></td>
+<td><a href="https://spdx.org/licenses/BSD-3-Clause">BSD</a></td>
 <td><a href="https://bitbucket.org/art-uniroma2/showvoc/src/master/">bitbucket</a></td>
 <td>2025</td>
 <td>viewer</td>
@@ -369,7 +369,7 @@ Table&nbsp;1
 <td>✓</td>
 <td>-</td>
 <td>Java</td>
-<td><a href="https://spdx.org/licenses/BSD-3-Clause">BSD-3-Clause</a></td>
+<td><a href="https://spdx.org/licenses/BSD-3-Clause">BSD</a></td>
 <td><a href="https://github.com/protegeproject/protege">github</a></td>
 <td>2025</td>
 <td>editor</td>
@@ -380,7 +380,7 @@ Table&nbsp;1
 <td>-</td>
 <td>-</td>
 <td>Python</td>
-<td><a href="https://spdx.org/licenses/BSD-3-Clause">BSD-3-Clause</a></td>
+<td><a href="https://spdx.org/licenses/BSD-3-Clause">BSD</a></td>
 <td><a href="https://github.com/Kurrawong/VocExcel">github</a></td>
 <td>2025</td>
 <td>converter</td>
@@ -391,7 +391,7 @@ Table&nbsp;1
 <td>-</td>
 <td>-</td>
 <td>Java</td>
-<td><a href="https://spdx.org/licenses/GPL-3.0-or-later">GPL-3.0-or-later</a></td>
+<td><a href="https://spdx.org/licenses/GPL-3.0-or-later">GPL</a></td>
 <td><a href="https://github.com/gouttegd/sssom-java">github</a></td>
 <td>2025</td>
 <td>converter</td>
@@ -457,7 +457,7 @@ Table&nbsp;1
 <td>-</td>
 <td>✓</td>
 <td>Typescript</td>
-<td><a href="https://spdx.org/licenses/EUPL-1.2">EUPL-1.2</a></td>
+<td><a href="https://spdx.org/licenses/EUPL-1.2">EUPL</a></td>
 <td><a href="https://github.com/netwerk-digitaal-erfgoed/network-of-terms">github</a></td>
 <td>2025</td>
 <td>converter</td>
@@ -468,7 +468,7 @@ Table&nbsp;1
 <td>-</td>
 <td>-</td>
 <td>Python</td>
-<td><a href="https://spdx.org/licenses/GPL-3.0-or-later">GPL-3.0-or-later</a></td>
+<td><a href="https://spdx.org/licenses/GPL-3.0-or-later">GPL</a></td>
 <td><a href="https://gitlab.com/elga-gmbh/termgit">gitlab</a></td>
 <td>2025</td>
 <td>converter</td>
@@ -479,7 +479,7 @@ Table&nbsp;1
 <td>-</td>
 <td>-</td>
 <td>Java, JavaScript</td>
-<td><a href="https://spdx.org/licenses/Apache-2.0">Apache-2.0</a></td>
+<td><a href="https://spdx.org/licenses/Apache-2.0">Apache</a></td>
 <td><a href="https://github.com/oeg-upm/fair_ontologies">github</a></td>
 <td>2025</td>
 <td>validator</td>
@@ -490,7 +490,7 @@ Table&nbsp;1
 <td>-</td>
 <td>-</td>
 <td>Python</td>
-<td><a href="https://spdx.org/licenses/Apache-2.0">Apache-2.0</a></td>
+<td><a href="https://spdx.org/licenses/Apache-2.0">Apache</a></td>
 <td><a href="https://github.com/oeg-upm/Chowlk">github</a></td>
 <td>2025</td>
 <td>converter</td>
@@ -501,7 +501,7 @@ Table&nbsp;1
 <td>-</td>
 <td>-</td>
 <td>JavaScript, Java</td>
-<td><a href="https://spdx.org/licenses/Apache-2.0">Apache-2.0</a></td>
+<td><a href="https://spdx.org/licenses/Apache-2.0">Apache</a></td>
 <td><a href="https://github.com/dgarijo/Widoco">github</a></td>
 <td>2025</td>
 <td>viewer</td>
@@ -523,7 +523,7 @@ Table&nbsp;1
 <td>-</td>
 <td>-</td>
 <td>Python</td>
-<td><a href="https://spdx.org/licenses/BSD-3-Clause">BSD-3-Clause</a></td>
+<td><a href="https://spdx.org/licenses/BSD-3-Clause">BSD</a></td>
 <td><a href="https://github.com/INCATools/ontology-development-kit">github</a></td>
 <td>2025</td>
 <td>converter, validator</td>
@@ -545,7 +545,7 @@ Table&nbsp;1
 <td>✓</td>
 <td>✓</td>
 <td>Python</td>
-<td><a href="https://spdx.org/licenses/GPL-3.0-or-later">GPL-3.0-or-later</a></td>
+<td><a href="https://spdx.org/licenses/GPL-3.0-or-later">GPL</a></td>
 <td><a href="https://github.com/OnroerendErfgoed/atramhasis">github</a></td>
 <td>2024</td>
 <td>editor</td>
@@ -567,7 +567,7 @@ Table&nbsp;1
 <td>-</td>
 <td>-</td>
 <td>Python</td>
-<td><a href="https://spdx.org/licenses/Apache-2.0">Apache-2.0</a></td>
+<td><a href="https://spdx.org/licenses/Apache-2.0">Apache</a></td>
 <td><a href="https://github.com/OnToology/OnToology">github</a></td>
 <td>2024</td>
 <td>viewer, validator</td>
@@ -589,7 +589,7 @@ Table&nbsp;1
 <td>-</td>
 <td>✓</td>
 <td>JavaScript</td>
-<td><a href="https://spdx.org/licenses/Apache-2.0">Apache-2.0</a></td>
+<td><a href="https://spdx.org/licenses/Apache-2.0">Apache</a></td>
 <td><a href="https://github.com/EBISPOT/OXO">github</a></td>
 <td>2024</td>
 <td>viewer</td>
@@ -600,7 +600,7 @@ Table&nbsp;1
 <td>-</td>
 <td>✓</td>
 <td>Java</td>
-<td><a href="https://spdx.org/licenses/GPL-3.0-or-later">GPL-3.0-or-later</a></td>
+<td><a href="https://spdx.org/licenses/GPL-3.0-or-later">GPL</a></td>
 <td><a href="https://github.com/cmader/qSKOS/">github</a></td>
 <td>2024</td>
 <td>validator</td>
@@ -622,7 +622,7 @@ Table&nbsp;1
 <td>-</td>
 <td>✓</td>
 <td>Python</td>
-<td><a href="https://spdx.org/licenses/GPL-3.0-or-later">GPL-3.0-or-later</a></td>
+<td><a href="https://spdx.org/licenses/GPL-3.0-or-later">GPL</a></td>
 <td><a href="https://github.com/RDFLib/VocPrez">github</a></td>
 <td>2024</td>
 <td>viewer</td>
@@ -633,7 +633,7 @@ Table&nbsp;1
 <td>-</td>
 <td>✓</td>
 <td>Java</td>
-<td><a href="https://spdx.org/licenses/Apache-2.0">Apache-2.0</a></td>
+<td><a href="https://spdx.org/licenses/Apache-2.0">Apache</a></td>
 <td><a href="https://github.com/IHTSDO/snowstorm">github</a></td>
 <td>2024</td>
 <td>viewer</td>
@@ -644,7 +644,7 @@ Table&nbsp;1
 <td>-</td>
 <td>-</td>
 <td>SHACL</td>
-<td><a href="https://spdx.org/licenses/CC-BY-4.0">CC-BY-4.0</a></td>
+<td><a href="https://spdx.org/licenses/CC-BY-4.0">CC</a></td>
 <td><a href="https://github.com/AGLDWG/vocpub-profile/">github</a></td>
 <td>2024</td>
 <td>validator</td>
@@ -655,7 +655,7 @@ Table&nbsp;1
 <td>✓</td>
 <td>✓</td>
 <td>Python</td>
-<td><a href="https://spdx.org/licenses/BSD-3-Clause">BSD-3-Clause</a></td>
+<td><a href="https://spdx.org/licenses/BSD-3-Clause">BSD</a></td>
 <td><a href="https://github.com/ODM2/ODM2ControlledVocabularies">github</a></td>
 <td>2024</td>
 <td>editor</td>
@@ -666,7 +666,7 @@ Table&nbsp;1
 <td>✓</td>
 <td>-</td>
 <td>JavaScript, PHP</td>
-<td><a href="https://spdx.org/licenses/Apache-2.0">Apache-2.0</a></td>
+<td><a href="https://spdx.org/licenses/Apache-2.0">Apache</a></td>
 <td><a href="https://github.com/NCOR-BR/onto4all">github</a></td>
 <td>2024</td>
 <td>editor</td>
@@ -677,7 +677,7 @@ Table&nbsp;1
 <td>✓</td>
 <td>-</td>
 <td>Java</td>
-<td><a href="https://spdx.org/licenses/BSD-3-Clause">BSD-3-Clause</a></td>
+<td><a href="https://spdx.org/licenses/BSD-3-Clause">BSD</a></td>
 <td><a href="https://github.com/protegeproject/webprotege">github</a></td>
 <td>2023</td>
 <td>editor</td>
@@ -688,7 +688,7 @@ Table&nbsp;1
 <td>✓</td>
 <td>✓</td>
 <td>Python</td>
-<td><a href="https://spdx.org/licenses/BSD-3-Clause">BSD-3-Clause</a></td>
+<td><a href="https://spdx.org/licenses/BSD-3-Clause">BSD</a></td>
 <td><a href="https://github.com/unt-libraries/django-controlled-vocabularies">github</a></td>
 <td>2023</td>
 <td>editor</td>
@@ -699,7 +699,7 @@ Table&nbsp;1
 <td>✓</td>
 <td>-</td>
 <td>prolog</td>
-<td><a href="https://spdx.org/licenses/BSD-3-Clause">BSD-3-Clause</a></td>
+<td><a href="https://spdx.org/licenses/BSD-3-Clause">BSD</a></td>
 <td><a href="https://github.com/jrvosse/amalgame">github</a></td>
 <td>2023</td>
 <td>mapping editor</td>
@@ -710,7 +710,7 @@ Table&nbsp;1
 <td>✓</td>
 <td>-</td>
 <td>Java</td>
-<td><a href="https://spdx.org/licenses/GPL-3.0-or-later">GPL-3.0-or-later</a></td>
+<td><a href="https://spdx.org/licenses/GPL-3.0-or-later">GPL</a></td>
 <td><a href="https://github.com/wandora-team/wandora">github</a></td>
 <td>2023</td>
 <td>editor</td>
@@ -721,7 +721,7 @@ Table&nbsp;1
 <td>-</td>
 <td>✓</td>
 <td>Java</td>
-<td><a href="https://spdx.org/licenses/GPL-3.0-or-later">GPL-3.0-or-later</a></td>
+<td><a href="https://spdx.org/licenses/GPL-3.0-or-later">GPL</a></td>
 <td><a href="https://gitlab.inria.fr/moex/alignapi/">inria</a></td>
 <td>2023</td>
 <td>database</td>
@@ -743,7 +743,7 @@ Table&nbsp;1
 <td>✓</td>
 <td>✓</td>
 <td>Java</td>
-<td><a href="https://spdx.org/licenses/GPL-3.0-or-later">GPL-3.0-or-later</a></td>
+<td><a href="https://spdx.org/licenses/GPL-3.0-or-later">GPL</a></td>
 <td><a href="https://github.com/culturecommunication/ginco">github</a></td>
 <td>2022</td>
 <td>editor</td>
@@ -765,7 +765,7 @@ Table&nbsp;1
 <td>✓</td>
 <td>-</td>
 <td>JavaScript</td>
-<td><a href="https://spdx.org/licenses/Apache-2.0">Apache-2.0</a></td>
+<td><a href="https://spdx.org/licenses/Apache-2.0">Apache</a></td>
 <td><a href="https://github.com/tkurz/skosjs">github</a></td>
 <td>2022</td>
 <td>editor</td>
@@ -809,7 +809,7 @@ Table&nbsp;1
 <td>-</td>
 <td>✓</td>
 <td>Java</td>
-<td><a href="https://spdx.org/licenses/Apache-2.0">Apache-2.0</a></td>
+<td><a href="https://spdx.org/licenses/Apache-2.0">Apache</a></td>
 <td><a href="https://github.com/oeg-upm/Themis">github</a></td>
 <td>2021</td>
 <td>validator</td>
@@ -820,7 +820,7 @@ Table&nbsp;1
 <td>-</td>
 <td>✓</td>
 <td>PHP</td>
-<td><a href="https://spdx.org/licenses/GPL-3.0-or-later">GPL-3.0-or-later</a></td>
+<td><a href="https://spdx.org/licenses/GPL-3.0-or-later">GPL</a></td>
 <td><a href="https://github.com/OpenSKOS/OpenSKOS">github</a></td>
 <td>2020</td>
 <td>viewer, editor</td>
@@ -842,7 +842,7 @@ Table&nbsp;1
 <td>-</td>
 <td>✓</td>
 <td>XSLT</td>
-<td><a href="https://spdx.org/licenses/Apache-2.0">Apache-2.0</a></td>
+<td><a href="https://spdx.org/licenses/Apache-2.0">Apache</a></td>
 <td><a href="https://github.com/SISS/sissvoc">github</a></td>
 <td>2019</td>
 <td>viewer</td>
@@ -853,7 +853,7 @@ Table&nbsp;1
 <td>-</td>
 <td>-</td>
 <td>Java</td>
-<td><a href="https://spdx.org/licenses/CC-BY-SA-4.0">CC-BY-SA-4.0</a></td>
+<td><a href="https://spdx.org/licenses/CC-BY-SA-4.0">CC</a></td>
 <td><a href="https://bitbucket.org/tfrancart/sparna/src/master/">bitbucket</a></td>
 <td>2018</td>
 <td>viewer, converter</td>
@@ -864,7 +864,7 @@ Table&nbsp;1
 <td>-</td>
 <td>✓</td>
 <td>PHP, JavaScript</td>
-<td><a href="https://spdx.org/licenses/Apache-2.0">Apache-2.0</a></td>
+<td><a href="https://spdx.org/licenses/Apache-2.0">Apache</a></td>
 <td><a href="https://github.com/OntoZoo/ontobee">github</a></td>
 <td>2018</td>
 <td>viewer</td>
@@ -875,7 +875,7 @@ Table&nbsp;1
 <td>✓</td>
 <td>✓</td>
 <td>Java</td>
-<td><a href="https://spdx.org/licenses/LGPL-3.0-or-later">LGPL-3.0-or-later</a></td>
+<td><a href="https://spdx.org/licenses/LGPL-3.0-or-later">LGPL</a></td>
 <td><a href="https://github.com/Blulab-Utah/SKOSEditor">github</a></td>
 <td>2016</td>
 <td>editor</td>
@@ -886,7 +886,7 @@ Table&nbsp;1
 <td>✓</td>
 <td>-</td>
 <td>Java</td>
-<td><a href="https://spdx.org/licenses/BSD-3-Clause">BSD-3-Clause</a></td>
+<td><a href="https://spdx.org/licenses/BSD-3-Clause">BSD</a></td>
 <td><a href="https://github.com/MetadataResearchCenter/hive-mrc">github</a></td>
 <td>2015</td>
 <td>viewer</td>
@@ -897,7 +897,7 @@ Table&nbsp;1
 <td>-</td>
 <td>-</td>
 <td>Java</td>
-<td><a href="https://spdx.org/licenses/GPL-3.0-or-later">GPL-3.0-or-later</a></td>
+<td><a href="https://spdx.org/licenses/GPL-3.0-or-later">GPL</a></td>
 <td><a href="http://www.askosi.org/example/">askosi</a></td>
 <td>2011</td>
 <td>viewer</td>
@@ -908,7 +908,7 @@ Table&nbsp;1
 <td>✓</td>
 <td>-</td>
 <td>Java</td>
-<td><a href="https://spdx.org/licenses/LGPL-3.0-or-later">LGPL-3.0-or-later</a></td>
+<td><a href="https://spdx.org/licenses/LGPL-3.0-or-later">LGPL</a></td>
 <td><a href="https://sourceforge.net/projects/thmanager/">sourceforge</a></td>
 <td>2006</td>
 <td>editor</td>
@@ -969,6 +969,7 @@ Table&nbsp;1
 </section>
 <section id="metadata" class="level2">
 <h2 class="anchored" data-anchor-id="metadata">Metadata</h2>
+<p>Machine-readable description of the software is based on <a href="https://codemeta.github.io/">CodeMeta</a> plus custom fields <code>api</code> and <code>edit</code>.</p>
 <table class="caption-top table">
 <colgroup>
 <col style="width: 25%">

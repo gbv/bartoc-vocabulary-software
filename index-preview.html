@@ -5,7 +5,7 @@
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-    <meta name="dcterms.date" content="2025-05-30">
+    <meta name="dcterms.date" content="2025-06-04">
 
     <title>Software for management of knowledge organization systems</title>
     <style>
@@ -185,10 +185,10 @@
 <link rel="shortcut icon" href="bartoc-icon.png" type="image/png">  
       <meta name="citation_title" content="Software for management of knowledge organization systems">
 <meta name="citation_author" content="Jakob Voß">
-<meta name="citation_publication_date" content="2025-05-30">
-<meta name="citation_cover_date" content="2025-05-30">
+<meta name="citation_publication_date" content="2025-06-04">
+<meta name="citation_cover_date" content="2025-06-04">
 <meta name="citation_year" content="2025">
-<meta name="citation_online_date" content="2025-05-30">
+<meta name="citation_online_date" content="2025-06-04">
 <meta name="citation_language" content="en">
 <meta name="citation_reference" content="citation_title=Coli-conc Technical Report 2: Open Source KOS software;,citation_abstract=This report gives an overview about Open Source software for Knowledge Organization Systems (KOS).;,citation_author=Jakob Voß;,citation_publication_date=2016-03;,citation_cover_date=2016-03;,citation_year=2016;,citation_fulltext_html_url=https://zenodo.org/records/48227;,citation_doi=10.5281/zenodo.48227;">
 <meta name="citation_reference" content="citation_title=Open Source web applications for Knowledge Organization Systems;,citation_abstract=This report gives an overview about Open Source web applications to create, manage, and publish Knowledge Organization Systems (KOS).;,citation_author=Jakob Voß;,citation_publication_date=2016-08;,citation_cover_date=2016-08;,citation_year=2016;,citation_fulltext_html_url=https://zenodo.org/records/61262;,citation_doi=10.5281/zenodo.61262;">
@@ -234,7 +234,7 @@
                 <div>
             <div class="quarto-title-meta-heading">Published</div>
             <div class="quarto-title-meta-contents">
-              <p class="date">May 30, 2025</p>
+              <p class="date">June 4, 2025</p>
             </div>
           </div>
           
@@ -270,25 +270,26 @@
        <p>The terminology registry <strong><a href="https://bartoc.org/">BARTOC</a></strong> collects information about all kinds of <strong>knowledge organization systems</strong> (KOS) such as controlled vocabularies, classifications, ontologies, and other semantic artifacts. This report summarizes information about <a href="#kos-software">software for KOS management</a>.</p>
 <section id="scope" class="level2">
 <h2 class="anchored" data-anchor-id="scope">Scope</h2>
-<p>This report is limited to <strong><a href="#kos-software">specialized KOS software</a> for editing, vizualizing and/or analyzing terminologies.</strong> The term “terminology” in this document is used as synonym for all kinds of KOS. Software is excluded if:</p>
+<p>This report is limited to <strong><a href="#kos-software">specialized KOS software</a> for editing, vizualizing and/or analyzing terminologies.</strong> The term “terminology” in this document is used as synonym for all kinds of KOS. Software is excluded if it:</p>
 <ul>
-<li>it only happens to make use of terminologies (for instance <a href="https://openrefine.org/">OpenRefine</a> and <a href="https://mix-n-match.toolforge.org/">mix’n’match</a>), or</li>
-<li>it is more <a href="#generic-software">generic software</a> that can be used for terminology management among other use cases (like database management systems), or</li>
-<li>it is only used as <a href="#hosted-services">hosted service</a>, or</li>
-<li>it is a programming library (<a href="https://github.com/gbv/jskos-vue/">jskos-vue</a>, <a href="https://github.com/gbv/cocoda-sdk/">cocoda-sdk</a>, <a href="https://github.com/ts4nfdi/terminology-service-suite">TSS Widgets</a>, <a href="http://gbv.github.io/ng-skos/">ng-skos</a>…), or</li>
-<li>it is limited to simple lists of terms, glossaries and similar, or</li>
-<li>it is so called <a href="#terminology-management">terminology management</a> software for a a centralized repository of approved terms, definitions, and translations in an organization, or</li>
-<li>it is only meant <a href="#identifier-systems">to manage identifiers</a>.</li>
+<li>only happens to make use of terminologies (for instance <a href="https://openrefine.org/">OpenRefine</a> and <a href="https://mix-n-match.toolforge.org/">mix’n’match</a>), or</li>
+<li>is more <a href="#generic-software">generic software</a> that can be used for terminology management among other use cases (like database management systems), or</li>
+<li>is only used as <a href="#hosted-services">hosted service</a>, or</li>
+<li>is limited to simple lists of terms, glossaries and similar, or</li>
+<li>is so called <a href="#terminology-management">terminology management</a> software for a a centralized repository of approved terms, definitions, and translations in an organization, or</li>
+<li>is only meant <a href="#identifier-systems">to manage identifiers</a>, or</li>
+<li>is a programming library (<a href="https://github.com/gbv/jskos-vue/">jskos-vue</a>, <a href="https://github.com/gbv/cocoda-sdk/">cocoda-sdk</a>, <a href="https://github.com/ts4nfdi/terminology-service-suite">TSS Widgets</a>, <a href="http://gbv.github.io/ng-skos/">ng-skos</a>…), or</li>
+<li>is a tool for <a href="#data-transformation">data transformation</a>.</li>
 </ul>
 <!-- start landscape mode in PDF -->
 </section>
 <section id="kos-software" class="level2">
 <h2 class="anchored" data-anchor-id="kos-software">KOS software</h2>
-<div class="cell-container"><div class="cell-decorator"><pre>In [1]:</pre></div><div id="6552b8e3" class="cell" data-execution_count="1">
+<div class="cell-container"><div class="cell-decorator"><pre>In [1]:</pre></div><div id="17ace5ee" class="cell" data-execution_count="1">
 <div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> pandas <span class="im">as</span> pd</span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>kos <span class="op">=</span> pd.read_json(<span class="st">'kos-software.json'</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div></div>
-<div id="628c3fae" class="cell markdown">
+<div id="6999e968" class="cell markdown">
 <p>This report includes <strong>69</strong> instances of KOS software so far. The list is managed <a href="kos-software.json">in a JSON file</a> as array of <a href="https://codemeta.github.io/">CodeMeta</a> records with fields as <a href="#metadata">described below</a>. Applications without license or repository are closed source. Deprecated applications are included for historical reference.</p>
 </div>
 <div class="cell-container"><div class="cell-decorator"><pre>In [2]:</pre></div><div class="cell" data-execution_count="2">
@@ -329,7 +330,7 @@
 <span id="cb2-35"><a href="#cb2-35" aria-hidden="true" tabindex="-1"></a>kos <span class="op">=</span> kos.rename(columns<span class="op">=</span>{<span class="st">"operatingSystem"</span>:<span class="st">"system"</span>,<span class="st">"programmingLanguage"</span>:<span class="st">"languages"</span>,<span class="st">"codeRepository"</span>:<span class="st">"repository"</span>,<span class="st">"dateModified"</span>:<span class="st">"update"</span>,<span class="st">"applicationSubCategory"</span>:<span class="st">"category"</span>})</span>
 <span id="cb2-36"><a href="#cb2-36" aria-hidden="true" tabindex="-1"></a>display(HTML(kos.to_html(escape<span class="op">=</span><span class="va">False</span>,index<span class="op">=</span><span class="va">False</span>)))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stderr">
-<pre><code>/tmp/ipykernel_2271/1505819908.py:34: FutureWarning: DataFrame.applymap has been deprecated. Use DataFrame.map instead.
+<pre><code>/tmp/ipykernel_2427/1505819908.py:34: FutureWarning: DataFrame.applymap has been deprecated. Use DataFrame.map instead.
   kos = kos.applymap(cell)</code></pre>
 </div>
 <div class="cell-container"><div class="cell-decorator"><pre>In [2]:</pre></div><div id="tbl-software" class="cell quarto-float quarto-figure quarto-figure-center anchored" data-execution_count="2">
@@ -1120,7 +1121,7 @@ Table&nbsp;1
 </figure>
 </div></div>
 </div></div>
-<div id="3cf64969" class="cell markdown">
+<div id="4863e801" class="cell markdown">
 <p>Please <a href="https://github.com/gbv/bartoc-vocabulary-software/issues">open an issue</a> if some relevant software is missing or data seems invalid!</p>
 <!-- end landscape mode in PDF -->
 <section id="metadata" class="level2">
@@ -1181,7 +1182,7 @@ Table&nbsp;1
 <h2 class="anchored" data-anchor-id="kos-software-categories">KOS software categories</h2>
 </section>
 </div>
-<div class="cell-container"><div class="cell-decorator"><pre>In [3]:</pre></div><div id="73db19c9" class="cell" data-execution_count="3">
+<div class="cell-container"><div class="cell-decorator"><pre>In [3]:</pre></div><div id="b9d9cc76" class="cell" data-execution_count="3">
 <div class="sourceCode cell-code" id="cb4"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>df <span class="op">=</span> pd.read_json(<span class="st">'kos-software.json'</span>)</span>
 <span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>categories <span class="op">=</span> {}</span>
 <span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> item <span class="kw">in</span> df[<span class="st">"applicationSubCategory"</span>]:</span>
@@ -1191,7 +1192,7 @@ Table&nbsp;1
 <span id="cb4-7"><a href="#cb4-7" aria-hidden="true" tabindex="-1"></a>        <span class="cf">else</span>:</span>
 <span id="cb4-8"><a href="#cb4-8" aria-hidden="true" tabindex="-1"></a>            categories[category] <span class="op">=</span> <span class="dv">1</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div></div>
-<div id="4376609c" class="cell markdown">
+<div id="c05bfe88" class="cell markdown">
 <ul>
 <li><strong>viewer</strong>: to display terminologies (23)</li>
 <li><strong>editor</strong>: to create and modify terminologies (24)</li>
@@ -1228,6 +1229,10 @@ Table&nbsp;1
 <section id="identifier-systems" class="level3">
 <h3 class="anchored" data-anchor-id="identifier-systems">Identifier systems</h3>
 <p>Several systems and applications exist to manage identifiers (Domain Name System, <a href="https://w3id.org/">w3id</a>…). These systems are relevant to manage KOS but they are rarely enough for KOS management alone. See <a href="https://bioregistry.io/registry/" class="uri">https://bioregistry.io/registry/</a> for a registry of identifier systems used with KOS.</p>
+</section>
+<section id="data-transformation" class="level3">
+<h3 class="anchored" data-anchor-id="data-transformation">Data transformation</h3>
+<p>Several programming languages, tools, and frameworks exist to define and apply transformation of data from one format and/or data model into another one (<a href="https://jqlang.org/">jq</a>, <a href="https://en.wikipedia.org/wiki/XSLT">XSLT</a>,<a href="https://librecat.org/">Catmandu</a>, <a href="https://getdtl.org/">DTL</a>, <a href="https://linkml.io/linkml-map/">LinkML-map</a>, <a href="https://en.wikipedia.org/wiki/QVT">QVT</a>…).</p>
 </section>
 <section id="other-software" class="level3">
 <h3 class="anchored" data-anchor-id="other-software">Other software</h3>

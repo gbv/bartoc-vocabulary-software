@@ -205,7 +205,7 @@
                   Verbundzentrale des GBV (VZG)
               }
       
-\date{2025-05-30}
+\date{2025-06-04}
 \begin{document}
 \maketitle
 
@@ -226,34 +226,36 @@ information about \hyperref[kos-software]{software for KOS management}.
 This report is limited to \textbf{\hyperref[kos-software]{specialized
 KOS software} for editing, vizualizing and/or analyzing terminologies.}
 The term ``terminology'' in this document is used as synonym for all
-kinds of KOS. Software is excluded if:
+kinds of KOS. Software is excluded if it:
 
 \begin{itemize}
 \tightlist
 \item
-  it only happens to make use of terminologies (for instance
+  only happens to make use of terminologies (for instance
   \href{https://openrefine.org/}{OpenRefine} and
   \href{https://mix-n-match.toolforge.org/}{mix'n'match}), or
 \item
-  it is more \hyperref[generic-software]{generic software} that can be
-  used for terminology management among other use cases (like database
+  is more \hyperref[generic-software]{generic software} that can be used
+  for terminology management among other use cases (like database
   management systems), or
 \item
-  it is only used as \hyperref[hosted-services]{hosted service}, or
+  is only used as \hyperref[hosted-services]{hosted service}, or
 \item
-  it is a programming library
+  is limited to simple lists of terms, glossaries and similar, or
+\item
+  is so called \hyperref[terminology-management]{terminology management}
+  software for a a centralized repository of approved terms,
+  definitions, and translations in an organization, or
+\item
+  is only meant \hyperref[identifier-systems]{to manage identifiers}, or
+\item
+  is a programming library
   (\href{https://github.com/gbv/jskos-vue/}{jskos-vue},
   \href{https://github.com/gbv/cocoda-sdk/}{cocoda-sdk},
   \href{https://github.com/ts4nfdi/terminology-service-suite}{TSS
   Widgets}, \href{http://gbv.github.io/ng-skos/}{ng-skos}\ldots), or
 \item
-  it is limited to simple lists of terms, glossaries and similar, or
-\item
-  it is so called \hyperref[terminology-management]{terminology
-  management} software for a a centralized repository of approved terms,
-  definitions, and translations in an organization, or
-\item
-  it is only meant \hyperref[identifier-systems]{to manage identifiers}.
+  is a tool for \hyperref[data-transformation]{data transformation}.
 \end{itemize}
 
 \newpage
@@ -669,6 +671,16 @@ Name System, \href{https://w3id.org/}{w3id}\ldots). These systems are
 relevant to manage KOS but they are rarely enough for KOS management
 alone. See \url{https://bioregistry.io/registry/} for a registry of
 identifier systems used with KOS.
+
+\subsubsection{Data transformation}\label{data-transformation}
+
+Several programming languages, tools, and frameworks exist to define and
+apply transformation of data from one format and/or data model into
+another one (\href{https://jqlang.org/}{jq},
+\href{https://en.wikipedia.org/wiki/XSLT}{XSLT},\href{https://librecat.org/}{Catmandu},
+\href{https://getdtl.org/}{DTL},
+\href{https://linkml.io/linkml-map/}{LinkML-map},
+\href{https://en.wikipedia.org/wiki/QVT}{QVT}\ldots).
 
 \subsubsection{Other software}\label{other-software}
 

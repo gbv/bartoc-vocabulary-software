@@ -20,15 +20,16 @@ The terminology registry **[BARTOC](https://bartoc.org/)** collects information 
 
 ## Scope
 
-This report is limited to **[specialized KOS software](#kos-software) for editing, vizualizing and/or analyzing terminologies.** The term "terminology" in this document is used as synonym for all kinds of KOS. Software is excluded if:
+This report is limited to **[specialized KOS software](#kos-software) for editing, vizualizing and/or analyzing terminologies.** The term "terminology" in this document is used as synonym for all kinds of KOS. Software is excluded if it:
 
-- it only happens to make use of terminologies (for instance [OpenRefine] and [mix'n'match]), or
-- it is more [generic software] that can be used for terminology management among other use cases (like database management systems), or
-- it is only used as [hosted service](#hosted-services), or
-- it is a programming library ([jskos-vue], [cocoda-sdk], [TSS Widgets], [ng-skos]...), or
-- it is limited to simple lists of terms, glossaries and similar, or
-- it is so called [terminology management] software for a a centralized repository of approved terms, definitions, and translations in an organization, or
-- it is only meant [to manage identifiers](#identifier-systems).
+- only happens to make use of terminologies (for instance [OpenRefine] and [mix'n'match]), or
+- is more [generic software] that can be used for terminology management among other use cases (like database management systems), or
+- is only used as [hosted service](#hosted-services), or
+- is limited to simple lists of terms, glossaries and similar, or
+- is so called [terminology management] software for a a centralized repository of approved terms, definitions, and translations in an organization, or
+- is only meant [to manage identifiers](#identifier-systems), or
+- is a programming library ([jskos-vue], [cocoda-sdk], [TSS Widgets], [ng-skos]...), or
+- is a tool for [data transformation].
 
 <!-- start landscape mode in PDF -->
 \newpage
@@ -163,6 +164,10 @@ The term "terminology management" is also used for systems to organize the terms
 
 Several systems and applications exist to manage identifiers (Domain Name System, [w3id](https://w3id.org/)...). These systems are relevant to manage KOS but they are rarely enough for KOS management alone. See <https://bioregistry.io/registry/> for a registry of identifier systems used with KOS.
 
+### Data transformation
+
+Several programming languages, tools, and frameworks exist to define and apply transformation of data from one format and/or data model into another one ([jq], [XSLT],[Catmandu],  [DTL], [LinkML-map], [QVT]...).
+
 ### Other software
 
 The following do not fit into of of the software categories above or there was not enough information:
@@ -207,4 +212,9 @@ and possibly others.
 [ng-skos]: http://gbv.github.io/ng-skos/
 [cocoda-sdk]: https://github.com/gbv/cocoda-sdk/
 [PoolParty Semantic Suite]: https://www.poolparty.biz/product-overview
-
+[Catmandu]: https://librecat.org/
+[jq]: https://jqlang.org/
+[XSLT]: https://en.wikipedia.org/wiki/XSLT
+[LinkML-map]: https://linkml.io/linkml-map/
+[QVT]: https://en.wikipedia.org/wiki/QVT
+[DTL]: https://getdtl.org/

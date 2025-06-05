@@ -20,16 +20,13 @@ The terminology registry **[BARTOC](https://bartoc.org/)** collects information 
 
 ## Scope
 
-This report is limited to **[specialized KOS software](#kos-software) for editing, vizualizing and/or analyzing terminologies.** The term "terminology" in this document is used as synonym for all kinds of KOS. Software is excluded if it:
+This report is limited to **[specialized KOS software](#kos-software) for editing, vizualizing and/or analyzing terminologies.** The term "terminology" in this document is used as synonym for all kinds of KOS. Software is excluded if:
 
-- only happens to make use of terminologies (for instance [OpenRefine] and [mix'n'match]), or
-- is more [generic software] that can be used for terminology management among other use cases (like database management systems), or
-- is only used as [hosted service](#hosted-services), or
-- is limited to simple lists of terms, glossaries and similar, or
-- is so called [terminology management] software for a a centralized repository of approved terms, definitions, and translations in an organization, or
-- is only meant [to manage identifiers](#identifier-systems), or
-- is a programming library ([jskos-vue], [cocoda-sdk], [TSS Widgets], [ng-skos]...), or
-- is a tool for [data transformation].
+- it is not aimed at KOS management in particular but [more generic software] such as database management systems, content management systems and text editors,
+- it is [more specific software], restricted to a limited type of KOS, such software for linguistic terminology management and identifier systems,
+- it [cannot be used](#limited-use) as stand-alone application, like programming libraries, and hosted services.
+
+Software for **ontology alignment** is only included if it is more then a research prototype and if we managed to get it running. See @Bergman2018 for a comprehensive list of software in this category. The [Ontology Alignment Evaluation Initiative (OAEI)](https://oaei.ontologymatching.org/) motivates the creation of tools for automated ontology alignment.
 
 <!-- start landscape mode in PDF -->
 \newpage
@@ -132,9 +129,9 @@ for item in df["applicationSubCategory"]:
 
 ## Related software
 
-Knowledge organization systems are also managed by other types software [excluded from this report](#scope).
+Knowledge organization systems can also be managed with other types software [excluded from this report](#scope).
 
-### Generic software
+### More generic software
 
 Simple terminologies can be managed in a **spreadsheet** (LibreOffice Calc, Excel, Google Sheets...). This software lacks most special functionality for terminology management but the usability and accessibility is very high. Some tools in the list above (VocExcel, voc4cat-tool) enhance standard spreadsheets with terminology management functionalities.
 
@@ -144,33 +141,27 @@ Tools for personal **knowledge management** (such as [Obsidian] and [Notion]) he
 
 Several **Content Management Systems** (CMS) allow to manage a list or hierarchy of topics or other entities for knowledge managements. If these lists can be exported, the CMS can be applied to manage terminologies. An example is [Drupal], which was used for the first version of BARTOC terminology registry.
 
-Terminologies can also directly be managed in **files** for instance in RDF/Turtle syntax. This only requires a text editor but the risk is high to introduce errors. A version control system such as git can be used on top to track changes.
+Terminologies can also directly be managed in **files** for instance in RDF/Turtle syntax. This only requires a **text editor** but the risk is high to introduce errors. A **version control system** such as git can be used on top to track changes.
 
-### Hosted services
+### More specific software
 
-Some organizations host their own applications for KOS management or related services. Examples include:
+The term **terminology management** is also used for systems to organize the terms, definitions, and translations used in an organization. See @Montoro2018 for a list of terminology management systems. The focus of these systems is more on translation but there is some overlap with KOS management. Software aimed at simple lists of terms, definitions, glossaries and similar is also excluded from this report.
 
-- [DANTE](https://doi.org/10.11588/akmb.2018.1.63475)
-- [xTree](https://xtree-public.digicult-verbund.de/)
-- [Linked Open Vocabularies (LOV)](http://lov.okfn.org/dataset/lov/)
+Several systems and applications exist to manage identifiers (Domain Name System, [w3id](https://w3id.org/)...). These **identifier systems** are relevant to manage KOS but they are rarely enough for KOS management alone. See [Bioregistry](https://bioregistry.io/) for a registry of identifier systems used with KOS.
 
-More examples may be found in the BARTOC [list of terminology registries](https://bartoc.org/registries).
+Several tools, frameworks and programming languages exist for **data transformation** between different formats and/or models ([XSLT], [jq], [Catmandu], [DTL], [LinkML-map], [QVT]...). These transformations often imply or make use of terminology mappings.
 
-### Terminology management
+Some tools for **data curation** also make use of or require terminologies, for instance [OpenRefine] and [mix'n'match]. The latter comes close to a mapping editor but it is limited to mappings with Wikidata.
 
-The term "terminology management" is also used for systems to organize the terms, definitions, and translations used in an organization. See @Montoro2018 for a list of terminology management systems. The focus of these systems is more on translation but there is some overlap with KOS management.
+### Limited use
 
-### Identifier systems
+Some organizations run **hosted services** for KOS management or related services. Examples include [DANTE](https://doi.org/10.11588/akmb.2018.1.63475), [xTree](https://xtree-public.digicult-verbund.de/) and [Linked Open Vocabularies (LOV)](http://lov.okfn.org/dataset/lov/). More examples may be found in the BARTOC [list of terminology registries](https://bartoc.org/registries).
 
-Several systems and applications exist to manage identifiers (Domain Name System, [w3id](https://w3id.org/)...). These systems are relevant to manage KOS but they are rarely enough for KOS management alone. See <https://bioregistry.io/registry/> for a registry of identifier systems used with KOS.
-
-### Data transformation
-
-Several programming languages, tools, and frameworks exist to define and apply transformation of data from one format and/or data model into another one ([jq], [XSLT],[Catmandu],  [DTL], [LinkML-map], [QVT]...).
+**programming libraries** such as [cocoda-sdk], [TSS Widgets], [jskos-vue], [SeMRA], and [ng-skos] are used to build KOS software.
 
 ### Other software
 
-The following do not fit into of of the software categories above or there was not enough information:
+The following do not fit into the software categories above or there was not enough information:
 
 - [Scripts to analyze concept drift](https://github.com/Multilingual-LGBTQIA-Vocabularies/Examing_LGBTQ_Concepts) as part of a research project (Open Source)
 - [TopBraid EDG](https://www.topquadrant.com/topbraid-edg/) is a commercial knowledge graph editor
@@ -180,8 +171,7 @@ The following do not fit into of of the software categories above or there was n
 
 ## Related works
 
-This report is based on two reports [@Voss2016a;@Voss2016b] from the beginning of [project coli-conc](https://coli-conc.gbv.de/) that led to a [a wiki page](https://github.com/gbv/bartoc.org/wiki/Software-for-controlled-vocabularies) managed between 2020 and 2024. 
-Other lists of software for management of terminologies include: See @Miles2009 for a report created during the specification of SKOS W3C Recommendation and the corresponding wiki pages at <https://www.w3.org/2001/sw/wiki/Category:Editor>.
+This report is based on two reports [@Voss2016a;@Voss2016b] from the beginning of [project coli-conc](https://coli-conc.gbv.de/) that led to a [a wiki page](https://github.com/gbv/bartoc.org/wiki/Software-for-controlled-vocabularies) managed between 2020 and 2024. See also @Miles2009 for a report created during the specification of SKOS W3C Recommendation, the corresponding wiki pages at <https://www.w3.org/2001/sw/wiki/Category:Editor>, and @Bergman2018 for a list of software for ontology alignment.
 
 ## Acknowledgements
 
@@ -218,3 +208,4 @@ and possibly others.
 [LinkML-map]: https://linkml.io/linkml-map/
 [QVT]: https://en.wikipedia.org/wiki/QVT
 [DTL]: https://getdtl.org/
+[SeMRA]: https://semra.readthedocs.io/

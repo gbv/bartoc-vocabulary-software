@@ -6,7 +6,7 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="dcterms.date" content="2025-06-04">
+<meta name="dcterms.date" content="2025-06-05">
 
 <title>Software for management of knowledge organization systems</title>
 <style>
@@ -64,15 +64,16 @@ div.csl-indent {
 
 <meta name="citation_title" content="Software for management of knowledge organization systems">
 <meta name="citation_author" content="Jakob Voß">
-<meta name="citation_publication_date" content="2025-06-04">
-<meta name="citation_cover_date" content="2025-06-04">
+<meta name="citation_publication_date" content="2025-06-05">
+<meta name="citation_cover_date" content="2025-06-05">
 <meta name="citation_year" content="2025">
-<meta name="citation_online_date" content="2025-06-04">
+<meta name="citation_online_date" content="2025-06-05">
 <meta name="citation_language" content="en">
 <meta name="citation_reference" content="citation_title=Coli-conc Technical Report 2: Open Source KOS software;,citation_abstract=This report gives an overview about Open Source software for Knowledge Organization Systems (KOS).;,citation_author=Jakob Voß;,citation_publication_date=2016-03;,citation_cover_date=2016-03;,citation_year=2016;,citation_fulltext_html_url=https://zenodo.org/records/48227;,citation_doi=10.5281/zenodo.48227;">
 <meta name="citation_reference" content="citation_title=Open Source web applications for Knowledge Organization Systems;,citation_abstract=This report gives an overview about Open Source web applications to create, manage, and publish Knowledge Organization Systems (KOS).;,citation_author=Jakob Voß;,citation_publication_date=2016-08;,citation_cover_date=2016-08;,citation_year=2016;,citation_fulltext_html_url=https://zenodo.org/records/61262;,citation_doi=10.5281/zenodo.61262;">
 <meta name="citation_reference" content="citation_title=W3C SKOS implementation report;,citation_abstract=This document summarises implementation experience reported to the Semantic Web Deployment Working Group relating to SKOS.;,citation_author=Alistair Miles;,citation_author=Sean Bechhofer;,citation_publication_date=2009-05;,citation_cover_date=2009-05;,citation_year=2009;,citation_fulltext_html_url=https://www.w3.org/2006/07/SWD/SKOS/reference/20090315/implementation.html;">
 <meta name="citation_reference" content="citation_title=Terminology management systems;,citation_author=Maria Pia Montoro;,citation_publication_date=2018;,citation_cover_date=2018;,citation_year=2018;,citation_fulltext_html_url=https://recremisi.blogspot.com/p/acrolinxterminology-lifecycle.html;">
+<meta name="citation_reference" content="citation_title=30 active ontology alignment tools;,citation_author=Michael K. Bergman;,citation_publication_date=2018;,citation_cover_date=2018;,citation_year=2018;,citation_fulltext_html_url=https://www.mkbergman.com/2129/30-active-ontology-alignment-tools/;">
 </head>
 
 <body class="quarto-light">
@@ -106,7 +107,7 @@ div.csl-indent {
                 <div>
             <div class="quarto-title-meta-heading">Published</div>
             <div class="quarto-title-meta-contents">
-              <p class="date">June 4, 2025</p>
+              <p class="date">June 5, 2025</p>
             </div>
           </div>
           
@@ -136,11 +137,9 @@ div.csl-indent {
   <li><a href="#kos-software-categories" id="toc-kos-software-categories" class="nav-link" data-scroll-target="#kos-software-categories">KOS software categories</a></li>
   <li><a href="#related-software" id="toc-related-software" class="nav-link" data-scroll-target="#related-software">Related software</a>
   <ul class="collapse">
-  <li><a href="#generic-software" id="toc-generic-software" class="nav-link" data-scroll-target="#generic-software">Generic software</a></li>
-  <li><a href="#hosted-services" id="toc-hosted-services" class="nav-link" data-scroll-target="#hosted-services">Hosted services</a></li>
-  <li><a href="#terminology-management" id="toc-terminology-management" class="nav-link" data-scroll-target="#terminology-management">Terminology management</a></li>
-  <li><a href="#identifier-systems" id="toc-identifier-systems" class="nav-link" data-scroll-target="#identifier-systems">Identifier systems</a></li>
-  <li><a href="#data-transformation" id="toc-data-transformation" class="nav-link" data-scroll-target="#data-transformation">Data transformation</a></li>
+  <li><a href="#more-generic-software" id="toc-more-generic-software" class="nav-link" data-scroll-target="#more-generic-software">More generic software</a></li>
+  <li><a href="#more-specific-software" id="toc-more-specific-software" class="nav-link" data-scroll-target="#more-specific-software">More specific software</a></li>
+  <li><a href="#limited-use" id="toc-limited-use" class="nav-link" data-scroll-target="#limited-use">Limited use</a></li>
   <li><a href="#other-software" id="toc-other-software" class="nav-link" data-scroll-target="#other-software">Other software</a></li>
   </ul></li>
   <li><a href="#related-works" id="toc-related-works" class="nav-link" data-scroll-target="#related-works">Related works</a></li>
@@ -161,17 +160,13 @@ div.csl-indent {
 <p>The terminology registry <strong><a href="https://bartoc.org/">BARTOC</a></strong> collects information about all kinds of <strong>knowledge organization systems</strong> (KOS) such as controlled vocabularies, classifications, ontologies, and other semantic artifacts. This report summarizes information about <a href="#kos-software">software for KOS management</a>.</p>
 <section id="scope" class="level2">
 <h2 class="anchored" data-anchor-id="scope">Scope</h2>
-<p>This report is limited to <strong><a href="#kos-software">specialized KOS software</a> for editing, vizualizing and/or analyzing terminologies.</strong> The term “terminology” in this document is used as synonym for all kinds of KOS. Software is excluded if it:</p>
+<p>This report is limited to <strong><a href="#kos-software">specialized KOS software</a> for editing, vizualizing and/or analyzing terminologies.</strong> The term “terminology” in this document is used as synonym for all kinds of KOS. Software is excluded if:</p>
 <ul>
-<li>only happens to make use of terminologies (for instance <a href="https://openrefine.org/">OpenRefine</a> and <a href="https://mix-n-match.toolforge.org/">mix’n’match</a>), or</li>
-<li>is more <a href="#generic-software">generic software</a> that can be used for terminology management among other use cases (like database management systems), or</li>
-<li>is only used as <a href="#hosted-services">hosted service</a>, or</li>
-<li>is limited to simple lists of terms, glossaries and similar, or</li>
-<li>is so called <a href="#terminology-management">terminology management</a> software for a a centralized repository of approved terms, definitions, and translations in an organization, or</li>
-<li>is only meant <a href="#identifier-systems">to manage identifiers</a>, or</li>
-<li>is a programming library (<a href="https://github.com/gbv/jskos-vue/">jskos-vue</a>, <a href="https://github.com/gbv/cocoda-sdk/">cocoda-sdk</a>, <a href="https://github.com/ts4nfdi/terminology-service-suite">TSS Widgets</a>, <a href="http://gbv.github.io/ng-skos/">ng-skos</a>…), or</li>
-<li>is a tool for <a href="#data-transformation">data transformation</a>.</li>
+<li>it is not aimed at KOS management in particular but <a href="#more-generic-software">more generic software</a> such as database management systems, content management systems and text editors,</li>
+<li>it is <a href="#more-specific-software">more specific software</a>, restricted to a limited type of KOS, such software for linguistic terminology management and identifier systems,</li>
+<li>it <a href="#limited-use">cannot be used</a> as stand-alone application, like programming libraries, and hosted services.</li>
 </ul>
+<p>Software for <strong>ontology alignment</strong> is only included if it is more then a research prototype and if we managed to get it running. See <span class="citation" data-cites="Bergman2018">Bergman (<a href="#ref-Bergman2018" role="doc-biblioref">2018</a>)</span> for a comprehensive list of software in this category. The <a href="https://oaei.ontologymatching.org/">Ontology Alignment Evaluation Initiative (OAEI)</a> motivates the creation of tools for automated ontology alignment.</p>
 <!-- start landscape mode in PDF -->
 </section>
 <section id="kos-software" class="level2">
@@ -1036,40 +1031,30 @@ Table&nbsp;1
 </section>
 <section id="related-software" class="level2">
 <h2 class="anchored" data-anchor-id="related-software">Related software</h2>
-<p>Knowledge organization systems are also managed by other types software <a href="#scope">excluded from this report</a>.</p>
-<section id="generic-software" class="level3">
-<h3 class="anchored" data-anchor-id="generic-software">Generic software</h3>
+<p>Knowledge organization systems can also be managed with other types software <a href="#scope">excluded from this report</a>.</p>
+<section id="more-generic-software" class="level3">
+<h3 class="anchored" data-anchor-id="more-generic-software">More generic software</h3>
 <p>Simple terminologies can be managed in a <strong>spreadsheet</strong> (LibreOffice Calc, Excel, Google Sheets…). This software lacks most special functionality for terminology management but the usability and accessibility is very high. Some tools in the list above (VocExcel, voc4cat-tool) enhance standard spreadsheets with terminology management functionalities.</p>
 <p>The same applies to <strong>database management systems</strong> (RDBMS, NoSQL, RDF triple stores, property graph databases…) with some additional features such as unique key constraints but less usability. An edge case might be systems for management of knowledge graphs (such as Wikibase), included above.</p>
 <p>Tools for personal <strong>knowledge management</strong> (such as <a href="https://obsidian.md/">Obsidian</a> and <a href="https://www.notion.com/">Notion</a>) help to structure ideas and concepts. Similar tools exist for enterprises to support data integration, knowledge management and/or business intelligence of an organization (for instance <a href="https://www.poolparty.biz/product-overview">PoolParty Semantic Suite</a>).</p>
 <p>Several <strong>Content Management Systems</strong> (CMS) allow to manage a list or hierarchy of topics or other entities for knowledge managements. If these lists can be exported, the CMS can be applied to manage terminologies. An example is <a href="https://www.drupal.org/">Drupal</a>, which was used for the first version of BARTOC terminology registry.</p>
-<p>Terminologies can also directly be managed in <strong>files</strong> for instance in RDF/Turtle syntax. This only requires a text editor but the risk is high to introduce errors. A version control system such as git can be used on top to track changes.</p>
+<p>Terminologies can also directly be managed in <strong>files</strong> for instance in RDF/Turtle syntax. This only requires a <strong>text editor</strong> but the risk is high to introduce errors. A <strong>version control system</strong> such as git can be used on top to track changes.</p>
 </section>
-<section id="hosted-services" class="level3">
-<h3 class="anchored" data-anchor-id="hosted-services">Hosted services</h3>
-<p>Some organizations host their own applications for KOS management or related services. Examples include:</p>
-<ul>
-<li><a href="https://doi.org/10.11588/akmb.2018.1.63475">DANTE</a></li>
-<li><a href="https://xtree-public.digicult-verbund.de/">xTree</a></li>
-<li><a href="http://lov.okfn.org/dataset/lov/">Linked Open Vocabularies (LOV)</a></li>
-</ul>
-<p>More examples may be found in the BARTOC <a href="https://bartoc.org/registries">list of terminology registries</a>.</p>
+<section id="more-specific-software" class="level3">
+<h3 class="anchored" data-anchor-id="more-specific-software">More specific software</h3>
+<p>The term <strong>terminology management</strong> is also used for systems to organize the terms, definitions, and translations used in an organization. See <span class="citation" data-cites="Montoro2018">Montoro (<a href="#ref-Montoro2018" role="doc-biblioref">2018</a>)</span> for a list of terminology management systems. The focus of these systems is more on translation but there is some overlap with KOS management. Software aimed at simple lists of terms, definitions, glossaries and similar is also excluded from this report.</p>
+<p>Several systems and applications exist to manage identifiers (Domain Name System, <a href="https://w3id.org/">w3id</a>…). These <strong>identifier systems</strong> are relevant to manage KOS but they are rarely enough for KOS management alone. See <a href="https://bioregistry.io/">Bioregistry</a> for a registry of identifier systems used with KOS.</p>
+<p>Several tools, frameworks and programming languages exist for <strong>data transformation</strong> between different formats and/or models (<a href="https://en.wikipedia.org/wiki/XSLT">XSLT</a>, <a href="https://jqlang.org/">jq</a>, <a href="https://librecat.org/">Catmandu</a>, <a href="https://getdtl.org/">DTL</a>, <a href="https://linkml.io/linkml-map/">LinkML-map</a>, <a href="https://en.wikipedia.org/wiki/QVT">QVT</a>…). These transformations often imply or make use of terminology mappings.</p>
+<p>Some tools for <strong>data curation</strong> also make use of or require terminologies, for instance <a href="https://openrefine.org/">OpenRefine</a> and <a href="https://mix-n-match.toolforge.org/">mix’n’match</a>. The latter comes close to a mapping editor but it is limited to mappings with Wikidata.</p>
 </section>
-<section id="terminology-management" class="level3">
-<h3 class="anchored" data-anchor-id="terminology-management">Terminology management</h3>
-<p>The term “terminology management” is also used for systems to organize the terms, definitions, and translations used in an organization. See <span class="citation" data-cites="Montoro2018">Montoro (<a href="#ref-Montoro2018" role="doc-biblioref">2018</a>)</span> for a list of terminology management systems. The focus of these systems is more on translation but there is some overlap with KOS management.</p>
-</section>
-<section id="identifier-systems" class="level3">
-<h3 class="anchored" data-anchor-id="identifier-systems">Identifier systems</h3>
-<p>Several systems and applications exist to manage identifiers (Domain Name System, <a href="https://w3id.org/">w3id</a>…). These systems are relevant to manage KOS but they are rarely enough for KOS management alone. See <a href="https://bioregistry.io/registry/" class="uri">https://bioregistry.io/registry/</a> for a registry of identifier systems used with KOS.</p>
-</section>
-<section id="data-transformation" class="level3">
-<h3 class="anchored" data-anchor-id="data-transformation">Data transformation</h3>
-<p>Several programming languages, tools, and frameworks exist to define and apply transformation of data from one format and/or data model into another one (<a href="https://jqlang.org/">jq</a>, <a href="https://en.wikipedia.org/wiki/XSLT">XSLT</a>,<a href="https://librecat.org/">Catmandu</a>, <a href="https://getdtl.org/">DTL</a>, <a href="https://linkml.io/linkml-map/">LinkML-map</a>, <a href="https://en.wikipedia.org/wiki/QVT">QVT</a>…).</p>
+<section id="limited-use" class="level3">
+<h3 class="anchored" data-anchor-id="limited-use">Limited use</h3>
+<p>Some organizations run <strong>hosted services</strong> for KOS management or related services. Examples include <a href="https://doi.org/10.11588/akmb.2018.1.63475">DANTE</a>, <a href="https://xtree-public.digicult-verbund.de/">xTree</a> and <a href="http://lov.okfn.org/dataset/lov/">Linked Open Vocabularies (LOV)</a>. More examples may be found in the BARTOC <a href="https://bartoc.org/registries">list of terminology registries</a>.</p>
+<p><strong>programming libraries</strong> such as <a href="https://github.com/gbv/cocoda-sdk/">cocoda-sdk</a>, <a href="https://github.com/ts4nfdi/terminology-service-suite">TSS Widgets</a>, <a href="https://github.com/gbv/jskos-vue/">jskos-vue</a>, <a href="https://semra.readthedocs.io/">SeMRA</a>, and <a href="http://gbv.github.io/ng-skos/">ng-skos</a> are used to build KOS software.</p>
 </section>
 <section id="other-software" class="level3">
 <h3 class="anchored" data-anchor-id="other-software">Other software</h3>
-<p>The following do not fit into of of the software categories above or there was not enough information:</p>
+<p>The following do not fit into the software categories above or there was not enough information:</p>
 <ul>
 <li><a href="https://github.com/Multilingual-LGBTQIA-Vocabularies/Examing_LGBTQ_Concepts">Scripts to analyze concept drift</a> as part of a research project (Open Source)</li>
 <li><a href="https://www.topquadrant.com/topbraid-edg/">TopBraid EDG</a> is a commercial knowledge graph editor</li>
@@ -1081,7 +1066,7 @@ Table&nbsp;1
 </section>
 <section id="related-works" class="level2">
 <h2 class="anchored" data-anchor-id="related-works">Related works</h2>
-<p>This report is based on two reports <span class="citation" data-cites="Voss2016a Voss2016b">(<a href="#ref-Voss2016a" role="doc-biblioref">Voß 2016a</a>, <a href="#ref-Voss2016b" role="doc-biblioref">2016b</a>)</span> from the beginning of <a href="https://coli-conc.gbv.de/">project coli-conc</a> that led to a <a href="https://github.com/gbv/bartoc.org/wiki/Software-for-controlled-vocabularies">a wiki page</a> managed between 2020 and 2024. Other lists of software for management of terminologies include: See <span class="citation" data-cites="Miles2009">Miles and Bechhofer (<a href="#ref-Miles2009" role="doc-biblioref">2009</a>)</span> for a report created during the specification of SKOS W3C Recommendation and the corresponding wiki pages at <a href="https://www.w3.org/2001/sw/wiki/Category:Editor" class="uri">https://www.w3.org/2001/sw/wiki/Category:Editor</a>.</p>
+<p>This report is based on two reports <span class="citation" data-cites="Voss2016a Voss2016b">(<a href="#ref-Voss2016a" role="doc-biblioref">Voß 2016a</a>, <a href="#ref-Voss2016b" role="doc-biblioref">2016b</a>)</span> from the beginning of <a href="https://coli-conc.gbv.de/">project coli-conc</a> that led to a <a href="https://github.com/gbv/bartoc.org/wiki/Software-for-controlled-vocabularies">a wiki page</a> managed between 2020 and 2024. See also <span class="citation" data-cites="Miles2009">Miles and Bechhofer (<a href="#ref-Miles2009" role="doc-biblioref">2009</a>)</span> for a report created during the specification of SKOS W3C Recommendation, the corresponding wiki pages at <a href="https://www.w3.org/2001/sw/wiki/Category:Editor" class="uri">https://www.w3.org/2001/sw/wiki/Category:Editor</a>, and <span class="citation" data-cites="Bergman2018">Bergman (<a href="#ref-Bergman2018" role="doc-biblioref">2018</a>)</span> for a list of software for ontology alignment.</p>
 </section>
 <section id="acknowledgements" class="level2">
 <h2 class="anchored" data-anchor-id="acknowledgements">Acknowledgements</h2>
@@ -1090,6 +1075,9 @@ Table&nbsp;1
 <section id="references" class="level2">
 <h2 class="anchored" data-anchor-id="references">References</h2>
 <div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" role="list">
+<div id="ref-Bergman2018" class="csl-entry" role="listitem">
+Bergman, Michael K. 2018. <span>“30 Active Ontology Alignment Tools.”</span> <a href="https://www.mkbergman.com/2129/30-active-ontology-alignment-tools/">https://www.mkbergman.com/2129/30-active-ontology-alignment-tools/</a>.
+</div>
 <div id="ref-Miles2009" class="csl-entry" role="listitem">
 Miles, Alistair, and Sean Bechhofer. 2009. <span>“W3C SKOS Implementation Report,”</span> May. <a href="https://www.w3.org/2006/07/SWD/SKOS/reference/20090315/implementation.html">https://www.w3.org/2006/07/SWD/SKOS/reference/20090315/implementation.html</a>.
 </div>

@@ -205,7 +205,7 @@
                   Verbundzentrale des GBV (VZG)
               }
       
-\date{2025-06-04}
+\date{2025-06-05}
 \begin{document}
 \maketitle
 
@@ -226,37 +226,30 @@ information about \hyperref[kos-software]{software for KOS management}.
 This report is limited to \textbf{\hyperref[kos-software]{specialized
 KOS software} for editing, vizualizing and/or analyzing terminologies.}
 The term ``terminology'' in this document is used as synonym for all
-kinds of KOS. Software is excluded if it:
+kinds of KOS. Software is excluded if:
 
 \begin{itemize}
 \tightlist
 \item
-  only happens to make use of terminologies (for instance
-  \href{https://openrefine.org/}{OpenRefine} and
-  \href{https://mix-n-match.toolforge.org/}{mix'n'match}), or
+  it is not aimed at KOS management in particular but
+  \hyperref[more-generic-software]{more generic software} such as
+  database management systems, content management systems and text
+  editors,
 \item
-  is more \hyperref[generic-software]{generic software} that can be used
-  for terminology management among other use cases (like database
-  management systems), or
+  it is \hyperref[more-specific-software]{more specific software},
+  restricted to a limited type of KOS, such software for linguistic
+  terminology management and identifier systems,
 \item
-  is only used as \hyperref[hosted-services]{hosted service}, or
-\item
-  is limited to simple lists of terms, glossaries and similar, or
-\item
-  is so called \hyperref[terminology-management]{terminology management}
-  software for a a centralized repository of approved terms,
-  definitions, and translations in an organization, or
-\item
-  is only meant \hyperref[identifier-systems]{to manage identifiers}, or
-\item
-  is a programming library
-  (\href{https://github.com/gbv/jskos-vue/}{jskos-vue},
-  \href{https://github.com/gbv/cocoda-sdk/}{cocoda-sdk},
-  \href{https://github.com/ts4nfdi/terminology-service-suite}{TSS
-  Widgets}, \href{http://gbv.github.io/ng-skos/}{ng-skos}\ldots), or
-\item
-  is a tool for \hyperref[data-transformation]{data transformation}.
+  it \hyperref[limited-use]{cannot be used} as stand-alone application,
+  like programming libraries, and hosted services.
 \end{itemize}
+
+Software for \textbf{ontology alignment} is only included if it is more
+then a research prototype and if we managed to get it running. See
+Bergman (2018) for a comprehensive list of software in this category.
+The \href{https://oaei.ontologymatching.org/}{Ontology Alignment
+Evaluation Initiative (OAEI)} motivates the creation of tools for
+automated ontology alignment.
 
 \newpage
 \KOMAoptions{paper=landscape,pagesize,DIV=20}
@@ -599,10 +592,10 @@ software \\
 
 \subsection{Related software}\label{related-software}
 
-Knowledge organization systems are also managed by other types software
-\hyperref[scope]{excluded from this report}.
+Knowledge organization systems can also be managed with other types
+software \hyperref[scope]{excluded from this report}.
 
-\subsubsection{Generic software}\label{generic-software}
+\subsubsection{More generic software}\label{more-generic-software}
 
 Simple terminologies can be managed in a \textbf{spreadsheet}
 (LibreOffice Calc, Excel, Google Sheets\ldots). This software lacks most
@@ -633,59 +626,64 @@ terminologies. An example is \href{https://www.drupal.org/}{Drupal},
 which was used for the first version of BARTOC terminology registry.
 
 Terminologies can also directly be managed in \textbf{files} for
-instance in RDF/Turtle syntax. This only requires a text editor but the
-risk is high to introduce errors. A version control system such as git
-can be used on top to track changes.
+instance in RDF/Turtle syntax. This only requires a \textbf{text editor}
+but the risk is high to introduce errors. A \textbf{version control
+system} such as git can be used on top to track changes.
 
-\subsubsection{Hosted services}\label{hosted-services}
+\subsubsection{More specific software}\label{more-specific-software}
 
-Some organizations host their own applications for KOS management or
-related services. Examples include:
+The term \textbf{terminology management} is also used for systems to
+organize the terms, definitions, and translations used in an
+organization. See Montoro (2018) for a list of terminology management
+systems. The focus of these systems is more on translation but there is
+some overlap with KOS management. Software aimed at simple lists of
+terms, definitions, glossaries and similar is also excluded from this
+report.
 
-\begin{itemize}
-\tightlist
-\item
-  \href{https://doi.org/10.11588/akmb.2018.1.63475}{DANTE}
-\item
-  \href{https://xtree-public.digicult-verbund.de/}{xTree}
-\item
-  \href{http://lov.okfn.org/dataset/lov/}{Linked Open Vocabularies
-  (LOV)}
-\end{itemize}
+Several systems and applications exist to manage identifiers (Domain
+Name System, \href{https://w3id.org/}{w3id}\ldots). These
+\textbf{identifier systems} are relevant to manage KOS but they are
+rarely enough for KOS management alone. See
+\href{https://bioregistry.io/}{Bioregistry} for a registry of identifier
+systems used with KOS.
 
+Several tools, frameworks and programming languages exist for
+\textbf{data transformation} between different formats and/or models
+(\href{https://en.wikipedia.org/wiki/XSLT}{XSLT},
+\href{https://jqlang.org/}{jq}, \href{https://librecat.org/}{Catmandu},
+\href{https://getdtl.org/}{DTL},
+\href{https://linkml.io/linkml-map/}{LinkML-map},
+\href{https://en.wikipedia.org/wiki/QVT}{QVT}\ldots). These
+transformations often imply or make use of terminology mappings.
+
+Some tools for \textbf{data curation} also make use of or require
+terminologies, for instance \href{https://openrefine.org/}{OpenRefine}
+and \href{https://mix-n-match.toolforge.org/}{mix'n'match}. The latter
+comes close to a mapping editor but it is limited to mappings with
+Wikidata.
+
+\subsubsection{Limited use}\label{limited-use}
+
+Some organizations run \textbf{hosted services} for KOS management or
+related services. Examples include
+\href{https://doi.org/10.11588/akmb.2018.1.63475}{DANTE},
+\href{https://xtree-public.digicult-verbund.de/}{xTree} and
+\href{http://lov.okfn.org/dataset/lov/}{Linked Open Vocabularies (LOV)}.
 More examples may be found in the BARTOC
 \href{https://bartoc.org/registries}{list of terminology registries}.
 
-\subsubsection{Terminology management}\label{terminology-management}
-
-The term ``terminology management'' is also used for systems to organize
-the terms, definitions, and translations used in an organization. See
-Montoro (2018) for a list of terminology management systems. The focus
-of these systems is more on translation but there is some overlap with
-KOS management.
-
-\subsubsection{Identifier systems}\label{identifier-systems}
-
-Several systems and applications exist to manage identifiers (Domain
-Name System, \href{https://w3id.org/}{w3id}\ldots). These systems are
-relevant to manage KOS but they are rarely enough for KOS management
-alone. See \url{https://bioregistry.io/registry/} for a registry of
-identifier systems used with KOS.
-
-\subsubsection{Data transformation}\label{data-transformation}
-
-Several programming languages, tools, and frameworks exist to define and
-apply transformation of data from one format and/or data model into
-another one (\href{https://jqlang.org/}{jq},
-\href{https://en.wikipedia.org/wiki/XSLT}{XSLT},\href{https://librecat.org/}{Catmandu},
-\href{https://getdtl.org/}{DTL},
-\href{https://linkml.io/linkml-map/}{LinkML-map},
-\href{https://en.wikipedia.org/wiki/QVT}{QVT}\ldots).
+\textbf{programming libraries} such as
+\href{https://github.com/gbv/cocoda-sdk/}{cocoda-sdk},
+\href{https://github.com/ts4nfdi/terminology-service-suite}{TSS
+Widgets}, \href{https://github.com/gbv/jskos-vue/}{jskos-vue},
+\href{https://semra.readthedocs.io/}{SeMRA}, and
+\href{http://gbv.github.io/ng-skos/}{ng-skos} are used to build KOS
+software.
 
 \subsubsection{Other software}\label{other-software}
 
-The following do not fit into of of the software categories above or
-there was not enough information:
+The following do not fit into the software categories above or there was
+not enough information:
 
 \begin{itemize}
 \tightlist
@@ -714,11 +712,11 @@ This report is based on two reports (Voß 2016a, 2016b) from the
 beginning of \href{https://coli-conc.gbv.de/}{project coli-conc} that
 led to a
 \href{https://github.com/gbv/bartoc.org/wiki/Software-for-controlled-vocabularies}{a
-wiki page} managed between 2020 and 2024. Other lists of software for
-management of terminologies include: See Miles and Bechhofer (2009) for
-a report created during the specification of SKOS W3C Recommendation and
-the corresponding wiki pages at
-\url{https://www.w3.org/2001/sw/wiki/Category:Editor}.
+wiki page} managed between 2020 and 2024. See also Miles and Bechhofer
+(2009) for a report created during the specification of SKOS W3C
+Recommendation, the corresponding wiki pages at
+\url{https://www.w3.org/2001/sw/wiki/Category:Editor}, and Bergman
+(2018) for a list of software for ontology alignment.
 
 \subsection{Acknowledgements}\label{acknowledgements}
 
@@ -731,6 +729,10 @@ possibly others.
 
 \phantomsection\label{refs}
 \begin{CSLReferences}{1}{0}
+\bibitem[\citeproctext]{ref-Bergman2018}
+Bergman, Michael K. 2018. {``30 Active Ontology Alignment Tools.''}
+\url{https://www.mkbergman.com/2129/30-active-ontology-alignment-tools/}.
+
 \bibitem[\citeproctext]{ref-Miles2009}
 Miles, Alistair, and Sean Bechhofer. 2009. {``W3C SKOS Implementation
 Report,''} May.

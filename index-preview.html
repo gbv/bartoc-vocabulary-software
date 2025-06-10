@@ -5,7 +5,7 @@
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-    <meta name="dcterms.date" content="2025-06-05">
+    <meta name="dcterms.date" content="2025-06-10">
 
     <title>Software for management of knowledge organization systems</title>
     <style>
@@ -185,10 +185,10 @@
 <link rel="shortcut icon" href="bartoc-icon.png" type="image/png">  
       <meta name="citation_title" content="Software for management of knowledge organization systems">
 <meta name="citation_author" content="Jakob Voß">
-<meta name="citation_publication_date" content="2025-06-05">
-<meta name="citation_cover_date" content="2025-06-05">
+<meta name="citation_publication_date" content="2025-06-10">
+<meta name="citation_cover_date" content="2025-06-10">
 <meta name="citation_year" content="2025">
-<meta name="citation_online_date" content="2025-06-05">
+<meta name="citation_online_date" content="2025-06-10">
 <meta name="citation_language" content="en">
 <meta name="citation_reference" content="citation_title=Coli-conc Technical Report 2: Open Source KOS software;,citation_abstract=This report gives an overview about Open Source software for Knowledge Organization Systems (KOS).;,citation_author=Jakob Voß;,citation_publication_date=2016-03;,citation_cover_date=2016-03;,citation_year=2016;,citation_fulltext_html_url=https://zenodo.org/records/48227;,citation_doi=10.5281/zenodo.48227;">
 <meta name="citation_reference" content="citation_title=Open Source web applications for Knowledge Organization Systems;,citation_abstract=This report gives an overview about Open Source web applications to create, manage, and publish Knowledge Organization Systems (KOS).;,citation_author=Jakob Voß;,citation_publication_date=2016-08;,citation_cover_date=2016-08;,citation_year=2016;,citation_fulltext_html_url=https://zenodo.org/records/61262;,citation_doi=10.5281/zenodo.61262;">
@@ -235,7 +235,7 @@
                 <div>
             <div class="quarto-title-meta-heading">Published</div>
             <div class="quarto-title-meta-contents">
-              <p class="date">June 5, 2025</p>
+              <p class="date">June 10, 2025</p>
             </div>
           </div>
           
@@ -282,11 +282,11 @@
 </section>
 <section id="kos-software" class="level2">
 <h2 class="anchored" data-anchor-id="kos-software">KOS software</h2>
-<div class="cell-container"><div class="cell-decorator"><pre>In [1]:</pre></div><div id="56154df5" class="cell" data-execution_count="1">
+<div class="cell-container"><div class="cell-decorator"><pre>In [1]:</pre></div><div id="0bacccda" class="cell" data-execution_count="1">
 <div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> pandas <span class="im">as</span> pd</span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>kos <span class="op">=</span> pd.read_json(<span class="st">'kos-software.json'</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div></div>
-<div id="0b078bd5" class="cell markdown">
+<div id="bc546807" class="cell markdown">
 <p>This report includes <strong>69</strong> instances of KOS software so far. The list is managed <a href="kos-software.json">in a JSON file</a> as array of <a href="https://codemeta.github.io/">CodeMeta</a> records with fields as <a href="#metadata">described below</a>. Applications without license or repository are closed source. Deprecated applications are included for historical reference.</p>
 </div>
 <div class="cell-container"><div class="cell-decorator"><pre>In [2]:</pre></div><div class="cell" data-execution_count="2">
@@ -327,7 +327,7 @@
 <span id="cb2-35"><a href="#cb2-35" aria-hidden="true" tabindex="-1"></a>kos <span class="op">=</span> kos.rename(columns<span class="op">=</span>{<span class="st">"operatingSystem"</span>:<span class="st">"system"</span>,<span class="st">"programmingLanguage"</span>:<span class="st">"languages"</span>,<span class="st">"codeRepository"</span>:<span class="st">"repository"</span>,<span class="st">"dateModified"</span>:<span class="st">"update"</span>,<span class="st">"applicationSubCategory"</span>:<span class="st">"category"</span>})</span>
 <span id="cb2-36"><a href="#cb2-36" aria-hidden="true" tabindex="-1"></a>display(HTML(kos.to_html(escape<span class="op">=</span><span class="va">False</span>,index<span class="op">=</span><span class="va">False</span>)))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stderr">
-<pre><code>/tmp/ipykernel_2394/1505819908.py:34: FutureWarning: DataFrame.applymap has been deprecated. Use DataFrame.map instead.
+<pre><code>/tmp/ipykernel_2402/1505819908.py:34: FutureWarning: DataFrame.applymap has been deprecated. Use DataFrame.map instead.
   kos = kos.applymap(cell)</code></pre>
 </div>
 <div class="cell-container"><div class="cell-decorator"><pre>In [2]:</pre></div><div id="tbl-software" class="cell quarto-float quarto-figure quarto-figure-center anchored" data-execution_count="2">
@@ -1118,7 +1118,7 @@ Table&nbsp;1
 </figure>
 </div></div>
 </div></div>
-<div id="6800b61c" class="cell markdown">
+<div id="fa5d114e" class="cell markdown">
 <p>Please <a href="https://github.com/gbv/bartoc-vocabulary-software/issues">open an issue</a> if some relevant software is missing or data seems invalid!</p>
 <!-- end landscape mode in PDF -->
 <section id="metadata" class="level2">
@@ -1179,7 +1179,7 @@ Table&nbsp;1
 <h2 class="anchored" data-anchor-id="kos-software-categories">KOS software categories</h2>
 </section>
 </div>
-<div class="cell-container"><div class="cell-decorator"><pre>In [3]:</pre></div><div id="343d56bd" class="cell" data-execution_count="3">
+<div class="cell-container"><div class="cell-decorator"><pre>In [3]:</pre></div><div id="1863f8ae" class="cell" data-execution_count="3">
 <div class="sourceCode cell-code" id="cb4"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>df <span class="op">=</span> pd.read_json(<span class="st">'kos-software.json'</span>)</span>
 <span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>categories <span class="op">=</span> {}</span>
 <span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> item <span class="kw">in</span> df[<span class="st">"applicationSubCategory"</span>]:</span>
@@ -1189,7 +1189,7 @@ Table&nbsp;1
 <span id="cb4-7"><a href="#cb4-7" aria-hidden="true" tabindex="-1"></a>        <span class="cf">else</span>:</span>
 <span id="cb4-8"><a href="#cb4-8" aria-hidden="true" tabindex="-1"></a>            categories[category] <span class="op">=</span> <span class="dv">1</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div></div>
-<div id="19cfc683" class="cell markdown">
+<div id="e479e5a8" class="cell markdown">
 <ul>
 <li><strong>viewer</strong>: to display terminologies (23)</li>
 <li><strong>editor</strong>: to create and modify terminologies (24)</li>

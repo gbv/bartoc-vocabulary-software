@@ -9,7 +9,8 @@
     "license": "https://spdx.org/licenses/GPL-3.0-or-later",
     "codeRepository": "https://github.com/SemanticMediaWiki/SemanticMediaWiki/",
     "dateModified": "2025",
-    "applicationSubCategory": ["editor"]
+    "applicationSubCategory": ["editor"],
+    "applicationCategory": ["SoftwareImage"]
   },
   {
     "name": "Wikibase",
@@ -21,7 +22,8 @@
     "license": "https://spdx.org/licenses/GPL-3.0-or-later",
     "codeRepository": "https://gerrit.wikimedia.org/g/mediawiki/extensions/Wikibase",
     "dateModified": "2025",
-    "applicationSubCategory": ["database","editor"]
+    "applicationSubCategory": ["database","editor"],
+    "applicationCategory":["ServerApplication"]
   },
   {
     "name": "TemaTres",
@@ -33,7 +35,9 @@
     "license": "https://spdx.org/licenses/GPL-3.0-or-later",
     "codeRepository": "https://github.com/tematres/TemaTres-Vocabulary-Server",
     "dateModified": "2025",
-    "applicationSubCategory": ["editor"]
+    "applicationSubCategory": ["editor"],
+    "applicationCategory":"ServerApplication"
+
   },
   {
     "name": "iQvoc",
@@ -808,5 +812,30 @@
     "codeRepository": "https://github.com/oeg-upm/Themis",
     "dateModified": "2021",
     "applicationSubCategory": ["validator"]
+  },
+  {
+    "name": "COMA",
+    "url": "https://sourceforge.net/projects/coma-ce/files/",
+    "operatingSystem": ["Web"],
+    "edit": true,
+    "api": false,
+    "programmingLanguage": ["Java"],
+    "license": "https://spdx.org/licenses/AGPL-3.0-or-later",
+    "codeRepository": "https://sourceforge.net/projects/coma-ce/",
+    "dateModified": "2013",
+    "applicationSubCategory": ["mapping editor, viewer"],
+    "applicationCategory": ["DesktopApplication"]
+  },
+  {
+    "name": "EVOKS",
+    "operatingSystem": ["Web"],
+    "edit": true,
+    "api": false,
+    "programmingLanguage": ["Python"],
+    "license": "https://spdx.org/licenses/MIT",
+    "codeRepository": "https://github.com/kit-data-manager/EVOKS",
+    "dateModified": "2025",
+    "applicationSubCategory": ["editor, converter"],
+    "applicationCategory": ["SoftwareImage, CommandLineApplication"]
   }
 ]

@@ -1,7 +1,7 @@
-level,notation,prefLabel
-0,0,viewer
-0,1,editor
-0,2,mapping editor
-0,3,converter
-0,4,validator
-0,5,database
+level,notation,prefLabel,scopeNote
+0,viewer,viewer,displays terminologies
+0,editor,editor,creates and modifys terminologies
+0,mapping,mapping editor,creates and modifys mappings/alignments
+0,converter,converter,converts from one format into another
+0,validator,validator,checks terminologies
+0,database,database,stores terminologies

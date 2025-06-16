@@ -36,8 +36,7 @@
     "codeRepository": "https://github.com/tematres/TemaTres-Vocabulary-Server",
     "dateModified": "2025",
     "applicationSubCategory": ["editor"],
-    "applicationCategory":"ServerApplication"
-
+    "applicationCategory":["ServerApplication"]
   },
   {
     "name": "iQvoc",
@@ -49,7 +48,8 @@
     "license": "https://spdx.org/licenses/Apache-2.0",
     "codeRepository": "https://github.com/innoq/iqvoc",
     "dateModified": "2025",
-    "applicationSubCategory": ["editor"]
+    "applicationSubCategory": ["editor"],
+    "applicationCategory":["SoftwareImage", "WebApplication"]
   },
   {
     "name": "VocBench",
@@ -61,7 +61,8 @@
     "license": "https://spdx.org/licenses/BSD-3-Clause",
     "codeRepository": "https://bitbucket.org/art-uniroma2/vocbench3/src/master/",
     "dateModified": "2025",
-    "applicationSubCategory": ["editor"]
+    "applicationSubCategory": ["editor"],
+    "applicationCategory":["WebApplication"]
   },
   {
     "name": "Skosmos",
@@ -73,7 +74,8 @@
     "license": "https://spdx.org/licenses/MIT",
     "codeRepository": "https://github.com/NatLibFi/Skosmos",
     "dateModified": "2025",
-    "applicationSubCategory": ["viewer"]
+    "applicationSubCategory": ["viewer"],
+    "applicationCategory":["WebApplication"]
   },
   {
     "name": "Cocoda",
@@ -85,7 +87,8 @@
     "license": "https://spdx.org/licenses/MIT",
     "codeRepository": "https://github.com/gbv/cocoda",
     "dateModified": "2025",
-    "applicationSubCategory": ["mapping editor"]
+    "applicationSubCategory": ["mapping editor"],
+    "applicationCategory":["WebApplication"]
   },
   {
     "name": "MSCR",
@@ -97,7 +100,8 @@
     "license": "https://spdx.org/licenses/MIT",
     "codeRepository": "https://github.com/CSCfi/mscr-compose",
     "dateModified": "2025",
-    "applicationSubCategory": ["mapping editor"]
+    "applicationSubCategory": ["mapping editor"],
+    "applicationCategory":["WebApplication", "WebAPI"]
   },
   {
     "name": "JSKOS Server",
@@ -109,7 +113,8 @@
     "license": "https://spdx.org/licenses/MIT",
     "codeRepository": "https://github.com/gbv/jskos-server",
     "dateModified": "2025",
-    "applicationSubCategory": ["database"]
+    "applicationSubCategory": ["database"],
+    "applicationCategory":["ServerApplication", "WebAPI"]
   },
   {
     "name": "SkoHub Vocabs",
@@ -121,7 +126,8 @@
     "license": "https://spdx.org/licenses/Apache-2.0",
     "codeRepository": "https://github.com/skohub-io/skohub-vocabs",
     "dateModified": "2025",
-    "applicationSubCategory": ["viewer"]
+    "applicationSubCategory": ["viewer"],
+    "applicationCategory":["WebApplication", "SoftwareImage"]
   },
   {
     "name": "OpenTheso",
@@ -133,7 +139,8 @@
     "license": "https://spdx.org/licenses/GPL-3.0-or-later",
     "codeRepository": "https://github.com/miledrousset/Opentheso",
     "dateModified": "2025",
-    "applicationSubCategory": ["editor"]
+    "applicationSubCategory": ["editor"],
+    "applicationCategory":["SoftwareImage", "WebApplication", "ServerApplication", "WebAPI"]
   },
   {
     "name": "Jekyll RDF",
@@ -145,7 +152,8 @@
     "license": "https://spdx.org/licenses/MIT",
     "codeRepository": "https://github.com/AKSW/jekyll-rdf",
     "dateModified": "2024",
-    "applicationSubCategory": ["viewer"]
+    "applicationSubCategory": ["viewer"],
+    "applicationCategory":["CommandLineApplication", "SoftwareImage"]
   },
   {
     "name": "Ontology Lookup Service (OLS)",
@@ -157,7 +165,8 @@
     "license": "https://spdx.org/licenses/Apache-2.0",
     "codeRepository": "https://github.com/EBISPOT/OLS",
     "dateModified": "2025",
-    "applicationSubCategory": ["viewer"]
+    "applicationSubCategory": ["viewer"],
+    "applicationCategory":["ServerApplication", "WebAPI", "WebApplication", "SoftwareImage"]
   },
   {
     "name": "OntoPortal Alliance",
@@ -169,7 +178,8 @@
     "license": "https://spdx.org/licenses/BSD-3-Clause",
     "codeRepository": "https://github.com/ontoportal",
     "dateModified": "2025",
-    "applicationSubCategory": ["viewer"]
+    "applicationSubCategory": ["viewer"],
+    "applicationCategory":["ServerApplication", "WebAPI", "WebApplication", "SoftwareImage", "SoftwarePackage"]
   },
   {
     "name": "ShowVoc",
@@ -181,7 +191,8 @@
     "license": "https://spdx.org/licenses/BSD-3-Clause",
     "codeRepository": "https://bitbucket.org/art-uniroma2/showvoc/src/master/",
     "dateModified": "2025",
-    "applicationSubCategory": ["viewer"]
+    "applicationSubCategory": ["viewer"],
+    "applicationCategory":["WebApplication"]
   },
   {
     "name": "voc4cat-tool",
@@ -193,7 +204,8 @@
     "license": "https://spdx.org/licenses/BSD-3-Clause",
     "codeRepository": "https://github.com/nfdi4cat/voc4cat-tool/",
     "dateModified": "2025",
-    "applicationSubCategory": ["converter"]
+    "applicationSubCategory": ["converter"],
+    "applicationCategory":["CommandLineApplication"]
   },
   {
     "name": "Protégé",
@@ -205,7 +217,8 @@
     "license": "https://spdx.org/licenses/BSD-3-Clause",
     "codeRepository": "https://github.com/protegeproject/protege",
     "dateModified": "2025",
-    "applicationSubCategory": ["editor"]
+    "applicationSubCategory": ["editor"],
+    "applicationCategory":["DesktopApplication"]
   },
   {
     "name": "VocExcel",
@@ -216,7 +229,8 @@
     "license": "https://spdx.org/licenses/BSD-3-Clause",
     "codeRepository": "https://github.com/Kurrawong/VocExcel",
     "dateModified": "2025",
-    "applicationSubCategory": ["converter"]
+    "applicationSubCategory": ["converter"],
+    "applicationCategory":["CommandLineApplication"]
   },
   {
     "name": "jskos-cli",
@@ -227,7 +241,8 @@
     "license": "https://spdx.org/licenses/MIT",
     "codeRepository": "https://github.com/gbv/jskos-cli/",
     "dateModified": "2025",
-    "applicationSubCategory": ["converter","validator"]
+    "applicationSubCategory": ["converter","validator"],
+    "applicationCategory":["CommandLineApplication"]
   },
   {
     "name": "TS4NFDI API Gateway",
@@ -239,7 +254,8 @@
     "programmingLanguage": ["Java","JavaScript"],
     "dateModified": "2025",
     "applicationSubCategory": ["viewer","converter"],
-    "codeRepository": "https://github.com/ts4nfdi/api-gateway"
+    "codeRepository": "https://github.com/ts4nfdi/api-gateway",
+    "applicationCategory":["WebAPI","SoftwarePackage"]
   },
   {
     "name": "sssom-py",
@@ -251,7 +267,8 @@
     "license": "https://spdx.org/licenses/MIT",
     "dateModified": "2025",
     "codeRepository": "https://github.com/mapping-commons/sssom-py",
-    "applicationSubCategory": ["converter"]
+    "applicationSubCategory": ["converter"],
+    "applicationCategory":["CommandLineApplication"]
   },
   {
     "name": "sssom-java",
@@ -263,7 +280,8 @@
     "license": "https://spdx.org/licenses/GPL-3.0-or-later",
     "dateModified": "2025",
     "codeRepository": "https://github.com/gouttegd/sssom-java",
-    "applicationSubCategory": ["converter"]
+    "applicationSubCategory": ["converter"],
+    "applicationCategory":["CommandLineApplication"]
   },
   {
     "name": "sssom-js",
@@ -275,7 +293,8 @@
     "license": "https://spdx.org/licenses/MIT",
     "dateModified": "2025",
     "codeRepository": "https://github.com/gbv/sssom-js",
-    "applicationSubCategory": ["converter"]
+    "applicationSubCategory": ["converter"],
+    "applicationCategory":["CommandLineApplication"]
   },
   {
     "name": "jskos-proxy",
@@ -286,7 +305,8 @@
     "license": "https://spdx.org/licenses/MIT",
     "codeRepository": "https://github.com/gbv/jskos-proxy/",
     "dateModified": "2025",
-    "applicationSubCategory": ["viewer","converter"]
+    "applicationSubCategory": ["viewer","converter"],
+    "applicationCategory":["WebAPI", "SoftwareImage"]
   },
   {
     "name": "Atramhasis",
@@ -298,7 +318,8 @@
     "license": "https://spdx.org/licenses/GPL-3.0-or-later",
     "codeRepository": "https://github.com/OnroerendErfgoed/atramhasis",
     "dateModified": "2024",
-    "applicationSubCategory": ["editor"]
+    "applicationSubCategory": ["editor"],
+    "applicationCategory":["WebApplication"]
   },
   {
     "name": "Snowstorm",
@@ -310,7 +331,8 @@
     "license": "https://spdx.org/licenses/Apache-2.0",
     "codeRepository": "https://github.com/IHTSDO/snowstorm",
     "dateModified": "2024",
-    "applicationSubCategory": ["viewer"]
+    "applicationSubCategory": ["viewer"],
+    "applicationCategory":["WebAPI", "SoftwareImage", "ServerApplication"]
   },
   {
     "name": "Network of Terms",
@@ -322,7 +344,8 @@
     "license": "https://spdx.org/licenses/EUPL-1.2",
     "codeRepository": "https://github.com/netwerk-digitaal-erfgoed/network-of-terms",
     "dateModified": "2025",
-    "applicationSubCategory": ["converter"]
+    "applicationSubCategory": ["converter"],
+    "applicationCategory":["WebAPI", "SoftwareImage"]
   },
   {
     "name": "Web Protégé",

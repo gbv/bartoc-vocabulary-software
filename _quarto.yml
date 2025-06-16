@@ -13,7 +13,7 @@ resources:
   - kos-software.json
   - bartoc-logo.svg
 
-doi: https://10.5281/zenodo.15672524
+doi: 10.5281/zenodo.15672523
 
 format:
   html:

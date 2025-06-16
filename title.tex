@@ -6,7 +6,7 @@ $if(doi)$
 \usepackage{etoolbox}
 \makeatletter
 \providecommand{\doi}[1]{% add DOI to \maketitle
-  \apptocmd{\@title}{\par {\large \url{#1} \par}}{}{}
+  \apptocmd{\@title}{\par {\large \url{https://doi.org/#1} \par}}{}{}
 }
 \makeatother
 \doi{$doi$}

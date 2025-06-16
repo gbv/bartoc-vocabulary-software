@@ -199,6 +199,13 @@
 
 \title{Software for management of knowledge organization systems}
 
+\usepackage{etoolbox}
+\makeatletter
+\providecommand{\doi}[1]{% add DOI to \maketitle
+  \apptocmd{\@title}{\par {\large \url{#1} \par}}{}{}
+}
+\makeatother
+\doi{https://10.5281/zenodo.15672524}
 
   \author{Jakob Voß}
             \affil{%

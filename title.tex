@@ -2,14 +2,14 @@ $if(title)$
 \title{$title$$if(thanks)$\thanks{$thanks$}$endif$}
 $endif$
 
-$if(subtitle)$
+$if(doi)$
 \usepackage{etoolbox}
 \makeatletter
-\providecommand{\subtitle}[1]{% add subtitle to \maketitle
-  \apptocmd{\@title}{\par {\large #1 \par}}{}{}
+\providecommand{\doi}[1]{% add DOI to \maketitle
+  \apptocmd{\@title}{\par {\large \url{#1} \par}}{}{}
 }
 \makeatother
-\subtitle{$subtitle$}
+\doi{$doi$}
 $endif$
 
 $for(by-author)$

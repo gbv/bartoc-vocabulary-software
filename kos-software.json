@@ -435,6 +435,7 @@
     "codeRepository": "https://github.com/AGLDWG/vocpub-profile/",
     "dateModified": "2024",
     "applicationSubCategory": ["validator"],
+    "applicationCategory":["SoftwareLibrary"]
   },
   {
     "name": "Ginco",

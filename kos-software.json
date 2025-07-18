@@ -332,7 +332,7 @@
     "codeRepository": "https://github.com/IHTSDO/snowstorm",
     "dateModified": "2024",
     "applicationSubCategory": ["viewer"],
-    "applicationCategory":["schema:WebAPI", "stypes:SoftwareImage", "ServerApplication"]
+    "applicationCategory":["schema:WebAPI", "stypes:SoftwareImage", "stype:ServerApplication"]
   },
   {
     "name": "Network of Terms",
@@ -358,7 +358,7 @@
     "codeRepository": "https://github.com/protegeproject/webprotege",
     "dateModified": "2023",
     "applicationSubCategory": ["editor"],
-    "applicationCategory":["schema:WebApplication", "schema:WebAPI", "stypes:SoftwareImage", "ServerApplication"]
+    "applicationCategory":["schema:WebApplication", "schema:WebAPI", "stypes:SoftwareImage", "stype:ServerApplication"]
   },
   {
     "name": "VoCol",
@@ -371,7 +371,7 @@
     "codeRepository": "https://github.com/vocol/vocol",
     "dateModified": "2021",
     "applicationSubCategory": ["editor"],
-    "applicationCategory":["schema:WebApplication", "stypes:SoftwareImage", "ServerApplication"]
+    "applicationCategory":["schema:WebApplication", "stypes:SoftwareImage", "stype:ServerApplication"]
   },
   {
     "name": "Django Controlled Vocabularies",
@@ -396,7 +396,7 @@
     "codeRepository": "https://github.com/acdh-oeaw/vocabseditor",
     "dateModified": "2024",
     "applicationSubCategory": ["editor"],
-    "applicationCategory":["schema:WebApplication", "schema:WebAPI", "stypes:SoftwareImage", "ServerApplication"]
+    "applicationCategory":["schema:WebApplication", "schema:WebAPI", "stypes:SoftwareImage", "stype:ServerApplication"]
   },
   {
     "name": "VocPrez",
@@ -448,7 +448,7 @@
     "codeRepository": "https://github.com/culturecommunication/ginco",
     "dateModified": "2022",
     "applicationSubCategory": ["editor"],
-    "applicationCategory":["schema:WebApplication", "schema:WebAPI", "ServerApplication"]
+    "applicationCategory":["schema:WebApplication", "schema:WebAPI", "stype:ServerApplication"]
   },
   {
     "name": "SKOSjs",
@@ -486,7 +486,7 @@
     "codeRepository": "https://github.com/OpenSKOS/OpenSKOS",
     "dateModified": "2020",
     "applicationSubCategory": ["viewer","editor"],
-    "applicationCategory":["schema:WebApplication", "schema:WebAPI", "stypes:SoftwareImage", "ServerApplication"]
+    "applicationCategory":["schema:WebApplication", "schema:WebAPI", "stypes:SoftwareImage", "stype:ServerApplication"]
   },
   {
     "name": "SISSVoc",
@@ -524,7 +524,7 @@
     "codeRepository": "https://github.com/OntoZoo/ontobee",
     "dateModified": "2018",
     "applicationSubCategory": ["viewer"],
-    "applicationCategory":["schema:WebApplication", "schema:WebAPI", "ServerApplication"]
+    "applicationCategory":["schema:WebApplication", "schema:WebAPI", "stype:ServerApplication"]
   },
   {
     "name": "SKOS Editor",
@@ -537,7 +537,7 @@
     "codeRepository": "https://github.com/Blulab-Utah/SKOSEditor",
     "dateModified": "2016",
     "applicationSubCategory": ["editor"],
-    "applicationCategory":["schema:WebApplication", "schema:WebAPI", "ServerApplication"]
+    "applicationCategory":["schema:WebApplication", "schema:WebAPI", "stype:ServerApplication"]
   },
   {
     "name": "HIVE Vocabulary Server",
@@ -549,7 +549,7 @@
     "codeRepository": "https://github.com/MetadataResearchCenter/hive-mrc",
     "dateModified": "2015",
     "applicationSubCategory": ["viewer"],
-    "applicationCategory":["schema:WebApplication", "ServerApplication"]
+    "applicationCategory":["schema:WebApplication", "stype:ServerApplication"]
   },
   {
     "name": "OntoServer",
@@ -560,7 +560,7 @@
     "license": "-",
     "codeRepository": "-",
     "applicationSubCategory": ["viewer"],
-    "applicationCategory":["schema:WebAPI", "ServerApplication"]
+    "applicationCategory":["schema:WebAPI", "stype:ServerApplication"]
   },
   {
     "name": "ASKOSI",
@@ -573,7 +573,7 @@
     "codeRepository": "http://www.askosi.org/example/",
     "dateModified": "2011",
     "applicationSubCategory": ["viewer"],
-    "applicationCategory":["schema:WebApplication", "schema:WebAPI", "ServerApplication"]
+    "applicationCategory":["schema:WebApplication", "schema:WebAPI", "stype:ServerApplication"]
   },
   {
     "name": "THManager",
@@ -597,7 +597,7 @@
     "license": "-",
     "codeRepository": "-",
     "applicationSubCategory": ["editor"],
-    "applicationCategory":["schema:WebApplication", "schema:WebAPI", "ServerApplication"]
+    "applicationCategory":["schema:WebApplication", "schema:WebAPI", "stype:ServerApplication"]
   },
   {
     "name": "TerminoloGit",
@@ -610,7 +610,7 @@
     "codeRepository": "https://gitlab.com/elga-gmbh/termgit",
     "dateModified": "2025",
     "applicationSubCategory": ["converter"],
-    "applicationCategory":["schema:WebApplication", "ServerApplication"]
+    "applicationCategory":["schema:WebApplication", "stype:ServerApplication"]
   },
   {
     "name": "mc2skos",
@@ -634,7 +634,7 @@
     "license": "-",
     "codeRepository": "-",
     "applicationSubCategory": ["editor"],
-    "applicationCategory":["schema:WebApplication", "schema:WebAPI", "SoftwarePackage", "ServerApplication"]
+    "applicationCategory":["schema:WebApplication", "schema:WebAPI", "SoftwarePackage", "stype:ServerApplication"]
   },
   {
     "name": "Ontology Development Kit",
@@ -660,7 +660,7 @@
     "dateModified": "2024",
     "codeRepository": "https://github.com/NCOR-BR/onto4all",
     "applicationSubCategory": ["editor"],
-    "applicationCategory":["schema:WebApplication", "ServerApplication"]
+    "applicationCategory":["schema:WebApplication", "stype:ServerApplication"]
   },
   {
     "name": "Neologism",
@@ -672,7 +672,7 @@
     "dateModified": "2023",
     "codeRepository": "https://github.com/Semantic-Society/Neologism",
     "applicationSubCategory": ["editor"],
-    "applicationCategory":["schema:WebApplication", "schema:WebAPI", "stypes:SoftwareImage", "ServerApplication"]
+    "applicationCategory":["schema:WebApplication", "schema:WebAPI", "stypes:SoftwareImage", "stype:ServerApplication"]
   },
   {
     "name": "Chowlk",
@@ -696,7 +696,7 @@
     "license": "-",
     "codeRepository": "-",
     "applicationSubCategory": ["editor"],
-    "applicationCategory":["schema:WebApplication", "ServerApplication", "SoftwarePackage"]
+    "applicationCategory":["schema:WebApplication", "stype:ServerApplication", "SoftwarePackage"]
   },
   {
     "name": "Wandora",
@@ -722,7 +722,7 @@
     "license": "https://spdx.org/licenses/Apache-2.0",
     "codeRepository": "https://github.com/EBISPOT/OXO",
     "applicationSubCategory": ["viewer"],
-    "applicationCategory":["schema:WebApplication", "schema:WebAPI", "stypes:SoftwareImage", "ServerApplication"]
+    "applicationCategory":["schema:WebApplication", "schema:WebAPI", "stypes:SoftwareImage", "stype:ServerApplication"]
   },
   {
     "name": "Amalgame",
@@ -748,7 +748,7 @@
     "codeRepository": "https://gitlab.inria.fr/moex/alignapi/",
     "dateModified": "2023",
     "applicationSubCategory": ["database"],
-    "applicationCategory":["stypes:CommandLineApplication", "schema:WebAPI", "ServerApplication"]
+    "applicationCategory":["stypes:CommandLineApplication", "schema:WebAPI", "stype:ServerApplication"]
   },
   {
     "name": "SkoHub Shapes",
@@ -785,7 +785,7 @@
     "codeRepository": "https://github.com/agroportal/fairness",
     "dateModified": "2025",
     "applicationSubCategory": ["validator"],
-    "applicationCategory":["schema:WebApplication", "schema:WebAPI", "ServerApplication"]
+    "applicationCategory":["schema:WebApplication", "schema:WebAPI", "stype:ServerApplication"]
   },
   {
     "name": "WebVOWL",
@@ -837,7 +837,7 @@
     "codeRepository": "https://github.com/essepuntato/LODE",
     "dateModified": "2020",
     "applicationSubCategory": ["viewer"],
-    "applicationCategory":["stypes:SoftwareImage", "ServerApplication"]
+    "applicationCategory":["stypes:SoftwareImage", "stype:ServerApplication"]
   },
   {
     "name": "ODM2 Controlled Vocabularies",

@@ -76,7 +76,7 @@ def cell(value):
 
 kos["name"] = kos.apply(hyperlink, axis=1)
 kos = kos.sort_values(by=["dateModified"],ascending=False)
-kos["category"] = kos.apply(lambda row: (row["applicationCategory"] or []) + (row["applicationSubCategory"] or []),axis=1)
+kos["category"] = kos.apply(lambda row: [c[7:] for c in (row["applicationCategory"] or [])] + (row["applicationSubCategory"] or []),axis=1)
 kos = kos.drop(columns=["url", "applicationCategory", "applicationSubCategory"])
 kos = kos.applymap(cell)
 kos = kos.rename(columns={"operatingSystem":"system","programmingLanguage":"languages","codeRepository":"repository","dateModified":"update","applicationSubCategory":"category"})
@@ -96,17 +96,21 @@ Machine-readable description of the software is based on [CodeMeta](https://code
 
 Field | Purpose 
 ------|--------
-`name` | name with link to homepage
+`name` | name of the software
+`url` | Homepage URL
 `operatingSystem` | operating system or similar dependency (Web, CLI...)
 `api` | whether a web service or similar API is provided to connect to
 `edit` | whether vocabularies can be modified with the software
-`programmingLanguage` | programming language(s)
+`programmingLanguage` | programming language(s) from SPDX
 `license` | license of the software (if free software)
 `codeRepository` | source Code repository (if open source)
 `dateModified` | year of most recent update
+`applicationCategory` | generic type of software
 `applicationSubCategory` | type of KOS software
 
 : {tbl-colwidths="[25,75]"}
+
+The metadata is also [made available in RDF](kos-software.ttl).
 
 ## KOS software categories
 

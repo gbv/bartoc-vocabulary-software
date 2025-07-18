@@ -1,0 +1,8 @@
+{
+  "scripts": {
+    "rdf": "jsonld2rdf kos-software.json -c codemeta.jsonld -p prefixes.json > kos-software.ttl"
+  },
+  "dependencies": {
+    "jsonld2rdf": "^0.5.1"
+  }
+}

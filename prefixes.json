@@ -1,0 +1,5 @@
+{
+  "schema": "http://schema.org/",
+  "codemeta": "https://codemeta.github.io/terms/",
+  "stypes": "https://w3id.org/software-types#"
+}

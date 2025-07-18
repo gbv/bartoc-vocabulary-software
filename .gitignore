@@ -5,3 +5,4 @@ docs/
 *.ipynb
 index-preview.html
 site_libs/
+node_modules

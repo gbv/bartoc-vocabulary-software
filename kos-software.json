@@ -156,6 +156,19 @@
     "applicationCategory":["stypes:CommandLineApplication", "stypes:SoftwareImage"]
   },
   {
+    "name": "ABECTO",
+    "url": "https://github.com/fusion-jena/abecto",
+    "edit": false,
+    "api": false,
+    "operatingSystem": ["JVM"],
+    "programmingLanguage": ["Java"],
+    "license": "https://spdx.org/licenses/Apache-2.0",
+    "codeRepository": "https://github.com/fusion-jena/abecto",
+    "dateModified": "2025",
+    "applicationSubCategory": ["validator"],
+    "applicationCategory":["stypes:CommandLineApplication", "stypes:SoftwareImage"]
+  },
+  {
     "name": "Ontology Lookup Service (OLS)",
     "url": "https://github.com/EBISPOT/ols4",
     "operatingSystem": ["Web"],

@@ -8,7 +8,7 @@
     "programmingLanguage": ["PHP"],
     "license": "https://spdx.org/licenses/GPL-3.0-or-later",
     "codeRepository": "https://github.com/SemanticMediaWiki/SemanticMediaWiki/",
-    "dateModified": "2025",
+    "dateModified": "2026",
     "applicationSubCategory": ["editor"],
     "applicationCategory": ["stypes:SoftwareImage"]
   },
@@ -21,7 +21,7 @@
     "programmingLanguage": ["PHP"],
     "license": "https://spdx.org/licenses/GPL-3.0-or-later",
     "codeRepository": "https://gerrit.wikimedia.org/g/mediawiki/extensions/Wikibase",
-    "dateModified": "2025",
+    "dateModified": "2026",
     "applicationSubCategory": ["database","editor"],
     "applicationCategory":["stypes:ServerApplication"]
   },
@@ -47,7 +47,7 @@
     "programmingLanguage": ["Ruby"],
     "license": "https://spdx.org/licenses/Apache-2.0",
     "codeRepository": "https://github.com/innoq/iqvoc",
-    "dateModified": "2025",
+    "dateModified": "2026",
     "applicationSubCategory": ["editor"],
     "applicationCategory":["stypes:SoftwareImage", "schema:WebApplication"]
   },
@@ -60,7 +60,7 @@
     "programmingLanguage": ["Java","JavaScript"],
     "license": "https://spdx.org/licenses/BSD-3-Clause",
     "codeRepository": "https://bitbucket.org/art-uniroma2/vocbench3/src/master/",
-    "dateModified": "2025",
+    "dateModified": "2026",
     "applicationSubCategory": ["editor"],
     "applicationCategory":["schema:WebApplication"]
   },
@@ -73,7 +73,7 @@
     "programmingLanguage": ["PHP"],
     "license": "https://spdx.org/licenses/MIT",
     "codeRepository": "https://github.com/NatLibFi/Skosmos",
-    "dateModified": "2025",
+    "dateModified": "2026",
     "applicationSubCategory": ["viewer"],
     "applicationCategory":["schema:WebApplication"]
   },
@@ -91,9 +91,20 @@
     "applicationCategory":["schema:WebApplication"]
   },
   {
+    "name": "SSSOM Curator",
+    "url": "https://github.com/cthoyt/sssom-curator#readme",
+    "api": false,
+    "edit": true,
+    "programmingLanguage": ["Phython"],
+    "license": "https://spdx.org/licenses/MIT",
+    "codeRepository": "https://github.com/cthoyt/sssom-curator",
+    "dateModified": "2026",
+    "applicationSubCategory": ["mapping editor"],
+    "applicationCategory":["schema:WebApplication","stypes:CommandLineApplication"]
+  },
+  {
     "name": "MSCR",
     "url": "https://cscfi.github.io/mscr-docs/",
-    "operatingSystem": ["Web"],
     "api": true,
     "edit": true,
     "programmingLanguage": ["Java"],
@@ -164,7 +175,7 @@
     "programmingLanguage": ["Java"],
     "license": "https://spdx.org/licenses/Apache-2.0",
     "codeRepository": "https://github.com/fusion-jena/abecto",
-    "dateModified": "2025",
+    "dateModified": "2026",
     "applicationSubCategory": ["validator"],
     "applicationCategory":["stypes:CommandLineApplication", "stypes:SoftwareImage"]
   },
@@ -176,8 +187,8 @@
     "edit": false,
     "programmingLanguage": ["JavaScript","Java"],
     "license": "https://spdx.org/licenses/Apache-2.0",
-    "codeRepository": "https://github.com/EBISPOT/OLS",
-    "dateModified": "2025",
+    "codeRepository": "https://github.com/EBISPOT/ols4",
+    "dateModified": "2026",
     "applicationSubCategory": ["viewer"],
     "applicationCategory":["stypes:ServerApplication", "schema:WebAPI", "schema:WebApplication", "stypes:SoftwareImage"]
   },
@@ -203,7 +214,7 @@
     "programmingLanguage": ["JavaScript"],
     "license": "https://spdx.org/licenses/BSD-3-Clause",
     "codeRepository": "https://bitbucket.org/art-uniroma2/showvoc/src/master/",
-    "dateModified": "2025",
+    "dateModified": "2026",
     "applicationSubCategory": ["viewer"],
     "applicationCategory":["schema:WebApplication"]
   },
@@ -216,7 +227,7 @@
     "programmingLanguage": ["Python"],
     "license": "https://spdx.org/licenses/BSD-3-Clause",
     "codeRepository": "https://github.com/nfdi4cat/voc4cat-tool/",
-    "dateModified": "2025",
+    "dateModified": "2026",
     "applicationSubCategory": ["converter"],
     "applicationCategory":["stypes:CommandLineApplication"]
   },
@@ -229,7 +240,7 @@
     "programmingLanguage": ["Java"],
     "license": "https://spdx.org/licenses/BSD-3-Clause",
     "codeRepository": "https://github.com/protegeproject/protege",
-    "dateModified": "2025",
+    "dateModified": "2026",
     "applicationSubCategory": ["editor"],
     "applicationCategory":["DesktopApplication"]
   },
@@ -253,7 +264,7 @@
     "programmingLanguage": ["JavaScript"],
     "license": "https://spdx.org/licenses/MIT",
     "codeRepository": "https://github.com/gbv/jskos-cli/",
-    "dateModified": "2025",
+    "dateModified": "2026",
     "applicationSubCategory": ["converter","validator"],
     "applicationCategory":["stypes:CommandLineApplication"]
   },
@@ -265,7 +276,7 @@
     "edit": false,
     "license": "https://spdx.org/licenses/MIT",
     "programmingLanguage": ["Java","JavaScript"],
-    "dateModified": "2025",
+    "dateModified": "2026",
     "applicationSubCategory": ["viewer","converter"],
     "codeRepository": "https://github.com/ts4nfdi/api-gateway",
     "applicationCategory":["schema:WebAPI","SoftwarePackage"]
@@ -291,7 +302,7 @@
     "edit": false,
     "programmingLanguage": ["Java"],
     "license": "https://spdx.org/licenses/GPL-3.0-or-later",
-    "dateModified": "2025",
+    "dateModified": "2026",
     "codeRepository": "https://github.com/gouttegd/sssom-java",
     "applicationSubCategory": ["converter"],
     "applicationCategory":["stypes:CommandLineApplication"]
@@ -304,7 +315,7 @@
     "edit": false,
     "programmingLanguage": ["JavaScript"],
     "license": "https://spdx.org/licenses/MIT",
-    "dateModified": "2025",
+    "dateModified": "2026",
     "codeRepository": "https://github.com/gbv/sssom-js",
     "applicationSubCategory": ["converter"],
     "applicationCategory":["stypes:CommandLineApplication"]
@@ -317,7 +328,7 @@
     "programmingLanguage": ["JavaScript"],
     "license": "https://spdx.org/licenses/MIT",
     "codeRepository": "https://github.com/gbv/jskos-proxy/",
-    "dateModified": "2025",
+    "dateModified": "2026",
     "applicationSubCategory": ["viewer","converter"],
     "applicationCategory":["schema:WebAPI", "stypes:SoftwareImage"]
   },
@@ -343,7 +354,7 @@
     "programmingLanguage": ["Java"],
     "license": "https://spdx.org/licenses/Apache-2.0",
     "codeRepository": "https://github.com/IHTSDO/snowstorm",
-    "dateModified": "2024",
+    "dateModified": "2026",
     "applicationSubCategory": ["viewer"],
     "applicationCategory":["schema:WebAPI", "stypes:SoftwareImage", "stype:ServerApplication"]
   },
@@ -356,7 +367,7 @@
     "programmingLanguage": ["Typescript"],
     "license": "https://spdx.org/licenses/EUPL-1.2",
     "codeRepository": "https://github.com/netwerk-digitaal-erfgoed/network-of-terms",
-    "dateModified": "2025",
+    "dateModified": "2026",
     "applicationSubCategory": ["converter"],
     "applicationCategory":["schema:WebAPI", "stypes:SoftwareImage"]
   },
@@ -407,7 +418,7 @@
     "programmingLanguage": ["Python"],
     "license": "https://spdx.org/licenses/MIT",
     "codeRepository": "https://github.com/acdh-oeaw/vocabseditor",
-    "dateModified": "2024",
+    "dateModified": "2025",
     "applicationSubCategory": ["editor"],
     "applicationCategory":["schema:WebApplication", "schema:WebAPI", "stypes:SoftwareImage", "stype:ServerApplication"]
   },
@@ -446,7 +457,7 @@
     "programmingLanguage": ["SHACL"],
     "license": "https://spdx.org/licenses/CC-BY-4.0",
     "codeRepository": "https://github.com/AGLDWG/vocpub-profile/",
-    "dateModified": "2024",
+    "dateModified": "2025",
     "applicationSubCategory": ["validator"],
     "applicationCategory":["SoftwareLibrary"]
   },
@@ -621,7 +632,7 @@
     "programmingLanguage": ["Python"],
     "license": "https://spdx.org/licenses/GPL-3.0-or-later",
     "codeRepository": "https://gitlab.com/elga-gmbh/termgit",
-    "dateModified": "2025",
+    "dateModified": "2026",
     "applicationSubCategory": ["converter"],
     "applicationCategory":["schema:WebApplication", "stype:ServerApplication"]
   },
@@ -657,7 +668,7 @@
     "api": false,
     "programmingLanguage": ["Python"],
     "codeRepository": "https://github.com/INCATools/ontology-development-kit",
-    "dateModified": "2025",
+    "dateModified": "2026",
     "license": "https://spdx.org/licenses/BSD-3-Clause",
     "applicationSubCategory": ["converter","validator"],
     "applicationCategory":["stypes:CommandLineApplication", "stypes:SoftwareImage"]
@@ -731,7 +742,7 @@
     "programmingLanguage": ["JavaScript"],
     "edit": false,
     "api": true,
-    "dateModified": "2024",
+    "dateModified": "2025",
     "license": "https://spdx.org/licenses/Apache-2.0",
     "codeRepository": "https://github.com/EBISPOT/OXO",
     "applicationSubCategory": ["viewer"],
@@ -771,7 +782,7 @@
     "license": "?",
     "operatingSystem": ["RDF"],
     "programmingLanguage": ["SHACL"],
-    "dateModified": "2024",
+    "dateModified": "2025",
     "applicationSubCategory": ["validator"],
     "applicationCategory":["stypes:SoftwareImage"]
   },
@@ -783,7 +794,7 @@
     "license": "https://spdx.org/licenses/Apache-2.0",
     "operatingSystem": ["Web","git"],
     "programmingLanguage": ["Python"],
-    "dateModified": "2024",
+    "dateModified": "2025",
     "applicationSubCategory": ["viewer","validator"],
     "applicationCategory":["schema:WebApplication"]
   },
@@ -796,7 +807,7 @@
     "programmingLanguage": ["Java"],
     "license": "https://spdx.org/licenses/MIT",
     "codeRepository": "https://github.com/agroportal/fairness",
-    "dateModified": "2025",
+    "dateModified": "2026",
     "applicationSubCategory": ["validator"],
     "applicationCategory":["schema:WebApplication", "schema:WebAPI", "stype:ServerApplication"]
   },
@@ -809,7 +820,7 @@
     "programmingLanguage": ["JavaScript"],
     "license": "https://spdx.org/licenses/MIT",
     "codeRepository": "https://github.com/VisualDataWeb/WebVOWL",
-    "dateModified": "2022",
+    "dateModified": "2025",
     "applicationSubCategory": ["viewer"],
     "applicationCategory":["schema:WebApplication", "stypes:SoftwareImage"]
   },
@@ -861,7 +872,7 @@
     "programmingLanguage": ["Python"],
     "license": "https://spdx.org/licenses/BSD-3-Clause",
     "codeRepository": "https://github.com/ODM2/ODM2ControlledVocabularies",
-    "dateModified": "2024",
+    "dateModified": "2025",
     "applicationSubCategory": ["editor"],
     "applicationCategory":["schema:WebApplication", "schema:WebAPI"]
   },

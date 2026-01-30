@@ -6,3 +6,5 @@ docs/
 index-preview.html
 site_libs/
 node_modules
+
+**/*.quarto_ipynb

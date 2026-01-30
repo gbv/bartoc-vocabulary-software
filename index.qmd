@@ -78,7 +78,7 @@ kos["name"] = kos.apply(hyperlink, axis=1)
 kos = kos.sort_values(by=["dateModified"],ascending=False)
 kos["category"] = kos.apply(lambda row: [c[7:] for c in (row["applicationCategory"] or [])] + (row["applicationSubCategory"] or []),axis=1)
 kos = kos.drop(columns=["url", "applicationCategory", "applicationSubCategory"])
-kos = kos.applymap(cell)
+kos = kos.map(cell)
 kos = kos.rename(columns={"operatingSystem":"system","programmingLanguage":"languages","codeRepository":"repository","dateModified":"update","applicationSubCategory":"category"})
 display(HTML(kos.to_html(escape=False,index=False)))
 ```

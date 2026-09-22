@@ -34,7 +34,7 @@
     "programmingLanguage": ["PHP"],
     "license": "https://spdx.org/licenses/GPL-3.0-or-later",
     "codeRepository": "https://github.com/tematres/TemaTres-Vocabulary-Server",
-    "dateModified": "2025",
+    "dateModified": "2026",
     "applicationSubCategory": ["editor"],
     "applicationCategory":["stypes:ServerApplication"]
   },
@@ -86,7 +86,7 @@
     "programmingLanguage": ["JavaScript"],
     "license": "https://spdx.org/licenses/MIT",
     "codeRepository": "https://github.com/gbv/cocoda",
-    "dateModified": "2025",
+    "dateModified": "2026",
     "applicationSubCategory": ["mapping editor"],
     "applicationCategory":["schema:WebApplication"]
   },
@@ -123,7 +123,7 @@
     "programmingLanguage": ["JavaScript"],
     "license": "https://spdx.org/licenses/MIT",
     "codeRepository": "https://github.com/gbv/jskos-server",
-    "dateModified": "2025",
+    "dateModified": "2026",
     "applicationSubCategory": ["database"],
     "applicationCategory":["stypes:ServerApplication", "schema:WebAPI"]
   },
@@ -136,7 +136,7 @@
     "programmingLanguage": ["JavaScript"],
     "license": "https://spdx.org/licenses/Apache-2.0",
     "codeRepository": "https://github.com/skohub-io/skohub-vocabs",
-    "dateModified": "2025",
+    "dateModified": "2026",
     "applicationSubCategory": ["viewer"],
     "applicationCategory":["schema:WebApplication", "stypes:SoftwareImage"]
   },
@@ -149,7 +149,7 @@
     "programmingLanguage": ["Java"],
     "license": "https://spdx.org/licenses/GPL-3.0-or-later",
     "codeRepository": "https://github.com/miledrousset/Opentheso",
-    "dateModified": "2025",
+    "dateModified": "2026",
     "applicationSubCategory": ["editor"],
     "applicationCategory":["stypes:SoftwareImage", "schema:WebApplication", "stypes:ServerApplication", "schema:WebAPI"]
   },
@@ -201,7 +201,7 @@
     "programmingLanguage": ["Ruby"],
     "license": "https://spdx.org/licenses/BSD-3-Clause",
     "codeRepository": "https://github.com/ontoportal",
-    "dateModified": "2025",
+    "dateModified": "2026",
     "applicationSubCategory": ["viewer"],
     "applicationCategory":["stypes:ServerApplication", "schema:WebAPI", "schema:WebApplication", "stypes:SoftwareImage", "SoftwarePackage"]
   },
@@ -252,7 +252,7 @@
     "programmingLanguage": ["Python"],
     "license": "https://spdx.org/licenses/BSD-3-Clause",
     "codeRepository": "https://github.com/Kurrawong/VocExcel",
-    "dateModified": "2025",
+    "dateModified": "2026",
     "applicationSubCategory": ["converter"],
     "applicationCategory":["stypes:CommandLineApplication"]
   },
@@ -289,7 +289,7 @@
     "edit": false,
     "programmingLanguage": ["Python"],
     "license": "https://spdx.org/licenses/MIT",
-    "dateModified": "2025",
+    "dateModified": "2026",
     "codeRepository": "https://github.com/mapping-commons/sssom-py",
     "applicationSubCategory": ["converter"],
     "applicationCategory":["stypes:CommandLineApplication"]
@@ -341,7 +341,7 @@
     "programmingLanguage": ["Python"],
     "license": "https://spdx.org/licenses/GPL-3.0-or-later",
     "codeRepository": "https://github.com/OnroerendErfgoed/atramhasis",
-    "dateModified": "2024",
+    "dateModified": "2026",
     "applicationSubCategory": ["editor"],
     "applicationCategory":["schema:WebApplication"]
   },
@@ -681,7 +681,7 @@
     "api": false,
     "programmingLanguage": ["JavaScript","PHP"],
     "license": "https://spdx.org/licenses/Apache-2.0",
-    "dateModified": "2024",
+    "dateModified": "2026",
     "codeRepository": "https://github.com/NCOR-BR/onto4all",
     "applicationSubCategory": ["editor"],
     "applicationCategory":["schema:WebApplication", "stype:ServerApplication"]
@@ -742,9 +742,9 @@
     "programmingLanguage": ["JavaScript"],
     "edit": false,
     "api": true,
-    "dateModified": "2025",
+    "dateModified": "2026",
     "license": "https://spdx.org/licenses/Apache-2.0",
-    "codeRepository": "https://github.com/EBISPOT/OXO",
+    "codeRepository": "https://github.com/EBISPOT/oxo2",
     "applicationSubCategory": ["viewer"],
     "applicationCategory":["schema:WebApplication", "schema:WebAPI", "stypes:SoftwareImage", "stype:ServerApplication"]
   },
@@ -794,7 +794,7 @@
     "license": "https://spdx.org/licenses/Apache-2.0",
     "operatingSystem": ["Web","git"],
     "programmingLanguage": ["Python"],
-    "dateModified": "2025",
+    "dateModified": "2026",
     "applicationSubCategory": ["viewer","validator"],
     "applicationCategory":["schema:WebApplication"]
   },
@@ -820,7 +820,7 @@
     "programmingLanguage": ["JavaScript"],
     "license": "https://spdx.org/licenses/MIT",
     "codeRepository": "https://github.com/VisualDataWeb/WebVOWL",
-    "dateModified": "2025",
+    "dateModified": "2026",
     "applicationSubCategory": ["viewer"],
     "applicationCategory":["schema:WebApplication", "stypes:SoftwareImage"]
   },
@@ -833,7 +833,7 @@
     "programmingLanguage": ["JavaScript","Java"],
     "license": "https://spdx.org/licenses/Apache-2.0",
     "codeRepository": "https://github.com/dgarijo/Widoco",
-    "dateModified": "2025",
+    "dateModified": "2026",
     "applicationSubCategory": ["viewer"],
     "applicationCategory":["stypes:CommandLineApplication", "stypes:SoftwareImage"]
   },
@@ -852,14 +852,14 @@
   },
   {
     "name": "LODE",
-    "url": "https://essepuntato.it/lode/",
+    "url": "https://lode.opencitations.net/",
     "operatingSystem": ["Web"],
     "api": true,
     "edit": false,
     "programmingLanguage": ["Java"],
     "license": "https://spdx.org/licenses/ISC",
-    "codeRepository": "https://github.com/essepuntato/LODE",
-    "dateModified": "2020",
+    "codeRepository": "https://github.com/opencitations/lode",
+    "dateModified": "2026",
     "applicationSubCategory": ["viewer"],
     "applicationCategory":["stypes:SoftwareImage", "stype:ServerApplication"]
   },
@@ -885,7 +885,7 @@
     "programmingLanguage": ["Java","JavaScript"],
     "license": "https://spdx.org/licenses/Apache-2.0",
     "codeRepository": "https://github.com/oeg-upm/fair_ontologies",
-    "dateModified": "2025",
+    "dateModified": "2026",
     "applicationSubCategory": ["validator"],
     "applicationCategory":["schema:WebApplication", "stypes:CommandLineApplication"]
   },
@@ -898,7 +898,7 @@
     "programmingLanguage": ["Java"],
     "license": "https://spdx.org/licenses/Apache-2.0",
     "codeRepository": "https://github.com/oeg-upm/Themis",
-    "dateModified": "2021",
+    "dateModified": "2026",
     "applicationSubCategory": ["validator"],
     "applicationCategory":["schema:WebApplication", "schema:WebAPI", "stypes:SoftwareImage", "stypes:CommandLineApplication"]
   },

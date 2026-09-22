@@ -65,6 +65,7 @@
 
 
 \usepackage{longtable,booktabs,array}
+\newcounter{none} % for unnumbered tables
 \usepackage{calc} % for calculating minipage widths
 % Correct order of tables after \paragraph or \subparagraph
 \usepackage{etoolbox}
@@ -187,6 +188,10 @@
 \usepackage{bookmark}
 \IfFileExists{xurl.sty}{\usepackage{xurl}}{} % add URL line breaks if available
 \urlstyle{same}
+% fallback for those not using the hyperref driver hyperxmp:
+\makeatletter
+\@ifundefined{xmpquote}{\newcommand{\xmpquote}[1]{#1}}{}
+\makeatother
 \hypersetup{
   pdftitle={Software for management of knowledge organization systems},
   colorlinks=true,
@@ -212,7 +217,7 @@
                   Verbundzentrale des GBV (VZG)
               }
       
-\date{2026-01-30}
+\date{2026-09-22}
 \begin{document}
 \maketitle
 
@@ -271,6 +276,8 @@ list is managed \href{kos-software.json}{in a JSON file} as array of
 repository are closed source. Deprecated applications are included for
 historical reference.
 
+{
+
 \begin{longtable}[]{@{}lllllllll@{}}
 
 \caption{\label{tbl-software}}
@@ -292,6 +299,10 @@ category \\
 \href{https://spdx.org/licenses/GPL-3.0-or-later}{GPL} &
 \href{https://gerrit.wikimedia.org/g/mediawiki/extensions/Wikibase}{wikimedia}
 & 2026 & ServerApplication, database, editor \\
+\href{https://vocabularyserver.com/web/}{TemaTres} & Web & ✓ & ✓ & PHP &
+\href{https://spdx.org/licenses/GPL-3.0-or-later}{GPL} &
+\href{https://github.com/tematres/TemaTres-Vocabulary-Server}{github} &
+2026 & ServerApplication, editor \\
 \href{https://iqvoc.net/}{iQvoc} & Web & ✓ & ✓ & Ruby &
 \href{https://spdx.org/licenses/Apache-2.0}{Apache} &
 \href{https://github.com/innoq/iqvoc}{github} & 2026 & SoftwareImage,
@@ -304,31 +315,26 @@ JavaScript & \href{https://spdx.org/licenses/BSD-3-Clause}{BSD} &
 \href{https://spdx.org/licenses/MIT}{MIT} &
 \href{https://github.com/NatLibFi/Skosmos}{github} & 2026 &
 WebApplication, viewer \\
-\href{https://foops.linkeddata.es/FAIR_validator.html}{O\textquotesingle FAIRe}
-& Web & - & ✓ & Java & \href{https://spdx.org/licenses/MIT}{MIT} &
-\href{https://github.com/agroportal/fairness}{github} & 2026 &
-WebApplication, WebAPI, erverApplication, validator \\
+\href{https://coli-conc.gbv.de/cocoda/}{Cocoda} & Web & ✓ & - &
+JavaScript & \href{https://spdx.org/licenses/MIT}{MIT} &
+\href{https://github.com/gbv/cocoda}{github} & 2026 & WebApplication,
+mapping editor \\
 \href{https://github.com/cthoyt/sssom-curator\#readme}{SSSOM Curator} &
 & ✓ & - & Phython & \href{https://spdx.org/licenses/MIT}{MIT} &
 \href{https://github.com/cthoyt/sssom-curator}{github} & 2026 &
 WebApplication, CommandLineApplication, mapping editor \\
-\href{https://protege.stanford.edu/}{Protégé} & JVM & ✓ & - & Java &
-\href{https://spdx.org/licenses/BSD-3-Clause}{BSD} &
-\href{https://github.com/protegeproject/protege}{github} & 2026 &
-Application, editor \\
-jskos-cli & CLI & - & - & JavaScript &
-\href{https://spdx.org/licenses/MIT}{MIT} &
-\href{https://github.com/gbv/jskos-cli/}{github} & 2026 &
-CommandLineApplication, converter, validator \\
-\href{https://github.com/nfdi4cat/voc4cat-tool/}{voc4cat-tool} & CLI,
-GitHub, Excel & - & - & Python &
-\href{https://spdx.org/licenses/BSD-3-Clause}{BSD} &
-\href{https://github.com/nfdi4cat/voc4cat-tool/}{github} & 2026 &
-CommandLineApplication, converter \\
-\href{https://showvoc.uniroma2.it/}{ShowVoc} & Web & - & - & JavaScript
-& \href{https://spdx.org/licenses/BSD-3-Clause}{BSD} &
-\href{https://bitbucket.org/art-uniroma2/showvoc/src/master/}{bitbucket}
-& 2026 & WebApplication, viewer \\
+\href{https://github.com/gbv/jskos-server}{JSKOS Server} & Web & ✓ & ✓ &
+JavaScript & \href{https://spdx.org/licenses/MIT}{MIT} &
+\href{https://github.com/gbv/jskos-server}{github} & 2026 &
+ServerApplication, WebAPI, database \\
+\href{https://opentheso.hypotheses.org/}{OpenTheso} & Web & ✓ & ✓ & Java
+& \href{https://spdx.org/licenses/GPL-3.0-or-later}{GPL} &
+\href{https://github.com/miledrousset/Opentheso}{github} & 2026 &
+SoftwareImage, WebApplication, ServerApplication, WebAPI, editor \\
+\href{https://github.com/skohub-io/skohub-vocabs}{SkoHub Vocabs} & Web &
+✓ & ✓ & JavaScript & \href{https://spdx.org/licenses/Apache-2.0}{Apache}
+& \href{https://github.com/skohub-io/skohub-vocabs}{github} & 2026 &
+WebApplication, SoftwareImage, viewer \\
 \href{https://github.com/EBISPOT/ols4}{Ontology Lookup Service (OLS)} &
 Web & - & ✓ & JavaScript, Java &
 \href{https://spdx.org/licenses/Apache-2.0}{Apache} &
@@ -338,10 +344,51 @@ ServerApplication, WebAPI, WebApplication, SoftwareImage, viewer \\
 Java & \href{https://spdx.org/licenses/Apache-2.0}{Apache} &
 \href{https://github.com/fusion-jena/abecto}{github} & 2026 &
 CommandLineApplication, SoftwareImage, validator \\
+\href{https://github.com/nfdi4cat/voc4cat-tool/}{voc4cat-tool} & CLI,
+GitHub, Excel & - & - & Python &
+\href{https://spdx.org/licenses/BSD-3-Clause}{BSD} &
+\href{https://github.com/nfdi4cat/voc4cat-tool/}{github} & 2026 &
+CommandLineApplication, converter \\
+\href{https://protege.stanford.edu/}{Protégé} & JVM & ✓ & - & Java &
+\href{https://spdx.org/licenses/BSD-3-Clause}{BSD} &
+\href{https://github.com/protegeproject/protege}{github} & 2026 &
+Application, editor \\
+\href{https://ontoportal.org/}{OntoPortal Alliance} & Web & - & ✓ & Ruby
+& \href{https://spdx.org/licenses/BSD-3-Clause}{BSD} &
+\href{https://github.com/ontoportal}{github} & 2026 & ServerApplication,
+WebAPI, WebApplication, SoftwareImage, ePackage, viewer \\
+\href{https://showvoc.uniroma2.it/}{ShowVoc} & Web & - & - & JavaScript
+& \href{https://spdx.org/licenses/BSD-3-Clause}{BSD} &
+\href{https://bitbucket.org/art-uniroma2/showvoc/src/master/}{bitbucket}
+& 2026 & WebApplication, viewer \\
+VocExcel & Excel, CLI & - & - & Python &
+\href{https://spdx.org/licenses/BSD-3-Clause}{BSD} &
+\href{https://github.com/Kurrawong/VocExcel}{github} & 2026 &
+CommandLineApplication, converter \\
+jskos-cli & CLI & - & - & JavaScript &
+\href{https://spdx.org/licenses/MIT}{MIT} &
+\href{https://github.com/gbv/jskos-cli/}{github} & 2026 &
+CommandLineApplication, converter, validator \\
+\href{https://mapping-commons.github.io/sssom-py}{sssom-py} & CLI & - &
+- & Python & \href{https://spdx.org/licenses/MIT}{MIT} &
+\href{https://github.com/mapping-commons/sssom-py}{github} & 2026 &
+CommandLineApplication, converter \\
+\href{https://ts4nfdi.github.io/api-gateway/}{TS4NFDI API Gateway} & Web
+& - & ✓ & Java, JavaScript & \href{https://spdx.org/licenses/MIT}{MIT} &
+\href{https://github.com/ts4nfdi/api-gateway}{github} & 2026 & WebAPI,
+ePackage, viewer, converter \\
 jskos-proxy & Web & - & ✓ & JavaScript &
 \href{https://spdx.org/licenses/MIT}{MIT} &
 \href{https://github.com/gbv/jskos-proxy/}{github} & 2026 & WebAPI,
 SoftwareImage, viewer, converter \\
+\href{https://atramhasis.readthedocs.io/en/latest/}{Atramhasis} & Web &
+✓ & ✓ & Python & \href{https://spdx.org/licenses/GPL-3.0-or-later}{GPL}
+& \href{https://github.com/OnroerendErfgoed/atramhasis}{github} & 2026 &
+WebApplication, editor \\
+\href{https://incenp.org/dvlpt/sssom-java/}{sssom-java} & CLI & - & - &
+Java & \href{https://spdx.org/licenses/GPL-3.0-or-later}{GPL} &
+\href{https://github.com/gouttegd/sssom-java}{github} & 2026 &
+CommandLineApplication, converter \\
 \href{https://www.npmjs.org/package/sssom}{sssom-js} & CLI & - & - &
 JavaScript & \href{https://spdx.org/licenses/MIT}{MIT} &
 \href{https://github.com/gbv/sssom-js}{github} & 2026 &
@@ -355,135 +402,96 @@ of Terms} & Web & - & ✓ & Typescript &
 \href{https://spdx.org/licenses/EUPL-1.2}{EUPL} &
 \href{https://github.com/netwerk-digitaal-erfgoed/network-of-terms}{github}
 & 2026 & WebAPI, SoftwareImage, converter \\
-\href{https://incenp.org/dvlpt/sssom-java/}{sssom-java} & CLI & - & - &
-Java & \href{https://spdx.org/licenses/GPL-3.0-or-later}{GPL} &
-\href{https://github.com/gouttegd/sssom-java}{github} & 2026 &
-CommandLineApplication, converter \\
-\href{https://ts4nfdi.github.io/api-gateway/}{TS4NFDI API Gateway} & Web
-& - & ✓ & Java, JavaScript & \href{https://spdx.org/licenses/MIT}{MIT} &
-\href{https://github.com/ts4nfdi/api-gateway}{github} & 2026 & WebAPI,
-ePackage, viewer, converter \\
+\href{https://lode.opencitations.net/}{LODE} & Web & - & ✓ & Java &
+\href{https://spdx.org/licenses/ISC}{ISC} &
+\href{https://github.com/opencitations/lode}{github} & 2026 &
+SoftwareImage, erverApplication, viewer \\
+\href{https://github.com/dgarijo/Widoco}{WIDOCO} & JVM & - & - &
+JavaScript, Java & \href{https://spdx.org/licenses/Apache-2.0}{Apache} &
+\href{https://github.com/dgarijo/Widoco}{github} & 2026 &
+CommandLineApplication, SoftwareImage, viewer \\
+\href{https://www.ebi.ac.uk/spot/oxo/}{OxO} & Web & - & ✓ & JavaScript &
+\href{https://spdx.org/licenses/Apache-2.0}{Apache} &
+\href{https://github.com/EBISPOT/oxo2}{github} & 2026 & WebApplication,
+WebAPI, SoftwareImage, erverApplication, viewer \\
+\href{https://service.tib.eu/webvowl/}{WebVOWL} & Web & - & - &
+JavaScript & \href{https://spdx.org/licenses/MIT}{MIT} &
+\href{https://github.com/VisualDataWeb/WebVOWL}{github} & 2026 &
+WebApplication, SoftwareImage, viewer \\
+\href{https://foops.linkeddata.es/FAIR_validator.html}{O\textquotesingle FAIRe}
+& Web & - & ✓ & Java & \href{https://spdx.org/licenses/MIT}{MIT} &
+\href{https://github.com/agroportal/fairness}{github} & 2026 &
+WebApplication, WebAPI, erverApplication, validator \\
+OnToology & Web, git & - & - & Python &
+\href{https://spdx.org/licenses/Apache-2.0}{Apache} &
+\href{https://github.com/OnToology/OnToology}{github} & 2026 &
+WebApplication, viewer, validator \\
+\href{https://foops.linkeddata.es/FAIR_validator.html}{FOOPS!} & Web & -
+& - & Java, JavaScript &
+\href{https://spdx.org/licenses/Apache-2.0}{Apache} &
+\href{https://github.com/oeg-upm/fair_ontologies}{github} & 2026 &
+WebApplication, CommandLineApplication, validator \\
 \href{https://termgit.elga.gv.at/}{TerminoloGit} & Web, git & - & - &
 Python & \href{https://spdx.org/licenses/GPL-3.0-or-later}{GPL} &
 \href{https://gitlab.com/elga-gmbh/termgit}{gitlab} & 2026 &
 WebApplication, erverApplication, converter \\
+\href{https://onto4all.com/}{Onto4ALL Editor} & Web & ✓ & - &
+JavaScript, PHP & \href{https://spdx.org/licenses/Apache-2.0}{Apache} &
+\href{https://github.com/NCOR-BR/onto4all}{github} & 2026 &
+WebApplication, erverApplication, editor \\
 \href{http://incatools.github.io/ontology-development-kit/}{Ontology
 Development Kit} & CLI & - & - & Python &
 \href{https://spdx.org/licenses/BSD-3-Clause}{BSD} &
 \href{https://github.com/INCATools/ontology-development-kit}{github} &
 2026 & CommandLineApplication, SoftwareImage, converter, validator \\
-\href{https://vocabularyserver.com/web/}{TemaTres} & Web & ✓ & ✓ & PHP &
-\href{https://spdx.org/licenses/GPL-3.0-or-later}{GPL} &
-\href{https://github.com/tematres/TemaTres-Vocabulary-Server}{github} &
-2025 & ServerApplication, editor \\
-\href{https://surroundaustralia.github.io/vocpub-profile/profile.html}{VocPub
-Profile} & RDF & - & - & SHACL &
-\href{https://spdx.org/licenses/CC-BY-4.0}{CC} &
-\href{https://github.com/AGLDWG/vocpub-profile/}{github} & 2025 &
-eLibrary, validator \\
-\href{https://coli-conc.gbv.de/cocoda/}{Cocoda} & Web & ✓ & - &
-JavaScript & \href{https://spdx.org/licenses/MIT}{MIT} &
-\href{https://github.com/gbv/cocoda}{github} & 2025 & WebApplication,
-mapping editor \\
-\href{https://ontoportal.org/}{OntoPortal Alliance} & Web & - & ✓ & Ruby
-& \href{https://spdx.org/licenses/BSD-3-Clause}{BSD} &
-\href{https://github.com/ontoportal}{github} & 2025 & ServerApplication,
-WebAPI, WebApplication, SoftwareImage, ePackage, viewer \\
-\href{https://github.com/gbv/jskos-server}{JSKOS Server} & Web & ✓ & ✓ &
-JavaScript & \href{https://spdx.org/licenses/MIT}{MIT} &
-\href{https://github.com/gbv/jskos-server}{github} & 2025 &
-ServerApplication, WebAPI, database \\
-VocExcel & Excel, CLI & - & - & Python &
-\href{https://spdx.org/licenses/BSD-3-Clause}{BSD} &
-\href{https://github.com/Kurrawong/VocExcel}{github} & 2025 &
-CommandLineApplication, converter \\
-\href{https://mapping-commons.github.io/sssom-py}{sssom-py} & CLI & - &
-- & Python & \href{https://spdx.org/licenses/MIT}{MIT} &
-\href{https://github.com/mapping-commons/sssom-py}{github} & 2025 &
-CommandLineApplication, converter \\
+\href{http://themis.linkeddata.es/}{Themis} & Web & - & ✓ & Java &
+\href{https://spdx.org/licenses/Apache-2.0}{Apache} &
+\href{https://github.com/oeg-upm/Themis}{github} & 2026 &
+WebApplication, WebAPI, SoftwareImage, CommandLineApplication,
+validator \\
 \href{https://vocabseditor.acdh.oeaw.ac.at/}{Vocabseditor} & Web & ✓ & ✓
 & Python & \href{https://spdx.org/licenses/MIT}{MIT} &
 \href{https://github.com/acdh-oeaw/vocabseditor}{github} & 2025 &
 WebApplication, WebAPI, SoftwareImage, erverApplication, editor \\
-\href{https://service.tib.eu/webvowl/}{WebVOWL} & Web & - & - &
-JavaScript & \href{https://spdx.org/licenses/MIT}{MIT} &
-\href{https://github.com/VisualDataWeb/WebVOWL}{github} & 2025 &
-WebApplication, SoftwareImage, viewer \\
-\href{https://foops.linkeddata.es/FAIR_validator.html}{FOOPS!} & Web & -
-& - & Java, JavaScript &
-\href{https://spdx.org/licenses/Apache-2.0}{Apache} &
-\href{https://github.com/oeg-upm/fair_ontologies}{github} & 2025 &
-WebApplication, CommandLineApplication, validator \\
-SkoHub Shapes & RDF & - & - & SHACL & ? &
-\href{https://github.com/skohub-io/skohub-shapes}{github} & 2025 &
-SoftwareImage, validator \\
-OnToology & Web, git & - & - & Python &
-\href{https://spdx.org/licenses/Apache-2.0}{Apache} &
-\href{https://github.com/OnToology/OnToology}{github} & 2025 &
-WebApplication, viewer, validator \\
+\href{https://cscfi.github.io/mscr-docs/}{MSCR} & & ✓ & ✓ & Java &
+\href{https://spdx.org/licenses/MIT}{MIT} &
+\href{https://github.com/CSCfi/mscr-compose}{github} & 2025 &
+WebApplication, WebAPI, mapping editor \\
 \href{https://chowlk.linkeddata.es/}{Chowlk} & Web & - & - & Python &
 \href{https://spdx.org/licenses/Apache-2.0}{Apache} &
 \href{https://github.com/oeg-upm/Chowlk}{github} & 2025 &
 WebApplication, WebAPI, SoftwareImage, CommandLineApplication,
 converter \\
-\href{https://github.com/skohub-io/skohub-vocabs}{SkoHub Vocabs} & Web &
-✓ & ✓ & JavaScript & \href{https://spdx.org/licenses/Apache-2.0}{Apache}
-& \href{https://github.com/skohub-io/skohub-vocabs}{github} & 2025 &
-WebApplication, SoftwareImage, viewer \\
-\href{https://cscfi.github.io/mscr-docs/}{MSCR} & & ✓ & ✓ & Java &
-\href{https://spdx.org/licenses/MIT}{MIT} &
-\href{https://github.com/CSCfi/mscr-compose}{github} & 2025 &
-WebApplication, WebAPI, mapping editor \\
-\href{https://opentheso.hypotheses.org/}{OpenTheso} & Web & ✓ & ✓ & Java
-& \href{https://spdx.org/licenses/GPL-3.0-or-later}{GPL} &
-\href{https://github.com/miledrousset/Opentheso}{github} & 2025 &
-SoftwareImage, WebApplication, ServerApplication, WebAPI, editor \\
-\href{https://github.com/dgarijo/Widoco}{WIDOCO} & JVM & - & - &
-JavaScript, Java & \href{https://spdx.org/licenses/Apache-2.0}{Apache} &
-\href{https://github.com/dgarijo/Widoco}{github} & 2025 &
-CommandLineApplication, SoftwareImage, viewer \\
+SkoHub Shapes & RDF & - & - & SHACL & ? &
+\href{https://github.com/skohub-io/skohub-shapes}{github} & 2025 &
+SoftwareImage, validator \\
+EVOKS & Web & ✓ & - & Python & \href{https://spdx.org/licenses/MIT}{MIT}
+& \href{https://github.com/kit-data-manager/EVOKS}{github} & 2025 &
+SoftwareImage, CommandLineApplication, editor, converter \\
 \href{https://oops.linkeddata.es/}{OOPS!} & Web & - & - & Java & ? &
 \href{https://github.com/oeg-upm/OOPS}{github} & 2025 & WebApplication,
 CommandLineApplication, viewer \\
+\href{https://surroundaustralia.github.io/vocpub-profile/profile.html}{VocPub
+Profile} & RDF & - & - & SHACL &
+\href{https://spdx.org/licenses/CC-BY-4.0}{CC} &
+\href{https://github.com/AGLDWG/vocpub-profile/}{github} & 2025 &
+eLibrary, validator \\
 \href{http://vocabulary.odm2.org/}{ODM2 Controlled Vocabularies} & Web &
 ✓ & ✓ & Python & \href{https://spdx.org/licenses/BSD-3-Clause}{BSD} &
 \href{https://github.com/ODM2/ODM2ControlledVocabularies}{github} & 2025
 & WebApplication, WebAPI, editor \\
-EVOKS & Web & ✓ & - & Python & \href{https://spdx.org/licenses/MIT}{MIT}
-& \href{https://github.com/kit-data-manager/EVOKS}{github} & 2025 &
-SoftwareImage, CommandLineApplication, editor, converter \\
-\href{https://www.ebi.ac.uk/spot/oxo/}{OxO} & Web & - & ✓ & JavaScript &
-\href{https://spdx.org/licenses/Apache-2.0}{Apache} &
-\href{https://github.com/EBISPOT/OXO}{github} & 2025 & WebApplication,
-WebAPI, SoftwareImage, erverApplication, viewer \\
-\href{https://github.com/RDFLib/VocPrez}{VocPrez} & Web & - & ✓ & Python
-& \href{https://spdx.org/licenses/GPL-3.0-or-later}{GPL} &
-\href{https://github.com/RDFLib/VocPrez}{github} & 2024 &
-WebApplication, WebAPI, SoftwareImage, viewer \\
-\href{https://atramhasis.readthedocs.io/en/latest/}{Atramhasis} & Web &
-✓ & ✓ & Python & \href{https://spdx.org/licenses/GPL-3.0-or-later}{GPL}
-& \href{https://github.com/OnroerendErfgoed/atramhasis}{github} & 2024 &
-WebApplication, editor \\
-\href{https://github.com/AKSW/jekyll-rdf}{Jekyll RDF} & Web & - & ✓ &
-Ruby & \href{https://spdx.org/licenses/MIT}{MIT} &
-\href{https://github.com/AKSW/jekyll-rdf}{github} & 2024 &
-CommandLineApplication, SoftwareImage, viewer \\
 \href{https://github.com/cmader/qSKOS/}{qSKOS} & CLI & - & ✓ & Java &
 \href{https://spdx.org/licenses/GPL-3.0-or-later}{GPL} &
 \href{https://github.com/cmader/qSKOS/}{github} & 2024 &
 CommandLineApplication, validator \\
-\href{https://onto4all.com/}{Onto4ALL Editor} & Web & ✓ & - &
-JavaScript, PHP & \href{https://spdx.org/licenses/Apache-2.0}{Apache} &
-\href{https://github.com/NCOR-BR/onto4all}{github} & 2024 &
-WebApplication, erverApplication, editor \\
-Django Controlled Vocabularies & Web & ✓ & ✓ & Python &
-\href{https://spdx.org/licenses/BSD-3-Clause}{BSD} &
-\href{https://github.com/unt-libraries/django-controlled-vocabularies}{github}
-& 2023 & eLibrary, CommandLineApplication, editor \\
-\href{https://protegewiki.stanford.edu/wiki/WebProtege}{Web Protégé} &
-Web & ✓ & - & Java & \href{https://spdx.org/licenses/BSD-3-Clause}{BSD}
-& \href{https://github.com/protegeproject/webprotege}{github} & 2023 &
-WebApplication, WebAPI, SoftwareImage, erverApplication, editor \\
+\href{https://github.com/AKSW/jekyll-rdf}{Jekyll RDF} & Web & - & ✓ &
+Ruby & \href{https://spdx.org/licenses/MIT}{MIT} &
+\href{https://github.com/AKSW/jekyll-rdf}{github} & 2024 &
+CommandLineApplication, SoftwareImage, viewer \\
+\href{https://github.com/RDFLib/VocPrez}{VocPrez} & Web & - & ✓ & Python
+& \href{https://spdx.org/licenses/GPL-3.0-or-later}{GPL} &
+\href{https://github.com/RDFLib/VocPrez}{github} & 2024 &
+WebApplication, WebAPI, SoftwareImage, viewer \\
 \href{https://semanticweb.cs.vu.nl/amalgame/}{Amalgame} & Web & ✓ & - &
 prolog & \href{https://spdx.org/licenses/BSD-3-Clause}{BSD} &
 \href{https://github.com/jrvosse/amalgame}{github} & 2023 &
@@ -492,15 +500,23 @@ WebApplication, SoftwareImage, ePackage, mapping editor \\
 \href{https://spdx.org/licenses/GPL-3.0-or-later}{GPL} &
 \href{https://github.com/wandora-team/wandora}{github} & 2023 &
 WebApplication, editor \\
-Neologism & Web & ✓ & ✓ & JavaScript &
-\href{https://spdx.org/licenses/MIT}{MIT} &
-\href{https://github.com/Semantic-Society/Neologism}{github} & 2023 &
+Django Controlled Vocabularies & Web & ✓ & ✓ & Python &
+\href{https://spdx.org/licenses/BSD-3-Clause}{BSD} &
+\href{https://github.com/unt-libraries/django-controlled-vocabularies}{github}
+& 2023 & eLibrary, CommandLineApplication, editor \\
+\href{https://protegewiki.stanford.edu/wiki/WebProtege}{Web Protégé} &
+Web & ✓ & - & Java & \href{https://spdx.org/licenses/BSD-3-Clause}{BSD}
+& \href{https://github.com/protegeproject/webprotege}{github} & 2023 &
 WebApplication, WebAPI, SoftwareImage, erverApplication, editor \\
 \href{https://moex.gitlabpages.inria.fr/alignapi/}{Alignment API and
 Alignment Server} & CLI & - & ✓ & Java &
 \href{https://spdx.org/licenses/GPL-3.0-or-later}{GPL} &
 \href{https://gitlab.inria.fr/moex/alignapi/}{inria} & 2023 &
 CommandLineApplication, WebAPI, erverApplication, database \\
+Neologism & Web & ✓ & ✓ & JavaScript &
+\href{https://spdx.org/licenses/MIT}{MIT} &
+\href{https://github.com/Semantic-Society/Neologism}{github} & 2023 &
+WebApplication, WebAPI, SoftwareImage, erverApplication, editor \\
 SKOSjs & Web & ✓ & - & JavaScript &
 \href{https://spdx.org/licenses/Apache-2.0}{Apache} &
 \href{https://github.com/tkurz/skosjs}{github} & 2022 & WebApplication,
@@ -521,15 +537,6 @@ CommandLineApplication, converter \\
 & Python & \href{https://spdx.org/licenses/MIT}{MIT} &
 \href{https://github.com/NatLibFi/Skosify}{github} & 2021 &
 CommandLineApplication, converter, validator \\
-\href{http://themis.linkeddata.es/}{Themis} & Web & - & ✓ & Java &
-\href{https://spdx.org/licenses/Apache-2.0}{Apache} &
-\href{https://github.com/oeg-upm/Themis}{github} & 2021 &
-WebApplication, WebAPI, SoftwareImage, CommandLineApplication,
-validator \\
-\href{https://essepuntato.it/lode/}{LODE} & Web & - & ✓ & Java &
-\href{https://spdx.org/licenses/ISC}{ISC} &
-\href{https://github.com/essepuntato/LODE}{github} & 2020 &
-SoftwareImage, erverApplication, viewer \\
 \href{http://openskos.org/}{OpenSKOS} & Web & - & ✓ & PHP &
 \href{https://spdx.org/licenses/GPL-3.0-or-later}{GPL} &
 \href{https://github.com/OpenSKOS/OpenSKOS}{github} & 2020 &
@@ -581,6 +588,8 @@ WebApplication, erverApplication, ePackage, editor \\
 
 \end{longtable}
 
+}
+
 Please
 \href{https://github.com/gbv/bartoc-vocabulary-software/issues}{open an
 issue} if some relevant software is missing or data seems invalid!
@@ -595,6 +604,7 @@ Machine-readable description of the software is based on
 \href{https://codemeta.github.io/}{CodeMeta} plus custom fields
 \texttt{api} and \texttt{edit}.
 
+{\def\LTcaptype{none} % do not increment counter
 \begin{longtable}[]{@{}
   >{\raggedright\arraybackslash}p{(\linewidth - 2\tabcolsep) * \real{0.2500}}
   >{\raggedright\arraybackslash}p{(\linewidth - 2\tabcolsep) * \real{0.7500}}@{}}
@@ -623,6 +633,7 @@ software \\
 \texttt{applicationCategory} & generic type of software \\
 \texttt{applicationSubCategory} & type of KOS software \\
 \end{longtable}
+}
 
 The metadata is also \href{kos-software.ttl}{made available in RDF}.
 
@@ -781,28 +792,29 @@ possibly others.
 
 \subsection{References}\label{references}
 
-\phantomsection\label{refs}
-\begin{CSLReferences}{1}{0}
+\protect\phantomsection\label{refs}
+\begin{CSLReferences}{1}{1}
 \bibitem[\citeproctext]{ref-Bergman2018}
-Bergman, Michael K. 2018. {``30 Active Ontology Alignment Tools.''}
+Bergman, Michael K. 2018. \emph{30 Active Ontology Alignment Tools}.
 \url{https://www.mkbergman.com/2129/30-active-ontology-alignment-tools/}.
 
 \bibitem[\citeproctext]{ref-Miles2009}
-Miles, Alistair, and Sean Bechhofer. 2009. {``W3C SKOS Implementation
-Report,''} May.
+Miles, Alistair, and Sean Bechhofer. 2009. \emph{W3C SKOS Implementation
+Report}. May.
 \url{https://www.w3.org/2006/07/SWD/SKOS/reference/20090315/implementation.html}.
 
 \bibitem[\citeproctext]{ref-Montoro2018}
-Montoro, Maria Pia. 2018. {``Terminology Management Systems.''}
+Montoro, Maria Pia. 2018. \emph{Terminology Management Systems}.
 \url{https://recremisi.blogspot.com/p/acrolinxterminology-lifecycle.html}.
 
 \bibitem[\citeproctext]{ref-Voss2016a}
-Voß, Jakob. 2016a. {``Coli-Conc {Technical} {Report} 2: {Open} {Source}
-{KOS} Software,''} March. \url{https://doi.org/10.5281/zenodo.48227}.
+Voß, Jakob. 2016a. \emph{Coli-Conc {Technical} {Report} 2: {Open}
+{Source} {KOS} Software}. March.
+\url{https://doi.org/10.5281/zenodo.48227}.
 
 \bibitem[\citeproctext]{ref-Voss2016b}
----------. 2016b. {``Open {Source} Web Applications for {Knowledge}
-{Organization} {Systems},''} August.
+Voß, Jakob. 2016b. \emph{Open {Source} Web Applications for {Knowledge}
+{Organization} {Systems}}. August.
 \url{https://doi.org/10.5281/zenodo.61262}.
 
 \end{CSLReferences}

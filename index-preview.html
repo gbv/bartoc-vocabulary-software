@@ -1,18 +1,24 @@
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
     <meta charset="utf-8">
-    <meta name="generator" content="quarto-1.8.27">
+    <meta name="generator" content="quarto-1.10.18">
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-    <meta name="dcterms.date" content="2026-01-30">
+    <meta name="dcterms.date" content="2026-09-22">
 
     <title>Software for management of knowledge organization systems</title>
     <style>
-      code{white-space: pre-wrap;}
+      /* Default styles provided by pandoc.
+      ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+      */
       span.smallcaps{font-variant: small-caps;}
-      div.columns{display: flex; gap: min(4vw, 1.5em);}
-      div.column{flex: auto; overflow-x: auto;}
+      div.columns{display: flex; gap: 1.5em;}
+      div.column{flex: auto;}
+      @media screen {
+      div.columns{gap: min(4vw, 1.5em);}
+      div.column{overflow-x: auto;}
+      }
       div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
       ul.task-list{list-style: none;}
       ul.task-list li input[type="checkbox"] {
@@ -59,7 +65,6 @@
       div.csl-bib-body { }
       div.csl-entry {
         clear: both;
-        margin-bottom: 0em;
       }
       .hanging-indent div.csl-entry {
         margin-left:2em;
@@ -171,25 +176,24 @@
 <script src="site_libs/clipboard/clipboard.min.js"></script>
 <script src="site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
-<script src="site_libs/quarto-html/axe/axe-check.js" type="module"></script>
 <script src="site_libs/quarto-html/popper.min.js"></script>
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="site_libs/quarto-html/anchor.min.js"></script>
 <link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-6b2306b05fee0b85d8c2d824c36e28c3.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-1ed79dc1172df127c7d94f8abf7ffee9.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-039dd4a01e0fbf6cabf371ca0eba5225.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-f47dfb6c2a217635020558841e19f305.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
      <script src="https://cdn.jsdelivr.net/npm/requirejs@2.3.6/require.min.js" integrity="sha384-c9c+LnTbwQ3aujuU7ULEPVvgLs+Fn6fJUvIGTsuu1ZcCf11fiEubah0ttpca4ntM sha384-6V1/AdqZRWk1KAlWbKBlGhN7VG4iE/yAZcO6NZPMF8od0vukrvr0tg4qY6NSrItx" crossorigin="anonymous"></script>
 
 <script type="application/javascript">define('jquery', [],function() {return window.jQuery;})</script>  <link rel="canonical" href="https://bartoc.org/software">
 <link rel="shortcut icon" href="bartoc-icon.png" type="image/png">  
       <meta name="citation_title" content="Software for management of knowledge organization systems">
 <meta name="citation_author" content="Jakob Voß">
-<meta name="citation_publication_date" content="2026-01-30">
-<meta name="citation_cover_date" content="2026-01-30">
+<meta name="citation_publication_date" content="2026-09-22">
+<meta name="citation_cover_date" content="2026-09-22">
 <meta name="citation_year" content="2026">
-<meta name="citation_online_date" content="2026-01-30">
+<meta name="citation_online_date" content="2026-09-22">
 <meta name="citation_doi" content="10.5281/zenodo.15672523">
 <meta name="citation_language" content="en">
 <meta name="citation_reference" content="citation_title=Coli-conc Technical Report 2: Open Source KOS software;,citation_abstract=This report gives an overview about Open Source software for Knowledge Organization Systems (KOS).;,citation_author=Jakob Voß;,citation_publication_date=2016-03;,citation_cover_date=2016-03;,citation_year=2016;,citation_fulltext_html_url=https://zenodo.org/records/48227;,citation_doi=10.5281/zenodo.48227;">
@@ -222,7 +226,7 @@
           <div class="quarto-title-meta-heading">Affiliation</div>
           
                 <div class="quarto-title-meta-contents">
-            <p class="author">Jakob Voß <a href="https://orcid.org/0000-0002-7613-4123" class="quarto-title-author-orcid"> <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAA2ZpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMC1jMDYwIDYxLjEzNDc3NywgMjAxMC8wMi8xMi0xNzozMjowMCAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wTU09Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9tbS8iIHhtbG5zOnN0UmVmPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvc1R5cGUvUmVzb3VyY2VSZWYjIiB4bWxuczp4bXA9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC8iIHhtcE1NOk9yaWdpbmFsRG9jdW1lbnRJRD0ieG1wLmRpZDo1N0NEMjA4MDI1MjA2ODExOTk0QzkzNTEzRjZEQTg1NyIgeG1wTU06RG9jdW1lbnRJRD0ieG1wLmRpZDozM0NDOEJGNEZGNTcxMUUxODdBOEVCODg2RjdCQ0QwOSIgeG1wTU06SW5zdGFuY2VJRD0ieG1wLmlpZDozM0NDOEJGM0ZGNTcxMUUxODdBOEVCODg2RjdCQ0QwOSIgeG1wOkNyZWF0b3JUb29sPSJBZG9iZSBQaG90b3Nob3AgQ1M1IE1hY2ludG9zaCI+IDx4bXBNTTpEZXJpdmVkRnJvbSBzdFJlZjppbnN0YW5jZUlEPSJ4bXAuaWlkOkZDN0YxMTc0MDcyMDY4MTE5NUZFRDc5MUM2MUUwNEREIiBzdFJlZjpkb2N1bWVudElEPSJ4bXAuZGlkOjU3Q0QyMDgwMjUyMDY4MTE5OTRDOTM1MTNGNkRBODU3Ii8+IDwvcmRmOkRlc2NyaXB0aW9uPiA8L3JkZjpSREY+IDwveDp4bXBtZXRhPiA8P3hwYWNrZXQgZW5kPSJyIj8+84NovQAAAR1JREFUeNpiZEADy85ZJgCpeCB2QJM6AMQLo4yOL0AWZETSqACk1gOxAQN+cAGIA4EGPQBxmJA0nwdpjjQ8xqArmczw5tMHXAaALDgP1QMxAGqzAAPxQACqh4ER6uf5MBlkm0X4EGayMfMw/Pr7Bd2gRBZogMFBrv01hisv5jLsv9nLAPIOMnjy8RDDyYctyAbFM2EJbRQw+aAWw/LzVgx7b+cwCHKqMhjJFCBLOzAR6+lXX84xnHjYyqAo5IUizkRCwIENQQckGSDGY4TVgAPEaraQr2a4/24bSuoExcJCfAEJihXkWDj3ZAKy9EJGaEo8T0QSxkjSwORsCAuDQCD+QILmD1A9kECEZgxDaEZhICIzGcIyEyOl2RkgwAAhkmC+eAm0TAAAAABJRU5ErkJggg=="></a></p>
+            <p class="author">Jakob Voß <a href="https://orcid.org/0000-0002-7613-4123" class="quarto-title-author-orcid" aria-label="ORCID profile for Jakob Voß"> <img alt="" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAA2ZpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMC1jMDYwIDYxLjEzNDc3NywgMjAxMC8wMi8xMi0xNzozMjowMCAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wTU09Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9tbS8iIHhtbG5zOnN0UmVmPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvc1R5cGUvUmVzb3VyY2VSZWYjIiB4bWxuczp4bXA9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC8iIHhtcE1NOk9yaWdpbmFsRG9jdW1lbnRJRD0ieG1wLmRpZDo1N0NEMjA4MDI1MjA2ODExOTk0QzkzNTEzRjZEQTg1NyIgeG1wTU06RG9jdW1lbnRJRD0ieG1wLmRpZDozM0NDOEJGNEZGNTcxMUUxODdBOEVCODg2RjdCQ0QwOSIgeG1wTU06SW5zdGFuY2VJRD0ieG1wLmlpZDozM0NDOEJGM0ZGNTcxMUUxODdBOEVCODg2RjdCQ0QwOSIgeG1wOkNyZWF0b3JUb29sPSJBZG9iZSBQaG90b3Nob3AgQ1M1IE1hY2ludG9zaCI+IDx4bXBNTTpEZXJpdmVkRnJvbSBzdFJlZjppbnN0YW5jZUlEPSJ4bXAuaWlkOkZDN0YxMTc0MDcyMDY4MTE5NUZFRDc5MUM2MUUwNEREIiBzdFJlZjpkb2N1bWVudElEPSJ4bXAuZGlkOjU3Q0QyMDgwMjUyMDY4MTE5OTRDOTM1MTNGNkRBODU3Ii8+IDwvcmRmOkRlc2NyaXB0aW9uPiA8L3JkZjpSREY+IDwveDp4bXBtZXRhPiA8P3hwYWNrZXQgZW5kPSJyIj8+84NovQAAAR1JREFUeNpiZEADy85ZJgCpeCB2QJM6AMQLo4yOL0AWZETSqACk1gOxAQN+cAGIA4EGPQBxmJA0nwdpjjQ8xqArmczw5tMHXAaALDgP1QMxAGqzAAPxQACqh4ER6uf5MBlkm0X4EGayMfMw/Pr7Bd2gRBZogMFBrv01hisv5jLsv9nLAPIOMnjy8RDDyYctyAbFM2EJbRQw+aAWw/LzVgx7b+cwCHKqMhjJFCBLOzAR6+lXX84xnHjYyqAo5IUizkRCwIENQQckGSDGY4TVgAPEaraQr2a4/24bSuoExcJCfAEJihXkWDj3ZAKy9EJGaEo8T0QSxkjSwORsCAuDQCD+QILmD1A9kECEZgxDaEZhICIzGcIyEyOl2RkgwAAhkmC+eAm0TAAAAABJRU5ErkJggg=="></a></p>
           </div>
                 <div class="quarto-title-meta-contents">
                     <p class="affiliation">
@@ -237,7 +241,7 @@
                 <div>
             <div class="quarto-title-meta-heading">Published</div>
             <div class="quarto-title-meta-contents">
-              <p class="date">January 30, 2026</p>
+              <p class="date">September 22, 2026</p>
             </div>
           </div>
           
@@ -292,11 +296,11 @@
 </section>
 <section id="kos-software" class="level2">
 <h2 class="anchored" data-anchor-id="kos-software">KOS software</h2>
-<div class="cell-container"><div class="cell-decorator"><pre>In [1]:</pre></div><div id="17e5101e" class="cell" data-execution_count="1">
+<div class="cell-container"><div class="cell-decorator"><pre>In [1]:</pre></div><div id="bf5146a0" class="cell" data-execution_count="1">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> pandas <span class="im">as</span> pd</span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>kos <span class="op">=</span> pd.read_json(<span class="st">'kos-software.json'</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div></div>
-<div id="ba322e1e" class="cell markdown">
+<div id="0558d2f4" class="cell markdown">
 <p>This report includes <strong>73</strong> instances of KOS software so far. The list is managed <a href="kos-software.json">in a JSON file</a> as array of <a href="https://codemeta.github.io/">CodeMeta</a> records with fields as <a href="#metadata">described below</a>. Applications without license or repository are closed source. Deprecated applications are included for historical reference.</p>
 </div>
 <div class="cell-container"><div class="cell-decorator"><pre>In [2]:</pre></div><div class="cell" data-execution_count="2">
@@ -344,7 +348,7 @@ Table&nbsp;1
 </figcaption>
 <div aria-describedby="tbl-software-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <div class="cell-output cell-output-display">
-<table class="dataframe do-not-create-environment caption-top table table-sm table-striped small" data-border="1">
+<table class="dataframe caption-top table table-sm table-striped small" data-border="1">
 <thead>
 <tr class="header">
 <th data-quarto-table-cell-role="th">name</th>
@@ -382,6 +386,17 @@ Table&nbsp;1
 <td>ServerApplication, database, editor</td>
 </tr>
 <tr class="odd">
+<td><a href="https://vocabularyserver.com/web/">TemaTres</a></td>
+<td>Web</td>
+<td>✓</td>
+<td>✓</td>
+<td>PHP</td>
+<td><a href="https://spdx.org/licenses/GPL-3.0-or-later">GPL</a></td>
+<td><a href="https://github.com/tematres/TemaTres-Vocabulary-Server">github</a></td>
+<td>2026</td>
+<td>ServerApplication, editor</td>
+</tr>
+<tr class="even">
 <td><a href="https://iqvoc.net/">iQvoc</a></td>
 <td>Web</td>
 <td>✓</td>
@@ -392,7 +407,7 @@ Table&nbsp;1
 <td>2026</td>
 <td>SoftwareImage, WebApplication, editor</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td><a href="https://vocbench.uniroma2.it/">VocBench</a></td>
 <td>Web</td>
 <td>✓</td>
@@ -403,7 +418,7 @@ Table&nbsp;1
 <td>2026</td>
 <td>WebApplication, editor</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td><a href="https://skosmos.org/">Skosmos</a></td>
 <td>Web</td>
 <td>-</td>
@@ -414,18 +429,18 @@ Table&nbsp;1
 <td>2026</td>
 <td>WebApplication, viewer</td>
 </tr>
-<tr class="even">
-<td><a href="https://foops.linkeddata.es/FAIR_validator.html">O'FAIRe</a></td>
-<td>Web</td>
-<td>-</td>
-<td>✓</td>
-<td>Java</td>
-<td><a href="https://spdx.org/licenses/MIT">MIT</a></td>
-<td><a href="https://github.com/agroportal/fairness">github</a></td>
-<td>2026</td>
-<td>WebApplication, WebAPI, erverApplication, validator</td>
-</tr>
 <tr class="odd">
+<td><a href="https://coli-conc.gbv.de/cocoda/">Cocoda</a></td>
+<td>Web</td>
+<td>✓</td>
+<td>-</td>
+<td>JavaScript</td>
+<td><a href="https://spdx.org/licenses/MIT">MIT</a></td>
+<td><a href="https://github.com/gbv/cocoda">github</a></td>
+<td>2026</td>
+<td>WebApplication, mapping editor</td>
+</tr>
+<tr class="even">
 <td><a href="https://github.com/cthoyt/sssom-curator#readme">SSSOM Curator</a></td>
 <td></td>
 <td>✓</td>
@@ -436,49 +451,38 @@ Table&nbsp;1
 <td>2026</td>
 <td>WebApplication, CommandLineApplication, mapping editor</td>
 </tr>
-<tr class="even">
-<td><a href="https://protege.stanford.edu/">Protégé</a></td>
-<td>JVM</td>
-<td>✓</td>
-<td>-</td>
-<td>Java</td>
-<td><a href="https://spdx.org/licenses/BSD-3-Clause">BSD</a></td>
-<td><a href="https://github.com/protegeproject/protege">github</a></td>
-<td>2026</td>
-<td>Application, editor</td>
-</tr>
 <tr class="odd">
-<td>jskos-cli</td>
-<td>CLI</td>
-<td>-</td>
-<td>-</td>
+<td><a href="https://github.com/gbv/jskos-server">JSKOS Server</a></td>
+<td>Web</td>
+<td>✓</td>
+<td>✓</td>
 <td>JavaScript</td>
 <td><a href="https://spdx.org/licenses/MIT">MIT</a></td>
-<td><a href="https://github.com/gbv/jskos-cli/">github</a></td>
+<td><a href="https://github.com/gbv/jskos-server">github</a></td>
 <td>2026</td>
-<td>CommandLineApplication, converter, validator</td>
+<td>ServerApplication, WebAPI, database</td>
 </tr>
 <tr class="even">
-<td><a href="https://github.com/nfdi4cat/voc4cat-tool/">voc4cat-tool</a></td>
-<td>CLI, GitHub, Excel</td>
-<td>-</td>
-<td>-</td>
-<td>Python</td>
-<td><a href="https://spdx.org/licenses/BSD-3-Clause">BSD</a></td>
-<td><a href="https://github.com/nfdi4cat/voc4cat-tool/">github</a></td>
+<td><a href="https://opentheso.hypotheses.org/">OpenTheso</a></td>
+<td>Web</td>
+<td>✓</td>
+<td>✓</td>
+<td>Java</td>
+<td><a href="https://spdx.org/licenses/GPL-3.0-or-later">GPL</a></td>
+<td><a href="https://github.com/miledrousset/Opentheso">github</a></td>
 <td>2026</td>
-<td>CommandLineApplication, converter</td>
+<td>SoftwareImage, WebApplication, ServerApplication, WebAPI, editor</td>
 </tr>
 <tr class="odd">
-<td><a href="https://showvoc.uniroma2.it/">ShowVoc</a></td>
+<td><a href="https://github.com/skohub-io/skohub-vocabs">SkoHub Vocabs</a></td>
 <td>Web</td>
-<td>-</td>
-<td>-</td>
+<td>✓</td>
+<td>✓</td>
 <td>JavaScript</td>
-<td><a href="https://spdx.org/licenses/BSD-3-Clause">BSD</a></td>
-<td><a href="https://bitbucket.org/art-uniroma2/showvoc/src/master/">bitbucket</a></td>
+<td><a href="https://spdx.org/licenses/Apache-2.0">Apache</a></td>
+<td><a href="https://github.com/skohub-io/skohub-vocabs">github</a></td>
 <td>2026</td>
-<td>WebApplication, viewer</td>
+<td>WebApplication, SoftwareImage, viewer</td>
 </tr>
 <tr class="even">
 <td><a href="https://github.com/EBISPOT/ols4">Ontology Lookup Service (OLS)</a></td>
@@ -503,6 +507,94 @@ Table&nbsp;1
 <td>CommandLineApplication, SoftwareImage, validator</td>
 </tr>
 <tr class="even">
+<td><a href="https://github.com/nfdi4cat/voc4cat-tool/">voc4cat-tool</a></td>
+<td>CLI, GitHub, Excel</td>
+<td>-</td>
+<td>-</td>
+<td>Python</td>
+<td><a href="https://spdx.org/licenses/BSD-3-Clause">BSD</a></td>
+<td><a href="https://github.com/nfdi4cat/voc4cat-tool/">github</a></td>
+<td>2026</td>
+<td>CommandLineApplication, converter</td>
+</tr>
+<tr class="odd">
+<td><a href="https://protege.stanford.edu/">Protégé</a></td>
+<td>JVM</td>
+<td>✓</td>
+<td>-</td>
+<td>Java</td>
+<td><a href="https://spdx.org/licenses/BSD-3-Clause">BSD</a></td>
+<td><a href="https://github.com/protegeproject/protege">github</a></td>
+<td>2026</td>
+<td>Application, editor</td>
+</tr>
+<tr class="even">
+<td><a href="https://ontoportal.org/">OntoPortal Alliance</a></td>
+<td>Web</td>
+<td>-</td>
+<td>✓</td>
+<td>Ruby</td>
+<td><a href="https://spdx.org/licenses/BSD-3-Clause">BSD</a></td>
+<td><a href="https://github.com/ontoportal">github</a></td>
+<td>2026</td>
+<td>ServerApplication, WebAPI, WebApplication, SoftwareImage, ePackage, viewer</td>
+</tr>
+<tr class="odd">
+<td><a href="https://showvoc.uniroma2.it/">ShowVoc</a></td>
+<td>Web</td>
+<td>-</td>
+<td>-</td>
+<td>JavaScript</td>
+<td><a href="https://spdx.org/licenses/BSD-3-Clause">BSD</a></td>
+<td><a href="https://bitbucket.org/art-uniroma2/showvoc/src/master/">bitbucket</a></td>
+<td>2026</td>
+<td>WebApplication, viewer</td>
+</tr>
+<tr class="even">
+<td>VocExcel</td>
+<td>Excel, CLI</td>
+<td>-</td>
+<td>-</td>
+<td>Python</td>
+<td><a href="https://spdx.org/licenses/BSD-3-Clause">BSD</a></td>
+<td><a href="https://github.com/Kurrawong/VocExcel">github</a></td>
+<td>2026</td>
+<td>CommandLineApplication, converter</td>
+</tr>
+<tr class="odd">
+<td>jskos-cli</td>
+<td>CLI</td>
+<td>-</td>
+<td>-</td>
+<td>JavaScript</td>
+<td><a href="https://spdx.org/licenses/MIT">MIT</a></td>
+<td><a href="https://github.com/gbv/jskos-cli/">github</a></td>
+<td>2026</td>
+<td>CommandLineApplication, converter, validator</td>
+</tr>
+<tr class="even">
+<td><a href="https://mapping-commons.github.io/sssom-py">sssom-py</a></td>
+<td>CLI</td>
+<td>-</td>
+<td>-</td>
+<td>Python</td>
+<td><a href="https://spdx.org/licenses/MIT">MIT</a></td>
+<td><a href="https://github.com/mapping-commons/sssom-py">github</a></td>
+<td>2026</td>
+<td>CommandLineApplication, converter</td>
+</tr>
+<tr class="odd">
+<td><a href="https://ts4nfdi.github.io/api-gateway/">TS4NFDI API Gateway</a></td>
+<td>Web</td>
+<td>-</td>
+<td>✓</td>
+<td>Java, JavaScript</td>
+<td><a href="https://spdx.org/licenses/MIT">MIT</a></td>
+<td><a href="https://github.com/ts4nfdi/api-gateway">github</a></td>
+<td>2026</td>
+<td>WebAPI, ePackage, viewer, converter</td>
+</tr>
+<tr class="even">
 <td>jskos-proxy</td>
 <td>Web</td>
 <td>-</td>
@@ -512,6 +604,28 @@ Table&nbsp;1
 <td><a href="https://github.com/gbv/jskos-proxy/">github</a></td>
 <td>2026</td>
 <td>WebAPI, SoftwareImage, viewer, converter</td>
+</tr>
+<tr class="odd">
+<td><a href="https://atramhasis.readthedocs.io/en/latest/">Atramhasis</a></td>
+<td>Web</td>
+<td>✓</td>
+<td>✓</td>
+<td>Python</td>
+<td><a href="https://spdx.org/licenses/GPL-3.0-or-later">GPL</a></td>
+<td><a href="https://github.com/OnroerendErfgoed/atramhasis">github</a></td>
+<td>2026</td>
+<td>WebApplication, editor</td>
+</tr>
+<tr class="even">
+<td><a href="https://incenp.org/dvlpt/sssom-java/">sssom-java</a></td>
+<td>CLI</td>
+<td>-</td>
+<td>-</td>
+<td>Java</td>
+<td><a href="https://spdx.org/licenses/GPL-3.0-or-later">GPL</a></td>
+<td><a href="https://github.com/gouttegd/sssom-java">github</a></td>
+<td>2026</td>
+<td>CommandLineApplication, converter</td>
 </tr>
 <tr class="odd">
 <td><a href="https://www.npmjs.org/package/sssom">sssom-js</a></td>
@@ -547,28 +661,83 @@ Table&nbsp;1
 <td>WebAPI, SoftwareImage, converter</td>
 </tr>
 <tr class="even">
-<td><a href="https://incenp.org/dvlpt/sssom-java/">sssom-java</a></td>
-<td>CLI</td>
-<td>-</td>
-<td>-</td>
-<td>Java</td>
-<td><a href="https://spdx.org/licenses/GPL-3.0-or-later">GPL</a></td>
-<td><a href="https://github.com/gouttegd/sssom-java">github</a></td>
-<td>2026</td>
-<td>CommandLineApplication, converter</td>
-</tr>
-<tr class="odd">
-<td><a href="https://ts4nfdi.github.io/api-gateway/">TS4NFDI API Gateway</a></td>
+<td><a href="https://lode.opencitations.net/">LODE</a></td>
 <td>Web</td>
 <td>-</td>
 <td>✓</td>
-<td>Java, JavaScript</td>
-<td><a href="https://spdx.org/licenses/MIT">MIT</a></td>
-<td><a href="https://github.com/ts4nfdi/api-gateway">github</a></td>
+<td>Java</td>
+<td><a href="https://spdx.org/licenses/ISC">ISC</a></td>
+<td><a href="https://github.com/opencitations/lode">github</a></td>
 <td>2026</td>
-<td>WebAPI, ePackage, viewer, converter</td>
+<td>SoftwareImage, erverApplication, viewer</td>
+</tr>
+<tr class="odd">
+<td><a href="https://github.com/dgarijo/Widoco">WIDOCO</a></td>
+<td>JVM</td>
+<td>-</td>
+<td>-</td>
+<td>JavaScript, Java</td>
+<td><a href="https://spdx.org/licenses/Apache-2.0">Apache</a></td>
+<td><a href="https://github.com/dgarijo/Widoco">github</a></td>
+<td>2026</td>
+<td>CommandLineApplication, SoftwareImage, viewer</td>
 </tr>
 <tr class="even">
+<td><a href="https://www.ebi.ac.uk/spot/oxo/">OxO</a></td>
+<td>Web</td>
+<td>-</td>
+<td>✓</td>
+<td>JavaScript</td>
+<td><a href="https://spdx.org/licenses/Apache-2.0">Apache</a></td>
+<td><a href="https://github.com/EBISPOT/oxo2">github</a></td>
+<td>2026</td>
+<td>WebApplication, WebAPI, SoftwareImage, erverApplication, viewer</td>
+</tr>
+<tr class="odd">
+<td><a href="https://service.tib.eu/webvowl/">WebVOWL</a></td>
+<td>Web</td>
+<td>-</td>
+<td>-</td>
+<td>JavaScript</td>
+<td><a href="https://spdx.org/licenses/MIT">MIT</a></td>
+<td><a href="https://github.com/VisualDataWeb/WebVOWL">github</a></td>
+<td>2026</td>
+<td>WebApplication, SoftwareImage, viewer</td>
+</tr>
+<tr class="even">
+<td><a href="https://foops.linkeddata.es/FAIR_validator.html">O'FAIRe</a></td>
+<td>Web</td>
+<td>-</td>
+<td>✓</td>
+<td>Java</td>
+<td><a href="https://spdx.org/licenses/MIT">MIT</a></td>
+<td><a href="https://github.com/agroportal/fairness">github</a></td>
+<td>2026</td>
+<td>WebApplication, WebAPI, erverApplication, validator</td>
+</tr>
+<tr class="odd">
+<td>OnToology</td>
+<td>Web, git</td>
+<td>-</td>
+<td>-</td>
+<td>Python</td>
+<td><a href="https://spdx.org/licenses/Apache-2.0">Apache</a></td>
+<td><a href="https://github.com/OnToology/OnToology">github</a></td>
+<td>2026</td>
+<td>WebApplication, viewer, validator</td>
+</tr>
+<tr class="even">
+<td><a href="https://foops.linkeddata.es/FAIR_validator.html">FOOPS!</a></td>
+<td>Web</td>
+<td>-</td>
+<td>-</td>
+<td>Java, JavaScript</td>
+<td><a href="https://spdx.org/licenses/Apache-2.0">Apache</a></td>
+<td><a href="https://github.com/oeg-upm/fair_ontologies">github</a></td>
+<td>2026</td>
+<td>WebApplication, CommandLineApplication, validator</td>
+</tr>
+<tr class="odd">
 <td><a href="https://termgit.elga.gv.at/">TerminoloGit</a></td>
 <td>Web, git</td>
 <td>-</td>
@@ -578,6 +747,17 @@ Table&nbsp;1
 <td><a href="https://gitlab.com/elga-gmbh/termgit">gitlab</a></td>
 <td>2026</td>
 <td>WebApplication, erverApplication, converter</td>
+</tr>
+<tr class="even">
+<td><a href="https://onto4all.com/">Onto4ALL Editor</a></td>
+<td>Web</td>
+<td>✓</td>
+<td>-</td>
+<td>JavaScript, PHP</td>
+<td><a href="https://spdx.org/licenses/Apache-2.0">Apache</a></td>
+<td><a href="https://github.com/NCOR-BR/onto4all">github</a></td>
+<td>2026</td>
+<td>WebApplication, erverApplication, editor</td>
 </tr>
 <tr class="odd">
 <td><a href="http://incatools.github.io/ontology-development-kit/">Ontology Development Kit</a></td>
@@ -591,81 +771,15 @@ Table&nbsp;1
 <td>CommandLineApplication, SoftwareImage, converter, validator</td>
 </tr>
 <tr class="even">
-<td><a href="https://vocabularyserver.com/web/">TemaTres</a></td>
-<td>Web</td>
-<td>✓</td>
-<td>✓</td>
-<td>PHP</td>
-<td><a href="https://spdx.org/licenses/GPL-3.0-or-later">GPL</a></td>
-<td><a href="https://github.com/tematres/TemaTres-Vocabulary-Server">github</a></td>
-<td>2025</td>
-<td>ServerApplication, editor</td>
-</tr>
-<tr class="odd">
-<td><a href="https://surroundaustralia.github.io/vocpub-profile/profile.html">VocPub Profile</a></td>
-<td>RDF</td>
-<td>-</td>
-<td>-</td>
-<td>SHACL</td>
-<td><a href="https://spdx.org/licenses/CC-BY-4.0">CC</a></td>
-<td><a href="https://github.com/AGLDWG/vocpub-profile/">github</a></td>
-<td>2025</td>
-<td>eLibrary, validator</td>
-</tr>
-<tr class="even">
-<td><a href="https://coli-conc.gbv.de/cocoda/">Cocoda</a></td>
-<td>Web</td>
-<td>✓</td>
-<td>-</td>
-<td>JavaScript</td>
-<td><a href="https://spdx.org/licenses/MIT">MIT</a></td>
-<td><a href="https://github.com/gbv/cocoda">github</a></td>
-<td>2025</td>
-<td>WebApplication, mapping editor</td>
-</tr>
-<tr class="odd">
-<td><a href="https://ontoportal.org/">OntoPortal Alliance</a></td>
+<td><a href="http://themis.linkeddata.es/">Themis</a></td>
 <td>Web</td>
 <td>-</td>
 <td>✓</td>
-<td>Ruby</td>
-<td><a href="https://spdx.org/licenses/BSD-3-Clause">BSD</a></td>
-<td><a href="https://github.com/ontoportal">github</a></td>
-<td>2025</td>
-<td>ServerApplication, WebAPI, WebApplication, SoftwareImage, ePackage, viewer</td>
-</tr>
-<tr class="even">
-<td><a href="https://github.com/gbv/jskos-server">JSKOS Server</a></td>
-<td>Web</td>
-<td>✓</td>
-<td>✓</td>
-<td>JavaScript</td>
-<td><a href="https://spdx.org/licenses/MIT">MIT</a></td>
-<td><a href="https://github.com/gbv/jskos-server">github</a></td>
-<td>2025</td>
-<td>ServerApplication, WebAPI, database</td>
-</tr>
-<tr class="odd">
-<td>VocExcel</td>
-<td>Excel, CLI</td>
-<td>-</td>
-<td>-</td>
-<td>Python</td>
-<td><a href="https://spdx.org/licenses/BSD-3-Clause">BSD</a></td>
-<td><a href="https://github.com/Kurrawong/VocExcel">github</a></td>
-<td>2025</td>
-<td>CommandLineApplication, converter</td>
-</tr>
-<tr class="even">
-<td><a href="https://mapping-commons.github.io/sssom-py">sssom-py</a></td>
-<td>CLI</td>
-<td>-</td>
-<td>-</td>
-<td>Python</td>
-<td><a href="https://spdx.org/licenses/MIT">MIT</a></td>
-<td><a href="https://github.com/mapping-commons/sssom-py">github</a></td>
-<td>2025</td>
-<td>CommandLineApplication, converter</td>
+<td>Java</td>
+<td><a href="https://spdx.org/licenses/Apache-2.0">Apache</a></td>
+<td><a href="https://github.com/oeg-upm/Themis">github</a></td>
+<td>2026</td>
+<td>WebApplication, WebAPI, SoftwareImage, CommandLineApplication, validator</td>
 </tr>
 <tr class="odd">
 <td><a href="https://vocabseditor.acdh.oeaw.ac.at/">Vocabseditor</a></td>
@@ -679,26 +793,26 @@ Table&nbsp;1
 <td>WebApplication, WebAPI, SoftwareImage, erverApplication, editor</td>
 </tr>
 <tr class="even">
-<td><a href="https://service.tib.eu/webvowl/">WebVOWL</a></td>
-<td>Web</td>
-<td>-</td>
-<td>-</td>
-<td>JavaScript</td>
+<td><a href="https://cscfi.github.io/mscr-docs/">MSCR</a></td>
+<td></td>
+<td>✓</td>
+<td>✓</td>
+<td>Java</td>
 <td><a href="https://spdx.org/licenses/MIT">MIT</a></td>
-<td><a href="https://github.com/VisualDataWeb/WebVOWL">github</a></td>
+<td><a href="https://github.com/CSCfi/mscr-compose">github</a></td>
 <td>2025</td>
-<td>WebApplication, SoftwareImage, viewer</td>
+<td>WebApplication, WebAPI, mapping editor</td>
 </tr>
 <tr class="odd">
-<td><a href="https://foops.linkeddata.es/FAIR_validator.html">FOOPS!</a></td>
+<td><a href="https://chowlk.linkeddata.es/">Chowlk</a></td>
 <td>Web</td>
 <td>-</td>
 <td>-</td>
-<td>Java, JavaScript</td>
+<td>Python</td>
 <td><a href="https://spdx.org/licenses/Apache-2.0">Apache</a></td>
-<td><a href="https://github.com/oeg-upm/fair_ontologies">github</a></td>
+<td><a href="https://github.com/oeg-upm/Chowlk">github</a></td>
 <td>2025</td>
-<td>WebApplication, CommandLineApplication, validator</td>
+<td>WebApplication, WebAPI, SoftwareImage, CommandLineApplication, converter</td>
 </tr>
 <tr class="even">
 <td>SkoHub Shapes</td>
@@ -712,72 +826,17 @@ Table&nbsp;1
 <td>SoftwareImage, validator</td>
 </tr>
 <tr class="odd">
-<td>OnToology</td>
-<td>Web, git</td>
-<td>-</td>
-<td>-</td>
-<td>Python</td>
-<td><a href="https://spdx.org/licenses/Apache-2.0">Apache</a></td>
-<td><a href="https://github.com/OnToology/OnToology">github</a></td>
-<td>2025</td>
-<td>WebApplication, viewer, validator</td>
-</tr>
-<tr class="even">
-<td><a href="https://chowlk.linkeddata.es/">Chowlk</a></td>
-<td>Web</td>
-<td>-</td>
-<td>-</td>
-<td>Python</td>
-<td><a href="https://spdx.org/licenses/Apache-2.0">Apache</a></td>
-<td><a href="https://github.com/oeg-upm/Chowlk">github</a></td>
-<td>2025</td>
-<td>WebApplication, WebAPI, SoftwareImage, CommandLineApplication, converter</td>
-</tr>
-<tr class="odd">
-<td><a href="https://github.com/skohub-io/skohub-vocabs">SkoHub Vocabs</a></td>
+<td>EVOKS</td>
 <td>Web</td>
 <td>✓</td>
-<td>✓</td>
-<td>JavaScript</td>
-<td><a href="https://spdx.org/licenses/Apache-2.0">Apache</a></td>
-<td><a href="https://github.com/skohub-io/skohub-vocabs">github</a></td>
-<td>2025</td>
-<td>WebApplication, SoftwareImage, viewer</td>
-</tr>
-<tr class="even">
-<td><a href="https://cscfi.github.io/mscr-docs/">MSCR</a></td>
-<td></td>
-<td>✓</td>
-<td>✓</td>
-<td>Java</td>
+<td>-</td>
+<td>Python</td>
 <td><a href="https://spdx.org/licenses/MIT">MIT</a></td>
-<td><a href="https://github.com/CSCfi/mscr-compose">github</a></td>
+<td><a href="https://github.com/kit-data-manager/EVOKS">github</a></td>
 <td>2025</td>
-<td>WebApplication, WebAPI, mapping editor</td>
-</tr>
-<tr class="odd">
-<td><a href="https://opentheso.hypotheses.org/">OpenTheso</a></td>
-<td>Web</td>
-<td>✓</td>
-<td>✓</td>
-<td>Java</td>
-<td><a href="https://spdx.org/licenses/GPL-3.0-or-later">GPL</a></td>
-<td><a href="https://github.com/miledrousset/Opentheso">github</a></td>
-<td>2025</td>
-<td>SoftwareImage, WebApplication, ServerApplication, WebAPI, editor</td>
+<td>SoftwareImage, CommandLineApplication, editor, converter</td>
 </tr>
 <tr class="even">
-<td><a href="https://github.com/dgarijo/Widoco">WIDOCO</a></td>
-<td>JVM</td>
-<td>-</td>
-<td>-</td>
-<td>JavaScript, Java</td>
-<td><a href="https://spdx.org/licenses/Apache-2.0">Apache</a></td>
-<td><a href="https://github.com/dgarijo/Widoco">github</a></td>
-<td>2025</td>
-<td>CommandLineApplication, SoftwareImage, viewer</td>
-</tr>
-<tr class="odd">
 <td><a href="https://oops.linkeddata.es/">OOPS!</a></td>
 <td>Web</td>
 <td>-</td>
@@ -787,6 +846,17 @@ Table&nbsp;1
 <td><a href="https://github.com/oeg-upm/OOPS">github</a></td>
 <td>2025</td>
 <td>WebApplication, CommandLineApplication, viewer</td>
+</tr>
+<tr class="odd">
+<td><a href="https://surroundaustralia.github.io/vocpub-profile/profile.html">VocPub Profile</a></td>
+<td>RDF</td>
+<td>-</td>
+<td>-</td>
+<td>SHACL</td>
+<td><a href="https://spdx.org/licenses/CC-BY-4.0">CC</a></td>
+<td><a href="https://github.com/AGLDWG/vocpub-profile/">github</a></td>
+<td>2025</td>
+<td>eLibrary, validator</td>
 </tr>
 <tr class="even">
 <td><a href="http://vocabulary.odm2.org/">ODM2 Controlled Vocabularies</a></td>
@@ -800,26 +870,26 @@ Table&nbsp;1
 <td>WebApplication, WebAPI, editor</td>
 </tr>
 <tr class="odd">
-<td>EVOKS</td>
-<td>Web</td>
-<td>✓</td>
+<td><a href="https://github.com/cmader/qSKOS/">qSKOS</a></td>
+<td>CLI</td>
 <td>-</td>
-<td>Python</td>
-<td><a href="https://spdx.org/licenses/MIT">MIT</a></td>
-<td><a href="https://github.com/kit-data-manager/EVOKS">github</a></td>
-<td>2025</td>
-<td>SoftwareImage, CommandLineApplication, editor, converter</td>
+<td>✓</td>
+<td>Java</td>
+<td><a href="https://spdx.org/licenses/GPL-3.0-or-later">GPL</a></td>
+<td><a href="https://github.com/cmader/qSKOS/">github</a></td>
+<td>2024</td>
+<td>CommandLineApplication, validator</td>
 </tr>
 <tr class="even">
-<td><a href="https://www.ebi.ac.uk/spot/oxo/">OxO</a></td>
+<td><a href="https://github.com/AKSW/jekyll-rdf">Jekyll RDF</a></td>
 <td>Web</td>
 <td>-</td>
 <td>✓</td>
-<td>JavaScript</td>
-<td><a href="https://spdx.org/licenses/Apache-2.0">Apache</a></td>
-<td><a href="https://github.com/EBISPOT/OXO">github</a></td>
-<td>2025</td>
-<td>WebApplication, WebAPI, SoftwareImage, erverApplication, viewer</td>
+<td>Ruby</td>
+<td><a href="https://spdx.org/licenses/MIT">MIT</a></td>
+<td><a href="https://github.com/AKSW/jekyll-rdf">github</a></td>
+<td>2024</td>
+<td>CommandLineApplication, SoftwareImage, viewer</td>
 </tr>
 <tr class="odd">
 <td><a href="https://github.com/RDFLib/VocPrez">VocPrez</a></td>
@@ -831,72 +901,6 @@ Table&nbsp;1
 <td><a href="https://github.com/RDFLib/VocPrez">github</a></td>
 <td>2024</td>
 <td>WebApplication, WebAPI, SoftwareImage, viewer</td>
-</tr>
-<tr class="even">
-<td><a href="https://atramhasis.readthedocs.io/en/latest/">Atramhasis</a></td>
-<td>Web</td>
-<td>✓</td>
-<td>✓</td>
-<td>Python</td>
-<td><a href="https://spdx.org/licenses/GPL-3.0-or-later">GPL</a></td>
-<td><a href="https://github.com/OnroerendErfgoed/atramhasis">github</a></td>
-<td>2024</td>
-<td>WebApplication, editor</td>
-</tr>
-<tr class="odd">
-<td><a href="https://github.com/AKSW/jekyll-rdf">Jekyll RDF</a></td>
-<td>Web</td>
-<td>-</td>
-<td>✓</td>
-<td>Ruby</td>
-<td><a href="https://spdx.org/licenses/MIT">MIT</a></td>
-<td><a href="https://github.com/AKSW/jekyll-rdf">github</a></td>
-<td>2024</td>
-<td>CommandLineApplication, SoftwareImage, viewer</td>
-</tr>
-<tr class="even">
-<td><a href="https://github.com/cmader/qSKOS/">qSKOS</a></td>
-<td>CLI</td>
-<td>-</td>
-<td>✓</td>
-<td>Java</td>
-<td><a href="https://spdx.org/licenses/GPL-3.0-or-later">GPL</a></td>
-<td><a href="https://github.com/cmader/qSKOS/">github</a></td>
-<td>2024</td>
-<td>CommandLineApplication, validator</td>
-</tr>
-<tr class="odd">
-<td><a href="https://onto4all.com/">Onto4ALL Editor</a></td>
-<td>Web</td>
-<td>✓</td>
-<td>-</td>
-<td>JavaScript, PHP</td>
-<td><a href="https://spdx.org/licenses/Apache-2.0">Apache</a></td>
-<td><a href="https://github.com/NCOR-BR/onto4all">github</a></td>
-<td>2024</td>
-<td>WebApplication, erverApplication, editor</td>
-</tr>
-<tr class="even">
-<td>Django Controlled Vocabularies</td>
-<td>Web</td>
-<td>✓</td>
-<td>✓</td>
-<td>Python</td>
-<td><a href="https://spdx.org/licenses/BSD-3-Clause">BSD</a></td>
-<td><a href="https://github.com/unt-libraries/django-controlled-vocabularies">github</a></td>
-<td>2023</td>
-<td>eLibrary, CommandLineApplication, editor</td>
-</tr>
-<tr class="odd">
-<td><a href="https://protegewiki.stanford.edu/wiki/WebProtege">Web Protégé</a></td>
-<td>Web</td>
-<td>✓</td>
-<td>-</td>
-<td>Java</td>
-<td><a href="https://spdx.org/licenses/BSD-3-Clause">BSD</a></td>
-<td><a href="https://github.com/protegeproject/webprotege">github</a></td>
-<td>2023</td>
-<td>WebApplication, WebAPI, SoftwareImage, erverApplication, editor</td>
 </tr>
 <tr class="even">
 <td><a href="https://semanticweb.cs.vu.nl/amalgame/">Amalgame</a></td>
@@ -921,17 +925,28 @@ Table&nbsp;1
 <td>WebApplication, editor</td>
 </tr>
 <tr class="even">
-<td>Neologism</td>
+<td>Django Controlled Vocabularies</td>
 <td>Web</td>
 <td>✓</td>
 <td>✓</td>
-<td>JavaScript</td>
-<td><a href="https://spdx.org/licenses/MIT">MIT</a></td>
-<td><a href="https://github.com/Semantic-Society/Neologism">github</a></td>
+<td>Python</td>
+<td><a href="https://spdx.org/licenses/BSD-3-Clause">BSD</a></td>
+<td><a href="https://github.com/unt-libraries/django-controlled-vocabularies">github</a></td>
+<td>2023</td>
+<td>eLibrary, CommandLineApplication, editor</td>
+</tr>
+<tr class="odd">
+<td><a href="https://protegewiki.stanford.edu/wiki/WebProtege">Web Protégé</a></td>
+<td>Web</td>
+<td>✓</td>
+<td>-</td>
+<td>Java</td>
+<td><a href="https://spdx.org/licenses/BSD-3-Clause">BSD</a></td>
+<td><a href="https://github.com/protegeproject/webprotege">github</a></td>
 <td>2023</td>
 <td>WebApplication, WebAPI, SoftwareImage, erverApplication, editor</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td><a href="https://moex.gitlabpages.inria.fr/alignapi/">Alignment API and Alignment Server</a></td>
 <td>CLI</td>
 <td>-</td>
@@ -941,6 +956,17 @@ Table&nbsp;1
 <td><a href="https://gitlab.inria.fr/moex/alignapi/">inria</a></td>
 <td>2023</td>
 <td>CommandLineApplication, WebAPI, erverApplication, database</td>
+</tr>
+<tr class="odd">
+<td>Neologism</td>
+<td>Web</td>
+<td>✓</td>
+<td>✓</td>
+<td>JavaScript</td>
+<td><a href="https://spdx.org/licenses/MIT">MIT</a></td>
+<td><a href="https://github.com/Semantic-Society/Neologism">github</a></td>
+<td>2023</td>
+<td>WebApplication, WebAPI, SoftwareImage, erverApplication, editor</td>
 </tr>
 <tr class="even">
 <td>SKOSjs</td>
@@ -996,28 +1022,6 @@ Table&nbsp;1
 <td><a href="https://github.com/NatLibFi/Skosify">github</a></td>
 <td>2021</td>
 <td>CommandLineApplication, converter, validator</td>
-</tr>
-<tr class="odd">
-<td><a href="http://themis.linkeddata.es/">Themis</a></td>
-<td>Web</td>
-<td>-</td>
-<td>✓</td>
-<td>Java</td>
-<td><a href="https://spdx.org/licenses/Apache-2.0">Apache</a></td>
-<td><a href="https://github.com/oeg-upm/Themis">github</a></td>
-<td>2021</td>
-<td>WebApplication, WebAPI, SoftwareImage, CommandLineApplication, validator</td>
-</tr>
-<tr class="even">
-<td><a href="https://essepuntato.it/lode/">LODE</a></td>
-<td>Web</td>
-<td>-</td>
-<td>✓</td>
-<td>Java</td>
-<td><a href="https://spdx.org/licenses/ISC">ISC</a></td>
-<td><a href="https://github.com/essepuntato/LODE">github</a></td>
-<td>2020</td>
-<td>SoftwareImage, erverApplication, viewer</td>
 </tr>
 <tr class="odd">
 <td><a href="http://openskos.org/">OpenSKOS</a></td>
@@ -1169,7 +1173,7 @@ Table&nbsp;1
 </figure>
 </div></div>
 </div></div>
-<div id="eb309560" class="cell markdown">
+<div id="9a2c5588" class="cell markdown">
 <p>Please <a href="https://github.com/gbv/bartoc-vocabulary-software/issues">open an issue</a> if some relevant software is missing or data seems invalid!</p>
 <!-- end landscape mode in PDF -->
 <section id="metadata" class="level2">
@@ -1239,7 +1243,7 @@ Table&nbsp;1
 <h2 class="anchored" data-anchor-id="kos-software-categories">KOS software categories</h2>
 </section>
 </div>
-<div class="cell-container"><div class="cell-decorator"><pre>In [3]:</pre></div><div id="a42ae849" class="cell" data-execution_count="3">
+<div class="cell-container"><div class="cell-decorator"><pre>In [3]:</pre></div><div id="3c2ad5b0" class="cell" data-execution_count="3">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>df <span class="op">=</span> pd.read_json(<span class="st">'kos-software.json'</span>)</span>
 <span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>categories <span class="op">=</span> {}</span>
 <span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> item <span class="kw">in</span> df[<span class="st">"applicationSubCategory"</span>]:</span>
@@ -1249,7 +1253,7 @@ Table&nbsp;1
 <span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a>        <span class="cf">else</span>:</span>
 <span id="cb3-8"><a href="#cb3-8" aria-hidden="true" tabindex="-1"></a>            categories[category] <span class="op">=</span> <span class="dv">1</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div></div>
-<div id="deed904f" class="cell markdown">
+<div id="8f31fd09" class="cell markdown">
 <ul>
 <li><strong>viewer</strong>: to display terminologies (23)</li>
 <li><strong>editor</strong>: to create and modify terminologies (24)</li>
@@ -1303,21 +1307,21 @@ Table&nbsp;1
 </section>
 <section id="references" class="level2">
 <h2 class="anchored" data-anchor-id="references">References</h2>
-<div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" role="list">
+<div id="refs" class="references csl-bib-body hanging-indent" role="list">
 <div id="ref-Bergman2018" class="csl-entry" role="listitem">
-Bergman, Michael K. 2018. <span>“30 Active Ontology Alignment Tools.”</span> <a href="https://www.mkbergman.com/2129/30-active-ontology-alignment-tools/">https://www.mkbergman.com/2129/30-active-ontology-alignment-tools/</a>.
+Bergman, Michael K. 2018. <em>30 Active Ontology Alignment Tools</em>. <a href="https://www.mkbergman.com/2129/30-active-ontology-alignment-tools/">https://www.mkbergman.com/2129/30-active-ontology-alignment-tools/</a>.
 </div>
 <div id="ref-Miles2009" class="csl-entry" role="listitem">
-Miles, Alistair, and Sean Bechhofer. 2009. <span>“W3C SKOS Implementation Report,”</span> May. <a href="https://www.w3.org/2006/07/SWD/SKOS/reference/20090315/implementation.html">https://www.w3.org/2006/07/SWD/SKOS/reference/20090315/implementation.html</a>.
+Miles, Alistair, and Sean Bechhofer. 2009. <em>W3C SKOS Implementation Report</em>. May. <a href="https://www.w3.org/2006/07/SWD/SKOS/reference/20090315/implementation.html">https://www.w3.org/2006/07/SWD/SKOS/reference/20090315/implementation.html</a>.
 </div>
 <div id="ref-Montoro2018" class="csl-entry" role="listitem">
-Montoro, Maria Pia. 2018. <span>“Terminology Management Systems.”</span> <a href="https://recremisi.blogspot.com/p/acrolinxterminology-lifecycle.html">https://recremisi.blogspot.com/p/acrolinxterminology-lifecycle.html</a>.
+Montoro, Maria Pia. 2018. <em>Terminology Management Systems</em>. <a href="https://recremisi.blogspot.com/p/acrolinxterminology-lifecycle.html">https://recremisi.blogspot.com/p/acrolinxterminology-lifecycle.html</a>.
 </div>
 <div id="ref-Voss2016a" class="csl-entry" role="listitem">
-Voß, Jakob. 2016a. <span>“Coli-Conc <span>Technical</span> <span>Report</span> 2: <span>Open</span> <span>Source</span> <span>KOS</span> Software,”</span> March. <a href="https://doi.org/10.5281/zenodo.48227">https://doi.org/10.5281/zenodo.48227</a>.
+Voß, Jakob. 2016a. <em>Coli-Conc <span>Technical</span> <span>Report</span> 2: <span>Open</span> <span>Source</span> <span>KOS</span> Software</em>. March. <a href="https://doi.org/10.5281/zenodo.48227">https://doi.org/10.5281/zenodo.48227</a>.
 </div>
 <div id="ref-Voss2016b" class="csl-entry" role="listitem">
-———. 2016b. <span>“Open <span>Source</span> Web Applications for <span>Knowledge</span> <span>Organization</span> <span>Systems</span>,”</span> August. <a href="https://doi.org/10.5281/zenodo.61262">https://doi.org/10.5281/zenodo.61262</a>.
+Voß, Jakob. 2016b. <em>Open <span>Source</span> Web Applications for <span>Knowledge</span> <span>Organization</span> <span>Systems</span></em>. August. <a href="https://doi.org/10.5281/zenodo.61262">https://doi.org/10.5281/zenodo.61262</a>.
 </div>
 </div>
 </section>

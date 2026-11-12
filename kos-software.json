@@ -91,6 +91,19 @@
     "applicationCategory":["schema:WebApplication"]
   },
   {
+    "name": "Terminologue",
+    "url": "https://www.terminologue.org/",
+    "operatingSystem": ["Web"],
+    "api": false,
+    "edit": true,
+    "programmingLanguage": ["JavaScript"],
+    "license": "https://spdx.org/licenses/MIT",
+    "codeRepository": "https://github.com/gaois/terminologue",
+    "dateModified": "2026",
+    "applicationSubCategory": ["editor"],
+    "applicationCategory":["schema:WebApplication"]
+  },
+  {
     "name": "SSSOM Curator",
     "url": "https://github.com/cthoyt/sssom-curator#readme",
     "api": false,

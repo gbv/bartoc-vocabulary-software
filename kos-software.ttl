@@ -21,20 +21,30 @@
   schema:programmingLanguage "PHP" ;
   schema:url <http://wikiba.se/> .
 
+[] schema:applicationCategory stypes:ServerApplication, schema:WebAPI ;
+  schema:applicationSubCategory <http://uri.gbv.de/terminology/koss/database> ;
+  schema:codeRepository <https://github.com/gbv/jskos-server> ;
+  schema:dateModified "2026"^^schema:Date ;
+  schema:license <https://spdx.org/licenses/MIT> ;
+  schema:name "JSKOS Server" ;
+  schema:operatingSystem "Web" ;
+  schema:programmingLanguage "JavaScript" ;
+  schema:url <https://github.com/gbv/jskos-server> .
+
 [] schema:applicationCategory stypes:SoftwareImage, schema:WebApplication ;
   schema:applicationSubCategory <http://uri.gbv.de/terminology/koss/viewer> ;
   schema:codeRepository <https://github.com/skohub-io/skohub-vocabs> ;
-  schema:dateModified "2025"^^schema:Date ;
+  schema:dateModified "2026"^^schema:Date ;
   schema:license <https://spdx.org/licenses/Apache-2.0> ;
   schema:name "SkoHub Vocabs" ;
   schema:operatingSystem "Web" ;
   schema:programmingLanguage "JavaScript" ;
   schema:url <https://github.com/skohub-io/skohub-vocabs> .
 
-[] schema:applicationCategory stypes:SoftwareImage, stypes:ServerApplication, schema:WebApplication, schema:WebAPI ;
+[] schema:applicationCategory stypes:SoftwareImage, stypes:ServerApplication, schema:WebAPI, schema:WebApplication ;
   schema:applicationSubCategory <http://uri.gbv.de/terminology/koss/editor> ;
   schema:codeRepository <https://github.com/miledrousset/Opentheso> ;
-  schema:dateModified "2025"^^schema:Date ;
+  schema:dateModified "2026"^^schema:Date ;
   schema:license <https://spdx.org/licenses/GPL-3.0-or-later> ;
   schema:name "OpenTheso" ;
   schema:operatingSystem "Web" ;
@@ -61,7 +71,7 @@
   schema:programmingLanguage "Java" ;
   schema:url <https://github.com/fusion-jena/abecto> .
 
-[] schema:applicationCategory stypes:SoftwareImage, stypes:ServerApplication, schema:WebApplication, schema:WebAPI ;
+[] schema:applicationCategory stypes:SoftwareImage, stypes:ServerApplication, schema:WebAPI, schema:WebApplication ;
   schema:applicationSubCategory <http://uri.gbv.de/terminology/koss/viewer> ;
   schema:codeRepository <https://github.com/EBISPOT/ols4> ;
   schema:dateModified "2026"^^schema:Date ;
@@ -71,10 +81,10 @@
   schema:programmingLanguage "JavaScript", "Java" ;
   schema:url <https://github.com/EBISPOT/ols4> .
 
-[] schema:applicationCategory stypes:SoftwareImage, stypes:ServerApplication, schema:WebApplication, schema:WebAPI ;
+[] schema:applicationCategory stypes:SoftwareImage, stypes:ServerApplication, schema:WebAPI, schema:WebApplication ;
   schema:applicationSubCategory <http://uri.gbv.de/terminology/koss/viewer> ;
   schema:codeRepository <https://github.com/ontoportal> ;
-  schema:dateModified "2025"^^schema:Date ;
+  schema:dateModified "2026"^^schema:Date ;
   schema:license <https://spdx.org/licenses/BSD-3-Clause> ;
   schema:name "OntoPortal Alliance" ;
   schema:operatingSystem "Web" ;
@@ -110,24 +120,24 @@
   schema:programmingLanguage "Java" ;
   schema:url <https://protege.stanford.edu/> .
 
-[] schema:applicationCategory stypes:CommandLineApplication ;
-  schema:applicationSubCategory <http://uri.gbv.de/terminology/koss/converter> ;
-  schema:codeRepository <https://github.com/Kurrawong/VocExcel> ;
-  schema:dateModified "2025"^^schema:Date ;
-  schema:license <https://spdx.org/licenses/BSD-3-Clause> ;
-  schema:name "VocExcel" ;
-  schema:operatingSystem "CLI", "Excel" ;
-  schema:programmingLanguage "Python" .
-
 [] schema:applicationCategory stypes:ServerApplication ;
   schema:applicationSubCategory <http://uri.gbv.de/terminology/koss/editor> ;
   schema:codeRepository <https://github.com/tematres/TemaTres-Vocabulary-Server> ;
-  schema:dateModified "2025"^^schema:Date ;
+  schema:dateModified "2026"^^schema:Date ;
   schema:license <https://spdx.org/licenses/GPL-3.0-or-later> ;
   schema:name "TemaTres" ;
   schema:operatingSystem "Web" ;
   schema:programmingLanguage "PHP" ;
   schema:url <https://vocabularyserver.com/web/> .
+
+[] schema:applicationCategory stypes:CommandLineApplication ;
+  schema:applicationSubCategory <http://uri.gbv.de/terminology/koss/converter> ;
+  schema:codeRepository <https://github.com/Kurrawong/VocExcel> ;
+  schema:dateModified "2026"^^schema:Date ;
+  schema:license <https://spdx.org/licenses/BSD-3-Clause> ;
+  schema:name "VocExcel" ;
+  schema:operatingSystem "CLI", "Excel" ;
+  schema:programmingLanguage "Python" .
 
 [] schema:applicationCategory stypes:CommandLineApplication ;
   schema:applicationSubCategory <http://uri.gbv.de/terminology/koss/validator>, <http://uri.gbv.de/terminology/koss/converter> ;
@@ -151,7 +161,7 @@
 [] schema:applicationCategory stypes:CommandLineApplication ;
   schema:applicationSubCategory <http://uri.gbv.de/terminology/koss/converter> ;
   schema:codeRepository <https://github.com/mapping-commons/sssom-py> ;
-  schema:dateModified "2025"^^schema:Date ;
+  schema:dateModified "2026"^^schema:Date ;
   schema:license <https://spdx.org/licenses/MIT> ;
   schema:name "sssom-py" ;
   schema:operatingSystem "CLI" ;
@@ -190,7 +200,7 @@
 [] schema:applicationCategory schema:WebApplication ;
   schema:applicationSubCategory <http://uri.gbv.de/terminology/koss/editor> ;
   schema:codeRepository <https://github.com/OnroerendErfgoed/atramhasis> ;
-  schema:dateModified "2024"^^schema:Date ;
+  schema:dateModified "2026"^^schema:Date ;
   schema:license <https://spdx.org/licenses/GPL-3.0-or-later> ;
   schema:name "Atramhasis" ;
   schema:operatingSystem "Web" ;
@@ -217,16 +227,6 @@
   schema:programmingLanguage "Typescript" ;
   schema:url <https://github.com/netwerk-digitaal-erfgoed/network-of-terms> .
 
-[] schema:applicationCategory stypes:SoftwareImage, schema:WebApplication, schema:WebAPI, <stype:ServerApplication> ;
-  schema:applicationSubCategory <http://uri.gbv.de/terminology/koss/editor> ;
-  schema:codeRepository <https://github.com/protegeproject/webprotege> ;
-  schema:dateModified "2023"^^schema:Date ;
-  schema:license <https://spdx.org/licenses/BSD-3-Clause> ;
-  schema:name "Web Protégé" ;
-  schema:operatingSystem "Web" ;
-  schema:programmingLanguage "Java" ;
-  schema:url <https://protegewiki.stanford.edu/wiki/WebProtege> .
-
 [] schema:applicationCategory stypes:SoftwareImage, schema:WebApplication ;
   schema:applicationSubCategory <http://uri.gbv.de/terminology/koss/editor> ;
   schema:codeRepository <https://github.com/innoq/iqvoc> ;
@@ -236,6 +236,16 @@
   schema:operatingSystem "Web" ;
   schema:programmingLanguage "Ruby" ;
   schema:url <https://iqvoc.net/> .
+
+[] schema:applicationCategory stypes:SoftwareImage, schema:WebAPI, schema:WebApplication, <stype:ServerApplication> ;
+  schema:applicationSubCategory <http://uri.gbv.de/terminology/koss/editor> ;
+  schema:codeRepository <https://github.com/protegeproject/webprotege> ;
+  schema:dateModified "2023"^^schema:Date ;
+  schema:license <https://spdx.org/licenses/BSD-3-Clause> ;
+  schema:name "Web Protégé" ;
+  schema:operatingSystem "Web" ;
+  schema:programmingLanguage "Java" ;
+  schema:url <https://protegewiki.stanford.edu/wiki/WebProtege> .
 
 [] schema:applicationCategory stypes:SoftwareImage, schema:WebApplication, <stype:ServerApplication> ;
   schema:applicationSubCategory <http://uri.gbv.de/terminology/koss/editor> ;
@@ -256,7 +266,7 @@
   schema:operatingSystem "Web" ;
   schema:programmingLanguage "Python" .
 
-[] schema:applicationCategory stypes:SoftwareImage, schema:WebApplication, schema:WebAPI, <stype:ServerApplication> ;
+[] schema:applicationCategory stypes:SoftwareImage, schema:WebAPI, schema:WebApplication, <stype:ServerApplication> ;
   schema:applicationSubCategory <http://uri.gbv.de/terminology/koss/editor> ;
   schema:codeRepository <https://github.com/acdh-oeaw/vocabseditor> ;
   schema:dateModified "2025"^^schema:Date ;
@@ -266,7 +276,7 @@
   schema:programmingLanguage "Python" ;
   schema:url <https://vocabseditor.acdh.oeaw.ac.at/> .
 
-[] schema:applicationCategory stypes:SoftwareImage, schema:WebApplication, schema:WebAPI ;
+[] schema:applicationCategory stypes:SoftwareImage, schema:WebAPI, schema:WebApplication ;
   schema:applicationSubCategory <http://uri.gbv.de/terminology/koss/viewer> ;
   schema:codeRepository <https://github.com/RDFLib/VocPrez> ;
   schema:dateModified "2024"^^schema:Date ;
@@ -295,7 +305,7 @@
   schema:programmingLanguage "SHACL" ;
   schema:url <https://surroundaustralia.github.io/vocpub-profile/profile.html> .
 
-[] schema:applicationCategory schema:WebApplication, schema:WebAPI, <stype:ServerApplication> ;
+[] schema:applicationCategory schema:WebAPI, schema:WebApplication, <stype:ServerApplication> ;
   schema:applicationSubCategory <http://uri.gbv.de/terminology/koss/editor> ;
   schema:codeRepository <https://github.com/culturecommunication/ginco> ;
   schema:dateModified "2022"^^schema:Date ;
@@ -324,16 +334,6 @@
   schema:programmingLanguage "Python" ;
   schema:url <https://skosify.readthedocs.io/en/latest/> .
 
-[] schema:applicationCategory stypes:SoftwareImage, schema:WebApplication, schema:WebAPI, <stype:ServerApplication> ;
-  schema:applicationSubCategory <http://uri.gbv.de/terminology/koss/editor>, <http://uri.gbv.de/terminology/koss/viewer> ;
-  schema:codeRepository <https://github.com/OpenSKOS/OpenSKOS> ;
-  schema:dateModified "2020"^^schema:Date ;
-  schema:license <https://spdx.org/licenses/GPL-3.0-or-later> ;
-  schema:name "OpenSKOS" ;
-  schema:operatingSystem "Web" ;
-  schema:programmingLanguage "PHP" ;
-  schema:url <http://openskos.org/> .
-
 [] schema:applicationCategory schema:WebApplication ;
   schema:applicationSubCategory <http://uri.gbv.de/terminology/koss/editor> ;
   schema:codeRepository <https://bitbucket.org/art-uniroma2/vocbench3/src/master/> ;
@@ -344,7 +344,17 @@
   schema:programmingLanguage "JavaScript", "Java" ;
   schema:url <https://vocbench.uniroma2.it/> .
 
-[] schema:applicationCategory stypes:SoftwareImage, schema:WebApplication, schema:WebAPI ;
+[] schema:applicationCategory stypes:SoftwareImage, schema:WebAPI, schema:WebApplication, <stype:ServerApplication> ;
+  schema:applicationSubCategory <http://uri.gbv.de/terminology/koss/editor>, <http://uri.gbv.de/terminology/koss/viewer> ;
+  schema:codeRepository <https://github.com/OpenSKOS/OpenSKOS> ;
+  schema:dateModified "2020"^^schema:Date ;
+  schema:license <https://spdx.org/licenses/GPL-3.0-or-later> ;
+  schema:name "OpenSKOS" ;
+  schema:operatingSystem "Web" ;
+  schema:programmingLanguage "PHP" ;
+  schema:url <http://openskos.org/> .
+
+[] schema:applicationCategory stypes:SoftwareImage, schema:WebAPI, schema:WebApplication ;
   schema:applicationSubCategory <http://uri.gbv.de/terminology/koss/viewer> ;
   schema:codeRepository <https://github.com/SISS/sissvoc> ;
   schema:dateModified "2019"^^schema:Date ;
@@ -363,7 +373,7 @@
   schema:programmingLanguage "Java" ;
   schema:url <https://skos-play.sparna.fr/play/about> .
 
-[] schema:applicationCategory schema:WebApplication, schema:WebAPI, <stype:ServerApplication> ;
+[] schema:applicationCategory schema:WebAPI, schema:WebApplication, <stype:ServerApplication> ;
   schema:applicationSubCategory <http://uri.gbv.de/terminology/koss/viewer> ;
   schema:codeRepository <https://github.com/OntoZoo/ontobee> ;
   schema:dateModified "2018"^^schema:Date ;
@@ -373,7 +383,7 @@
   schema:programmingLanguage "PHP", "JavaScript" ;
   schema:url <https://ontobee.org/> .
 
-[] schema:applicationCategory schema:WebApplication, schema:WebAPI, <stype:ServerApplication> ;
+[] schema:applicationCategory schema:WebAPI, schema:WebApplication, <stype:ServerApplication> ;
   schema:applicationSubCategory <http://uri.gbv.de/terminology/koss/editor> ;
   schema:codeRepository <https://github.com/Blulab-Utah/SKOSEditor> ;
   schema:dateModified "2016"^^schema:Date ;
@@ -398,7 +408,7 @@
   schema:operatingSystem "Web" ;
   schema:url <https://ontoserver.csiro.au/> .
 
-[] schema:applicationCategory schema:WebApplication, schema:WebAPI, <stype:ServerApplication> ;
+[] schema:applicationCategory schema:WebAPI, schema:WebApplication, <stype:ServerApplication> ;
   schema:applicationSubCategory <http://uri.gbv.de/terminology/koss/viewer> ;
   schema:codeRepository <http://www.askosi.org/example/> ;
   schema:dateModified "2011"^^schema:Date ;
@@ -417,21 +427,11 @@
   schema:programmingLanguage "Java" ;
   schema:url <https://thmanager.sourceforge.io/> .
 
-[] schema:applicationCategory schema:WebApplication, schema:WebAPI, <stype:ServerApplication> ;
+[] schema:applicationCategory schema:WebAPI, schema:WebApplication, <stype:ServerApplication> ;
   schema:applicationSubCategory <http://uri.gbv.de/terminology/koss/editor> ;
   schema:name "PoolParty Thesaurus Server" ;
   schema:operatingSystem "Web" ;
   schema:url <https://www.poolparty.biz/poolparty-thesaurus-manager> .
-
-[] schema:applicationCategory schema:WebApplication, <stype:ServerApplication> ;
-  schema:applicationSubCategory <http://uri.gbv.de/terminology/koss/converter> ;
-  schema:codeRepository <https://gitlab.com/elga-gmbh/termgit> ;
-  schema:dateModified "2026"^^schema:Date ;
-  schema:license <https://spdx.org/licenses/GPL-3.0-or-later> ;
-  schema:name "TerminoloGit" ;
-  schema:operatingSystem "Web", "git" ;
-  schema:programmingLanguage "Python" ;
-  schema:url <https://termgit.elga.gv.at/> .
 
 [] schema:applicationCategory schema:WebApplication ;
   schema:applicationSubCategory <http://uri.gbv.de/terminology/koss/viewer> ;
@@ -443,6 +443,16 @@
   schema:programmingLanguage "PHP" ;
   schema:url <https://skosmos.org/> .
 
+[] schema:applicationCategory schema:WebApplication, <stype:ServerApplication> ;
+  schema:applicationSubCategory <http://uri.gbv.de/terminology/koss/converter> ;
+  schema:codeRepository <https://gitlab.com/elga-gmbh/termgit> ;
+  schema:dateModified "2026"^^schema:Date ;
+  schema:license <https://spdx.org/licenses/GPL-3.0-or-later> ;
+  schema:name "TerminoloGit" ;
+  schema:operatingSystem "Web", "git" ;
+  schema:programmingLanguage "Python" ;
+  schema:url <https://termgit.elga.gv.at/> .
+
 [] schema:applicationCategory stypes:CommandLineApplication ;
   schema:applicationSubCategory <http://uri.gbv.de/terminology/koss/converter> ;
   schema:codeRepository <https://github.com/scriptotek/mc2skos> ;
@@ -453,7 +463,7 @@
   schema:programmingLanguage "Python" ;
   schema:url <https://github.com/scriptotek/mc2skos> .
 
-[] schema:applicationCategory schema:WebApplication, schema:WebAPI, <stype:ServerApplication> ;
+[] schema:applicationCategory schema:WebAPI, schema:WebApplication, <stype:ServerApplication> ;
   schema:applicationSubCategory <http://uri.gbv.de/terminology/koss/editor> ;
   schema:name "Lexasaurus" ;
   schema:operatingSystem "Web" ;
@@ -472,14 +482,14 @@
 [] schema:applicationCategory schema:WebApplication, <stype:ServerApplication> ;
   schema:applicationSubCategory <http://uri.gbv.de/terminology/koss/editor> ;
   schema:codeRepository <https://github.com/NCOR-BR/onto4all> ;
-  schema:dateModified "2024"^^schema:Date ;
+  schema:dateModified "2026"^^schema:Date ;
   schema:license <https://spdx.org/licenses/Apache-2.0> ;
   schema:name "Onto4ALL Editor" ;
   schema:operatingSystem "Web" ;
   schema:programmingLanguage "PHP", "JavaScript" ;
   schema:url <https://onto4all.com/> .
 
-[] schema:applicationCategory stypes:SoftwareImage, schema:WebApplication, schema:WebAPI, <stype:ServerApplication> ;
+[] schema:applicationCategory stypes:SoftwareImage, schema:WebAPI, schema:WebApplication, <stype:ServerApplication> ;
   schema:applicationSubCategory <http://uri.gbv.de/terminology/koss/editor> ;
   schema:codeRepository <https://github.com/Semantic-Society/Neologism> ;
   schema:dateModified "2023"^^schema:Date ;
@@ -488,7 +498,7 @@
   schema:operatingSystem "Web" ;
   schema:programmingLanguage "JavaScript" .
 
-[] schema:applicationCategory stypes:SoftwareImage, schema:WebApplication, schema:WebAPI, stypes:CommandLineApplication ;
+[] schema:applicationCategory stypes:SoftwareImage, schema:WebAPI, schema:WebApplication, stypes:CommandLineApplication ;
   schema:applicationSubCategory <http://uri.gbv.de/terminology/koss/converter> ;
   schema:codeRepository <https://github.com/oeg-upm/Chowlk> ;
   schema:dateModified "2025"^^schema:Date ;
@@ -514,15 +524,24 @@
   schema:programmingLanguage "Java" ;
   schema:url <http://wandora.org/www/> .
 
-[] schema:applicationCategory stypes:SoftwareImage, schema:WebApplication, schema:WebAPI, <stype:ServerApplication> ;
+[] schema:applicationCategory stypes:SoftwareImage, schema:WebAPI, schema:WebApplication, <stype:ServerApplication> ;
   schema:applicationSubCategory <http://uri.gbv.de/terminology/koss/viewer> ;
-  schema:codeRepository <https://github.com/EBISPOT/OXO> ;
-  schema:dateModified "2025"^^schema:Date ;
+  schema:codeRepository <https://github.com/EBISPOT/oxo2> ;
+  schema:dateModified "2026"^^schema:Date ;
   schema:license <https://spdx.org/licenses/Apache-2.0> ;
   schema:name "OxO" ;
   schema:operatingSystem "Web" ;
   schema:programmingLanguage "JavaScript" ;
   schema:url <https://www.ebi.ac.uk/spot/oxo/> .
+
+[] schema:applicationCategory schema:WebApplication ;
+  schema:codeRepository <https://github.com/gbv/cocoda> ;
+  schema:dateModified "2026"^^schema:Date ;
+  schema:license <https://spdx.org/licenses/MIT> ;
+  schema:name "Cocoda" ;
+  schema:operatingSystem "Web" ;
+  schema:programmingLanguage "JavaScript" ;
+  schema:url <https://coli-conc.gbv.de/cocoda/> .
 
 [] schema:applicationCategory stypes:SoftwareImage, schema:WebApplication ;
   schema:codeRepository <https://github.com/jrvosse/amalgame> ;
@@ -532,15 +551,6 @@
   schema:operatingSystem "Web" ;
   schema:programmingLanguage "prolog" ;
   schema:url <https://semanticweb.cs.vu.nl/amalgame/> .
-
-[] schema:applicationCategory schema:WebApplication ;
-  schema:codeRepository <https://github.com/gbv/cocoda> ;
-  schema:dateModified "2025"^^schema:Date ;
-  schema:license <https://spdx.org/licenses/MIT> ;
-  schema:name "Cocoda" ;
-  schema:operatingSystem "Web" ;
-  schema:programmingLanguage "JavaScript" ;
-  schema:url <https://coli-conc.gbv.de/cocoda/> .
 
 [] schema:applicationCategory schema:WebAPI, stypes:CommandLineApplication, <stype:ServerApplication> ;
   schema:applicationSubCategory <http://uri.gbv.de/terminology/koss/database> ;
@@ -563,13 +573,13 @@
 [] schema:applicationCategory schema:WebApplication ;
   schema:applicationSubCategory <http://uri.gbv.de/terminology/koss/viewer>, <http://uri.gbv.de/terminology/koss/validator> ;
   schema:codeRepository <https://github.com/OnToology/OnToology> ;
-  schema:dateModified "2025"^^schema:Date ;
+  schema:dateModified "2026"^^schema:Date ;
   schema:license <https://spdx.org/licenses/Apache-2.0> ;
   schema:name "OnToology" ;
   schema:operatingSystem "Web", "git" ;
   schema:programmingLanguage "Python" .
 
-[] schema:applicationCategory schema:WebApplication, schema:WebAPI, <stype:ServerApplication> ;
+[] schema:applicationCategory schema:WebAPI, schema:WebApplication, <stype:ServerApplication> ;
   schema:applicationSubCategory <http://uri.gbv.de/terminology/koss/validator> ;
   schema:codeRepository <https://github.com/agroportal/fairness> ;
   schema:dateModified "2026"^^schema:Date ;
@@ -582,7 +592,7 @@
 [] schema:applicationCategory stypes:SoftwareImage, schema:WebApplication ;
   schema:applicationSubCategory <http://uri.gbv.de/terminology/koss/viewer> ;
   schema:codeRepository <https://github.com/VisualDataWeb/WebVOWL> ;
-  schema:dateModified "2025"^^schema:Date ;
+  schema:dateModified "2026"^^schema:Date ;
   schema:license <https://spdx.org/licenses/MIT> ;
   schema:name "WebVOWL" ;
   schema:operatingSystem "Web" ;
@@ -592,7 +602,7 @@
 [] schema:applicationCategory stypes:SoftwareImage, stypes:CommandLineApplication ;
   schema:applicationSubCategory <http://uri.gbv.de/terminology/koss/viewer> ;
   schema:codeRepository <https://github.com/dgarijo/Widoco> ;
-  schema:dateModified "2025"^^schema:Date ;
+  schema:dateModified "2026"^^schema:Date ;
   schema:license <https://spdx.org/licenses/Apache-2.0> ;
   schema:name "WIDOCO" ;
   schema:operatingSystem "JVM" ;
@@ -610,15 +620,15 @@
 
 [] schema:applicationCategory stypes:SoftwareImage, <stype:ServerApplication> ;
   schema:applicationSubCategory <http://uri.gbv.de/terminology/koss/viewer> ;
-  schema:codeRepository <https://github.com/essepuntato/LODE> ;
-  schema:dateModified "2020"^^schema:Date ;
+  schema:codeRepository <https://github.com/opencitations/lode> ;
+  schema:dateModified "2026"^^schema:Date ;
   schema:license <https://spdx.org/licenses/ISC> ;
   schema:name "LODE" ;
   schema:operatingSystem "Web" ;
   schema:programmingLanguage "Java" ;
-  schema:url <https://essepuntato.it/lode/> .
+  schema:url <https://lode.opencitations.net/> .
 
-[] schema:applicationCategory schema:WebApplication, schema:WebAPI ;
+[] schema:applicationCategory schema:WebAPI, schema:WebApplication ;
   schema:applicationSubCategory <http://uri.gbv.de/terminology/koss/editor> ;
   schema:codeRepository <https://github.com/ODM2/ODM2ControlledVocabularies> ;
   schema:dateModified "2025"^^schema:Date ;
@@ -628,28 +638,30 @@
   schema:programmingLanguage "Python" ;
   schema:url <http://vocabulary.odm2.org/> .
 
+[] schema:applicationCategory schema:WebApplication ;
+  schema:applicationSubCategory <http://uri.gbv.de/terminology/koss/editor> ;
+  schema:codeRepository <https://github.com/gaois/terminologue> ;
+  schema:dateModified "2026"^^schema:Date ;
+  schema:license <https://spdx.org/licenses/MIT> ;
+  schema:name "Terminologue" ;
+  schema:operatingSystem "Web" ;
+  schema:programmingLanguage "JavaScript" ;
+  schema:url <https://www.terminologue.org/> .
+
 [] schema:applicationCategory schema:WebApplication, stypes:CommandLineApplication ;
   schema:applicationSubCategory <http://uri.gbv.de/terminology/koss/validator> ;
   schema:codeRepository <https://github.com/oeg-upm/fair_ontologies> ;
-  schema:dateModified "2025"^^schema:Date ;
+  schema:dateModified "2026"^^schema:Date ;
   schema:license <https://spdx.org/licenses/Apache-2.0> ;
   schema:name "FOOPS!" ;
   schema:operatingSystem "Web" ;
   schema:programmingLanguage "JavaScript", "Java" ;
   schema:url <https://foops.linkeddata.es/FAIR_validator.html> .
 
-[] schema:applicationCategory schema:WebApplication, stypes:CommandLineApplication ;
-  schema:codeRepository <https://github.com/cthoyt/sssom-curator> ;
-  schema:dateModified "2026"^^schema:Date ;
-  schema:license <https://spdx.org/licenses/MIT> ;
-  schema:name "SSSOM Curator" ;
-  schema:programmingLanguage "Phython" ;
-  schema:url <https://github.com/cthoyt/sssom-curator#readme> .
-
-[] schema:applicationCategory stypes:SoftwareImage, schema:WebApplication, schema:WebAPI, stypes:CommandLineApplication ;
+[] schema:applicationCategory stypes:SoftwareImage, schema:WebAPI, schema:WebApplication, stypes:CommandLineApplication ;
   schema:applicationSubCategory <http://uri.gbv.de/terminology/koss/validator> ;
   schema:codeRepository <https://github.com/oeg-upm/Themis> ;
-  schema:dateModified "2021"^^schema:Date ;
+  schema:dateModified "2026"^^schema:Date ;
   schema:license <https://spdx.org/licenses/Apache-2.0> ;
   schema:name "Themis" ;
   schema:operatingSystem "Web" ;
@@ -673,20 +685,18 @@
   schema:operatingSystem "Web" ;
   schema:programmingLanguage "Python" .
 
-[] schema:applicationCategory schema:WebApplication, schema:WebAPI ;
+[] schema:applicationCategory schema:WebApplication, stypes:CommandLineApplication ;
+  schema:codeRepository <https://github.com/cthoyt/sssom-curator> ;
+  schema:dateModified "2026"^^schema:Date ;
+  schema:license <https://spdx.org/licenses/MIT> ;
+  schema:name "SSSOM Curator" ;
+  schema:programmingLanguage "Phython" ;
+  schema:url <https://github.com/cthoyt/sssom-curator#readme> .
+
+[] schema:applicationCategory schema:WebAPI, schema:WebApplication ;
   schema:codeRepository <https://github.com/CSCfi/mscr-compose> ;
   schema:dateModified "2025"^^schema:Date ;
   schema:license <https://spdx.org/licenses/MIT> ;
   schema:name "MSCR" ;
   schema:programmingLanguage "Java" ;
   schema:url <https://cscfi.github.io/mscr-docs/> .
-
-[] schema:applicationCategory stypes:ServerApplication, schema:WebAPI ;
-  schema:applicationSubCategory <http://uri.gbv.de/terminology/koss/database> ;
-  schema:codeRepository <https://github.com/gbv/jskos-server> ;
-  schema:dateModified "2025"^^schema:Date ;
-  schema:license <https://spdx.org/licenses/MIT> ;
-  schema:name "JSKOS Server" ;
-  schema:operatingSystem "Web" ;
-  schema:programmingLanguage "JavaScript" ;
-  schema:url <https://github.com/gbv/jskos-server> .
